@@ -1,0 +1,73 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Feedback · Prompts" subtitle="Info · inline · action prompts" viewport="700x220" -->
+<html><head><meta charset="utf-8"><title>Prompts</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 18px 22px; gap: 14px; min-height: auto; }
+  .ico-20 { width: 20px; height: 20px; flex-shrink: 0; }
+  .prompt {
+    background: var(--engu-cream);
+    border-radius: 20px;
+    padding: 16px 18px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .prompt-action {
+    background: var(--engu-cream);
+    border-radius: 20px;
+    padding: 16px 18px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+  .badge {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: var(--engu-green);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .btn-green {
+    background: var(--engu-green);
+    color: #fff;
+    font: 700 13px/1 var(--font-body);
+    letter-spacing: -0.005em;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+</style>
+</head><body><div class="card">
+  <div class="col" style="gap:12px; max-width:540px; margin:0 auto; width:100%">
+
+    <!-- Info prompt — icon aligned center, full-rounded, no padding-top empty space -->
+    <div class="prompt">
+      <span style="color:var(--engu-green-text); display:inline-flex; flex-shrink:0">
+        <svg class="ico-20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-circle-info"/></svg>
+      </span>
+      <div style="font:500 13px/1.4 'Inter Display'; color:var(--engu-green-deep); letter-spacing:-0.005em">
+        Progress reports email out every Sunday. <a href="#" style="color:var(--engu-green-text); text-decoration:underline">Customize</a>
+      </div>
+    </div>
+
+    <!-- Action prompt -->
+    <div class="prompt-action">
+      <div class="badge">
+        <svg class="ico-20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-sparkle"/></svg>
+      </div>
+      <div style="flex:1">
+        <div style="font:700 14px/1.3 'Inter Display'; color:var(--engu-green-ink); letter-spacing:-0.005em">Try the Star Atlas</div>
+        <div style="font:500 13px/1.4 'Inter Display'; color:var(--fg-2); letter-spacing:-0.005em">New adventures launched this week.</div>
+      </div>
+      <button class="btn-green">Open</button>
+    </div>
+
+  </div>
+</div></body></html>

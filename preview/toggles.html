@@ -1,0 +1,364 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Components · Toggle · Check · Radio" subtitle="Form controls" viewport="700x160" -->
+<html><head><meta charset="utf-8"><title>Toggle · Check · Radio</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  /* tweakable tokens — overridden live by the Tweaks panel; defaults reproduce the spec */
+  .card { --tg-accent: #5AA57C; --tg-symbol: #36634A; --tg-rad-L: 6px; --tg-rad-M: 4.5px; --tg-rad-S: 3px; --tg-bw: 1px; --tg-w: 1; }
+
+  /* ─── ENGU SWITCH ─────────────────────────────────────────
+     From figma node 529:2832. */
+  .switch {
+    display: flex;
+    width: 51px;
+    height: 27px;
+    padding: 2px 21px 2px 2px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: rgba(0,0,0,0.10);
+    box-shadow:
+      0 8px 2px 0 rgba(0,0,0,0.00) inset,
+      0 5px 2px 0 rgba(0,0,0,0.01) inset,
+      0 3px 2px 0 rgba(0,0,0,0.05) inset,
+      0 1px 1px 0 rgba(0,0,0,0.09) inset,
+      0   0 1px 0 rgba(0,0,0,0.10) inset;
+    transition: padding 220ms var(--ease-out), background 220ms var(--ease-out);
+  }
+  .switch::before {
+    content: ""; display: block;
+    width: 28px; height: 23px; flex-shrink: 0;
+    border-radius: 999px; background: #FFFFFF;
+    box-shadow:
+      0 2px 0.5px 0 rgba(0,0,0,0.01),
+      0 1px 0.5px 0 rgba(0,0,0,0.05),
+      0   0 0.5px 0 rgba(0,0,0,0.09),
+      inset 0 0 0 0.5px rgba(0,0,0,0.05);
+    transition: width 220ms var(--ease-out);
+  }
+  .switch.is-on { padding: 2px 2px 2px 21px; justify-content: flex-end; background: var(--engu-yellow-500, #FFCC00); }
+  .switch.is-pressed::before { width: 33px; }
+  .switch.is-pressed.is-on { padding: 2px 2px 2px 16px; }
+  .switch.is-pressed:not(.is-on) { padding: 2px 16px 2px 2px; }
+  .switch.is-disabled { background: linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10)), #FFFAE5; pointer-events: none; }
+  .switch.is-disabled.is-on { background: linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10)), #FFFAE5; }
+  .switch.is-small { width: 30px; height: 15px; padding: 1px 13px 1px 1px; border-radius: 11px; }
+  .switch.is-small::before { width: 16px; height: 13px; }
+  .switch.is-small.is-on { padding: 1px 1px 1px 13px; }
+  .switch.is-small.is-pressed::before { width: 19px; }
+  .switch.is-small.is-pressed.is-on { padding: 1px 1px 1px 10px; }
+  .switch.is-small.is-pressed:not(.is-on) { padding: 1px 10px 1px 1px; }
+  .scale-2x { transform: scale(2); transform-origin: left center; }
+  .scale-cell { display: flex; align-items: center; min-height: 64px; padding-right: 56px; }
+  .scale-cell.sm { min-height: 36px; padding-right: 32px; }
+
+  /* ─── CHECKBOX (from /Checkbox/Checkbox/) ─────────────────
+     3 sizes × 10 states. L=32 / M=24 / S=16. */
+  .check {
+    position: relative;
+    background: #FFFFFF;
+    border: var(--tg-bw, 1px) solid #636869;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: transparent;
+  }
+  .check svg { display: block; }
+
+  .check.is-L { width: 32px; height: 32px; border-radius: var(--tg-rad-L, 6px); }
+  .check.is-M { width: 24px; height: 24px; border-radius: var(--tg-rad-M, 4.5px); }
+  .check.is-S { width: 16px; height: 16px; border-radius: var(--tg-rad-S, 3px); }
+
+  /* checkmark stroke weight scales with the Weight tweak */
+  .check.is-L svg path { stroke-width: calc(4 * var(--tg-w, 1)); }
+  .check.is-M svg path { stroke-width: calc(3 * var(--tg-w, 1)); }
+  .check.is-S svg path { stroke-width: calc(2 * var(--tg-w, 1)); }
+
+  /* unselected state colors */
+  .check.is-hover    { background: rgba(0,0,0,0.05); border-color: #7B8283; }
+  .check.is-pressed  { background: rgba(0,0,0,0.10); border-color: #7B8283; }
+  .check.is-focus    { border-color: #7B8283; }
+  .check.is-disabled { border-color: #E5E7E7; background: #FFFFFF; }
+
+  /* selected */
+  .check.is-on            { border-color: var(--tg-accent, #5AA57C); color: var(--tg-symbol, #36634A); }
+  .check.is-on.is-hover   { background: rgba(0,0,0,0.05); border-color: var(--tg-accent, #5AA57C); }
+  .check.is-on.is-pressed { background: rgba(0,0,0,0.10); border-color: var(--tg-accent, #5AA57C); }
+  .check.is-on.is-focus   { border-color: var(--tg-accent, #5AA57C); }
+  .check.is-on.is-disabled{ border-color: #DEEDE5; color: #BDDBCA; }
+
+  /* focus ring — positioned ::after, size-dependent */
+  .check.is-focus::after, .radio.is-focus::after {
+    content: ""; position: absolute; box-sizing: border-box; pointer-events: none;
+    border-style: solid; border-color: #2C88D3;
+  }
+  .check.is-focus.is-L::after { left: -4px; top: -4px; width: 38px; height: 38px; border-radius: calc(var(--tg-rad-L, 6px) + 3px); border-width: 2px; }
+  .check.is-focus.is-M::after { left: -3.25px; top: -3.25px; width: 28.5px; height: 28.5px; border-radius: calc(var(--tg-rad-M, 4.5px) + 2.25px); border-width: 1.5px; }
+  .check.is-focus.is-S::after { left: -3px; top: -3px; width: 20px; height: 20px; border-radius: calc(var(--tg-rad-S, 3px) + 1.5px); border-width: 1px; }
+
+  /* ─── RADIO (mirrors checkbox) ──────────────────────────── */
+  .radio {
+    position: relative;
+    background: #FFFFFF;
+    border: var(--tg-bw, 1px) solid #636869;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .radio.is-L { width: 32px; height: 32px; border-radius: 999px; }
+  .radio.is-M { width: 24px; height: 24px; border-radius: 999px; }
+  .radio.is-S { width: 16px; height: 16px; border-radius: 999px; }
+
+  .radio.is-hover    { background: rgba(0,0,0,0.05); border-color: #7B8283; }
+  .radio.is-pressed  { background: rgba(0,0,0,0.10); border-color: #7B8283; }
+  .radio.is-focus    { border-color: #7B8283; }
+  .radio.is-disabled { border-color: #E5E7E7; background: #FFFFFF; }
+
+  .radio.is-on            { border-color: var(--tg-accent, #5AA57C); }
+  .radio.is-on.is-hover   { background: rgba(0,0,0,0.05); border-color: var(--tg-accent, #5AA57C); }
+  .radio.is-on.is-pressed { background: rgba(0,0,0,0.10); border-color: var(--tg-accent, #5AA57C); }
+  .radio.is-on.is-focus   { border-color: var(--tg-accent, #5AA57C); }
+  .radio.is-on.is-disabled{ border-color: #DEEDE5; }
+
+  .radio.is-on::before {
+    content: ""; border-radius: 999px; background: var(--tg-symbol, #36634A);
+  }
+  .radio.is-L.is-on::before { width: calc(14px * var(--tg-w, 1)); height: calc(14px * var(--tg-w, 1)); }
+  .radio.is-M.is-on::before { width: calc(10px * var(--tg-w, 1)); height: calc(10px * var(--tg-w, 1)); }
+  .radio.is-S.is-on::before { width: calc(7px * var(--tg-w, 1)); height: calc(7px * var(--tg-w, 1)); }
+  .radio.is-on.is-disabled::before { background: #BDDBCA; }
+
+  .radio.is-focus.is-L::after { left: -4px; top: -4px; width: 38px; height: 38px; border-radius: 999px; border-width: 2px; }
+  .radio.is-focus.is-M::after { left: -3.25px; top: -3.25px; width: 28.5px; height: 28.5px; border-radius: 999px; border-width: 1.5px; }
+  .radio.is-focus.is-S::after { left: -3px; top: -3px; width: 20px; height: 20px; border-radius: 999px; border-width: 1px; }
+
+  /* ─── matrix layout ──────────────────────────────────────── */
+  .matrix {
+    display: grid;
+    grid-template-columns: 90px repeat(10, 1fr);
+    column-gap: 8px;
+    row-gap: 16px;
+    align-items: center;
+  }
+  .matrix .grp {
+    font: 600 11px/1 var(--font-body);
+    color: var(--fg-2);
+    letter-spacing: -0.005em;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .matrix-head { font: 500 10px/1 var(--font-body); letter-spacing: 0.10em; text-transform: uppercase; color: var(--fg-3); }
+  .row-name { font: 600 11px/1 var(--font-body); color: var(--fg-2); letter-spacing: -0.005em; }
+  .m-cell { display: inline-flex; align-items: center; padding: 4px 0; }
+
+  section { display: flex; flex-direction: column; gap: 14px; }
+  section h3 { margin: 0; font: 700 14px/1 var(--font-body); color: var(--fg-1); letter-spacing: -0.005em; }
+</style>
+</head><body><div class="card" style="padding: 22px 26px; gap: 22px; min-height: auto">
+
+  <!-- ─── SWITCH ──────────────────────────── -->
+  <section>
+    <header class="row" style="justify-content:space-between; align-items:baseline">
+      <h3>Switch</h3>
+      <span class="lbl" style="font-size:11px">engu-yellow-500 · figma node 529:2832 · shown @ 2×</span>
+    </header>
+    <div style="display:grid; grid-template-columns: 110px repeat(4, 1fr); column-gap:18px; row-gap:18px; align-items:center">
+      <span></span>
+      <span class="matrix-head">Off</span><span class="matrix-head">On</span><span class="matrix-head">Pressed</span><span class="matrix-head">Disabled</span>
+
+      <span class="row-name">Small · 30×15</span>
+      <span class="scale-cell sm"><span class="switch is-small scale-2x"></span></span>
+      <span class="scale-cell sm"><span class="switch is-small is-on scale-2x"></span></span>
+      <span class="scale-cell sm"><span class="switch is-small is-on is-pressed scale-2x"></span></span>
+      <span class="scale-cell sm"><span class="switch is-small is-disabled is-pressed scale-2x"></span></span>
+
+      <span class="row-name">Medium · 51×27</span>
+      <span class="scale-cell"><span class="switch scale-2x"></span></span>
+      <span class="scale-cell"><span class="switch is-on scale-2x"></span></span>
+      <span class="scale-cell"><span class="switch is-on is-pressed scale-2x"></span></span>
+      <span class="scale-cell"><span class="switch is-disabled is-pressed scale-2x"></span></span>
+    </div>
+  </section>
+
+  <!-- ─── CHECKBOX ────────────────────────── -->
+  <section>
+    <header class="row" style="justify-content:space-between; align-items:baseline">
+      <h3>Checkbox</h3>
+      <span class="lbl" style="font-size:11px">3 sizes (L 32 · M 24 · S 16) × 10 states · figma node 204:25589</span>
+    </header>
+    <div class="matrix">
+      <span></span>
+      <span class="grp" style="grid-column: span 5">Unselected</span>
+      <span class="grp" style="grid-column: span 5">Selected</span>
+      <span></span>
+      <span class="matrix-head">Default</span>
+      <span class="matrix-head">Hover</span>
+      <span class="matrix-head">Pressed</span>
+      <span class="matrix-head">Focus</span>
+      <span class="matrix-head">Disabled</span>
+      <span class="matrix-head">Default</span>
+      <span class="matrix-head">Hover</span>
+      <span class="matrix-head">Pressed</span>
+      <span class="matrix-head">Focus</span>
+      <span class="matrix-head">Disabled</span>
+      <span class="row-name">L · 32px</span>
+      <span class="m-cell"><span class="check is-L"></span></span>
+      <span class="m-cell"><span class="check is-L is-hover"></span></span>
+      <span class="m-cell"><span class="check is-L is-pressed"></span></span>
+      <span class="m-cell"><span class="check is-L is-focus"></span></span>
+      <span class="m-cell"><span class="check is-L is-disabled"></span></span>
+      <span class="m-cell"><span class="check is-L is-on"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M8.5 15.5 L13.5 20.5 L22.5 10.5" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      <span class="m-cell"><span class="check is-L is-on is-hover"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M8.5 15.5 L13.5 20.5 L22.5 10.5" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      <span class="m-cell"><span class="check is-L is-on is-pressed"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M8.5 15.5 L13.5 20.5 L22.5 10.5" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      <span class="m-cell"><span class="check is-L is-on is-focus"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M8.5 15.5 L13.5 20.5 L22.5 10.5" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      <span class="m-cell"><span class="check is-L is-on is-disabled"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M8.5 15.5 L13.5 20.5 L22.5 10.5" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      <span class="row-name">M · 24px</span>
+      <span class="m-cell"><span class="check is-M"></span></span>
+      <span class="m-cell"><span class="check is-M is-hover"></span></span>
+      <span class="m-cell"><span class="check is-M is-pressed"></span></span>
+      <span class="m-cell"><span class="check is-M is-focus"></span></span>
+      <span class="m-cell"><span class="check is-M is-disabled"></span></span>
+      <span class="m-cell"><span class="check is-M is-on"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.25 11.5 L10 15.25 L16.75 7.75" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      <span class="m-cell"><span class="check is-M is-on is-hover"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.25 11.5 L10 15.25 L16.75 7.75" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      <span class="m-cell"><span class="check is-M is-on is-pressed"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.25 11.5 L10 15.25 L16.75 7.75" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      <span class="m-cell"><span class="check is-M is-on is-focus"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.25 11.5 L10 15.25 L16.75 7.75" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      <span class="m-cell"><span class="check is-M is-on is-disabled"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.25 11.5 L10 15.25 L16.75 7.75" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      <span class="row-name">S · 16px</span>
+      <span class="m-cell"><span class="check is-S"></span></span>
+      <span class="m-cell"><span class="check is-S is-hover"></span></span>
+      <span class="m-cell"><span class="check is-S is-pressed"></span></span>
+      <span class="m-cell"><span class="check is-S is-focus"></span></span>
+      <span class="m-cell"><span class="check is-S is-disabled"></span></span>
+      <span class="m-cell"><span class="check is-S is-on"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 7.5 L6.5 10 L11 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      <span class="m-cell"><span class="check is-S is-on is-hover"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 7.5 L6.5 10 L11 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      <span class="m-cell"><span class="check is-S is-on is-pressed"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 7.5 L6.5 10 L11 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      <span class="m-cell"><span class="check is-S is-on is-focus"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 7.5 L6.5 10 L11 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      <span class="m-cell"><span class="check is-S is-on is-disabled"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 7.5 L6.5 10 L11 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+    </div>
+  </section>
+
+  <!-- ─── RADIO ──────────────────────────── -->
+  <section>
+    <header class="row" style="justify-content:space-between; align-items:baseline">
+      <h3>Radio</h3>
+      <span class="lbl" style="font-size:11px">Mirrors checkbox · same tokens, circular geometry</span>
+    </header>
+    <div class="matrix">
+      <span></span>
+      <span class="grp" style="grid-column: span 5">Unselected</span>
+      <span class="grp" style="grid-column: span 5">Selected</span>
+      <span></span>
+      <span class="matrix-head">Default</span>
+      <span class="matrix-head">Hover</span>
+      <span class="matrix-head">Pressed</span>
+      <span class="matrix-head">Focus</span>
+      <span class="matrix-head">Disabled</span>
+      <span class="matrix-head">Default</span>
+      <span class="matrix-head">Hover</span>
+      <span class="matrix-head">Pressed</span>
+      <span class="matrix-head">Focus</span>
+      <span class="matrix-head">Disabled</span>
+      <span class="row-name">L · 32px</span>
+      <span class="m-cell"><span class="radio is-L"></span></span>
+      <span class="m-cell"><span class="radio is-L is-hover"></span></span>
+      <span class="m-cell"><span class="radio is-L is-pressed"></span></span>
+      <span class="m-cell"><span class="radio is-L is-focus"></span></span>
+      <span class="m-cell"><span class="radio is-L is-disabled"></span></span>
+      <span class="m-cell"><span class="radio is-L is-on"></span></span>
+      <span class="m-cell"><span class="radio is-L is-on is-hover"></span></span>
+      <span class="m-cell"><span class="radio is-L is-on is-pressed"></span></span>
+      <span class="m-cell"><span class="radio is-L is-on is-focus"></span></span>
+      <span class="m-cell"><span class="radio is-L is-on is-disabled"></span></span>
+      <span class="row-name">M · 24px</span>
+      <span class="m-cell"><span class="radio is-M"></span></span>
+      <span class="m-cell"><span class="radio is-M is-hover"></span></span>
+      <span class="m-cell"><span class="radio is-M is-pressed"></span></span>
+      <span class="m-cell"><span class="radio is-M is-focus"></span></span>
+      <span class="m-cell"><span class="radio is-M is-disabled"></span></span>
+      <span class="m-cell"><span class="radio is-M is-on"></span></span>
+      <span class="m-cell"><span class="radio is-M is-on is-hover"></span></span>
+      <span class="m-cell"><span class="radio is-M is-on is-pressed"></span></span>
+      <span class="m-cell"><span class="radio is-M is-on is-focus"></span></span>
+      <span class="m-cell"><span class="radio is-M is-on is-disabled"></span></span>
+      <span class="row-name">S · 16px</span>
+      <span class="m-cell"><span class="radio is-S"></span></span>
+      <span class="m-cell"><span class="radio is-S is-hover"></span></span>
+      <span class="m-cell"><span class="radio is-S is-pressed"></span></span>
+      <span class="m-cell"><span class="radio is-S is-focus"></span></span>
+      <span class="m-cell"><span class="radio is-S is-disabled"></span></span>
+      <span class="m-cell"><span class="radio is-S is-on"></span></span>
+      <span class="m-cell"><span class="radio is-S is-on is-hover"></span></span>
+      <span class="m-cell"><span class="radio is-S is-on is-pressed"></span></span>
+      <span class="m-cell"><span class="radio is-S is-on is-focus"></span></span>
+      <span class="m-cell"><span class="radio is-S is-on is-disabled"></span></span>
+    </div>
+  </section>
+
+</div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel">
+  const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "accent": [
+      "#5AA57C",
+      "#36634A"
+    ],
+    "shape": "Rounded",
+    "weight": "Regular"
+  }/*EDITMODE-END*/;
+
+  // Each accent is [border/active color, symbol color] — green keeps the spec default.
+  const ACCENTS = [
+    ["#5AA57C", "#36634A"], // Green
+    ["#2C88D3", "#13476F"], // Ocean
+    ["#7A5AE0", "#3C2A73"], // Grape
+    ["#FFCC00", "#665200"], // Sun
+  ];
+  const SHAPES  = { Square: ["2px", "1.5px", "1px"], Rounded: ["6px", "4.5px", "3px"], Round: ["999px", "999px", "999px"] };
+  const WEIGHTS = { Light: [0.8, "1px"], Regular: [1, "1px"], Bold: [1.4, "2px"] };
+
+  function App() {
+    const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+    React.useEffect(() => {
+      const card = document.querySelector(".card");
+      if (!card) return;
+      const acc = Array.isArray(t.accent) ? t.accent : ACCENTS[0];
+      card.style.setProperty("--tg-accent", acc[0]);
+      card.style.setProperty("--tg-symbol", acc[1]);
+      const shp = SHAPES[t.shape] || SHAPES.Rounded;
+      card.style.setProperty("--tg-rad-L", shp[0]);
+      card.style.setProperty("--tg-rad-M", shp[1]);
+      card.style.setProperty("--tg-rad-S", shp[2]);
+      const wt = WEIGHTS[t.weight] || WEIGHTS.Regular;
+      card.style.setProperty("--tg-w", wt[0]);
+      card.style.setProperty("--tg-bw", wt[1]);
+    }, [t]);
+
+    return (
+      <TweaksPanel>
+        <TweakSection label="Selection" />
+        <TweakColor label="Accent" value={t.accent} options={ACCENTS}
+                    onChange={(v) => setTweak("accent", v)} />
+        <TweakSection label="Geometry" />
+        <TweakRadio label="Shape" value={t.shape} options={["Square", "Rounded", "Round"]}
+                    onChange={(v) => setTweak("shape", v)} />
+        <TweakRadio label="Weight" value={t.weight} options={["Light", "Regular", "Bold"]}
+                    onChange={(v) => setTweak("weight", v)} />
+      </TweaksPanel>
+    );
+  }
+
+  const mount = document.createElement("div");
+  document.body.appendChild(mount);
+  ReactDOM.createRoot(mount).render(<App />);
+</script>
+</body></html>

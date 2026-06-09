@@ -1,0 +1,78 @@
+<!doctype html>
+<!-- @dsCard group="Spacing" name="Foundations · Icons" subtitle="Imported from centralicons.com · currentColor" viewport="760x360" -->
+<html><head><meta charset="utf-8"><title>Icons</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  header { display: flex; align-items: center; justify-content: space-between; }
+  h3 { margin: 0; font: 700 14px/1 'Inter Display'; color: var(--fg-1); }
+  .open-link {
+    background: var(--engu-green); color: #fff;
+    border-radius: 999px; padding: 8px 14px;
+    font: 700 12px/1 'Inter Display'; letter-spacing: -0.005em;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+  }
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+    gap: 8px;
+  }
+  .tile {
+    background: #fff; border: 1px solid rgba(0,0,0,0.06); border-radius: 12px;
+    padding: 14px 6px 8px; display: flex; flex-direction: column; align-items: center; gap: 6px;
+    color: var(--engu-green-ink);
+  }
+  .tile svg { width: 24px; height: 24px; }
+  .tile .name {
+    font: 500 10px/1.2 ui-monospace, Menlo, monospace;
+    color: var(--fg-3); letter-spacing: -0.005em; text-align: center;
+  }
+  .demo {
+    display: flex; gap: 18px; align-items: center;
+    padding: 14px 16px; background: var(--engu-cream); border-radius: 14px;
+  }
+  .demo > div { display: flex; align-items: center; gap: 8px; color: var(--engu-green-ink); font: 500 13px/1 'Inter Display'; letter-spacing: -0.005em; }
+  .demo svg { color: currentColor; }
+</style>
+</head><body><div class="card" style="padding: 18px 22px; gap: 16px">
+
+  <header>
+    <h3>Icon library · Engu icons</h3>
+    <a class="open-link" href="../assets/icons/engu-icons-browse.html" target="_blank" rel="noopener">Browse all 1973 →</a>
+  </header>
+
+  <div class="lbl" style="font-size:11px">Imported from engu icons · 38 categories · 2px stroke · currentColor</div>
+
+  <!-- A curated sample showing variety -->
+  <div class="featured-grid">
+    ${[
+      ['home', 'home-1', 'house'],
+      ['user', 'user-1', 'profile'],
+      ['settings', 'gear-1', 'cog'],
+      ['search', 'magnifying-glass', 'find'],
+      ['eye-open', 'eye-closed'],
+      ['heart', 'star'],
+      ['envelope', 'paperplane'],
+      ['arrow-right', 'arrow-left', 'arrow-up', 'arrow-down'],
+      ['chevron-right', 'chevron-left'],
+      ['plus', 'x'],
+      ['bell', 'bell-1'],
+      ['calendar', 'clock'],
+    ].flat().slice(0, 24).map(n => `<div class="tile" title="${n}">
+      <svg viewBox="0 0 24 24"><use href="../assets/icons/engu-icons-sprite.svg#engu-${n}"/></svg>
+      <span class="name">${n}</span>
+    </div>`).join('')}
+  </div>
+
+  <!-- Size / color demo (proves currentColor) -->
+  <div class="demo">
+    <div><svg width="16" height="16" viewBox="0 0 24 24"><use href="../assets/icons/engu-icons-sprite.svg#engu-home"/></svg> 16px</div>
+    <div style="color:var(--engu-green-text)"><svg width="20" height="20" viewBox="0 0 24 24"><use href="../assets/icons/engu-icons-sprite.svg#engu-eye-open"/></svg> 20 · green</div>
+    <div style="color:#C03A3A"><svg width="24" height="24" viewBox="0 0 24 24"><use href="../assets/icons/engu-icons-sprite.svg#engu-x"/></svg> 24 · error</div>
+    <div style="color:#332900"><svg width="32" height="32" viewBox="0 0 24 24"><use href="../assets/icons/engu-icons-sprite.svg#engu-star"/></svg> 32 · dark</div>
+  </div>
+
+  <div class="cap" style="text-align:center; font-size:11px">
+    Reference with <code style="font-family:ui-monospace,Menlo,monospace">&lt;svg&gt;&lt;use href="…/engu-icons-sprite.svg#engu-NAME"/&gt;&lt;/svg&gt;</code>
+  </div>
+
+</div></body></html>

@@ -1,0 +1,191 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="QA · Locale + viewport" subtitle="5 widths × EN/CS · faithful 1:3.2 scale · verify wrap + truncation" viewport="1360x500" -->
+<html><head><meta charset="utf-8"><title>Locale + viewport test</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 22px 26px; gap: 0; min-height: auto; justify-content: flex-start; }
+
+  .lt-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding-bottom: 14px; margin-bottom: 18px;
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+  .lt-head h3 {
+    margin: 0; font: 900 17px/1 var(--font-display);
+    letter-spacing: -0.02em; color: var(--color-fg-primary);
+  }
+  .lt-head .cap { font: 500 10px/1 var(--font-mono); letter-spacing: 0.06em; color: var(--color-fg-tertiary); text-transform: none; }
+
+  /* one block per locale */
+  .lt-locale + .lt-locale { margin-top: 22px; }
+  .lt-locale-label {
+    display: flex; align-items: center; gap: 8px; margin-bottom: 12px;
+  }
+  .lt-locale-code {
+    font: 700 10px/1 var(--font-mono); letter-spacing: 0.04em;
+    color: var(--color-fg-secondary);
+    background: var(--color-bg-tinted); border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-xs); padding: 4px 7px;
+  }
+  .lt-locale-name { font: 500 12px/1 var(--font-body); color: var(--color-fg-tertiary); letter-spacing: -0.005em; }
+
+  /* filmstrip of faithfully-scaled viewports */
+  .lt-strip { display: flex; gap: 16px; align-items: flex-start; }
+
+  .lt-vp { display: flex; flex-direction: column; gap: 7px; }
+  .lt-vp-meta {
+    display: flex; align-items: baseline; gap: 5px; padding-left: 1px;
+  }
+  .lt-vp-w { font: 700 11px/1 var(--font-body); color: var(--color-fg-secondary); letter-spacing: -0.01em; }
+  .lt-vp-bp { font: 500 9px/1 var(--font-mono); color: var(--color-fg-tertiary); letter-spacing: 0.02em; }
+
+  /* the device frame — sized to the SCALED footprint */
+  .lt-frame {
+    border: 1px solid var(--color-border-default);
+    border-radius: 9px; background: #fff; overflow: hidden;
+    box-shadow: var(--shadow-card);
+  }
+  .lt-bar {
+    display: flex; align-items: center; gap: 4px;
+    height: 16px; padding: 0 7px;
+    background: var(--color-bg-tinted);
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+  .lt-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--color-border-strong); }
+
+  /* clipping window — height set by JS to the scaled screen height */
+  .lt-window { overflow: hidden; }
+  /* the real-width screen, scaled down via transform so layout is faithful */
+  .lt-screen { background: #fff; transform-origin: top left; }
+
+  /* the component under test — authored at REAL pixel sizes */
+  .lt-card {
+    padding: 24px; display: flex; flex-direction: column; gap: 14px;
+  }
+  .lt-card-title {
+    font: 900 26px/1.02 var(--font-display); letter-spacing: -0.025em;
+    color: var(--color-fg-primary); text-wrap: balance;
+  }
+  .lt-card-body {
+    font: 400 15px/1.45 var(--font-body); letter-spacing: -0.005em;
+    color: var(--color-fg-secondary); text-wrap: pretty;
+  }
+  .lt-cta {
+    margin-top: 10px; align-self: flex-start;
+    background: var(--color-bg-accent); color: var(--color-fg-on-accent);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-pill); padding: 11px 20px;
+    font: 700 14px/1 var(--font-body); letter-spacing: -0.005em;
+    box-shadow: var(--shadow-button); cursor: pointer; white-space: nowrap;
+  }
+
+  .lt-foot {
+    margin-top: 22px; padding-top: 14px;
+    border-top: 1px solid var(--color-border-subtle);
+    font: 500 10px/1.5 var(--font-mono); letter-spacing: 0.03em;
+    color: var(--color-fg-tertiary); text-transform: none;
+  }
+</style>
+</head><body><div class="card">
+
+  <div class="lt-head">
+    <h3>Locale &amp; viewport</h3>
+    <span class="cap">same component · faithful 1:3.2 scale</span>
+  </div>
+
+  <div id="lt-mount"></div>
+
+  <div class="lt-foot">
+    Each frame renders the card at its real breakpoint width, then scales down 1:3.2 — wrapping and truncation are true to device. Watch the CS title: longer strings must not clip or overflow the pill.
+  </div>
+
+</div>
+
+<script>
+  const SCALE = 1 / 3.2;
+  const VIEWPORTS = [
+    { w: 320,  bp: "mobile"  },
+    { w: 480,  bp: "mobile+" },
+    { w: 768,  bp: "tablet"  },
+    { w: 1024, bp: "laptop"  },
+    { w: 1280, bp: "desktop" },
+  ];
+  const LOCALES = [
+    {
+      code: "EN", name: "English",
+      title: "Start an adventure",
+      body: "A safe place to learn by playing — from your first mission to your hundredth.",
+      cta: "Get started",
+    },
+    {
+      code: "CS", name: "Čeština",
+      title: "Začni dobrodružství",
+      body: "Bezpečné místo, kde se děti učí hraním — od první mise až po stou.",
+      cta: "Začít",
+    },
+  ];
+
+  // the card has a comfortable max content width; beyond ~520px it stops growing,
+  // so the wider viewports show the card centered in extra whitespace — exactly
+  // how it behaves on a real large screen.
+  const CARD_MAX = 520;
+
+  function escapeHtml(s) {
+    return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
+  const mount = document.getElementById("lt-mount");
+
+  mount.innerHTML = LOCALES.map((loc) => `
+    <div class="lt-locale">
+      <div class="lt-locale-label">
+        <span class="lt-locale-code">${loc.code}</span>
+        <span class="lt-locale-name">${escapeHtml(loc.name)}</span>
+      </div>
+      <div class="lt-strip">
+        ${VIEWPORTS.map((vp) => {
+          const scaledW = Math.round(vp.w * SCALE);
+          const cardW = Math.min(vp.w, CARD_MAX);
+          const padX = Math.round(((vp.w - cardW) / 2));
+          return `
+          <div class="lt-vp">
+            <div class="lt-vp-meta">
+              <span class="lt-vp-w">${vp.w}</span>
+              <span class="lt-vp-bp">${vp.bp}</span>
+            </div>
+            <div class="lt-frame" style="width:${scaledW}px">
+              <div class="lt-bar"><span class="lt-dot"></span><span class="lt-dot"></span><span class="lt-dot"></span></div>
+              <div class="lt-window" style="width:${scaledW}px">
+                <div class="lt-screen" style="width:${vp.w}px; transform:scale(${SCALE});">
+                  <div style="padding:0 ${padX}px">
+                    <div class="lt-card" style="max-width:${cardW}px; margin:0 auto;">
+                      <div class="lt-card-title">${escapeHtml(loc.title)}</div>
+                      <div class="lt-card-body">${escapeHtml(loc.body)}</div>
+                      <button class="lt-cta">${escapeHtml(loc.cta)}</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }).join("")}
+      </div>
+    </div>`).join("");
+
+  // Reserve the correct scaled height for each frame. transform doesn't change
+  // layout box size, so measure the real-size screen and clip the window to its
+  // scaled height. Wait for fonts so wrap heights are accurate.
+  function fit() {
+    mount.querySelectorAll(".lt-window").forEach((win) => {
+      const screen = win.querySelector(".lt-screen");
+      win.style.height = Math.round(screen.offsetHeight * SCALE) + "px";
+    });
+  }
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(fit);
+  }
+  requestAnimationFrame(fit);
+  window.addEventListener("load", fit);
+</script>
+
+</body></html>

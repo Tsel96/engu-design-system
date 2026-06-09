@@ -1,0 +1,73 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Inputs · Money" subtitle="Display value + currency selector" viewport="700x220" -->
+<html><head><meta charset="utf-8"><title>Money input</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  /* Canonical engu input — pill, floating label, trailing slot, helper */
+  .field-stack { display: flex; flex-direction: column; align-items: stretch; gap: 8px; width: 320px; }
+  .field-shell {
+    position: relative; background: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.08); border-radius: 999px;
+    padding: 16px 24px; min-height: 72px;
+    display: flex; align-items: center;
+  }
+  .field-shell.focused { border: 1.5px solid var(--engu-green); padding: 15.5px 23.5px; box-shadow: 0 0 0 4px rgba(90,165,124,0.15); }
+  .field-body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 4px; min-width: 0; }
+  .field-label { font: 500 13px/1.2 var(--font-body); color: rgba(0,0,0,0.5); letter-spacing: -0.005em; }
+  .field-value { font: 700 18px/1.2 var(--font-body); color: rgba(0,0,0,0.92); letter-spacing: -0.01em; background: transparent; border: 0; outline: none; padding: 0; width: 100%; }
+  .field-desc { font: 500 13px/1.3 var(--font-body); color: rgba(0,0,0,0.5); letter-spacing: -0.005em; padding-left: 4px; }
+
+  /* Trailing currency selector — a tiny pill inside the pill */
+  .currency-trigger {
+    flex-shrink: 0;
+    margin-left: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--engu-cream);
+    color: var(--engu-green-deep);
+    border-radius: 999px;
+    padding: 8px 12px;
+    font: 700 13px/1 var(--font-body);
+    letter-spacing: -0.005em;
+    border: 0;
+    cursor: pointer;
+  }
+  .currency-trigger svg { width: 14px; height: 14px; }
+</style>
+</head><body><div class="card" style="padding: 24px">
+  <div style="display:grid; grid-template-columns: repeat(2, 320px); gap: 16px 24px; justify-content: center">
+
+    <!-- Filled — main money field -->
+    <div class="field-stack">
+      <label class="field-shell focused">
+        <div class="field-body">
+          <span class="field-label">You pay</span>
+          <input class="field-value" type="text" value="299">
+        </div>
+        <button class="currency-trigger" type="button">
+          CZK
+          <svg viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-chevron-bottom"/></svg>
+        </button>
+      </label>
+      <span class="field-desc">≈ €12.34 · billed yearly</span>
+    </div>
+
+    <!-- Filled — converted readout, no currency trigger -->
+    <div class="field-stack">
+      <label class="field-shell">
+        <div class="field-body">
+          <span class="field-label">They receive</span>
+          <input class="field-value" type="text" value="12.34" readonly>
+        </div>
+        <span class="currency-trigger" style="cursor:default; background:transparent; color:rgba(0,0,0,0.5)">EUR</span>
+      </label>
+      <span class="field-desc">Rate locks at checkout</span>
+    </div>
+
+  </div>
+
+  <div class="cap" style="text-align:center; padding-top: 6px; font: 500 11px/1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-3)">
+    Pill input · currency trigger replaces trailing icon
+  </div>
+</div></body></html>

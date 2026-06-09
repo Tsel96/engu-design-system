@@ -1,0 +1,30 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Data · Promo cards" subtitle="Brand promo + invite-a-friend" viewport="700x300" -->
+<html><head><meta charset="utf-8"><title>Promo card</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 18px 22px; gap: 14px; min-height: auto; }
+  section { display: flex; flex-direction: column; gap: 10px; }
+  h3 { margin: 0; font: 700 14px/1 var(--font-body); color: var(--fg-1); letter-spacing: -0.005em; }
+  .cap { font: 500 11px/1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-3); }
+  .ico { width: 16px; height: 16px; flex-shrink: 0; }
+  .ico-20 { width: 20px; height: 20px; flex-shrink: 0; }
+  .ico-24 { width: 24px; height: 24px; flex-shrink: 0; }
+</style>
+</head><body><div class="card">
+  <div class="row" style="gap:12px; max-width:600px; margin:0 auto; justify-content:center">
+    <div style="background:var(--engu-green); color:#fff; border-radius:18px; padding:18px; flex:1; display:flex; flex-direction:column; gap:8px; position:relative; overflow:hidden; min-height:230px">
+      <img src="../assets/engu-logomark-white.svg" style="position:absolute; right:-30px; bottom:-30px; width:140px; opacity:0.18">
+      <span style="font:500 11px/1 'Inter Display'; letter-spacing:0.14em; text-transform:uppercase; opacity:0.7">Limited offer</span>
+      <h3 style="margin:0; font:900 26px/0.95 var(--font-display); letter-spacing:-0.03em; color:#FFEB99">Save 20% on yearly</h3>
+      <p style="margin:0; font:500 13px/1.4 'Inter Display'; opacity:0.85">Until 31 May. Switch from monthly anytime.</p>
+      <button style="align-self:flex-start; margin-top:auto; background:#FFEB99; color:#332900; border:none; padding:10px 16px; border-radius:999px; font:700 13px/1 'Inter Display'; cursor:pointer; box-shadow:var(--shadow-button)">Upgrade</button>
+    </div>
+    <div style="background:var(--engu-cream); color:var(--engu-green-ink); border-radius:18px; padding:18px; flex:1; display:flex; flex-direction:column; gap:8px; min-height:230px">
+      <div style="width:36px; height:36px; border-radius:999px; background:var(--engu-green); color:#fff; display:flex; align-items:center; justify-content:center"><svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-gift-1"/></svg></div>
+      <h3 style="margin:0; font:700 18px/1.2 'Inter Display'; letter-spacing:-0.01em">Invite a friend</h3>
+      <p style="margin:0; font:500 13px/1.4 'Inter Display'; color:var(--fg-2)">Both of you get one free month.</p>
+      <button style="align-self:flex-start; margin-top:auto; background:transparent; border:1px solid var(--engu-green); color:var(--engu-green-text); padding:10px 14px; border-radius:999px; font:700 13px/1 'Inter Display'; cursor:pointer">Get link</button>
+    </div>
+  </div>
+</div></body></html>

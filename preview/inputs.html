@@ -1,0 +1,112 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Components · Inputs" subtitle="Figma node 30:652 · 351px column · 4 states" viewport="760x320" -->
+<html><head><meta charset="utf-8"><title>Inputs</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  /* Canonical engu input — pill, floating label, trailing library icon, helper */
+  .field-stack { display: flex; flex-direction: column; align-items: stretch; gap: 8px; width: 320px; }
+  .field-shell {
+    position: relative; background: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.08); border-radius: 999px;
+    padding: 16px 24px; min-height: 72px;
+    display: flex; align-items: center;
+  }
+  .field-shell.focused { border: 1.5px solid var(--engu-green); padding: 15.5px 23.5px; box-shadow: 0 0 0 4px rgba(90,165,124,0.15); }
+  .field-shell.error   { border: 1.5px solid #C03A3A; padding: 15.5px 23.5px; box-shadow: 0 0 0 4px rgba(192,58,58,0.12); }
+  .field-shell.disabled { background: #F2F2F2; border-color: rgba(0,0,0,0.06); }
+
+  .field-body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 4px; min-width: 0; }
+  .field-shell.empty .field-body { gap: 0; }
+  .field-shell.empty .field-label { font-size: 18px; font-weight: 500; color: rgba(0,0,0,0.45); line-height: 1.2; letter-spacing:-0.005em; }
+  .field-shell.empty .field-value { display: none; }
+
+  .field-shell.filled .field-label,
+  .field-shell.focused .field-label,
+  .field-shell.error .field-label,
+  .field-shell.disabled .field-label {
+    font: 500 13px/1.2 var(--font-body); color: rgba(0,0,0,0.5); letter-spacing: -0.005em;
+  }
+  .field-shell.filled .field-value,
+  .field-shell.focused .field-value,
+  .field-shell.error .field-value,
+  .field-shell.disabled .field-value {
+    font: 700 18px/1.2 var(--font-body); color: rgba(0,0,0,0.92); letter-spacing: -0.01em;
+    background: transparent; border: 0; outline: none; padding: 0; width: 100%;
+  }
+  .field-shell.disabled .field-label, .field-shell.disabled .field-value { color: rgba(0,0,0,0.4); }
+
+  .field-icon { flex-shrink: 0; margin-left: 16px; width: 24px; height: 24px; color: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; }
+  .field-shell.disabled .field-icon { color: rgba(0,0,0,0.3); }
+
+  .field-desc { font: 500 13px/1.3 var(--font-body); color: rgba(0,0,0,0.5); letter-spacing: -0.005em; padding-left: 4px; }
+  .field-desc.err { color: #C03A3A; }
+  .field-desc.ok  { color: var(--engu-green-text); }
+</style>
+</head><body><div class="card" style="padding: 24px">
+
+  <div style="display:grid; grid-template-columns: repeat(2, 320px); gap: 16px 24px; justify-content: center">
+
+    <!-- 1) Empty -->
+    <div class="field-stack">
+      <div class="field-shell empty">
+        <div class="field-body"><span class="field-label">Email</span></div>
+        <span class="field-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-email-1"/></svg></span>
+      </div>
+      <span class="field-desc">Description</span>
+    </div>
+
+    <!-- 2) Filled -->
+    <div class="field-stack">
+      <div class="field-shell filled">
+        <div class="field-body">
+          <span class="field-label">Full name</span>
+          <input class="field-value" type="text" value="Anežka Nováková">
+        </div>
+        <span class="field-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-user"/></svg></span>
+      </div>
+      <span class="field-desc">Description</span>
+    </div>
+
+    <!-- 3) Focused -->
+    <div class="field-stack">
+      <div class="field-shell focused filled">
+        <div class="field-body">
+          <span class="field-label">Email</span>
+          <input class="field-value" type="email" value="parent@engu.cz">
+        </div>
+        <span class="field-icon" style="color:var(--engu-green)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-checkmark-1"/></svg></span>
+      </div>
+      <span class="field-desc ok">Looks good.</span>
+    </div>
+
+    <!-- 4) Error -->
+    <div class="field-stack">
+      <div class="field-shell error filled">
+        <div class="field-body">
+          <span class="field-label">Postal code</span>
+          <input class="field-value" type="text" value="abc">
+        </div>
+        <span class="field-icon" style="color:#C03A3A"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-warning-sign"/></svg></span>
+      </div>
+      <span class="field-desc err">Numbers only.</span>
+    </div>
+
+    <!-- 5) Disabled (filled) -->
+    <div class="field-stack">
+      <div class="field-shell filled disabled">
+        <div class="field-body">
+          <span class="field-label">Plan</span>
+          <input class="field-value" type="text" value="Free trial" disabled>
+        </div>
+        <span class="field-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-ticket"/></svg></span>
+      </div>
+      <span class="field-desc">Disabled while trial is active</span>
+    </div>
+
+  </div>
+
+  <div class="cap" style="text-align:center; padding-top: 6px; font: 500 11px/1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-3)">
+    Pill · floating label · library icon · description below
+  </div>
+
+</div></body></html>

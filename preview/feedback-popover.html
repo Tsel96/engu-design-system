@@ -1,0 +1,228 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Feedback · Popover" subtitle="Tooltip + dropdown menu" viewport="700x240" -->
+<html><head><meta charset="utf-8"><title>Popover · Tooltip · Menu</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 22px 24px; gap: 24px; min-height: auto; }
+  section { display: flex; flex-direction: column; gap: 14px; }
+  h3 { margin: 0; font: 700 14px/1 var(--font-body); color: var(--fg-1); letter-spacing: -0.005em; }
+  .ico { width: 16px; height: 16px; flex-shrink: 0; }
+  .ico-20 { width: 20px; height: 20px; flex-shrink: 0; }
+
+  /* Surface where we anchor popovers so they aren't cropped */
+  .stage {
+    background: var(--engu-cream);
+    border-radius: 16px;
+    padding: 28px 24px 88px;
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    position: relative;
+    align-items: flex-start;
+  }
+  .anchor { position: relative; }
+
+  /* ─── Anchor buttons ─── */
+  .anchor-btn {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 999px;
+    padding: 10px 14px;
+    font: 700 13px/1 var(--font-body);
+    color: var(--fg-1);
+    letter-spacing: -0.005em;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .anchor-btn.green {
+    background: var(--engu-green);
+    color: #fff;
+    border-color: transparent;
+  }
+
+  /* ─── Tooltip ─── */
+  .tooltip {
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 12px);
+    transform: translateX(-50%);
+    background: var(--engu-green-ink);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font: 500 12px/1.4 var(--font-body);
+    letter-spacing: -0.005em;
+    white-space: nowrap;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  }
+  .tooltip::before {
+    content: "";
+    position: absolute;
+    top: -4px; left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 8px; height: 8px;
+    background: var(--engu-green-ink);
+  }
+
+  /* ─── Menu ─── */
+  .menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 12px 32px rgba(18,33,25,0.12);
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    min-width: 220px;
+  }
+  .menu .item {
+    text-align: left;
+    background: transparent;
+    border: 0;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font: 500 14px/1.2 var(--font-body);
+    color: var(--fg-1);
+    letter-spacing: -0.005em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .menu .item:hover { background: var(--engu-cream); }
+  .menu .item.is-danger { color: #C03A3A; }
+  .menu .item.is-danger:hover { background: rgba(192,58,58,0.08); }
+  .menu .divider {
+    height: 1px;
+    background: rgba(0,0,0,0.06);
+    margin: 4px 6px;
+  }
+  .menu .kbd {
+    margin-left: auto;
+    font: 500 11px/1 ui-monospace, Menlo, monospace;
+    color: var(--fg-3);
+    background: rgba(0,0,0,0.04);
+    padding: 3px 6px;
+    border-radius: 5px;
+  }
+
+  /* ─── Popover (richer content) ─── */
+  .popover {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 12px 32px rgba(18,33,25,0.12);
+    padding: 16px;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .popover .pop-title {
+    font: 700 14px/1.2 var(--font-body);
+    color: var(--engu-green-ink);
+    letter-spacing: -0.005em;
+  }
+  .popover .pop-body {
+    font: 500 13px/1.45 var(--font-body);
+    color: var(--fg-2);
+    letter-spacing: -0.005em;
+  }
+  .popover .pop-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .popover .pop-actions button {
+    flex: 1;
+    border-radius: 999px;
+    padding: 8px 12px;
+    font: 700 12px/1 var(--font-body);
+    letter-spacing: -0.005em;
+    cursor: pointer;
+    border: 0;
+  }
+  .popover .pop-actions .primary { background: var(--engu-green); color: #fff; }
+  .popover .pop-actions .ghost   { background: rgba(0,0,0,0.05); color: var(--fg-1); }
+</style>
+</head><body><div class="card">
+
+  <!-- ─── Tooltip + Menu side by side ─── -->
+  <section>
+    <header class="row" style="justify-content:space-between; align-items:baseline">
+      <h3>Tooltip · Menu</h3>
+      <span class="lbl" style="font-size:11px">Anchored to a trigger · ink-green tooltip · white menu sheet</span>
+    </header>
+    <div class="stage">
+
+      <!-- Tooltip -->
+      <div class="anchor">
+        <button class="anchor-btn">
+          <svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-circle-info"/></svg>
+          Help
+        </button>
+        <div class="tooltip">Open the help center</div>
+      </div>
+
+      <!-- Menu -->
+      <div class="anchor">
+        <button class="anchor-btn green">
+          Account
+          <svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-chevron-bottom"/></svg>
+        </button>
+        <div class="menu">
+          <button class="item">
+            <svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-user"/></svg>
+            Profile
+          </button>
+          <button class="item">
+            <svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-settings-gear-1"/></svg>
+            Settings
+            <span class="kbd">⌘,</span>
+          </button>
+          <button class="item">
+            <svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-bell"/></svg>
+            Notifications
+          </button>
+          <div class="divider"></div>
+          <button class="item is-danger">
+            <svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-file-arrow-right-out"/></svg>
+            Log out
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── Rich popover ─── -->
+  <section>
+    <header class="row" style="justify-content:space-between; align-items:baseline">
+      <h3>Popover</h3>
+      <span class="lbl" style="font-size:11px">Title · body · actions · anchored sheet</span>
+    </header>
+    <div class="stage">
+      <div class="anchor">
+        <button class="anchor-btn">
+          Share
+          <svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-chevron-bottom"/></svg>
+        </button>
+        <div class="popover">
+          <span class="pop-title">Share progress with co-parent?</span>
+          <span class="pop-body">They'll get the same weekly email and dashboard access. You can revoke this any time from Settings.</span>
+          <div class="pop-actions">
+            <button class="ghost">Not now</button>
+            <button class="primary">Share</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div></body></html>

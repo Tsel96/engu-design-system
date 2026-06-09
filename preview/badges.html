@@ -1,0 +1,137 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Components · Badges + chips" subtitle="Eyebrow · semantic · supportive · filter dots" viewport="700x240" -->
+<html><head><meta charset="utf-8"><title>Badges + chips</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  /* Wise-style structure: matrix of intent × style for tags,
+     then a separate row of interactive chip states. */
+
+  .matrix {
+    display: grid;
+    grid-template-columns: 80px repeat(2, 1fr);
+    column-gap: 24px;
+    row-gap: 10px;
+    align-items: center;
+  }
+  .matrix-head {
+    font: 500 10px/1 var(--font-body);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--fg-3);
+  }
+  .row-name {
+    font: 600 12px/1 var(--font-body);
+    color: var(--fg-2);
+    letter-spacing: -0.005em;
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    border-radius: 999px;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    padding: 6px 10px;
+    width: fit-content;
+  }
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+  }
+
+  /* Chips (interactive) */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font: 500 13px/1 var(--font-body);
+    letter-spacing: -0.005em;
+    color: var(--fg-1);
+    background: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 999px;
+    padding: 8px 14px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .chip:hover, .chip.is-hover { background: rgba(0,0,0,0.03); }
+  .chip.is-selected {
+    background: var(--engu-green);
+    border-color: var(--engu-green);
+    color: #fff;
+  }
+  .chip .x { color: rgba(0,0,0,0.4); display:flex; }
+  .chip.is-selected .x { color: rgba(255,255,255,0.7); }
+</style>
+</head><body><div class="card" style="padding:20px 24px; gap:18px; min-height:auto">
+
+  <!-- ─── TAGS (display-only, intent × style) ──────────────── -->
+  <section class="col" style="gap:10px">
+    <header class="row" style="justify-content:space-between; align-items:baseline">
+      <h3 style="margin:0; font:700 14px/1 var(--font-body); color:var(--fg-1); letter-spacing:-0.005em">Tags</h3>
+      <span class="lbl" style="font-size:11px">Display-only · intent × style</span>
+    </header>
+
+    <div class="matrix">
+      <span></span>
+      <span class="matrix-head">Light</span>
+      <span class="matrix-head">Solid</span>
+
+      <span class="row-name">Neutral</span>
+      <span><span class="tag" style="background:#E6E6E6; color:#333333">Neutral</span></span>
+      <span><span class="tag" style="background:#333333; color:#fff">Neutral</span></span>
+
+      <span class="row-name">Brand</span>
+      <span><span class="tag" style="background:#DEEDE5; color:#244231">Brand</span></span>
+      <span><span class="tag" style="background:var(--engu-green); color:#fff">Brand</span></span>
+
+      <span class="row-name">Accent</span>
+      <span><span class="tag" style="background:#FFEB99; color:#332900">Accent</span></span>
+      <span><span class="tag" style="background:#FFD633; color:#332900">Accent</span></span>
+
+      <span class="row-name">Positive</span>
+      <span><span class="tag" style="background:#D4EFD4; color:#0F290A">Success</span></span>
+      <span><span class="tag" style="background:#2E8B2E; color:#fff">Success</span></span>
+
+      <span class="row-name">Warning</span>
+      <span><span class="tag" style="background:#FFE0B3; color:#321E01">Warning</span></span>
+      <span><span class="tag" style="background:#C77F00; color:#fff">Warning</span></span>
+
+      <span class="row-name">Negative</span>
+      <span><span class="tag" style="background:#F7D9D9; color:#5C1A1A">Error</span></span>
+      <span><span class="tag" style="background:#C03A3A; color:#fff">Error</span></span>
+
+      <span class="row-name">Info</span>
+      <span><span class="tag" style="background:#D9E5F7; color:#0F2D54">Info</span></span>
+      <span><span class="tag" style="background:#1E6BB8; color:#fff">Info</span></span>
+    </div>
+  </section>
+
+  <!-- ─── CHIPS (interactive filters) ──────────────────────── -->
+  <section class="col" style="gap:10px">
+    <header class="row" style="justify-content:space-between; align-items:baseline">
+      <h3 style="margin:0; font:700 14px/1 var(--font-body); color:var(--fg-1); letter-spacing:-0.005em">Chips</h3>
+      <span class="lbl" style="font-size:11px">Interactive · selectable filters</span>
+    </header>
+
+    <div class="row" style="gap:8px; flex-wrap:wrap">
+      <span class="chip">Default</span>
+      <span class="chip is-hover">Hover</span>
+      <span class="chip is-selected">Selected</span>
+      <span class="chip"><span class="dot" style="background:#2A6FDB"></span>With dot</span>
+      <span class="chip">With icon
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </span>
+      <span class="chip">Dismissable
+        <span class="x"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m18 6-12 12M6 6l12 12"/></svg></span>
+      </span>
+    </div>
+  </section>
+
+</div></body></html>

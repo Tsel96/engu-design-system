@@ -1,0 +1,26 @@
+/* preview card base — keep cards calm, no titles, content only */
+@import url("../colors_and_type.css");
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--engu-near-white);
+  color: var(--fg-1);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+.card {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+}
+.row { display: flex; align-items: center; gap: 12px; }
+.col { display: flex; flex-direction: column; gap: 8px; }
+.cap { font: 500 11px/1 "Inter Display"; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-3); }
+.lbl { font: 500 12px/1 "Inter Display"; color: var(--fg-2); }
+.val { font: 700 13px/1 "Inter Display"; color: var(--fg-1); }

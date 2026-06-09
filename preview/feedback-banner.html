@@ -1,0 +1,141 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Feedback · Critical banner" subtitle="Error + warning inline banners" viewport="700x220" -->
+<html><head><meta charset="utf-8"><title>Critical banner</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .banner {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06);
+  }
+  .badge {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFFFFF;
+  }
+  .badge.is-critical { background: #C03A3A; }
+  .badge.is-warning  { background: #C77F00; }
+  .badge.is-success  { background: var(--engu-green); }
+  .badge.is-info     { background: var(--engu-green-ink); color: var(--engu-green); }
+
+  .banner .body { flex: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .banner .title {
+    font: 700 14px/1.3 var(--font-body);
+    color: var(--engu-green-ink);
+    letter-spacing: -0.005em;
+  }
+  .banner .desc {
+    font: 500 13px/1.4 var(--font-body);
+    color: var(--fg-2);
+    letter-spacing: -0.005em;
+  }
+  .banner .action {
+    background: #FFEB99;
+    color: #332900;
+    border: 1px solid rgba(0,0,0,0.1);
+    font: 700 13px/1 var(--font-body);
+    letter-spacing: -0.005em;
+    padding: 10px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-button);
+  }
+  .banner .dismiss {
+    background: rgba(0,0,0,0.04);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--fg-3);
+    flex-shrink: 0;
+  }
+
+  /* Inline / full-bleed variant (banner pinned to top of page) */
+  .banner-bleed {
+    background: var(--engu-green-ink);
+    color: #FFFFFF;
+    border-radius: 16px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .banner-bleed .title { font: 700 14px/1.3 var(--font-body); color: #FFFFFF; letter-spacing: -0.005em; }
+  .banner-bleed .desc  { font: 500 13px/1.4 var(--font-body); color: rgba(255,255,255,0.72); letter-spacing: -0.005em; }
+  .banner-bleed .action {
+    background: #FFEB99;
+    color: #332900;
+    border: 1px solid rgba(0,0,0,0.1);
+    font: 700 13px/1 var(--font-body);
+    padding: 10px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .banner-bleed .body { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+</style>
+</head><body><div class="card" style="padding: 18px 22px; gap: 10px; min-height: auto">
+
+  <!-- Critical -->
+  <div class="banner">
+    <div class="badge is-critical">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-warning-sign"/></svg>
+    </div>
+    <div class="body">
+      <div class="title">Payment failed</div>
+      <div class="desc">Your card was declined on 15 May. Update your payment method to keep your subscription.</div>
+    </div>
+    <button class="action">Update card</button>
+    <button class="dismiss" aria-label="dismiss"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-cross-medium"/></svg></button>
+  </div>
+
+  <!-- Warning -->
+  <div class="banner">
+    <div class="badge is-warning">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-clock"/></svg>
+    </div>
+    <div class="body">
+      <div class="title">Trial ends in 3 days</div>
+      <div class="desc">Upgrade now to keep your child's progress.</div>
+    </div>
+    <button class="action">Upgrade</button>
+  </div>
+
+  <!-- Success -->
+  <div class="banner">
+    <div class="badge is-success">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-checkmark-1"/></svg>
+    </div>
+    <div class="body">
+      <div class="title">Subscription updated</div>
+      <div class="desc">You're now on the Complete plan, renews 12 May 2027.</div>
+    </div>
+  </div>
+
+  <!-- Full-bleed dark info variant (use at top of page for system-level messages) -->
+  <div class="banner-bleed">
+    <div class="badge is-info">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-sparkle"/></svg>
+    </div>
+    <div class="body">
+      <div class="title">New adventure pack available</div>
+      <div class="desc">Star Atlas — 12 missions for ages 9 and up.</div>
+    </div>
+    <button class="action">Explore</button>
+  </div>
+
+</div></body></html>

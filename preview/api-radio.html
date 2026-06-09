@@ -1,0 +1,33 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="API · Radio" subtitle="Prop table · RadioGroup + Radio" viewport="760x700" -->
+<html><head><meta charset="utf-8"><title>Radio · API</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 20px 24px; gap: 16px; min-height: auto; }
+  h3 { margin: 0; font: 700 16px/1 var(--font-body); color: var(--color-fg-primary); letter-spacing: -0.005em; }
+  h4 { margin: 0; font: 500 11px/1 var(--font-body); color: var(--color-fg-tertiary); letter-spacing: 0.14em; text-transform: uppercase; padding-top: 8px; }
+  .desc { font: 500 13px/1.4 var(--font-body); color: var(--color-fg-secondary); letter-spacing: -0.005em; max-width: 640px; }
+  .api { width: 100%; border-collapse: collapse; font: 500 13px/1.4 var(--font-body); letter-spacing: -0.005em; }
+  .api thead th { text-align: left; padding: 8px 12px; font: 500 11px/1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-fg-tertiary); border-bottom: 1px solid var(--color-border-default); }
+  .api tbody td { padding: 10px 12px; vertical-align: top; border-bottom: 1px solid var(--color-border-subtle); }
+  .api tbody tr:last-child td { border-bottom: none; }
+  .api .prop { font: 700 12px/1.3 var(--font-mono); color: var(--color-fg-primary); }
+  .api .type { font: 500 12px/1.4 var(--font-mono); color: var(--color-fg-brand-strong); white-space: pre-wrap; }
+  .api .def { font: 500 12px/1.4 var(--font-mono); color: var(--color-fg-tertiary); }
+  .api .descr { color: var(--color-fg-secondary); }
+  .api .descr strong { color: var(--color-fg-primary); font-weight: 700; }
+  .badge { display: inline-block; font: 500 10px/1 var(--font-body); letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 6px; border-radius: 4px; background: var(--color-bg-tinted); color: var(--color-fg-brand-strong); margin-left: 6px; }
+  .badge.req { background: rgba(192,58,58,0.1); color: var(--color-intent-error); }
+  pre.code { background: var(--color-bg-inverse); color: rgba(255,255,255,0.92); border-radius: var(--radius-sm); padding: 14px 16px; font: 500 12px/1.55 var(--font-mono); overflow-x: auto; white-space: pre; }
+  pre.code .k { color: #FFD633; }
+  pre.code .s { color: #9CC9B0; }
+  pre.code .t { color: #FFB8B8; }
+</style>
+</head><body><div class="card"><header><h3>Radio · RadioGroup</h3></header><p class="desc">Mutually-exclusive selection. Always grouped via RadioGroup — bare Radio renders the circular control without keyboard semantics.</p><h4>RadioGroup</h4><table class="api"><thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td><span class="prop">value</span></td><td><span class="type">string</span></td><td><span class="def">undefined</span></td><td class="descr">Controlled selection.</td></tr><tr><td><span class="prop">defaultValue</span></td><td><span class="type">string</span></td><td><span class="def">undefined</span></td><td class="descr">Uncontrolled.</td></tr><tr><td><span class="prop">onChange</span></td><td><span class="type">(value: string) => void</span></td><td><span class="def">undefined</span></td><td class="descr"></td></tr><tr><td><span class="prop">name</span><span class="badge req">required</span></td><td><span class="type">string</span></td><td><span class="def">auto</span></td><td class="descr">Shared input name. Required when submitting via form.</td></tr><tr><td><span class="prop">orientation</span></td><td><span class="type">"horizontal" | "vertical"</span></td><td><span class="def">"vertical"</span></td><td class="descr">Horizontal for ≤3 short options.</td></tr><tr><td><span class="prop">label</span></td><td><span class="type">string</span></td><td><span class="def">undefined</span></td><td class="descr">Group heading.</td></tr><tr><td><span class="prop">helperText</span></td><td><span class="type">string</span></td><td><span class="def">undefined</span></td><td class="descr"></td></tr><tr><td><span class="prop">errorText</span></td><td><span class="type">string</span></td><td><span class="def">undefined</span></td><td class="descr"></td></tr><tr><td><span class="prop">disabled</span></td><td><span class="type">boolean</span></td><td><span class="def">false</span></td><td class="descr">Disables every child Radio.</td></tr></tbody></table><h4>Radio</h4><table class="api"><thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td><span class="prop">value</span><span class="badge req">required</span></td><td><span class="type">string</span></td><td><span class="def">undefined</span></td><td class="descr">Identifier within the group.</td></tr><tr><td><span class="prop">label</span><span class="badge req">required</span></td><td><span class="type">string</span></td><td><span class="def">undefined</span></td><td class="descr">Label to the right of the dot.</td></tr><tr><td><span class="prop">helperText</span></td><td><span class="type">string</span></td><td><span class="def">undefined</span></td><td class="descr"></td></tr><tr><td><span class="prop">size</span></td><td><span class="type">"sm" | "md" | "lg"</span></td><td><span class="def">"lg"</span></td><td class="descr">Matches Checkbox sizing — 16/24/32.</td></tr><tr><td><span class="prop">disabled</span></td><td><span class="type">boolean</span></td><td><span class="def">false</span></td><td class="descr">Disables just this option.</td></tr></tbody></table><pre class="code"><span class="t">&lt;RadioGroup</span>
+  <span class="k">label</span>=<span class="s">"Choose a plan"</span>
+  <span class="k">value</span>={plan}
+  <span class="k">onChange</span>={setPlan}
+<span class="t">&gt;</span>
+  <span class="t">&lt;Radio</span> <span class="k">value</span>=<span class="s">"lite"</span> <span class="k">label</span>=<span class="s">"Lite — 99 CZK/mo"</span> <span class="t">/&gt;</span>
+  <span class="t">&lt;Radio</span> <span class="k">value</span>=<span class="s">"complete"</span> <span class="k">label</span>=<span class="s">"Complete — 299 CZK/mo"</span> <span class="t">/&gt;</span>
+<span class="t">&lt;/RadioGroup&gt;</span></pre></div></body></html>

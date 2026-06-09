@@ -1,0 +1,30 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="API · Checkbox" subtitle="Prop table · size + indeterminate" viewport="760x540" -->
+<html><head><meta charset="utf-8"><title>Checkbox · API</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 20px 24px; gap: 16px; min-height: auto; }
+  h3 { margin: 0; font: 700 16px/1 var(--font-body); color: var(--color-fg-primary); letter-spacing: -0.005em; }
+  h4 { margin: 0; font: 500 11px/1 var(--font-body); color: var(--color-fg-tertiary); letter-spacing: 0.14em; text-transform: uppercase; padding-top: 8px; }
+  .desc { font: 500 13px/1.4 var(--font-body); color: var(--color-fg-secondary); letter-spacing: -0.005em; max-width: 640px; }
+  .api { width: 100%; border-collapse: collapse; font: 500 13px/1.4 var(--font-body); letter-spacing: -0.005em; }
+  .api thead th { text-align: left; padding: 8px 12px; font: 500 11px/1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-fg-tertiary); border-bottom: 1px solid var(--color-border-default); }
+  .api tbody td { padding: 10px 12px; vertical-align: top; border-bottom: 1px solid var(--color-border-subtle); }
+  .api tbody tr:last-child td { border-bottom: none; }
+  .api .prop { font: 700 12px/1.3 var(--font-mono); color: var(--color-fg-primary); }
+  .api .type { font: 500 12px/1.4 var(--font-mono); color: var(--color-fg-brand-strong); white-space: pre-wrap; }
+  .api .def { font: 500 12px/1.4 var(--font-mono); color: var(--color-fg-tertiary); }
+  .api .descr { color: var(--color-fg-secondary); }
+  .api .descr strong { color: var(--color-fg-primary); font-weight: 700; }
+  .badge { display: inline-block; font: 500 10px/1 var(--font-body); letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 6px; border-radius: 4px; background: var(--color-bg-tinted); color: var(--color-fg-brand-strong); margin-left: 6px; }
+  .badge.req { background: rgba(192,58,58,0.1); color: var(--color-intent-error); }
+  pre.code { background: var(--color-bg-inverse); color: rgba(255,255,255,0.92); border-radius: var(--radius-sm); padding: 14px 16px; font: 500 12px/1.55 var(--font-mono); overflow-x: auto; white-space: pre; }
+  pre.code .k { color: #FFD633; }
+  pre.code .s { color: #9CC9B0; }
+  pre.code .t { color: #FFB8B8; }
+</style>
+</head><body><div class="card"><header><h3>Checkbox</h3></header><p class="desc">Multi-select primitive. Engu-green outline + green-700 checkmark. Use for batch operations and form questions that require an explicit Save — for immediate toggles, use Switch.</p><h4>API</h4><table class="api"><thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td><span class="prop">checked</span></td><td><span class="type">boolean</span></td><td><span class="def">undefined</span></td><td class="descr">Controlled state.</td></tr><tr><td><span class="prop">defaultChecked</span></td><td><span class="type">boolean</span></td><td><span class="def">false</span></td><td class="descr">Uncontrolled.</td></tr><tr><td><span class="prop">onChange</span></td><td><span class="type">(checked: boolean) => void</span></td><td><span class="def">undefined</span></td><td class="descr"></td></tr><tr><td><span class="prop">indeterminate</span></td><td><span class="type">boolean</span></td><td><span class="def">false</span></td><td class="descr">Renders a dash. Use for "some selected" header states.</td></tr><tr><td><span class="prop">size</span></td><td><span class="type">"sm" | "md" | "lg"</span></td><td><span class="def">"lg"</span></td><td class="descr"><strong>sm</strong> 16 · <strong>md</strong> 24 · <strong>lg</strong> 32. Default 32 matches the figma Size=L symbol.</td></tr><tr><td><span class="prop">label</span></td><td><span class="type">string</span></td><td><span class="def">undefined</span></td><td class="descr">Visible label to the right of the box.</td></tr><tr><td><span class="prop">helperText</span></td><td><span class="type">string</span></td><td><span class="def">undefined</span></td><td class="descr">Caption below the label.</td></tr><tr><td><span class="prop">aria-label</span></td><td><span class="type">string</span></td><td><span class="def">undefined</span></td><td class="descr">Required when no visible label.</td></tr><tr><td><span class="prop">disabled</span></td><td><span class="type">boolean</span></td><td><span class="def">false</span></td><td class="descr"></td></tr><tr><td><span class="prop">name</span></td><td><span class="type">string</span></td><td><span class="def">undefined</span></td><td class="descr"></td></tr><tr><td><span class="prop">value</span></td><td><span class="type">string</span></td><td><span class="def">"on"</span></td><td class="descr"></td></tr></tbody></table><pre class="code"><span class="t">&lt;Checkbox</span>
+  <span class="k">label</span>=<span class="s">"I agree to the terms"</span>
+  <span class="k">checked</span>={agreed}
+  <span class="k">onChange</span>={setAgreed}
+<span class="t">/&gt;</span></pre></div></body></html>

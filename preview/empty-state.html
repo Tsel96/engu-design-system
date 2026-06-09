@@ -1,0 +1,92 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Empty state" subtitle="First-run · error · no-results (dark)" viewport="760x360" -->
+<html><head><meta charset="utf-8"><title>Empty state</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 20px 24px; gap: 14px; min-height: auto; }
+  h3 { margin: 0; font: 700 14px/1 var(--font-body); color: var(--color-fg-primary); letter-spacing: -0.005em; }
+  .cap { font: 500 11px/1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-fg-tertiary); }
+  .ico { width: 16px; height: 16px; flex-shrink: 0; }
+  .ico-20 { width: 20px; height: 20px; flex-shrink: 0; }
+  .ico-24 { width: 24px; height: 24px; flex-shrink: 0; }
+</style>
+</head><body><div class="card">
+<style>
+  .es {
+    background: #fff; border-radius: var(--radius-lg);
+    padding: 32px 24px;
+    display: flex; flex-direction: column; align-items: center; gap: 14px;
+    text-align: center;
+    box-shadow: var(--shadow-card);
+    max-width: 360px; flex: 1;
+  }
+  .es-icon {
+    width: 64px; height: 64px;
+    border-radius: 999px;
+    background: var(--color-bg-tinted);
+    color: var(--color-fg-brand);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .es-icon svg { width: 28px; height: 28px; }
+  .es-title {
+    margin: 0;
+    font: 900 22px/1 var(--font-display);
+    letter-spacing: -0.025em;
+    color: var(--color-fg-primary);
+  }
+  .es-body {
+    margin: 0;
+    font: 500 14px/1.45 var(--font-body);
+    color: var(--color-fg-secondary);
+    letter-spacing: -0.005em;
+    max-width: 280px;
+  }
+  .es-actions { display: flex; gap: 8px; padding-top: 4px; }
+  .es-btn {
+    border: 0; cursor: pointer; border-radius: 999px; padding: 10px 18px;
+    font: 700 13px/1 var(--font-body); letter-spacing: -0.005em;
+  }
+  .es-btn.primary { background: var(--_yellow-200); color: var(--_yellow-900); border: 1px solid var(--color-border-default); box-shadow: var(--shadow-button); }
+  .es-btn.tertiary { background: transparent; color: var(--color-fg-brand-strong); }
+
+  .es.dark {
+    background: var(--color-bg-inverse); color: #fff;
+  }
+  .es.dark .es-icon { background: rgba(255,255,255,0.08); color: var(--color-bg-brand); }
+  .es.dark .es-title { color: var(--color-bg-brand); }
+  .es.dark .es-body { color: rgba(255,255,255,0.7); }
+  .es.dark .es-btn.tertiary { color: var(--color-bg-accent); }
+</style>
+
+  <div style="display: flex; gap: 14px; flex-wrap: wrap; justify-content: center">
+
+    <div class="es">
+      <span class="es-icon"><svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-sparkle"/></svg></span>
+      <h3 class="es-title">No adventures yet</h3>
+      <p class="es-body">Start your child's first mission to see progress here.</p>
+      <div class="es-actions">
+        <button class="es-btn primary">Start adventure</button>
+      </div>
+    </div>
+
+    <div class="es">
+      <span class="es-icon" style="color: var(--color-intent-error)"><svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-warning-sign"/></svg></span>
+      <h3 class="es-title">We can't reach Engu</h3>
+      <p class="es-body">Check your connection — we'll try again in a moment.</p>
+      <div class="es-actions">
+        <button class="es-btn primary">Retry</button>
+        <button class="es-btn tertiary">Status</button>
+      </div>
+    </div>
+
+    <div class="es dark">
+      <span class="es-icon"><svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-magnifying-glass"/></svg></span>
+      <h3 class="es-title">No results</h3>
+      <p class="es-body">Try different keywords or browse all 12 adventures.</p>
+      <div class="es-actions">
+        <button class="es-btn tertiary">Clear filters</button>
+      </div>
+    </div>
+
+  </div>
+</div></body></html>

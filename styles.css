@@ -1,0 +1,8 @@
+/* ─────────────────────────────────────────────────────────────
+   ENGU — styles.css
+   Canonical entry point for the design system. Consumers link
+   THIS one file; it pulls in the token sheet (and, through it,
+   the brand fonts). Everything public lives downstream of here.
+   ───────────────────────────────────────────────────────────── */
+
+@import url("./colors_and_type.css");

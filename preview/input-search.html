@@ -1,0 +1,27 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Inputs · Search" subtitle="Pill · magnifier + clear" viewport="700x200" -->
+<html><head><meta charset="utf-8"><title>Search input</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 18px 22px; gap: 14px; min-height: auto; }
+  section { display: flex; flex-direction: column; gap: 10px; }
+  h3 { margin: 0; font: 700 14px/1 var(--font-body); color: var(--fg-1); letter-spacing: -0.005em; }
+  .cap { font: 500 11px/1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-3); }
+  .ico { width: 16px; height: 16px; flex-shrink: 0; }
+  .ico-20 { width: 20px; height: 20px; flex-shrink: 0; }
+  .ico-24 { width: 24px; height: 24px; flex-shrink: 0; }
+</style>
+</head><body><div class="card">
+  <div class="row" style="gap:14px; align-items:flex-start; flex-wrap:wrap">
+    <label style="display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid rgba(0,0,0,0.1); border-radius:999px; padding:10px 16px; width:280px">
+      <svg class="ico-20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-magnifying-glass"/></svg>
+      <input type="text" placeholder="Search adventures" style="border:none; outline:none; flex:1; font:500 14px/1 'Inter Display'; letter-spacing:-0.005em; background:transparent; color:var(--fg-1)">
+    </label>
+    <label style="display:inline-flex; align-items:center; gap:8px; background:#fff; border:1.5px solid var(--engu-green); border-radius:999px; padding:9.5px 15.5px; width:280px; box-shadow:0 0 0 4px rgba(90,165,124,0.18)">
+      <svg class="ico-20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-magnifying-glass"/></svg>
+      <input type="text" value="forest" style="border:none; outline:none; flex:1; font:500 14px/1 'Inter Display'; letter-spacing:-0.005em; background:transparent; color:var(--fg-1)">
+      <button style="background:none; border:none; cursor:pointer; color:rgba(0,0,0,0.5); display:flex; padding:0"><svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-cross-medium"/></svg></button>
+    </label>
+  </div>
+  <span class="cap">Pill · magnifier prefix · clear suffix on focus</span>
+</div></body></html>

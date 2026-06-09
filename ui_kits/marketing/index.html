@@ -1,0 +1,119 @@
+<!doctype html>
+<!-- @dsCard group="UI Kit — Marketing" name="Patterns · Marketing landing page" subtitle="Hero → features → age tiles → CTA → footer" viewport="1280x900" -->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>engu — a safe place to learn by playing</title>
+  <link rel="stylesheet" href="../../colors_and_type.css" />
+  <link rel="icon" href="./assets/engu-logomark.svg" />
+  <style>
+    html, body { margin: 0; padding: 0; background: var(--engu-near-white); color: var(--fg-1); -webkit-font-smoothing: antialiased; }
+    * { box-sizing: border-box; }
+    button { font-family: inherit; }
+    button.cta-primary:hover { background: #FFF1B3; }
+    button.cta-primary:active { transform: scale(0.98); }
+    section[data-screen-label] { scroll-margin-top: 80px; }
+  </style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="./image-slot.js"></script>
+</head>
+<body>
+  <div id="app" data-screen-label="01 engu marketing"></div>
+
+  <script type="text/babel" src="./Navbar.jsx"></script>
+  <script type="text/babel" src="./Hero.jsx"></script>
+  <script type="text/babel" src="./FeatureRow.jsx"></script>
+  <script type="text/babel" src="./AgeTiles.jsx"></script>
+  <script type="text/babel" src="./Testimonial.jsx"></script>
+  <script type="text/babel" src="./CtaBlock.jsx"></script>
+  <script type="text/babel" src="./Footer.jsx"></script>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    function App() {
+      const [showSignup, setShowSignup] = useState(false);
+      const openSignup = () => setShowSignup(true);
+
+      return (
+        <div>
+          <Navbar onCta={openSignup} />
+          <Hero onCta={openSignup} />
+
+          <FeatureRow
+            eyebrow="How it works"
+            title={{ before: 'play opens the door to ', accent: 'curiosity', after: '.' }}
+            accent
+            body="Missions, puzzles, and open-ended challenges nurture creativity, logical thinking, and digital skills. Adaptive difficulty keeps every child learning at their own pace."
+            image={{ id: 'engu-feat-play', placeholder: 'Drop a gameplay screenshot' }}
+            side="right"
+          />
+
+          <FeatureRow
+            eyebrow="For parents + teachers"
+            title="see what they're learning, not just what they're playing."
+            body="Parent and teacher dashboards translate adventures into real outcomes: literacy, numeracy, problem-solving, and collaboration — aligned to curriculum goals."
+            image={{ id: 'engu-feat-dash', placeholder: 'Drop the parent dashboard screenshot' }}
+            side="left"
+          />
+
+          <AgeTiles />
+
+          <Testimonial />
+
+          <CtaBlock onCta={openSignup} />
+
+          <Footer />
+
+          {showSignup && (
+            <div onClick={() => setShowSignup(false)} style={{
+              position: 'fixed', inset: 0, background: 'rgba(18,33,25,0.55)',
+              backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              zIndex: 100,
+            }}>
+              <div onClick={(e) => e.stopPropagation()} style={{
+                background: '#fff', borderRadius: 24, padding: 40,
+                width: 'min(440px, 92vw)', display: 'flex', flexDirection: 'column', gap: 18,
+                boxShadow: '0 4px 16px rgba(0,0,0,0.10), 0 24px 48px rgba(18,33,25,0.18)',
+              }}>
+                <div style={{ font: '900 36px/1 var(--font-display)', letterSpacing: '-0.03em', color: 'var(--engu-green)' }}>
+                  start an<br />
+                  <span style={{ fontFamily: 'var(--font-accent)', fontStyle: 'italic', fontWeight: 900, color: '#FFD633' }}>adventure.</span>
+                </div>
+                <p style={{ margin: 0, font: '400 15px/1.45 var(--font-body)', color: 'var(--fg-2)' }}>
+                  Free 30-day trial. No credit card.
+                </p>
+                <label style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                  <span style={{ font: '500 11px/1 var(--font-body)', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--fg-2)' }}>Parent email</span>
+                  <input type="email" placeholder="you@home.com" autoFocus style={{
+                    font: '500 16px/1 var(--font-body)', padding: '14px 16px',
+                    border: '1px solid rgba(0,0,0,0.12)', borderRadius: 14, outline: 'none',
+                  }} />
+                </label>
+                <button onClick={() => setShowSignup(false)} className="cta-primary" style={{
+                  border: '1px solid rgba(0,0,0,0.1)', background: '#FFEB99',
+                  color: '#332900', font: '700 16px/1 var(--font-body)', letterSpacing: '-0.01em',
+                  padding: '16px 24px', borderRadius: 999, cursor: 'pointer',
+                  boxShadow: 'var(--shadow-button)', transition: 'background 180ms, transform 80ms',
+                }}>Create my account</button>
+                <button onClick={() => setShowSignup(false)} style={{
+                  border: 'none', background: 'transparent', color: 'var(--fg-2)',
+                  font: '500 13px/1 var(--font-body)', cursor: 'pointer', padding: 4,
+                }}>Maybe later</button>
+              </div>
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    setTimeout(() => {
+      ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+    }, 50);
+  </script>
+</body>
+</html>

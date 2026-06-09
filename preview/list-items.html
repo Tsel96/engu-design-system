@@ -1,0 +1,46 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="List items" subtitle="No-action · navigation · switch · checkbox · icon-button · button" viewport="700x500" -->
+<html><head><meta charset="utf-8"><title>List items</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 18px 22px; gap: 14px; min-height: auto; }
+  section { display: flex; flex-direction: column; gap: 10px; }
+  h3 { margin: 0; font: 700 14px/1 var(--font-body); color: var(--fg-1); letter-spacing: -0.005em; }
+  .cap { font: 500 11px/1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-3); }
+  .ico { width: 16px; height: 16px; flex-shrink: 0; }
+  .ico-20 { width: 20px; height: 20px; flex-shrink: 0; }
+  .ico-24 { width: 24px; height: 24px; flex-shrink: 0; }
+</style>
+</head><body><div class="card">
+  <div class="col" style="gap:6px; max-width:480px; margin:0 auto; width:100%">
+    <div style="display:flex; align-items:center; gap:14px; padding:14px 16px; background:#fff; border-radius:14px; box-shadow:0 1px 2px rgba(0,0,0,0.04)">
+      <div style="width:36px; height:36px; border-radius:999px; background:var(--engu-cream); color:var(--engu-green-text); display:flex; align-items:center; justify-content:center"><svg class="ico-20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-user"/></svg></div>
+      <div style="flex:1"><div style="font:700 14px/1.2 'Inter Display'; color:var(--fg-1)">Anežka Nováková</div><div style="font:500 12px/1.2 'Inter Display'; color:var(--fg-3)">Age 9 · 3.B</div></div>
+      <span style="font:500 11px/1 'Inter Display'; letter-spacing:0.14em; text-transform:uppercase; color:var(--fg-3)">Active</span>
+    </div>
+    <button style="display:flex; align-items:center; gap:14px; padding:14px 16px; background:#fff; border:none; border-radius:14px; box-shadow:0 1px 2px rgba(0,0,0,0.04); cursor:pointer; text-align:left">
+      <div style="width:36px; height:36px; border-radius:999px; background:var(--engu-cream); color:var(--engu-green-text); display:flex; align-items:center; justify-content:center"><svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-bars-three"/></svg></div>
+      <div style="flex:1"><div style="font:700 14px/1.2 'Inter Display'; color:var(--fg-1)">Progress report</div><div style="font:500 12px/1.2 'Inter Display'; color:var(--fg-3)">Last updated 2 days ago</div></div>
+      <span style="color:var(--fg-3); display:flex"><svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-chevron-right"/></svg></span>
+    </button>
+    <div style="display:flex; align-items:center; gap:14px; padding:14px 16px; background:#fff; border-radius:14px; box-shadow:0 1px 2px rgba(0,0,0,0.04)">
+      <div style="width:36px; height:36px; border-radius:999px; background:var(--engu-cream); color:var(--engu-green-text); display:flex; align-items:center; justify-content:center"><svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-bell"/></svg></div>
+      <div style="flex:1"><div style="font:700 14px/1.2 'Inter Display'; color:var(--fg-1)">Weekly email reports</div><div style="font:500 12px/1.2 'Inter Display'; color:var(--fg-3)">Every Sunday at 9am</div></div>
+      <span style="display:inline-block; width:51px; height:27px; border-radius:30px; background:#FFCC00; position:relative; box-shadow:inset 0 1px 1px rgba(0,0,0,0.09)"><span style="position:absolute; right:2px; top:2px; width:28px; height:23px; background:#fff; border-radius:999px"></span></span>
+    </div>
+    <label style="display:flex; align-items:center; gap:14px; padding:14px 16px; background:#fff; border-radius:14px; box-shadow:0 1px 2px rgba(0,0,0,0.04); cursor:pointer">
+      <div style="flex:1"><div style="font:700 14px/1.2 'Inter Display'; color:var(--fg-1)">Share with co-parent</div><div style="font:500 12px/1.2 'Inter Display'; color:var(--fg-3)">Send reports to sebastian@gmail.com</div></div>
+      <span style="width:32px; height:32px; border-radius:6px; background:#fff; border:1px solid #5AA57C; display:flex; align-items:center; justify-content:center; color:#36634A"><svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-checkmark-1"/></svg></span>
+    </label>
+    <div style="display:flex; align-items:center; gap:14px; padding:14px 16px; background:#fff; border-radius:14px; box-shadow:0 1px 2px rgba(0,0,0,0.04)">
+      <div style="width:36px; height:36px; border-radius:999px; background:var(--engu-cream); color:var(--engu-green-text); display:flex; align-items:center; justify-content:center"><svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-star"/></svg></div>
+      <div style="flex:1"><div style="font:700 14px/1.2 'Inter Display'; color:var(--fg-1)">Favourite adventures</div></div>
+      <button style="background:rgba(0,0,0,0.04); border:none; width:36px; height:36px; border-radius:999px; cursor:pointer; display:flex; align-items:center; justify-content:center; color:var(--fg-2)"><svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-pencil"/></svg></button>
+      <button style="background:rgba(0,0,0,0.04); border:none; width:36px; height:36px; border-radius:999px; cursor:pointer; display:flex; align-items:center; justify-content:center; color:#C03A3A"><svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-trash-can"/></svg></button>
+    </div>
+    <button style="display:flex; align-items:center; gap:14px; padding:14px 16px; background:var(--engu-cream); border:none; border-radius:14px; cursor:pointer; text-align:left">
+      <div style="width:36px; height:36px; border-radius:999px; background:var(--engu-green); color:#fff; display:flex; align-items:center; justify-content:center"><svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-circle-plus"/></svg></div>
+      <div style="flex:1"><div style="font:700 14px/1.2 'Inter Display'; color:var(--engu-green-text)">Add a child</div><div style="font:500 12px/1.2 'Inter Display'; color:var(--fg-2)">Free with your plan</div></div>
+    </button>
+  </div>
+</div></body></html>

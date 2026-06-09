@@ -1,0 +1,77 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Inputs · Compact" subtitle="48px height · inline label · dense forms" viewport="760x280" -->
+<html><head><meta charset="utf-8"><title>Compact input</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 20px 24px; gap: 14px; min-height: auto; }
+  h3 { margin: 0; font: 700 14px/1 var(--font-body); color: var(--color-fg-primary); letter-spacing: -0.005em; }
+  .cap { font: 500 11px/1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-fg-tertiary); }
+  .ico { width: 16px; height: 16px; flex-shrink: 0; }
+  .ico-20 { width: 20px; height: 20px; flex-shrink: 0; }
+  .ico-24 { width: 24px; height: 24px; flex-shrink: 0; }
+</style>
+</head><body><div class="card">
+<style>
+  .field-c-stack { display: flex; flex-direction: column; align-items: stretch; gap: 6px; width: 280px; }
+  .field-c {
+    position: relative; background: #FFFFFF;
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    padding: 0 14px; height: 48px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .field-c.focused { border: 1.5px solid var(--color-border-brand); padding: 0 13.5px; box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-bg-brand) 18%, transparent); }
+  .field-c.error { border: 1.5px solid var(--color-intent-error); padding: 0 13.5px; box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-intent-error) 14%, transparent); }
+  .field-c.disabled { background: #F2F2F2; border-color: var(--color-border-subtle); }
+  .field-c .label-c {
+    font: 500 13px/1 var(--font-body); color: var(--color-fg-tertiary);
+    letter-spacing: -0.005em; flex-shrink: 0;
+  }
+  .field-c .input-c {
+    flex: 1; border: 0; outline: none; background: transparent;
+    font: 600 14px/1 var(--font-body); color: var(--color-fg-primary);
+    letter-spacing: -0.005em; padding: 0; min-width: 0;
+  }
+  .field-c .icon-c { color: var(--color-fg-secondary); display: flex; }
+  .field-c.focused .icon-c { color: var(--color-bg-brand); }
+  .field-c-desc { font: 500 12px/1.3 var(--font-body); color: var(--color-fg-tertiary); padding-left: 4px; }
+</style>
+
+  <div style="display:grid; grid-template-columns: repeat(2, 280px); gap: 12px 16px; justify-content: center">
+
+    <div class="field-c-stack">
+      <div class="field-c">
+        <span class="label-c">Email</span>
+        <input class="input-c" type="email" value="parent@engu.cz">
+        <svg class="ico-20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-email-1"/></svg>
+      </div>
+    </div>
+
+    <div class="field-c-stack">
+      <div class="field-c focused">
+        <span class="label-c">Name</span>
+        <input class="input-c" type="text" value="Anežka">
+        <svg class="ico-20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-checkmark-1"/></svg>
+      </div>
+    </div>
+
+    <div class="field-c-stack">
+      <div class="field-c error">
+        <span class="label-c">Phone</span>
+        <input class="input-c" type="tel" value="abc">
+        <svg class="ico-20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-warning-sign"/></svg>
+      </div>
+      <span class="field-c-desc" style="color: var(--color-intent-error)">Numbers only</span>
+    </div>
+
+    <div class="field-c-stack">
+      <div class="field-c disabled">
+        <span class="label-c">Plan</span>
+        <input class="input-c" type="text" value="Free trial" disabled>
+        <svg class="ico-20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-ticket"/></svg>
+      </div>
+    </div>
+
+  </div>
+  <div class="cap" style="text-align: center; padding-top: 6px">48px height · 16px radius · label inline · for dense settings forms</div>
+</div></body></html>

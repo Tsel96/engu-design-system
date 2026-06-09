@@ -1,0 +1,304 @@
+/* ─────────────────────────────────────────────────────────────
+   ENGU — colors_and_type.css
+   PUBLIC API: semantic tokens (--color-*, --space-*, --font-*,
+   --radius-*, --shadow-*, --motion-*, --z-*, --focus-ring).
+   PRIVATE: brand scales (--_engu-*, --_green-*, --_yellow-*, …)
+   live below — never reference these directly from a component;
+   compose with the semantic layer.
+
+   The semantic layer is what survives a rebrand. The private
+   scales are an implementation detail.
+   ───────────────────────────────────────────────────────────── */
+
+/* ────────────── Fonts ─────────────────────────────────────── */
+@import url("https://use.typekit.net/chm5jtz.css");
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@1,8..30,900&display=swap");
+
+/* apparat (brand display) — declared explicitly so the family resolves to its
+   Adobe-hosted source. These mirror the faces in the Typekit kit imported above
+   (chm5jtz); the @import still does the loading, this just makes the src visible. */
+@font-face {
+  font-family: "apparat";
+  src: url("https://use.typekit.net/af/1097cb/00000000000000007735ed03/31/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("woff2"),
+       url("https://use.typekit.net/af/1097cb/00000000000000007735ed03/31/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("woff");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "apparat";
+  src: url("https://use.typekit.net/af/e96365/00000000000000007735ed0b/31/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3") format("woff2"),
+       url("https://use.typekit.net/af/e96365/00000000000000007735ed0b/31/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3") format("woff");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "apparat";
+  src: url("https://use.typekit.net/af/06a679/00000000000000007735ed0c/31/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i4&v=3") format("woff2"),
+       url("https://use.typekit.net/af/06a679/00000000000000007735ed0c/31/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i4&v=3") format("woff");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "apparat";
+  src: url("https://use.typekit.net/af/e3863a/00000000000000007735ed06/31/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i7&v=3") format("woff2"),
+       url("https://use.typekit.net/af/e3863a/00000000000000007735ed06/31/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i7&v=3") format("woff");
+  font-weight: 700; font-style: italic; font-display: swap;
+}
+
+@font-face { font-family: "Inter Display"; src: url("./fonts/InterDisplay-Light.ttf")        format("truetype"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter Display"; src: url("./fonts/InterDisplay-Regular.ttf")      format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter Display"; src: url("./fonts/InterDisplay-Italic.ttf")       format("truetype"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Inter Display"; src: url("./fonts/InterDisplay-Medium.ttf")       format("truetype"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter Display"; src: url("./fonts/InterDisplay-MediumItalic.ttf") format("truetype"); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: "Inter Display"; src: url("./fonts/InterDisplay-SemiBold.ttf")     format("truetype"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter Display"; src: url("./fonts/InterDisplay-Bold.ttf")         format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter Display"; src: url("./fonts/InterDisplay-BoldItalic.ttf")   format("truetype"); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: "Inter Display"; src: url("./fonts/InterDisplay-ExtraBold.ttf")    format("truetype"); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter Display"; src: url("./fonts/InterDisplay-Black.ttf")        format("truetype"); font-weight: 900; font-style: normal; font-display: swap; }
+
+:root {
+  /* ═══════════════════════════════════════════════════════════════
+     PRIVATE — brand primitives. Do NOT reference from a component.
+     ═══════════════════════════════════════════════════════════════ */
+
+  --_green-900: #122119;   --_green-800: #244231;   --_green-700: #36634A;
+  --_green-600: #488463;   --_green-500: #5AA57C;   --_green-400: #7BB796;
+  --_green-300: #9CC9B0;   --_green-200: #BDDBCA;   --_green-100: #DEEDE5;
+  --_green-50:  #EEF6F2;   --_green-10:  #F7FBF9;
+
+  --_yellow-900: #332900;  --_yellow-800: #665200;  --_yellow-700: #997A00;
+  --_yellow-600: #CCA300;  --_yellow-500: #FFCC00;  --_yellow-400: #FFD633;
+  --_yellow-300: #FFE066;  --_yellow-200: #FFEB99;  --_yellow-100: #FFF5CC;
+  --_yellow-50:  #FFFAE5;  --_yellow-10:  #FFFEFA;
+
+  --_grey-900: #000000;    --_grey-800: #1A1A1A;    --_grey-700: #333333;
+  --_grey-600: #4D4D4D;    --_grey-500: #666666;    --_grey-400: #808080;
+  --_grey-300: #999999;    --_grey-200: #B3B3B3;    --_grey-100: #CCCCCC;
+  --_grey-50:  #E6E6E6;    --_grey-10:  #F2F2F2;    --_grey-0:   #FFFFFF;
+
+  --_brand-primary:   var(--_green-500);
+  --_brand-ink:       var(--_green-900);
+  --_brand-accent:    var(--_yellow-400);
+  --_brand-canvas:    #FCFCFC;
+  --_brand-tinted:    var(--_green-50);
+  --_intent-info:     #2C88D3;
+  --_intent-success:  #2E8B2E;
+  --_intent-warning:  #C77F00;
+  --_intent-error:    #C03A3A;
+
+  /* ═══════════════════════════════════════════════════════════════
+     PUBLIC — semantic tokens. Components read from these.
+     ═══════════════════════════════════════════════════════════════ */
+
+  /* ───── Color · Background ───── */
+  --color-bg-canvas:        var(--_brand-canvas);
+  --color-bg-tinted:        var(--_brand-tinted);
+  --color-bg-card:          #FFFFFF;
+  --color-bg-elevated:      #FFFFFF;
+  --color-bg-inverse:       var(--_brand-ink);
+  --color-bg-brand:         var(--_brand-primary);
+  --color-bg-accent:        var(--_brand-accent);
+  --color-bg-accent-soft:   var(--_yellow-200);
+  --color-bg-overlay:       rgba(18,33,25,0.55);
+  --color-bg-hover:         rgba(0,0,0,0.04);
+  --color-bg-pressed:       rgba(0,0,0,0.08);
+
+  /* ───── Color · Foreground (text + icons) ───── */
+  --color-fg-primary:       rgba(0,0,0,0.92);
+  --color-fg-secondary:     rgba(0,0,0,0.65);
+  --color-fg-tertiary:      rgba(0,0,0,0.45);
+  --color-fg-on-brand:      #FFFFFF;
+  --color-fg-on-accent:     var(--_yellow-900);
+  --color-fg-on-inverse:    #FFFFFF;
+  --color-fg-on-inverse-2:  rgba(255,255,255,0.70);
+  --color-fg-brand:         var(--_green-600);   /* 4.05:1 on white, AA OK */
+  --color-fg-brand-strong:  var(--_green-700);   /* 7.1:1, AAA */
+
+  /* ───── Color · Border ───── */
+  --color-border-subtle:    rgba(0,0,0,0.06);
+  --color-border-default:   rgba(0,0,0,0.10);
+  --color-border-strong:    rgba(0,0,0,0.20);
+  --color-border-brand:     var(--_brand-primary);
+  --color-border-inverse:   rgba(255,255,255,0.15);
+
+  /* ───── Color · Intent ───── */
+  --color-intent-info:      var(--_intent-info);
+  --color-intent-success:   var(--_intent-success);
+  --color-intent-warning:   var(--_intent-warning);
+  --color-intent-error:     var(--_intent-error);
+  --color-intent-info-bg:    #D9E5F7;
+  --color-intent-success-bg: #D4EFD4;
+  --color-intent-warning-bg: #FFE0B3;
+  --color-intent-error-bg:   #F7D9D9;
+
+  /* ───── Focus ring (intent-blue, high contrast on any bg) ───── */
+  --focus-ring:             0 0 0 3px color-mix(in srgb, var(--_intent-info) 35%, transparent);
+  --focus-ring-color:       var(--_intent-info);
+  --focus-ring-offset:      3px;
+
+  /* ───── Typography ───── */
+  --font-display:           "apparat", "Apparat", "Inter Display", system-ui, sans-serif;
+  --font-accent:            "Piazzolla", "piazzolla", Georgia, serif;
+  --font-body:              "Inter Display", "Inter", system-ui, sans-serif;
+  --font-mono:              ui-monospace, monospace;
+
+  /* ───── Spacing (4-pt base, tight set) ───── */
+  --space-0:   0;
+  --space-1:   2px;
+  --space-2:   4px;
+  --space-3:   8px;
+  --space-4:   12px;
+  --space-5:   16px;
+  --space-6:   24px;
+  --space-7:   32px;
+  --space-8:   48px;
+  --space-9:   96px;
+
+  /* ───── Radii ───── */
+  --radius-xs:   6px;
+  --radius-sm:   12px;
+  --radius-md:   16px;
+  --radius-lg:   20px;
+  --radius-xl:   24px;
+  --radius-2xl:  32px;
+  --radius-pill: 999px;
+
+  /* ───── Shadows ───── */
+  --shadow-button:
+    0 0 1px 0 rgba(0,0,0,0.15),
+    0 1px 1px 0 rgba(0,0,0,0.13),
+    0 3px 2px 0 rgba(0,0,0,0.08),
+    0 5px 2px 0 rgba(0,0,0,0.02);
+  --shadow-card:   0 1px 2px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.06);
+  --shadow-lift:   0 4px 16px rgba(0,0,0,0.10), 0 24px 48px rgba(18,33,25,0.12);
+  --shadow-modal:  0 24px 60px rgba(18,33,25,0.20);
+
+  /* ───── Motion (durations + easing) ───── */
+  --dur-instant:   60ms;   /* @kind other */
+  --dur-micro:     120ms;  /* @kind other */
+  --dur-short:     180ms;  /* @kind other */
+  --dur-medium:    240ms;  /* @kind other */
+  --dur-long:      400ms;  /* @kind other */
+  --dur-extra:     600ms;  /* @kind other */
+  --ease-out:      cubic-bezier(0.22, 1, 0.36, 1);   /* @kind other */
+  --ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);   /* @kind other */
+  --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1); /* @kind other */
+
+  /* ───── Z-index ───── */
+  --z-base:        0;    /* @kind other */
+  --z-elevated:    10;   /* @kind other */
+  --z-sticky:      20;   /* @kind other */
+  --z-popover:     40;   /* @kind other */
+  --z-overlay:     80;   /* @kind other */
+  --z-modal:       100;  /* @kind other */
+  --z-toast:       120;  /* @kind other */
+  --z-tooltip:     140;  /* @kind other */
+
+  /* ───── Layout ───── */
+  --bp-mobile:     320px;
+  --bp-tablet:     810px;
+  --bp-desktop:    1200px;
+  --container-max: 1440px;
+
+  /* ═══════════════════════════════════════════════════════════════
+     LEGACY COMPATIBILITY — do not use in new code.
+     These aliases exist so older preview cards keep rendering.
+     New code: use the semantic layer above.
+     ═══════════════════════════════════════════════════════════════ */
+  --engu-green:       var(--_green-500);
+  --engu-green-text:  var(--_green-600);
+  --engu-green-deep:  var(--_green-700);
+  --engu-green-ink:   var(--_green-900);
+  --engu-yellow:      var(--_yellow-400);
+  --engu-yellow-soft: var(--_yellow-200);
+  --engu-yellow-deep: var(--_yellow-900);
+  --engu-near-white:  var(--_brand-canvas);
+  --engu-cream:       var(--_green-50);
+  --green-900: var(--_green-900); --green-800: var(--_green-800); --green-700: var(--_green-700);
+  --green-600: var(--_green-600); --green-500: var(--_green-500); --green-400: var(--_green-400);
+  --green-300: var(--_green-300); --green-200: var(--_green-200); --green-100: var(--_green-100);
+  --green-50:  var(--_green-50);  --green-10:  var(--_green-10);
+  --yellow-900: var(--_yellow-900); --yellow-800: var(--_yellow-800); --yellow-700: var(--_yellow-700);
+  --yellow-600: var(--_yellow-600); --yellow-500: var(--_yellow-500); --yellow-400: var(--_yellow-400);
+  --yellow-300: var(--_yellow-300); --yellow-200: var(--_yellow-200); --yellow-100: var(--_yellow-100);
+  --yellow-50:  var(--_yellow-50);  --yellow-10:  var(--_yellow-10);
+  --black-900: var(--_grey-900); --black-800: var(--_grey-800); --black-700: var(--_grey-700);
+  --black-600: var(--_grey-600); --black-500: var(--_grey-500); --black-400: var(--_grey-400);
+  --black-300: var(--_grey-300); --black-200: var(--_grey-200); --black-100: var(--_grey-100);
+  --black-50:  var(--_grey-50);  --black-10:  var(--_grey-10);  --black-0:   var(--_grey-0);
+  --info:    var(--_intent-info);
+  --success: var(--_intent-success);
+  --warning: var(--_intent-warning);
+  --error:   var(--_intent-error);
+  --fg-1: var(--color-fg-primary);
+  --fg-2: var(--color-fg-secondary);
+  --fg-3: var(--color-fg-tertiary);
+  --fg-brand: var(--color-fg-brand);
+  --bg-canvas: var(--color-bg-canvas);
+  --bg-tinted: var(--color-bg-tinted);
+  --bg-card:   var(--color-bg-card);
+  --bg-ink:    var(--color-bg-inverse);
+  --bg-brand:  var(--color-bg-brand);
+  --border-soft:    var(--color-border-subtle);
+  --border-default: var(--color-border-default);
+  --border-strong:  var(--color-border-strong);
+  --space-10: 124px;
+}
+
+/* ──────────────────────────────────────────────────────────────
+   Semantic type styles
+   ────────────────────────────────────────────────────────────── */
+
+html, body { font-family: var(--font-body); color: var(--color-fg-primary); }
+
+.t-display-lg, .t-display-md, .t-display-sm {
+  font-family: var(--font-display); font-weight: 900;
+  line-height: 0.84; letter-spacing: -0.04em; color: var(--color-fg-primary);
+}
+.t-display-lg { font-size: 84px; }
+.t-display-md { font-size: 64px; }
+.t-display-sm { font-size: 48px; }
+
+.t-headline-lg, .t-headline-md {
+  font-family: var(--font-display); font-weight: 900;
+  line-height: 1.0; letter-spacing: -0.03em; color: var(--color-fg-primary);
+}
+.t-headline-lg { font-size: 32px; }
+.t-headline-md { font-size: 28px; line-height: 1.1; letter-spacing: -0.025em; }
+
+.t-title-lg, .t-title-md, .t-title-sm {
+  font-family: var(--font-body); font-weight: 700;
+  line-height: 1.2; letter-spacing: -0.01em; color: var(--color-fg-primary);
+}
+.t-title-lg { font-size: 24px; }
+.t-title-md { font-size: 20px; }
+.t-title-sm { font-size: 16px; }
+
+.t-body-lg, .t-body-md, .t-body-sm {
+  font-family: var(--font-body); font-weight: 400;
+  line-height: 1.4; letter-spacing: -0.005em; color: var(--color-fg-primary);
+}
+.t-body-lg { font-size: 18px; }
+.t-body-md { font-size: 16px; }
+.t-body-sm { font-size: 14px; }
+.t-body-bold { font-weight: 700; }
+
+.t-label-md, .t-label-sm {
+  font-family: var(--font-body); font-weight: 500;
+  line-height: 1.2; text-transform: uppercase;
+  letter-spacing: 0.16em; color: var(--color-fg-secondary);
+}
+.t-label-md { font-size: 12px; }
+.t-label-sm { font-size: 10px; }
+
+.t-accent {
+  font-family: var(--font-accent);
+  font-style: italic; font-weight: 900; letter-spacing: -0.02em;
+}
+
+h1 { font-family: var(--font-display); font-weight: 900; font-size: 64px; line-height: 0.84; letter-spacing: -0.04em; }
+h2 { font-family: var(--font-display); font-weight: 900; font-size: 48px; line-height: 0.9;  letter-spacing: -0.035em; }
+h3 { font-family: var(--font-display); font-weight: 900; font-size: 36px; line-height: 1.0;  letter-spacing: -0.03em; }
+h4 { font-family: var(--font-body);    font-weight: 700; font-size: 24px; line-height: 1.2;  letter-spacing: -0.01em; }
+h5 { font-family: var(--font-body);    font-weight: 700; font-size: 20px; line-height: 1.2;  letter-spacing: -0.01em; }
+h6 { font-family: var(--font-body);    font-weight: 600; font-size: 16px; line-height: 1.2; }
+p  { font-family: var(--font-body);    font-weight: 400; font-size: 16px; line-height: 1.4; }
+small { font-size: 12px; line-height: 1.4; }
+code, .t-mono { font-family: var(--font-mono); font-size: 13px; }

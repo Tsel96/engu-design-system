@@ -1,0 +1,169 @@
+<!doctype html>
+<!-- @dsCard group="Spacing" name="QA · Contrast audit" subtitle="Every fg/bg pair · WCAG ratio + rating" viewport="760x700" -->
+<html><head><meta charset="utf-8"><title>Contrast audit</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 20px 24px; gap: 14px; min-height: auto; }
+  h3 { margin: 0; font: 700 14px/1 var(--font-body); color: var(--color-fg-primary); letter-spacing: -0.005em; }
+  .cap { font: 500 11px/1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-fg-tertiary); }
+  .ico { width: 16px; height: 16px; flex-shrink: 0; }
+  .ico-20 { width: 20px; height: 20px; flex-shrink: 0; }
+  .ico-24 { width: 24px; height: 24px; flex-shrink: 0; }
+</style>
+</head><body><div class="card">
+<style>
+  table.ca { width: 100%; border-collapse: collapse; font: 500 13px/1.3 var(--font-body); }
+  table.ca th { text-align: left; padding: 8px 12px; font: 500 11px/1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-fg-tertiary); border-bottom: 1px solid var(--color-border-default); }
+  table.ca td { padding: 10px 12px; vertical-align: middle; border-bottom: 1px solid var(--color-border-subtle); }
+  table.ca tr:last-child td { border-bottom: 0; }
+  .mono { font: 600 12px/1 var(--font-mono); color: var(--color-fg-primary); }
+  .hex  { font: 500 11px/1 var(--font-mono); color: var(--color-fg-tertiary); margin-left: 4px; }
+  .sample { display: inline-block; padding: 6px 10px; border-radius: 6px; font: 600 13px/1 var(--font-body); border: 1px solid var(--color-border-subtle); }
+  .ratio { font: 700 13px/1 var(--font-mono); color: var(--color-fg-primary); white-space: nowrap; }
+  .rate  { display: inline-block; font: 700 11px/1 var(--font-body); letter-spacing: 0.06em; padding: 4px 8px; border-radius: 4px; }
+  .ctx   { font: 500 12px/1.3 var(--font-body); color: var(--color-fg-secondary); }
+</style>
+
+  <table class="ca">
+    <thead>
+      <tr><th>Foreground</th><th>Background</th><th>Preview</th><th>Ratio</th><th>WCAG</th><th>Use</th></tr>
+    </thead>
+    <tbody><tr>
+    <td><code class="mono">fg-primary</code> <span class="hex">#171717</span></td>
+    <td><code class="mono">bg-canvas</code> <span class="hex">#FCFCFC</span></td>
+    <td><span class="sample" style="background:#FCFCFC; color:#171717">Aa lorem ipsum</span></td>
+    <td class="ratio">17.47 : 1</td>
+    <td><span class="rate" style="background:#2E8B2E1a; color:#2E8B2E">AAA</span></td>
+    <td class="ctx">Body text on canvas</td>
+  </tr><tr>
+    <td><code class="mono">fg-secondary</code> <span class="hex">#595959</span></td>
+    <td><code class="mono">bg-canvas</code> <span class="hex">#FCFCFC</span></td>
+    <td><span class="sample" style="background:#FCFCFC; color:#595959">Aa lorem ipsum</span></td>
+    <td class="ratio">6.83 : 1</td>
+    <td><span class="rate" style="background:#2E8B2E1a; color:#2E8B2E">AA</span></td>
+    <td class="ctx">Helper / caption on canvas</td>
+  </tr><tr>
+    <td><code class="mono">fg-tertiary</code> <span class="hex">#737373</span></td>
+    <td><code class="mono">bg-canvas</code> <span class="hex">#FCFCFC</span></td>
+    <td><span class="sample" style="background:#FCFCFC; color:#737373">Aa lorem ipsum</span></td>
+    <td class="ratio">4.62 : 1</td>
+    <td><span class="rate" style="background:#2E8B2E1a; color:#2E8B2E">AA</span></td>
+    <td class="ctx">Disabled / placeholder on canvas</td>
+  </tr><tr>
+    <td><code class="mono">fg-primary</code> <span class="hex">#171717</span></td>
+    <td><code class="mono">bg-tinted</code> <span class="hex">#EEF6F2</span></td>
+    <td><span class="sample" style="background:#EEF6F2; color:#171717">Aa lorem ipsum</span></td>
+    <td class="ratio">16.31 : 1</td>
+    <td><span class="rate" style="background:#2E8B2E1a; color:#2E8B2E">AAA</span></td>
+    <td class="ctx">Body text on cream</td>
+  </tr><tr>
+    <td><code class="mono">fg-secondary</code> <span class="hex">#595959</span></td>
+    <td><code class="mono">bg-tinted</code> <span class="hex">#EEF6F2</span></td>
+    <td><span class="sample" style="background:#EEF6F2; color:#595959">Aa lorem ipsum</span></td>
+    <td class="ratio">6.37 : 1</td>
+    <td><span class="rate" style="background:#2E8B2E1a; color:#2E8B2E">AA</span></td>
+    <td class="ctx">Helper on cream</td>
+  </tr><tr>
+    <td><code class="mono">fg-brand</code> <span class="hex">#488463</span></td>
+    <td><code class="mono">bg-canvas</code> <span class="hex">#FCFCFC</span></td>
+    <td><span class="sample" style="background:#FCFCFC; color:#488463">Aa lorem ipsum</span></td>
+    <td class="ratio">4.30 : 1</td>
+    <td><span class="rate" style="background:#C77F001a; color:#C77F00">Large only</span></td>
+    <td class="ctx">Green text on canvas</td>
+  </tr><tr>
+    <td><code class="mono">fg-brand-strong</code> <span class="hex">#36634A</span></td>
+    <td><code class="mono">bg-canvas</code> <span class="hex">#FCFCFC</span></td>
+    <td><span class="sample" style="background:#FCFCFC; color:#36634A">Aa lorem ipsum</span></td>
+    <td class="ratio">6.73 : 1</td>
+    <td><span class="rate" style="background:#2E8B2E1a; color:#2E8B2E">AA</span></td>
+    <td class="ctx">Strong green text on canvas</td>
+  </tr><tr>
+    <td><code class="mono">fg-brand</code> <span class="hex">#488463</span></td>
+    <td><code class="mono">bg-tinted</code> <span class="hex">#EEF6F2</span></td>
+    <td><span class="sample" style="background:#EEF6F2; color:#488463">Aa lorem ipsum</span></td>
+    <td class="ratio">4.02 : 1</td>
+    <td><span class="rate" style="background:#C77F001a; color:#C77F00">Large only</span></td>
+    <td class="ctx">Green text on cream</td>
+  </tr><tr>
+    <td><code class="mono">fg-on-brand</code> <span class="hex">#FFFFFF</span></td>
+    <td><code class="mono">bg-brand</code> <span class="hex">#5AA57C</span></td>
+    <td><span class="sample" style="background:#5AA57C; color:#FFFFFF">Aa lorem ipsum</span></td>
+    <td class="ratio">2.95 : 1</td>
+    <td><span class="rate" style="background:#C03A3A1a; color:#C03A3A">Fail</span></td>
+    <td class="ctx">White text on engu-green</td>
+  </tr><tr>
+    <td><code class="mono">fg-on-accent</code> <span class="hex">#332900</span></td>
+    <td><code class="mono">bg-accent</code> <span class="hex">#FFD633</span></td>
+    <td><span class="sample" style="background:#FFD633; color:#332900">Aa lorem ipsum</span></td>
+    <td class="ratio">10.23 : 1</td>
+    <td><span class="rate" style="background:#2E8B2E1a; color:#2E8B2E">AAA</span></td>
+    <td class="ctx">Dark text on yellow</td>
+  </tr><tr>
+    <td><code class="mono">fg-on-accent</code> <span class="hex">#332900</span></td>
+    <td><code class="mono">bg-accent-soft</code> <span class="hex">#FFEB99</span></td>
+    <td><span class="sample" style="background:#FFEB99; color:#332900">Aa lorem ipsum</span></td>
+    <td class="ratio">12.07 : 1</td>
+    <td><span class="rate" style="background:#2E8B2E1a; color:#2E8B2E">AAA</span></td>
+    <td class="ctx">Dark text on soft yellow (primary button)</td>
+  </tr><tr>
+    <td><code class="mono">fg-on-inverse</code> <span class="hex">#FFFFFF</span></td>
+    <td><code class="mono">bg-inverse</code> <span class="hex">#122119</span></td>
+    <td><span class="sample" style="background:#122119; color:#FFFFFF">Aa lorem ipsum</span></td>
+    <td class="ratio">16.70 : 1</td>
+    <td><span class="rate" style="background:#2E8B2E1a; color:#2E8B2E">AAA</span></td>
+    <td class="ctx">White text on ink</td>
+  </tr><tr>
+    <td><code class="mono">fg-on-inverse-2</code> <span class="hex">#B3B3B3</span></td>
+    <td><code class="mono">bg-inverse</code> <span class="hex">#122119</span></td>
+    <td><span class="sample" style="background:#122119; color:#B3B3B3">Aa lorem ipsum</span></td>
+    <td class="ratio">7.97 : 1</td>
+    <td><span class="rate" style="background:#2E8B2E1a; color:#2E8B2E">AAA</span></td>
+    <td class="ctx">Muted text on ink</td>
+  </tr><tr>
+    <td><code class="mono">intent-info</code> <span class="hex">#2C88D3</span></td>
+    <td><code class="mono">bg-canvas</code> <span class="hex">#FCFCFC</span></td>
+    <td><span class="sample" style="background:#FCFCFC; color:#2C88D3">Aa lorem ipsum</span></td>
+    <td class="ratio">3.68 : 1</td>
+    <td><span class="rate" style="background:#C77F001a; color:#C77F00">Large only</span></td>
+    <td class="ctx">Info link on canvas</td>
+  </tr><tr>
+    <td><code class="mono">intent-success</code> <span class="hex">#2E8B2E</span></td>
+    <td><code class="mono">bg-canvas</code> <span class="hex">#FCFCFC</span></td>
+    <td><span class="sample" style="background:#FCFCFC; color:#2E8B2E">Aa lorem ipsum</span></td>
+    <td class="ratio">4.22 : 1</td>
+    <td><span class="rate" style="background:#C77F001a; color:#C77F00">Large only</span></td>
+    <td class="ctx">Success text on canvas</td>
+  </tr><tr>
+    <td><code class="mono">intent-warning</code> <span class="hex">#C77F00</span></td>
+    <td><code class="mono">bg-canvas</code> <span class="hex">#FCFCFC</span></td>
+    <td><span class="sample" style="background:#FCFCFC; color:#C77F00">Aa lorem ipsum</span></td>
+    <td class="ratio">3.17 : 1</td>
+    <td><span class="rate" style="background:#C77F001a; color:#C77F00">Large only</span></td>
+    <td class="ctx">Warning text on canvas</td>
+  </tr><tr>
+    <td><code class="mono">intent-error</code> <span class="hex">#C03A3A</span></td>
+    <td><code class="mono">bg-canvas</code> <span class="hex">#FCFCFC</span></td>
+    <td><span class="sample" style="background:#FCFCFC; color:#C03A3A">Aa lorem ipsum</span></td>
+    <td class="ratio">5.24 : 1</td>
+    <td><span class="rate" style="background:#2E8B2E1a; color:#2E8B2E">AA</span></td>
+    <td class="ctx">Error text on canvas</td>
+  </tr><tr>
+    <td><code class="mono">_green-500</code> <span class="hex">#5AA57C</span></td>
+    <td><code class="mono">bg-canvas</code> <span class="hex">#FCFCFC</span></td>
+    <td><span class="sample" style="background:#FCFCFC; color:#5AA57C">Aa lorem ipsum</span></td>
+    <td class="ratio">2.88 : 1</td>
+    <td><span class="rate" style="background:#C03A3A1a; color:#C03A3A">Fail</span></td>
+    <td class="ctx">Brand green AS TEXT (avoid)</td>
+  </tr><tr>
+    <td><code class="mono">_yellow-400</code> <span class="hex">#FFD633</span></td>
+    <td><code class="mono">bg-canvas</code> <span class="hex">#FCFCFC</span></td>
+    <td><span class="sample" style="background:#FCFCFC; color:#FFD633">Aa lorem ipsum</span></td>
+    <td class="ratio">1.37 : 1</td>
+    <td><span class="rate" style="background:#C03A3A1a; color:#C03A3A">Fail</span></td>
+    <td class="ctx">Brand yellow AS TEXT (avoid)</td>
+  </tr></tbody>
+  </table>
+  <div class="cap" style="text-align: center; padding-top: 8px">
+    WCAG 2.1 — AA = 4.5:1 · AAA = 7:1 · Large only = 3:1 (≥18px or ≥14px bold)
+  </div>
+</div></body></html>

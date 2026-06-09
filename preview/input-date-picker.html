@@ -1,0 +1,136 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Inputs · Date picker" subtitle="Month grid · today highlighted" viewport="700x360" -->
+<html><head><meta charset="utf-8"><title>Date picker</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  /* Wise-style calendar — white rounded card, ink chevrons,
+     weekend day-names muted, bold day numbers, today is solid
+     dark-green circle with light-green digit inside. */
+  .calendar {
+    background: #FFFFFF;
+    border-radius: 24px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 8px 32px rgba(18,33,25,0.08);
+    padding: 22px 26px 26px;
+    width: 360px;
+    margin: 0 auto;
+  }
+  .cal-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-bottom: 14px;
+  }
+  .cal-head .month {
+    font: 700 17px/1 var(--font-body);
+    color: var(--engu-green-ink);
+    letter-spacing: -0.01em;
+  }
+  .cal-nav {
+    background: transparent; border: 0; cursor: pointer;
+    color: var(--engu-green-deep);
+    width: 28px; height: 28px;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .cal-nav svg { width: 18px; height: 18px; }
+  .cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 8px;
+  }
+  .cal-grid .dow {
+    font: 700 13px/1 var(--font-body);
+    color: var(--engu-green-ink);
+    text-align: center;
+    padding: 8px 0 12px;
+    letter-spacing: -0.005em;
+  }
+  .cal-grid .dow.is-weekend { color: rgba(0,0,0,0.35); font-weight: 500; }
+
+  .cal-grid .day {
+    aspect-ratio: 1 / 1;
+    display: flex; align-items: center; justify-content: center;
+    font: 700 16px/1 var(--font-body);
+    color: var(--engu-green-ink);
+    letter-spacing: -0.005em;
+    border: 0; background: transparent;
+    cursor: pointer; padding: 0;
+  }
+  .cal-grid .day.is-weekend { color: rgba(0,0,0,0.35); font-weight: 500; }
+  .cal-grid .day.is-empty { visibility: hidden; }
+  .cal-grid .day.is-today {
+    background: var(--engu-green);
+    color: #FFFFFF;
+    border-radius: 999px;
+    width: 44px; height: 44px;
+    justify-self: center;
+  }
+  .cal-grid .day:hover:not(.is-today):not(.is-empty) {
+    background: var(--engu-cream);
+    border-radius: 999px;
+    width: 44px; height: 44px;
+    justify-self: center;
+  }
+</style>
+</head><body><div class="card" style="padding: 18px 22px; min-height: auto">
+  <div class="calendar">
+    <div class="cal-head">
+      <button class="cal-nav" aria-label="previous month">
+        <svg viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-chevron-left"/></svg>
+      </button>
+      <span class="month">May 2026</span>
+      <button class="cal-nav" aria-label="next month">
+        <svg viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-chevron-right"/></svg>
+      </button>
+    </div>
+
+    <div class="cal-grid">
+      <!-- Day-of-week headers (Mon-first, weekend muted) -->
+      <div class="dow">Mon</div>
+      <div class="dow">Tue</div>
+      <div class="dow">Wed</div>
+      <div class="dow">Thu</div>
+      <div class="dow">Fri</div>
+      <div class="dow is-weekend">Sat</div>
+      <div class="dow is-weekend">Sun</div>
+
+      <!-- May 2026 starts on a Friday. 4 empty cells before. -->
+      <button class="day is-empty"></button>
+      <button class="day is-empty"></button>
+      <button class="day is-empty"></button>
+      <button class="day is-empty"></button>
+      <button class="day">1</button>
+      <button class="day is-weekend">2</button>
+      <button class="day is-weekend">3</button>
+
+      <button class="day">4</button>
+      <button class="day">5</button>
+      <button class="day">6</button>
+      <button class="day">7</button>
+      <button class="day">8</button>
+      <button class="day is-weekend">9</button>
+      <button class="day is-weekend">10</button>
+
+      <button class="day">11</button>
+      <button class="day">12</button>
+      <button class="day">13</button>
+      <button class="day">14</button>
+      <button class="day">15</button>
+      <button class="day is-weekend">16</button>
+      <button class="day is-weekend">17</button>
+
+      <button class="day">18</button>
+      <button class="day">19</button>
+      <button class="day is-today">20</button>
+      <button class="day">21</button>
+      <button class="day">22</button>
+      <button class="day is-weekend">23</button>
+      <button class="day is-weekend">24</button>
+
+      <button class="day">25</button>
+      <button class="day">26</button>
+      <button class="day">27</button>
+      <button class="day">28</button>
+      <button class="day">29</button>
+      <button class="day is-weekend">30</button>
+      <button class="day is-weekend">31</button>
+    </div>
+  </div>
+</div></body></html>

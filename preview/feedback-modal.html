@@ -1,0 +1,28 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Feedback · Modal" subtitle="Confirmation modal on ink scrim" viewport="700x360" -->
+<html><head><meta charset="utf-8"><title>Modal</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 18px 22px; gap: 14px; min-height: auto; }
+  section { display: flex; flex-direction: column; gap: 10px; }
+  h3 { margin: 0; font: 700 14px/1 var(--font-body); color: var(--fg-1); letter-spacing: -0.005em; }
+  .cap { font: 500 11px/1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-3); }
+  .ico { width: 16px; height: 16px; flex-shrink: 0; }
+  .ico-20 { width: 20px; height: 20px; flex-shrink: 0; }
+  .ico-24 { width: 24px; height: 24px; flex-shrink: 0; }
+</style>
+</head><body><div class="card">
+  <div style="background:var(--engu-green-ink); border-radius:16px; padding:32px 12px; display:flex; justify-content:center; align-items:center">
+    <div style="background:#fff; border-radius:20px; box-shadow:0 24px 60px rgba(18,33,25,0.3); width:380px; padding:28px; display:flex; flex-direction:column; gap:14px">
+      <div class="row" style="justify-content:space-between; align-items:flex-start">
+        <h2 style="margin:0; font:900 28px/0.95 var(--font-display); letter-spacing:-0.03em; color:var(--engu-green-ink)">Cancel<br>subscription?</h2>
+        <button style="background:rgba(0,0,0,0.04); border:none; cursor:pointer; color:var(--fg-2); width:32px; height:32px; border-radius:999px; display:flex; align-items:center; justify-content:center"><svg class="ico" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-cross-medium"/></svg></button>
+      </div>
+      <p style="margin:0; font:500 15px/1.45 'Inter Display'; color:var(--fg-2)">Your access continues until 12 June 2026. Progress is saved for 90 days.</p>
+      <div class="row" style="gap:8px; margin-top:6px">
+        <button style="flex:1; background:#fff; border:1px solid rgba(0,0,0,0.1); color:var(--fg-1); font:700 14px/1 'Inter Display'; padding:14px; border-radius:999px; cursor:pointer">Keep plan</button>
+        <button style="flex:1; background:#FFEB99; border:1px solid rgba(0,0,0,0.1); color:#332900; font:700 14px/1 'Inter Display'; padding:14px; border-radius:999px; cursor:pointer; box-shadow:var(--shadow-button)">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div></body></html>

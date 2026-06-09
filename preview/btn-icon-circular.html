@@ -1,0 +1,150 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Buttons · Icon + circular" subtitle="Square icon buttons + circular FAB" viewport="700x240" -->
+<html><head><meta charset="utf-8"><title>Icon + circular buttons</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  section { display: flex; flex-direction: column; gap: 10px; }
+  h3 { margin: 0; font: 700 14px/1 var(--font-body); color: var(--fg-1); letter-spacing: -0.005em; }
+
+  /* Spec panel — cream surface so tertiary (transparent) buttons are visible against it */
+  .spec {
+    background: var(--engu-cream);
+    border-radius: 16px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .row-spec { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .row-label {
+    font: 600 11px/1 var(--font-body);
+    color: var(--fg-2);
+    letter-spacing: -0.005em;
+    width: 70px;
+    flex-shrink: 0;
+  }
+
+  /* ─── Buttons ──────────────────────────────────────────── */
+  .btn {
+    border: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-body);
+  }
+  .btn.primary {
+    background: #FFEB99;
+    color: #332900;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-button);
+  }
+  .btn.secondary {
+    background: #FFFFFF;
+    color: rgba(0,0,0,0.8);
+    border: 1px solid rgba(0,0,0,0.1);
+  }
+  .btn.tertiary {
+    background: transparent;
+    color: rgba(0,0,0,0.8);
+    border: 0;
+  }
+  .btn.tertiary:hover { background: rgba(0,0,0,0.06); }
+
+  /* Sizes — square */
+  .sq-36 { width: 36px; height: 36px; border-radius: 10px; }
+  .sq-44 { width: 44px; height: 44px; border-radius: 12px; }
+  .sq-54 { width: 54px; height: 54px; border-radius: 14px; }
+  .sq-64 { width: 64px; height: 64px; border-radius: 16px; }
+
+  /* Sizes — circular */
+  .ci-36, .ci-44, .ci-54, .ci-64 { border-radius: 999px; }
+  .ci-36 { width: 36px; height: 36px; }
+  .ci-44 { width: 44px; height: 44px; }
+  .ci-54 { width: 54px; height: 54px; }
+  .ci-64 { width: 64px; height: 64px; }
+
+  /* ─── Icon — real DS glyph (heart) ─────────────────── */
+  .icon-slot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: currentColor;
+  }
+  .icon-slot.s16 { width: 16px; height: 16px; }
+  .icon-slot.s20 { width: 20px; height: 20px; }
+  .icon-slot.s24 { width: 24px; height: 24px; }
+  .icon-slot.s28 { width: 28px; height: 28px; }
+  .size-cap {
+    font: 500 10px/1 ui-monospace, Menlo, monospace;
+    color: var(--fg-3);
+    width: 36px;
+    text-align: center;
+  }
+  .col-stack { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; }
+</style>
+</head><body><div class="card" style="padding: 18px 22px; gap: 18px; min-height: auto">
+
+  <!-- ─── Square icon buttons ──────────────────────────────── -->
+  <section>
+    <header class="row" style="justify-content:space-between; align-items:baseline">
+      <h3>Icon button (square)</h3>
+      <span class="lbl" style="font-size:11px">3 emphasis levels × 4 sizes · icon placeholder shown in each slot</span>
+    </header>
+    <div class="spec">
+      <div class="row-spec">
+        <span class="row-label">Primary</span>
+        <div class="col-stack"><button class="btn primary sq-36"><svg class="icon-slot s16" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">36</span></div>
+        <div class="col-stack"><button class="btn primary sq-44"><svg class="icon-slot s20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">44</span></div>
+        <div class="col-stack"><button class="btn primary sq-54"><svg class="icon-slot s24" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">54</span></div>
+        <div class="col-stack"><button class="btn primary sq-64"><svg class="icon-slot s28" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">64</span></div>
+      </div>
+      <div class="row-spec">
+        <span class="row-label">Secondary</span>
+        <div class="col-stack"><button class="btn secondary sq-36"><svg class="icon-slot s16" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">36</span></div>
+        <div class="col-stack"><button class="btn secondary sq-44"><svg class="icon-slot s20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">44</span></div>
+        <div class="col-stack"><button class="btn secondary sq-54"><svg class="icon-slot s24" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">54</span></div>
+        <div class="col-stack"><button class="btn secondary sq-64"><svg class="icon-slot s28" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">64</span></div>
+      </div>
+      <div class="row-spec">
+        <span class="row-label">Tertiary</span>
+        <div class="col-stack"><button class="btn tertiary sq-36"><svg class="icon-slot s16" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">36</span></div>
+        <div class="col-stack"><button class="btn tertiary sq-44"><svg class="icon-slot s20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">44</span></div>
+        <div class="col-stack"><button class="btn tertiary sq-54"><svg class="icon-slot s24" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">54</span></div>
+        <div class="col-stack"><button class="btn tertiary sq-64"><svg class="icon-slot s28" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">64</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Circular icon buttons ────────────────────────────── -->
+  <section>
+    <header class="row" style="justify-content:space-between; align-items:baseline">
+      <h3>Circular button</h3>
+      <span class="lbl" style="font-size:11px">Same emphasis × sizes · pill geometry</span>
+    </header>
+    <div class="spec">
+      <div class="row-spec">
+        <span class="row-label">Primary</span>
+        <div class="col-stack"><button class="btn primary ci-36"><svg class="icon-slot s16" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">36</span></div>
+        <div class="col-stack"><button class="btn primary ci-44"><svg class="icon-slot s20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">44</span></div>
+        <div class="col-stack"><button class="btn primary ci-54"><svg class="icon-slot s24" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">54</span></div>
+        <div class="col-stack"><button class="btn primary ci-64"><svg class="icon-slot s28" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">64</span></div>
+      </div>
+      <div class="row-spec">
+        <span class="row-label">Secondary</span>
+        <div class="col-stack"><button class="btn secondary ci-36"><svg class="icon-slot s16" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">36</span></div>
+        <div class="col-stack"><button class="btn secondary ci-44"><svg class="icon-slot s20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">44</span></div>
+        <div class="col-stack"><button class="btn secondary ci-54"><svg class="icon-slot s24" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">54</span></div>
+        <div class="col-stack"><button class="btn secondary ci-64"><svg class="icon-slot s28" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">64</span></div>
+      </div>
+      <div class="row-spec">
+        <span class="row-label">Tertiary</span>
+        <div class="col-stack"><button class="btn tertiary ci-36"><svg class="icon-slot s16" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">36</span></div>
+        <div class="col-stack"><button class="btn tertiary ci-44"><svg class="icon-slot s20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">44</span></div>
+        <div class="col-stack"><button class="btn tertiary ci-54"><svg class="icon-slot s24" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">54</span></div>
+        <div class="col-stack"><button class="btn tertiary ci-64"><svg class="icon-slot s28" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-heart"/></svg></button><span class="size-cap">64</span></div>
+      </div>
+    </div>
+  </section>
+
+</div></body></html>

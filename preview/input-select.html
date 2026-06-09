@@ -1,0 +1,98 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Inputs · Select" subtitle="Field + open popover" viewport="700x320" -->
+<html><head><meta charset="utf-8"><title>Select</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  /* Canonical engu input — pill, floating label, trailing chevron */
+  .field-stack { display: flex; flex-direction: column; align-items: stretch; gap: 8px; width: 320px; }
+  .field-shell {
+    position: relative; background: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.08); border-radius: 999px;
+    padding: 16px 24px; min-height: 72px;
+    display: flex; align-items: center;
+    cursor: pointer;
+  }
+  .field-shell.focused { border: 1.5px solid var(--engu-green); padding: 15.5px 23.5px; box-shadow: 0 0 0 4px rgba(90,165,124,0.15); }
+  .field-body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 4px; min-width: 0; }
+  .field-label { font: 500 13px/1.2 var(--font-body); color: rgba(0,0,0,0.5); letter-spacing: -0.005em; }
+  .field-value { font: 700 18px/1.2 var(--font-body); color: rgba(0,0,0,0.92); letter-spacing: -0.01em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .field-icon { flex-shrink: 0; margin-left: 16px; width: 24px; height: 24px; color: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; transition: transform 180ms var(--ease-out); }
+  .field-shell.focused .field-icon { color: var(--engu-green); transform: rotate(180deg); }
+  .field-desc { font: 500 13px/1.3 var(--font-body); color: rgba(0,0,0,0.5); letter-spacing: -0.005em; padding-left: 4px; }
+
+  /* Empty (placeholder only) */
+  .field-shell.empty .field-body { gap: 0; }
+  .field-shell.empty .field-label { font-size: 18px; font-weight: 500; color: rgba(0,0,0,0.45); }
+
+  /* Open dropdown */
+  .menu {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 6px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 12px 32px rgba(18,33,25,0.12);
+    margin-top: 2px;
+    display: flex; flex-direction: column;
+  }
+  .menu .item {
+    text-align: left;
+    background: transparent;
+    border: 0;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font: 600 14px/1.2 var(--font-body);
+    color: var(--fg-1);
+    letter-spacing: -0.005em;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .menu .item:hover { background: var(--engu-cream); }
+  .menu .item.is-selected { background: var(--engu-cream); color: var(--engu-green-deep); }
+  .menu .check { color: var(--engu-green); display: flex; }
+</style>
+</head><body><div class="card" style="padding: 24px">
+  <div style="display:grid; grid-template-columns: repeat(2, 320px); gap: 16px 24px; justify-content: center; align-items: start">
+
+    <!-- Closed (empty) -->
+    <div class="field-stack">
+      <div class="field-shell empty">
+        <div class="field-body">
+          <span class="field-label">Class</span>
+        </div>
+        <span class="field-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-chevron-bottom"/></svg></span>
+      </div>
+      <span class="field-desc">Choose your child's class</span>
+    </div>
+
+    <!-- Filled (closed) -->
+    <div class="field-stack">
+      <div class="field-shell">
+        <div class="field-body">
+          <span class="field-label">Class</span>
+          <span class="field-value">3.B · Mrs. Horáková</span>
+        </div>
+        <span class="field-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-chevron-bottom"/></svg></span>
+      </div>
+      <span class="field-desc">Description</span>
+    </div>
+
+    <!-- Open dropdown (spans both columns) -->
+    <div class="field-stack" style="grid-column: 1 / -1; width: auto; max-width: 320px; margin: 0 auto">
+      <div class="field-shell focused">
+        <div class="field-body">
+          <span class="field-label">Class</span>
+          <span class="field-value">3.B · Mrs. Horáková</span>
+        </div>
+        <span class="field-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-chevron-bottom"/></svg></span>
+      </div>
+      <div class="menu">
+        <button class="item is-selected">
+          3.B · Mrs. Horáková
+          <span class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><use href="../assets/icons/engu-icons-sprite.svg#engu-checkmark-1"/></svg></span>
+        </button>
+        <button class="item">3.A · Mr. Novák</button>
+        <button class="item">4.A · Ms. Černá</button>
+      </div>
+    </div>
+
+  </div>
+</div></body></html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Dashboard · Seat management" subtitle="Email-list input · capacity counter · seat rows" viewport="600x380" -->
+<html><head><meta charset="utf-8"><title>Seat row + invite</title>
+<link rel="stylesheet" href="_card.css">
+</head><body><div class="card" style="padding: 18px 22px">
+<div style="display:flex; flex-direction:column; gap:14px; max-width:540px; margin:0 auto; width:100%">
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:0 4px">
+    <h3 style="margin:0; font:700 20px/1.2 'Inter Display'; color:rgba(0,0,0,0.9)">Invite other members</h3>
+  </div>
+  <!-- Email + Add button row -->
+  <div style="display:flex; gap:8px">
+    <input type="email" placeholder="Emails, comma separated" style="flex:1; height:54px; border:0.5px solid rgba(0,0,0,0.1); border-radius:8px; padding:8px 16px; font:500 16px/1.4 'Inter Display'; letter-spacing:-0.01em; background:#fff; outline:none">
+    <button style="height:54px; width:100px; background:rgba(0,0,0,0.08); color:rgba(0,0,0,0.4); border:none; border-radius:8px; font:700 16px/1 'Inter Display'; letter-spacing:-0.01em; cursor:not-allowed">Add</button>
+  </div>
+  <span style="font:500 14px/1.4 'Inter Display'; color:rgba(0,0,0,0.5); letter-spacing:-0.01em">Who has access (2/3)</span>
+  <!-- Seat rows -->
+  <div style="display:flex; flex-direction:column">
+    <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 0">
+      <div style="display:flex; align-items:center; gap:12px">
+        <div style="width:26px; height:26px; border-radius:999px; background:var(--engu-green); color:#fff; display:flex; align-items:center; justify-content:center; font:500 14px/1 'Inter Display'">K</div>
+        <span style="font:500 14px/1.4 'Inter Display'; color:rgba(0,0,0,0.5); letter-spacing:-0.01em">konstantin@gmail.com <span style="opacity:0.7">(you)</span></span>
+      </div>
+      <button style="background:transparent; border:none; color:rgba(0,0,0,0.9); font:700 14px/1 'Inter Display'; letter-spacing:-0.01em; cursor:default; display:flex; align-items:center; gap:6px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Added
+      </button>
+    </div>
+    <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 0">
+      <div style="display:flex; align-items:center; gap:12px">
+        <div style="width:26px; height:26px; border-radius:999px; background:#FFCC00; color:#fff; display:flex; align-items:center; justify-content:center; font:500 14px/1 'Inter Display'">S</div>
+        <span style="font:500 16px/1.4 'Inter Display'; color:rgba(0,0,0,0.9); letter-spacing:-0.01em">sebastian@gmail.com</span>
+      </div>
+      <button style="background:transparent; border:none; color:rgba(0,0,0,0.9); font:700 14px/1 'Inter Display'; letter-spacing:-0.01em; cursor:default; display:flex; align-items:center; gap:6px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Added
+      </button>
+    </div>
+    <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 0; border-top:1px solid rgba(0,0,0,0.05)">
+      <div style="display:flex; align-items:center; gap:12px">
+        <div style="width:26px; height:26px; border-radius:999px; background:#7A4ED9; color:#fff; display:flex; align-items:center; justify-content:center; font:500 14px/1 'Inter Display'">E</div>
+        <span style="font:500 16px/1.4 'Inter Display'; color:rgba(0,0,0,0.9); letter-spacing:-0.01em">emanuel@gmail.com</span>
+      </div>
+      <button style="background:transparent; border:none; color:#C03A3A; font:700 14px/1 'Inter Display'; letter-spacing:-0.01em; cursor:pointer">Remove</button>
+    </div>
+  </div>
+</div></div></body></html>
