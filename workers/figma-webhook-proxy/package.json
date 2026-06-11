@@ -1,0 +1,14 @@
+{
+  "name": "figma-webhook-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "secret:github-pat": "wrangler secret put GITHUB_PAT",
+    "secret:figma-passcode": "wrangler secret put FIGMA_PASSCODE"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

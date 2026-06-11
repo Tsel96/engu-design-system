@@ -23,8 +23,8 @@ Go to **figma.com/developers/webhooks** (or use the REST API below) and create a
 |---|---|
 | **Team ID** | Your Figma team ID (visible in the URL when you open a team page) |
 | **Event type** | `LIBRARY_PUBLISH` (fires when a library component is published) |
-| **Endpoint URL** | `https://api.github.com/repos/Tsel96/engu-design-system/dispatches` |
-| **Passcode** | *(optional — leave blank or set any string; GitHub validates the Bearer token instead)* |
+| **Endpoint URL** | `https://figma-webhook-proxy.<your-cf-subdomain>.workers.dev` |
+| **Passcode** | Set to the same value you store as `FIGMA_PASSCODE` in the Worker (optional but recommended) |
 
 ### Via the Figma REST API
 
@@ -35,7 +35,7 @@ curl -X POST https://api.figma.com/v2/webhooks \
   -d '{
     "event_type": "LIBRARY_PUBLISH",
     "team_id": "<your-team-id>",
-    "endpoint": "https://api.github.com/repos/Tsel96/engu-design-system/dispatches",
+    "endpoint": "https://figma-webhook-proxy.<your-cf-subdomain>.workers.dev",
     "passcode": "<any-string>"
   }'
 ```
@@ -53,38 +53,26 @@ The GitHub Actions dispatch endpoint requires a Bearer token in the
 you need a small proxy **or** use Figma's passcode field as a pre-shared key and
 verify it in the workflow.
 
-### Simplest approach — use a proxy (e.g. a Cloudflare Worker)
+### Cloudflare Worker proxy (included in this repo)
 
-The proxy receives the Figma webhook POST, extracts the event type, and calls
-the GitHub dispatches API with the correct `Authorization` header:
+The worker lives at `workers/figma-webhook-proxy/`. It receives the Figma
+webhook POST, optionally verifies a passcode, and calls the GitHub dispatches
+API with the correct `Authorization` header.
 
-```js
-// Cloudflare Worker (pseudocode)
-export default {
-  async fetch(request, env) {
-    const body = await request.json();
-    await fetch(
-      "https://api.github.com/repos/Tsel96/engu-design-system/dispatches",
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${env.GITHUB_PAT}`,
-          Accept: "application/vnd.github+json",
-          "Content-Type": "application/json",
-          "User-Agent": "figma-webhook-proxy",
-        },
-        body: JSON.stringify({
-          event_type: body.event_type ?? "FIGMA_WEBHOOK",
-          client_payload: { figma_event: body },
-        }),
-      }
-    );
-    return new Response("ok");
-  },
-};
+**Deploy:**
+
+```bash
+cd workers/figma-webhook-proxy
+npm install
+npm run secret:github-pat        # paste your GitHub fine-grained PAT
+npm run secret:figma-passcode    # paste the passcode you set in Figma (optional)
+npm run deploy
 ```
 
-Store the GitHub PAT as `GITHUB_PAT` in the Worker's environment secrets.
+The deployed URL will be printed by wrangler:
+`https://figma-webhook-proxy.<your-cf-subdomain>.workers.dev`
+
+Use that URL as the Figma webhook endpoint.
 
 ### Alternative — trigger directly (requires GitHub App or OAuth token)
 
