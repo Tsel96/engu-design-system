@@ -1,0 +1,39 @@
+name: Regenerate Figma Code Connect
+
+on:
+  workflow_dispatch:
+    inputs:
+      event_type:
+        description: "Figma webhook event type (e.g. FILE_UPDATE, LIBRARY_PUBLISH)"
+        required: false
+        default: "manual"
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Regenerate code-connect files
+        run: node scripts/generate-code-connect.js
+        env:
+          FIGMA_TOKEN: ${{ secrets.FIGMA_ACCESS_TOKEN }}
+
+      - name: Commit and push updated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add code-connect/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: regenerate code-connect from Figma (event: ${{ inputs.event_type }})"
+            git push
+          fi
