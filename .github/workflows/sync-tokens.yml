@@ -1,0 +1,40 @@
+name: Sync color tokens from Figma
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 9 * * 1"  # every Monday at 09:00 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Export tokens from Figma
+        run: node scripts/export-figma-tokens.js
+        env:
+          FIGMA_TOKEN: ${{ secrets.FIGMA_ACCESS_TOKEN }}
+          FIGMA_FILE_KEY: yFUGWRkPWpTU0rDJOqrIBe
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add colors_and_type.css
+          if git diff --cached --quiet; then
+            echo "No token changes — skipping commit."
+          else
+            git commit -m "chore: sync color tokens from Figma"
+            git push
+          fi
