@@ -114,19 +114,41 @@ async function main() {
   const setBatches = chunk(sets, 150);
   const childBySetId = {};
   const childNamesBySetId = {};
+  const visibleBySetId = {};
   for (const batch of setBatches) {
     const data = await get(`https://api.figma.com/v1/files/${FILE_KEY}/nodes?ids=${batch.map((s) => s.node_id).join(",")}`);
     for (const [nodeId, entry] of Object.entries(data.nodes || {})) {
       const children = entry?.document?.children || [];
       childNamesBySetId[nodeId] = children.map((ch) => ch.name);
+      visibleBySetId[nodeId] = entry?.document?.visible !== false;
       const outlined = children.find((ch) => isOutlined24(ch.name));
       if (outlined) childBySetId[nodeId] = outlined.id;
     }
   }
 
+  // The file has leftover hidden/duplicate component sets that reuse the exact
+  // "Icons/{Category}/{name}" name of a real, current icon (edit history cruft
+  // Figma keeps around). Dedupe by name, preferring a visible set that actually
+  // resolves an outlined-24 child over a stale/hidden one that doesn't.
+  const bestByKey = new Map(); // "category/name" -> set
+  for (const set of sets) {
+    const key = set.name;
+    const visible = visibleBySetId[set.node_id] !== false;
+    const resolved = Boolean(childBySetId[set.node_id]);
+    const existing = bestByKey.get(key);
+    if (!existing) {
+      bestByKey.set(key, set);
+      continue;
+    }
+    const existingVisible = visibleBySetId[existing.node_id] !== false;
+    const existingResolved = Boolean(childBySetId[existing.node_id]);
+    const better = (visible && !existingVisible) || (visible === existingVisible && resolved && !existingResolved);
+    if (better) bestByKey.set(key, set);
+  }
+
   const icons = []; // { category, name, nodeId }
   const missingVariant = [];
-  for (const set of sets) {
+  for (const set of bestByKey.values()) {
     const parts = set.name.split("/"); // ["Icons", "Category", "icon-name"]
     const category = parts[1];
     const name = parts.slice(2).join("/").trim();
