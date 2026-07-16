@@ -99,8 +99,15 @@ async function main() {
 
   const variantsBySet = {};
   for (const comp of components) {
-    if (!comp.component_set_id) continue;
-    (variantsBySet[comp.component_set_id] ??= []).push(comp);
+    const setId = comp.component_set_id || comp.containing_frame?.containingStateGroup?.nodeId;
+    if (!setId) continue;
+    (variantsBySet[setId] ??= []).push(comp);
+  }
+
+  if (Object.keys(variantsBySet).length === 0 && components.length > 0) {
+    console.error("Could not determine component-set membership for any component. Sample component shape:");
+    console.error(JSON.stringify(components[0], null, 2));
+    process.exit(1);
   }
 
   const icons = []; // { category, name, nodeId }
