@@ -1,4 +1,4 @@
-name: Regenerate Figma Code Connect
+name: Sync icons + Code Connect from Figma
 
 on:
   workflow_dispatch:
@@ -7,6 +7,11 @@ on:
         description: "Figma webhook event type (e.g. FILE_UPDATE, LIBRARY_PUBLISH)"
         required: false
         default: "manual"
+  repository_dispatch:
+    types: [FILE_UPDATE, LIBRARY_PUBLISH]
+
+permissions:
+  contents: write
 
 jobs:
   regenerate:
@@ -21,6 +26,11 @@ jobs:
 
       - run: npm ci
 
+      - name: Export icon assets (sprite / manifest / browse page)
+        run: node scripts/export-figma-icons.js
+        env:
+          FIGMA_TOKEN: ${{ secrets.FIGMA_ACCESS_TOKEN }}
+
       - name: Regenerate code-connect files
         run: node scripts/generate-code-connect.js
         env:
@@ -30,10 +40,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add code-connect/
+          git add assets/icons/ code-connect/
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "chore: regenerate code-connect from Figma (event: ${{ inputs.event_type }})"
+            git commit -m "chore: sync icons + code-connect from Figma (event: ${{ inputs.event_type || github.event.action || 'unknown' }})"
             git push
           fi

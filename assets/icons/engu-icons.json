@@ -83,11 +83,43 @@
     "category": "Accessibility"
   },
   {
+    "name": "reduce-motion",
+    "slug": "reduce-motion",
+    "aliases": [
+      "reduce-motion"
+    ],
+    "category": "Accessibility"
+  },
+  {
     "name": "square-lines-bottom",
     "slug": "square-lines-bottom",
     "aliases": [
       "square-lines-bottom",
       "transcription"
+    ],
+    "category": "Accessibility"
+  },
+  {
+    "name": "voice-control",
+    "slug": "voice-control",
+    "aliases": [
+      "voice-control"
+    ],
+    "category": "Accessibility"
+  },
+  {
+    "name": "voiceover",
+    "slug": "voiceover",
+    "aliases": [
+      "voiceover"
+    ],
+    "category": "Accessibility"
+  },
+  {
+    "name": "voiceover-2",
+    "slug": "voiceover-2",
+    "aliases": [
+      "voiceover-2"
     ],
     "category": "Accessibility"
   },
@@ -150,7 +182,7 @@
     "category": "AI & Magic"
   },
   {
-    "name": "bag 2-sparkle",
+    "name": "bag-2-sparkle",
     "slug": "bag-2-sparkle",
     "aliases": [
       "bag 2-sparkle",
@@ -266,7 +298,7 @@
     "category": "AI & Magic"
   },
   {
-    "name": "clipboard 2-sparkle",
+    "name": "clipboard-2-sparkle",
     "slug": "clipboard-2-sparkle",
     "aliases": [
       "clipboard 2-sparkle",
@@ -343,7 +375,7 @@
     "category": "AI & Magic"
   },
   {
-    "name": "Folder-sparkle",
+    "name": "folder-sparkle",
     "slug": "folder-sparkle",
     "aliases": [
       "Folder-sparkle",
@@ -703,7 +735,7 @@
     "category": "AI & Magic"
   },
   {
-    "name": "search lines-sparkle",
+    "name": "search-lines-sparkle",
     "slug": "search-lines-sparkle",
     "aliases": [
       "search lines-sparkle",
@@ -1315,16 +1347,6 @@
     "category": "Arrows"
   },
   {
-    "name": "arrows-hide",
-    "slug": "arrows-hide",
-    "aliases": [
-      "arrows-hide",
-      "collapse",
-      "minimize"
-    ],
-    "category": "Arrows"
-  },
-  {
     "name": "arrow-split-down",
     "slug": "arrow-split-down",
     "aliases": [
@@ -1365,64 +1387,6 @@
       "rules",
       "direction",
       "split"
-    ],
-    "category": "Arrows"
-  },
-  {
-    "name": "arrows-repeat",
-    "slug": "arrows-repeat",
-    "aliases": [
-      "arrows-repeat",
-      "repost"
-    ],
-    "category": "Arrows"
-  },
-  {
-    "name": "arrows-repeat-circle",
-    "slug": "arrows-repeat-circle",
-    "aliases": [
-      "arrows-repeat-circle",
-      "repost"
-    ],
-    "category": "Arrows"
-  },
-  {
-    "name": "arrows-repeat-right-left",
-    "slug": "arrows-repeat-right-left",
-    "aliases": [
-      "arrows-repeat-right-left",
-      "repost"
-    ],
-    "category": "Arrows"
-  },
-  {
-    "name": "arrows-repeat-right-left-off",
-    "slug": "arrows-repeat-right-left-off",
-    "aliases": [
-      "arrows-repeat-right-left-off",
-      "repost-off"
-    ],
-    "category": "Arrows"
-  },
-  {
-    "name": "arrows-show",
-    "slug": "arrows-show",
-    "aliases": [
-      "arrows-show",
-      "expand",
-      "maximize"
-    ],
-    "category": "Arrows"
-  },
-  {
-    "name": "arrows-zoom",
-    "slug": "arrows-zoom",
-    "aliases": [
-      "arrows-zoom",
-      "scale",
-      "motion",
-      "move",
-      "directions"
     ],
     "category": "Arrows"
   },
@@ -1607,6 +1571,74 @@
     "aliases": [
       "arrow-wall-up",
       "align top"
+    ],
+    "category": "Arrows"
+  },
+  {
+    "name": "arrows-hide",
+    "slug": "arrows-hide",
+    "aliases": [
+      "arrows-hide",
+      "collapse",
+      "minimize"
+    ],
+    "category": "Arrows"
+  },
+  {
+    "name": "arrows-repeat",
+    "slug": "arrows-repeat",
+    "aliases": [
+      "arrows-repeat",
+      "repost"
+    ],
+    "category": "Arrows"
+  },
+  {
+    "name": "arrows-repeat-circle",
+    "slug": "arrows-repeat-circle",
+    "aliases": [
+      "arrows-repeat-circle",
+      "repost"
+    ],
+    "category": "Arrows"
+  },
+  {
+    "name": "arrows-repeat-right-left",
+    "slug": "arrows-repeat-right-left",
+    "aliases": [
+      "arrows-repeat-right-left",
+      "repost"
+    ],
+    "category": "Arrows"
+  },
+  {
+    "name": "arrows-repeat-right-left-off",
+    "slug": "arrows-repeat-right-left-off",
+    "aliases": [
+      "arrows-repeat-right-left-off",
+      "repost-off"
+    ],
+    "category": "Arrows"
+  },
+  {
+    "name": "arrows-show",
+    "slug": "arrows-show",
+    "aliases": [
+      "arrows-show",
+      "expand",
+      "maximize"
+    ],
+    "category": "Arrows"
+  },
+  {
+    "name": "arrows-zoom",
+    "slug": "arrows-zoom",
+    "aliases": [
+      "arrows-zoom",
+      "scale",
+      "motion",
+      "move",
+      "directions"
     ],
     "category": "Arrows"
   },
@@ -1968,6 +2000,14 @@
     "category": "Arrows"
   },
   {
+    "name": "pivot",
+    "slug": "pivot",
+    "aliases": [
+      "pivot"
+    ],
+    "category": "Arrows"
+  },
+  {
     "name": "random",
     "slug": "random",
     "aliases": [
@@ -2225,15 +2265,6 @@
     "category": "Augmented Reality"
   },
   {
-    "name": "around",
-    "slug": "around",
-    "aliases": [
-      "around",
-      "spatial"
-    ],
-    "category": "Augmented Reality"
-  },
-  {
     "name": "ar-scan-cube-1",
     "slug": "ar-scan-cube-1",
     "aliases": [
@@ -2246,6 +2277,15 @@
     "slug": "ar-scan-cube-2",
     "aliases": [
       "ar-scan-cube-2"
+    ],
+    "category": "Augmented Reality"
+  },
+  {
+    "name": "around",
+    "slug": "around",
+    "aliases": [
+      "around",
+      "spatial"
     ],
     "category": "Augmented Reality"
   },
@@ -2312,6 +2352,14 @@
       "window"
     ],
     "category": "Augmented Reality"
+  },
+  {
+    "name": "add-building-blueprint",
+    "slug": "add-building-blueprint",
+    "aliases": [
+      "add-building-blueprint"
+    ],
+    "category": "Building"
   },
   {
     "name": "bank",
@@ -2556,6 +2604,14 @@
     "category": "Clouds"
   },
   {
+    "name": "cloud-2",
+    "slug": "cloud-2",
+    "aliases": [
+      "cloud-2"
+    ],
+    "category": "Clouds"
+  },
+  {
     "name": "cloud-api",
     "slug": "cloud-api",
     "aliases": [
@@ -2636,6 +2692,22 @@
     "slug": "cloud-sync",
     "aliases": [
       "cloud-sync"
+    ],
+    "category": "Clouds"
+  },
+  {
+    "name": "cloud-sync-2",
+    "slug": "cloud-sync-2",
+    "aliases": [
+      "cloud-sync-2"
+    ],
+    "category": "Clouds"
+  },
+  {
+    "name": "cloud-transfer",
+    "slug": "cloud-transfer",
+    "aliases": [
+      "cloud-transfer"
     ],
     "category": "Clouds"
   },
@@ -2835,109 +2907,94 @@
     "category": "Code"
   },
   {
-    "name": "bug-face",
-    "slug": "bug-face",
+    "name": "bug-2",
+    "slug": "bug-2",
     "aliases": [
-      "bug-face",
-      "issue"
+      "bug-2"
     ],
     "category": "Code"
   },
   {
-    "name": "changes",
-    "slug": "changes",
+    "name": "circles-three",
+    "slug": "circles-three",
     "aliases": [
-      "changes",
-      "plus-minus",
-      "compare"
+      "circles-three",
+      "bubbles"
     ],
     "category": "Code"
   },
   {
-    "name": "code",
-    "slug": "code",
+    "name": "code-check",
+    "slug": "code-check",
     "aliases": [
-      "code"
+      "code-check"
     ],
     "category": "Code"
   },
   {
-    "name": "code-analyze",
-    "slug": "code-analyze",
+    "name": "code-snippet",
+    "slug": "code-snippet",
     "aliases": [
-      "code-analyze",
-      "vibe-coding"
+      "code-snippet"
     ],
     "category": "Code"
   },
   {
-    "name": "code-assistant",
-    "slug": "code-assistant",
+    "name": "code-snippet-2",
+    "slug": "code-snippet-2",
     "aliases": [
-      "code-assistant",
-      "vibe-coding"
+      "code-snippet-2"
     ],
     "category": "Code"
   },
   {
-    "name": "code-brackets",
-    "slug": "code-brackets",
+    "name": "color-swatch",
+    "slug": "color-swatch",
     "aliases": [
-      "code-brackets"
+      "color-swatch",
+      "palette",
+      "colours"
     ],
     "category": "Code"
   },
   {
-    "name": "code-insert",
-    "slug": "code-insert",
+    "name": "command",
+    "slug": "command",
     "aliases": [
-      "code-insert"
+      "command"
     ],
     "category": "Code"
   },
   {
-    "name": "code-large",
-    "slug": "code-large",
+    "name": "commit",
+    "slug": "commit",
     "aliases": [
-      "code-large",
-      "syntax",
-      "brackets"
+      "commit"
     ],
     "category": "Code"
   },
   {
-    "name": "code-lines",
-    "slug": "code-lines",
+    "name": "component-link",
+    "slug": "component-link",
     "aliases": [
-      "code-lines"
+      "component-link"
     ],
     "category": "Code"
   },
   {
-    "name": "code-medium",
-    "slug": "code-medium",
+    "name": "components",
+    "slug": "components",
     "aliases": [
-      "code-medium",
-      "syntax",
-      "brackets",
-      "dev"
+      "components",
+      "figma"
     ],
     "category": "Code"
   },
   {
-    "name": "code-tree",
-    "slug": "code-tree",
+    "name": "components-2",
+    "slug": "components-2",
     "aliases": [
-      "code-tree",
-      "file-tree"
-    ],
-    "category": "Code"
-  },
-  {
-    "name": "commits",
-    "slug": "commits",
-    "aliases": [
-      "commits"
+      "components-2"
     ],
     "category": "Code"
   },
@@ -2951,79 +3008,90 @@
     "category": "Code"
   },
   {
-    "name": "console-simple",
-    "slug": "console-simple",
+    "name": "container-simple",
+    "slug": "container-simple",
     "aliases": [
-      "console-simple",
-      "terminal"
+      "container-simple"
     ],
     "category": "Code"
   },
   {
-    "name": "debugger",
-    "slug": "debugger",
+    "name": "cpu",
+    "slug": "cpu",
     "aliases": [
-      "debugger",
+      "cpu"
+    ],
+    "category": "Code"
+  },
+  {
+    "name": "debug",
+    "slug": "debug",
+    "aliases": [
       "debug"
     ],
     "category": "Code"
   },
   {
-    "name": "difference-ignored",
-    "slug": "difference-ignored",
+    "name": "deployment",
+    "slug": "deployment",
     "aliases": [
-      "difference-ignored"
+      "deployment"
     ],
     "category": "Code"
   },
   {
-    "name": "difference-modified",
-    "slug": "difference-modified",
+    "name": "design-token",
+    "slug": "design-token",
     "aliases": [
-      "difference-modified"
+      "design-token"
     ],
     "category": "Code"
   },
   {
-    "name": "draft",
-    "slug": "draft",
+    "name": "diamond-code",
+    "slug": "diamond-code",
     "aliases": [
-      "draft"
+      "diamond-code"
     ],
     "category": "Code"
   },
   {
-    "name": "draft-simple",
-    "slug": "draft-simple",
+    "name": "diff-added",
+    "slug": "diff-added",
     "aliases": [
-      "draft-simple"
+      "diff-added"
     ],
     "category": "Code"
   },
   {
-    "name": "fork-code",
-    "slug": "fork-code",
+    "name": "diff-ignored",
+    "slug": "diff-ignored",
     "aliases": [
-      "fork-code"
+      "diff-ignored"
     ],
     "category": "Code"
   },
   {
-    "name": "fork-simple",
-    "slug": "fork-simple",
+    "name": "diff-modified",
+    "slug": "diff-modified",
     "aliases": [
-      "fork-simple",
-      "agents"
+      "diff-modified"
     ],
     "category": "Code"
   },
   {
-    "name": "hammer",
-    "slug": "hammer",
+    "name": "diff-removed",
+    "slug": "diff-removed",
     "aliases": [
-      "hammer",
-      "craft",
-      "build"
+      "diff-removed"
+    ],
+    "category": "Code"
+  },
+  {
+    "name": "diff-renamed",
+    "slug": "diff-renamed",
+    "aliases": [
+      "diff-renamed"
     ],
     "category": "Code"
   },
@@ -3410,17 +3478,6 @@
     "category": "Communication"
   },
   {
-    "name": "bubbles",
-    "slug": "bubbles",
-    "aliases": [
-      "bubbles",
-      "messages",
-      "chat",
-      "communicate"
-    ],
-    "category": "Communication"
-  },
-  {
     "name": "bubble-sparkle",
     "slug": "bubble-sparkle",
     "aliases": [
@@ -3478,6 +3535,17 @@
       "badge",
       "message",
       "chat"
+    ],
+    "category": "Communication"
+  },
+  {
+    "name": "bubbles",
+    "slug": "bubbles",
+    "aliases": [
+      "bubbles",
+      "messages",
+      "chat",
+      "communicate"
     ],
     "category": "Communication"
   },
@@ -3757,6 +3825,17 @@
     "category": "Crypto"
   },
   {
+    "name": "coin-stack",
+    "slug": "coin-stack",
+    "aliases": [
+      "coin-stack",
+      "tokens",
+      "data",
+      "money"
+    ],
+    "category": "Crypto"
+  },
+  {
     "name": "coins",
     "slug": "coins",
     "aliases": [
@@ -3771,17 +3850,6 @@
     "slug": "coins-add",
     "aliases": [
       "coins-add",
-      "money"
-    ],
-    "category": "Crypto"
-  },
-  {
-    "name": "coin-stack",
-    "slug": "coin-stack",
-    "aliases": [
-      "coin-stack",
-      "tokens",
-      "data",
       "money"
     ],
     "category": "Crypto"
@@ -3803,6 +3871,14 @@
     "category": "Crypto"
   },
   {
+    "name": "crypto-wallet",
+    "slug": "crypto-wallet",
+    "aliases": [
+      "crypto-wallet"
+    ],
+    "category": "Crypto"
+  },
+  {
     "name": "cryptopunk",
     "slug": "cryptopunk",
     "aliases": [
@@ -3811,14 +3887,6 @@
       "pfp",
       "profile",
       "avatar"
-    ],
-    "category": "Crypto"
-  },
-  {
-    "name": "crypto-wallet",
-    "slug": "crypto-wallet",
-    "aliases": [
-      "crypto-wallet"
     ],
     "category": "Crypto"
   },
@@ -4181,6 +4249,14 @@
     "category": "Devices & Signals"
   },
   {
+    "name": "mac-mini",
+    "slug": "mac-mini",
+    "aliases": [
+      "mac-mini"
+    ],
+    "category": "Devices & Signals"
+  },
+  {
     "name": "macbook",
     "slug": "macbook",
     "aliases": [
@@ -4204,14 +4280,6 @@
     "aliases": [
       "macintosh",
       "mac"
-    ],
-    "category": "Devices & Signals"
-  },
-  {
-    "name": "mac-mini",
-    "slug": "mac-mini",
-    "aliases": [
-      "mac-mini"
     ],
     "category": "Devices & Signals"
   },
@@ -4675,7 +4743,7 @@
     "category": "Edit"
   },
   {
-    "name": "bezier--edit",
+    "name": "bezier-edit",
     "slug": "bezier-edit",
     "aliases": [
       "bezier--edit"
@@ -4803,30 +4871,11 @@
     "category": "Edit"
   },
   {
-    "name": "color-picker",
-    "slug": "color-picker",
-    "aliases": [
-      "color-picker",
-      "color"
-    ],
-    "category": "Edit"
-  },
-  {
     "name": "color-roll",
     "slug": "color-roll",
     "aliases": [
       "color-roll",
       "paint-roller"
-    ],
-    "category": "Edit"
-  },
-  {
-    "name": "colors",
-    "slug": "colors",
-    "aliases": [
-      "colors",
-      "rgb",
-      "adjustments"
     ],
     "category": "Edit"
   },
@@ -4837,6 +4886,16 @@
       "color-swatch",
       "palette",
       "colours"
+    ],
+    "category": "Edit"
+  },
+  {
+    "name": "colors",
+    "slug": "colors",
+    "aliases": [
+      "colors",
+      "rgb",
+      "adjustments"
     ],
     "category": "Edit"
   },
@@ -4938,6 +4997,30 @@
       "eraser-simple",
       "rubber",
       "clean-up"
+    ],
+    "category": "Edit"
+  },
+  {
+    "name": "extend-image",
+    "slug": "extend-image",
+    "aliases": [
+      "extend-image"
+    ],
+    "category": "Edit"
+  },
+  {
+    "name": "eyedropper",
+    "slug": "eyedropper",
+    "aliases": [
+      "eyedropper"
+    ],
+    "category": "Edit"
+  },
+  {
+    "name": "eyedropper-2",
+    "slug": "eyedropper-2",
+    "aliases": [
+      "eyedropper-2"
     ],
     "category": "Edit"
   },
@@ -5570,12 +5653,18 @@
     "category": "Emoji"
   },
   {
-    "name": "emoji-smiley",
-    "slug": "emoji-smiley",
+    "name": "emoji-smile-beam",
+    "slug": "emoji-smile-beam",
     "aliases": [
-      "emoji-smiley",
-      "face",
-      "smile"
+      "emoji-smile-beam"
+    ],
+    "category": "Emoji"
+  },
+  {
+    "name": "emoji-smile-wink",
+    "slug": "emoji-smile-wink",
+    "aliases": [
+      "emoji-smile-wink"
     ],
     "category": "Emoji"
   },
@@ -5589,14 +5678,6 @@
     "category": "Emoji"
   },
   {
-    "name": "emoji-smirking",
-    "slug": "emoji-smirking",
-    "aliases": [
-      "emoji-smirking"
-    ],
-    "category": "Emoji"
-  },
-  {
     "name": "emoji-star-struck",
     "slug": "emoji-star-struck",
     "aliases": [
@@ -5606,19 +5687,61 @@
     "category": "Emoji"
   },
   {
-    "name": "emoji-wink",
-    "slug": "emoji-wink",
+    "name": "emoji-sticker-smirk",
+    "slug": "emoji-sticker-smirk",
     "aliases": [
-      "emoji-wink"
+      "emoji-sticker-smirk"
     ],
     "category": "Emoji"
   },
   {
-    "name": "mask",
-    "slug": "mask",
+    "name": "emoji-sunglasses",
+    "slug": "emoji-sunglasses",
     "aliases": [
-      "mask",
-      "theatre"
+      "emoji-sunglasses"
+    ],
+    "category": "Emoji"
+  },
+  {
+    "name": "emoji-surprised",
+    "slug": "emoji-surprised",
+    "aliases": [
+      "emoji-surprised"
+    ],
+    "category": "Emoji"
+  },
+  {
+    "name": "emoji-sweat",
+    "slug": "emoji-sweat",
+    "aliases": [
+      "emoji-sweat"
+    ],
+    "category": "Emoji"
+  },
+  {
+    "name": "emoji-tongue",
+    "slug": "emoji-tongue",
+    "aliases": [
+      "emoji-tongue"
+    ],
+    "category": "Emoji"
+  },
+  {
+    "name": "emoji-wink-tongue",
+    "slug": "emoji-wink-tongue",
+    "aliases": [
+      "emoji-wink-tongue"
+    ],
+    "category": "Emoji"
+  },
+  {
+    "name": "ghost",
+    "slug": "ghost",
+    "aliases": [
+      "ghost",
+      "hidden",
+      "unknown",
+      "horror"
     ],
     "category": "Emoji"
   },
@@ -5630,6 +5753,54 @@
       "spam"
     ],
     "category": "Emoji"
+  },
+  {
+    "name": "skull",
+    "slug": "skull",
+    "aliases": [
+      "skull"
+    ],
+    "category": "Emoji"
+  },
+  {
+    "name": "snowman",
+    "slug": "snowman",
+    "aliases": [
+      "snowman"
+    ],
+    "category": "Emoji"
+  },
+  {
+    "name": "zzz",
+    "slug": "zzz",
+    "aliases": [
+      "zzz"
+    ],
+    "category": "Emoji"
+  },
+  {
+    "name": "alert-circle",
+    "slug": "alert-circle",
+    "aliases": [
+      "alert-circle"
+    ],
+    "category": "Feedback"
+  },
+  {
+    "name": "alert-square",
+    "slug": "alert-square",
+    "aliases": [
+      "alert-square"
+    ],
+    "category": "Feedback"
+  },
+  {
+    "name": "alert-triangle",
+    "slug": "alert-triangle",
+    "aliases": [
+      "alert-triangle"
+    ],
+    "category": "Feedback"
   },
   {
     "name": "block-sort-ascending",
@@ -6016,15 +6187,6 @@
     "category": "Folders & Files"
   },
   {
-    "name": "files",
-    "slug": "files",
-    "aliases": [
-      "files",
-      "documents"
-    ],
-    "category": "Folders & Files"
-  },
-  {
     "name": "file-text",
     "slug": "file-text",
     "aliases": [
@@ -6038,6 +6200,15 @@
     "slug": "file-zip",
     "aliases": [
       "file-zip"
+    ],
+    "category": "Folders & Files"
+  },
+  {
+    "name": "files",
+    "slug": "files",
+    "aliases": [
+      "files",
+      "documents"
     ],
     "category": "Folders & Files"
   },
@@ -6194,24 +6365,6 @@
     "category": "Folders & Files"
   },
   {
-    "name": "folders",
-    "slug": "folders",
-    "aliases": [
-      "folders"
-    ],
-    "category": "Folders & Files"
-  },
-  {
-    "name": "folders-2",
-    "slug": "folders-2",
-    "aliases": [
-      "folders-2",
-      "collection",
-      "stuff"
-    ],
-    "category": "Folders & Files"
-  },
-  {
     "name": "folder-shared",
     "slug": "folder-shared",
     "aliases": [
@@ -6233,6 +6386,24 @@
     "slug": "folder-upload",
     "aliases": [
       "folder-upload"
+    ],
+    "category": "Folders & Files"
+  },
+  {
+    "name": "folders",
+    "slug": "folders",
+    "aliases": [
+      "folders"
+    ],
+    "category": "Folders & Files"
+  },
+  {
+    "name": "folders-2",
+    "slug": "folders-2",
+    "aliases": [
+      "folders-2",
+      "collection",
+      "stuff"
     ],
     "category": "Folders & Files"
   },
@@ -6279,6 +6450,14 @@
     "category": "Folders & Files"
   },
   {
+    "name": "note-text",
+    "slug": "note-text",
+    "aliases": [
+      "note-text"
+    ],
+    "category": "Folders & Files"
+  },
+  {
     "name": "notebook",
     "slug": "notebook",
     "aliases": [
@@ -6301,14 +6480,6 @@
     "slug": "notes",
     "aliases": [
       "notes"
-    ],
-    "category": "Folders & Files"
-  },
-  {
-    "name": "note-text",
-    "slug": "note-text",
-    "aliases": [
-      "note-text"
     ],
     "category": "Folders & Files"
   },
@@ -7147,17 +7318,6 @@
     "category": "Forms & Shapes"
   },
   {
-    "name": "forms-circle-square",
-    "slug": "forms-circle-square",
-    "aliases": [
-      "forms-circle-square",
-      "shapes",
-      "designs",
-      "templates"
-    ],
-    "category": "Forms & Shapes"
-  },
-  {
     "name": "form-seal",
     "slug": "form-seal",
     "aliases": [
@@ -7171,6 +7331,17 @@
     "slug": "form-square",
     "aliases": [
       "form-square"
+    ],
+    "category": "Forms & Shapes"
+  },
+  {
+    "name": "forms-circle-square",
+    "slug": "forms-circle-square",
+    "aliases": [
+      "forms-circle-square",
+      "shapes",
+      "designs",
+      "templates"
     ],
     "category": "Forms & Shapes"
   },
@@ -7661,96 +7832,6 @@
     "category": "Hands"
   },
   {
-    "name": "pointer",
-    "slug": "pointer",
-    "aliases": [
-      "pointer",
-      "hand"
-    ],
-    "category": "Hands"
-  },
-  {
-    "name": "raising-hand-4-finger",
-    "slug": "raising-hand-4-finger",
-    "aliases": [
-      "raising-hand-4-finger",
-      "hey",
-      "hello"
-    ],
-    "category": "Hands"
-  },
-  {
-    "name": "raising-hand-5-finger",
-    "slug": "raising-hand-5-finger",
-    "aliases": [
-      "raising-hand-5-finger",
-      "hey",
-      "hello",
-      "high-five"
-    ],
-    "category": "Hands"
-  },
-  {
-    "name": "shaka-1",
-    "slug": "shaka-1",
-    "aliases": [
-      "shaka-1",
-      "call me",
-      "hang-ten"
-    ],
-    "category": "Hands"
-  },
-  {
-    "name": "shaka-2",
-    "slug": "shaka-2",
-    "aliases": [
-      "shaka-2",
-      "call me",
-      "hang-ten"
-    ],
-    "category": "Hands"
-  },
-  {
-    "name": "thumb-down-curved",
-    "slug": "thumb-down-curved",
-    "aliases": [
-      "thumb-down-curved"
-    ],
-    "category": "Hands"
-  },
-  {
-    "name": "thumbs-down",
-    "slug": "thumbs-down",
-    "aliases": [
-      "thumbs-down",
-      "thumb",
-      "hand",
-      "no",
-      "contra"
-    ],
-    "category": "Hands"
-  },
-  {
-    "name": "thumbs-up",
-    "slug": "thumbs-up",
-    "aliases": [
-      "thumbs-up",
-      "thumb",
-      "hand",
-      "yes",
-      "pro"
-    ],
-    "category": "Hands"
-  },
-  {
-    "name": "thumb-up-curved",
-    "slug": "thumb-up-curved",
-    "aliases": [
-      "thumb-up-curved"
-    ],
-    "category": "Hands"
-  },
-  {
     "name": "touch",
     "slug": "touch",
     "aliases": [
@@ -7785,248 +7866,6 @@
     "aliases": [
       "anchor-2",
       "link"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "appearance-dark-mode",
-    "slug": "appearance-dark-mode",
-    "aliases": [
-      "appearance-dark-mode",
-      "switch"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "appearance-light-mode",
-    "slug": "appearance-light-mode",
-    "aliases": [
-      "appearance-light-mode",
-      "switch"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "archive-1",
-    "slug": "archive-1",
-    "aliases": [
-      "archive-1",
-      "inbox",
-      "file"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "archive-junk",
-    "slug": "archive-junk",
-    "aliases": [
-      "archive-junk"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "arrow-box-left",
-    "slug": "arrow-box-left",
-    "aliases": [
-      "arrow-box-left",
-      "logout",
-      "leave",
-      "door"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "arrow-box-right",
-    "slug": "arrow-box-right",
-    "aliases": [
-      "arrow-box-right",
-      "login",
-      "enter",
-      "door"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "arrow-inbox",
-    "slug": "arrow-inbox",
-    "aliases": [
-      "arrow-inbox",
-      "download",
-      "file",
-      "down",
-      "save"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "arrow-left-x",
-    "slug": "arrow-left-x",
-    "aliases": [
-      "arrow-left-x",
-      "delete",
-      "remove",
-      "backspace"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "arrow-out-of-box",
-    "slug": "arrow-out-of-box",
-    "aliases": [
-      "arrow-out-of-box",
-      "upload",
-      "share"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "arrow-rounded",
-    "slug": "arrow-rounded",
-    "aliases": [
-      "arrow-rounded",
-      "share",
-      "arrow",
-      "login"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "arrows-all-sides",
-    "slug": "arrows-all-sides",
-    "aliases": [
-      "arrows-all-sides",
-      "move",
-      "focus"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "arrows-all-sides-2",
-    "slug": "arrows-all-sides-2",
-    "aliases": [
-      "arrows-all-sides-2",
-      "scan-text",
-      "text",
-      "focus",
-      "list"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "barcode",
-    "slug": "barcode",
-    "aliases": [
-      "barcode",
-      "qr code",
-      "scan"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "bars-three",
-    "slug": "bars-three",
-    "aliases": [
-      "bars-three",
-      "menu",
-      "list",
-      "hamburger"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "bars-three-2",
-    "slug": "bars-three-2",
-    "aliases": [
-      "bars-three-2",
-      "menu",
-      "list",
-      "hamburger"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "bars-three-3",
-    "slug": "bars-three-3",
-    "aliases": [
-      "bars-three-3",
-      "menu",
-      "list",
-      "hamburger"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "bars-two",
-    "slug": "bars-two",
-    "aliases": [
-      "bars-two",
-      "menu simple",
-      "nav simple"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "bars-two-2",
-    "slug": "bars-two-2",
-    "aliases": [
-      "bars-two-2",
-      "menu",
-      "nav"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "bell",
-    "slug": "bell",
-    "aliases": [
-      "bell",
-      "notification",
-      "activity",
-      "alert"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "bell-2",
-    "slug": "bell-2",
-    "aliases": [
-      "bell-2",
-      "notification",
-      "activity",
-      "alert"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "bell-2-snooze",
-    "slug": "bell-2-snooze",
-    "aliases": [
-      "bell-2-snooze",
-      "notification",
-      "activity",
-      "alert"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "bell-check",
-    "slug": "bell-check",
-    "aliases": [
-      "bell-check",
-      "notification alarm",
-      "activity",
-      "alert"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "bell-off",
-    "slug": "bell-off",
-    "aliases": [
-      "bell-off",
-      "notification off",
-      "activity",
-      "alert"
     ],
     "category": "Interface General"
   },
@@ -8811,6 +8650,15 @@
     "category": "Interface General"
   },
   {
+    "name": "light-bulb-simple",
+    "slug": "light-bulb-simple",
+    "aliases": [
+      "light-bulb-simple",
+      "idea"
+    ],
+    "category": "Interface General"
+  },
+  {
     "name": "lightbulb-glow",
     "slug": "lightbulb-glow",
     "aliases": [
@@ -8818,15 +8666,6 @@
       "idea",
       "reasoning",
       "think"
-    ],
-    "category": "Interface General"
-  },
-  {
-    "name": "light-bulb-simple",
-    "slug": "light-bulb-simple",
-    "aliases": [
-      "light-bulb-simple",
-      "idea"
     ],
     "category": "Interface General"
   },
@@ -9670,6 +9509,14 @@
     "category": "Interface General"
   },
   {
+    "name": "unblock",
+    "slug": "unblock",
+    "aliases": [
+      "unblock"
+    ],
+    "category": "Interface General"
+  },
+  {
     "name": "unpin",
     "slug": "unpin",
     "aliases": [
@@ -9814,6 +9661,14 @@
     "category": "Keyboard"
   },
   {
+    "name": "enter",
+    "slug": "enter",
+    "aliases": [
+      "enter"
+    ],
+    "category": "Keyboard"
+  },
+  {
     "name": "esc",
     "slug": "esc",
     "aliases": [
@@ -9937,6 +9792,14 @@
     "category": "Layout"
   },
   {
+    "name": "bottombar-hidden-bottom-wide",
+    "slug": "bottombar-hidden-bottom-wide",
+    "aliases": [
+      "bottombar-hidden-bottom-wide"
+    ],
+    "category": "Layout"
+  },
+  {
     "name": "canvas-grid",
     "slug": "canvas-grid",
     "aliases": [
@@ -9953,26 +9816,6 @@
     "aliases": [
       "carussel",
       "slides"
-    ],
-    "category": "Layout"
-  },
-  {
-    "name": "columns-3",
-    "slug": "columns-3",
-    "aliases": [
-      "columns-3",
-      "layout",
-      "third"
-    ],
-    "category": "Layout"
-  },
-  {
-    "name": "columns-3-wide",
-    "slug": "columns-3-wide",
-    "aliases": [
-      "columns-3-wide",
-      "layout",
-      "third"
     ],
     "category": "Layout"
   },
@@ -10022,6 +9865,26 @@
     "slug": "column-wide-remove",
     "aliases": [
       "column-wide-remove"
+    ],
+    "category": "Layout"
+  },
+  {
+    "name": "columns-3",
+    "slug": "columns-3",
+    "aliases": [
+      "columns-3",
+      "layout",
+      "third"
+    ],
+    "category": "Layout"
+  },
+  {
+    "name": "columns-3-wide",
+    "slug": "columns-3-wide",
+    "aliases": [
+      "columns-3-wide",
+      "layout",
+      "third"
     ],
     "category": "Layout"
   },
@@ -10079,6 +9942,14 @@
     "category": "Layout"
   },
   {
+    "name": "layout-align-left-right",
+    "slug": "layout-align-left-right",
+    "aliases": [
+      "layout-align-left-right"
+    ],
+    "category": "Layout"
+  },
+  {
     "name": "layout-align-right",
     "slug": "layout-align-right",
     "aliases": [
@@ -10091,6 +9962,14 @@
     "slug": "layout-align-top",
     "aliases": [
       "layout-align-top"
+    ],
+    "category": "Layout"
+  },
+  {
+    "name": "layout-align-top-bottom",
+    "slug": "layout-align-top-bottom",
+    "aliases": [
+      "layout-align-top-bottom"
     ],
     "category": "Layout"
   },
@@ -10178,6 +10057,30 @@
       "layout-sidebar",
       "grid",
       "window"
+    ],
+    "category": "Layout"
+  },
+  {
+    "name": "layout-sidebar-right",
+    "slug": "layout-sidebar-right",
+    "aliases": [
+      "layout-sidebar-right"
+    ],
+    "category": "Layout"
+  },
+  {
+    "name": "layout-sidebar-two",
+    "slug": "layout-sidebar-two",
+    "aliases": [
+      "layout-sidebar-two"
+    ],
+    "category": "Layout"
+  },
+  {
+    "name": "layout-sidebar-two-r",
+    "slug": "layout-sidebar-two-r",
+    "aliases": [
+      "layout-sidebar-two-r"
     ],
     "category": "Layout"
   },
@@ -10321,6 +10224,22 @@
     "category": "Layout"
   },
   {
+    "name": "slide-tall-add",
+    "slug": "slide-tall-add",
+    "aliases": [
+      "slide-tall-add"
+    ],
+    "category": "Layout"
+  },
+  {
+    "name": "slide-wide-add",
+    "slug": "slide-wide-add",
+    "aliases": [
+      "slide-wide-add"
+    ],
+    "category": "Layout"
+  },
+  {
     "name": "slides-tall",
     "slug": "slides-tall",
     "aliases": [
@@ -10353,18 +10272,10 @@
     "category": "Layout"
   },
   {
-    "name": "slide-tall-add",
-    "slug": "slide-tall-add",
+    "name": "topbar-hidden-top-wide",
+    "slug": "topbar-hidden-top-wide",
     "aliases": [
-      "slide-tall-add"
-    ],
-    "category": "Layout"
-  },
-  {
-    "name": "slide-wide-add",
-    "slug": "slide-wide-add",
-    "aliases": [
-      "slide-wide-add"
+      "topbar-hidden-top-wide"
     ],
     "category": "Layout"
   },
@@ -10442,6 +10353,14 @@
     "aliases": [
       "map",
       "paper"
+    ],
+    "category": "Location"
+  },
+  {
+    "name": "map-edit-flat",
+    "slug": "map-edit-flat",
+    "aliases": [
+      "map-edit-flat"
     ],
     "category": "Location"
   },
@@ -10982,6 +10901,14 @@
     "category": "People"
   },
   {
+    "name": "people-id-card-2",
+    "slug": "people-id-card-2",
+    "aliases": [
+      "people-id-card-2"
+    ],
+    "category": "People"
+  },
+  {
     "name": "people-like",
     "slug": "people-like",
     "aliases": [
@@ -11141,6 +11068,17 @@
     "category": "People"
   },
   {
+    "name": "user-add-right",
+    "slug": "user-add-right",
+    "aliases": [
+      "user-add-right",
+      "people",
+      "person",
+      "member"
+    ],
+    "category": "People"
+  },
+  {
     "name": "user-added",
     "slug": "user-added",
     "aliases": [
@@ -11149,17 +11087,6 @@
       "person",
       "member",
       "checked"
-    ],
-    "category": "People"
-  },
-  {
-    "name": "user-add-right",
-    "slug": "user-add-right",
-    "aliases": [
-      "user-add-right",
-      "people",
-      "person",
-      "member"
     ],
     "category": "People"
   },
@@ -11959,6 +11886,14 @@
     "category": "Photography & Video"
   },
   {
+    "name": "stop-share-screen",
+    "slug": "stop-share-screen",
+    "aliases": [
+      "stop-share-screen"
+    ],
+    "category": "Photography & Video"
+  },
+  {
     "name": "unblur",
     "slug": "unblur",
     "aliases": [
@@ -12037,15 +11972,6 @@
     "category": "Photography & Video"
   },
   {
-    "name": "videos",
-    "slug": "videos",
-    "aliases": [
-      "videos",
-      "video-playlist"
-    ],
-    "category": "Photography & Video"
-  },
-  {
     "name": "video-timeline",
     "slug": "video-timeline",
     "aliases": [
@@ -12059,6 +11985,15 @@
     "slug": "video-trim",
     "aliases": [
       "video-trim"
+    ],
+    "category": "Photography & Video"
+  },
+  {
+    "name": "videos",
+    "slug": "videos",
+    "aliases": [
+      "videos",
+      "video-playlist"
     ],
     "category": "Photography & Video"
   },
@@ -12477,6 +12412,14 @@
     "category": "Shopping & Payment"
   },
   {
+    "name": "card-nfc",
+    "slug": "card-nfc",
+    "aliases": [
+      "card-nfc"
+    ],
+    "category": "Shopping & Payment"
+  },
+  {
     "name": "coin-lira",
     "slug": "coin-lira",
     "aliases": [
@@ -12553,6 +12496,14 @@
       "credit-card-add",
       "card",
       "payment"
+    ],
+    "category": "Shopping & Payment"
+  },
+  {
+    "name": "credit-card-nfc",
+    "slug": "credit-card-nfc",
+    "aliases": [
+      "credit-card-nfc"
     ],
     "category": "Shopping & Payment"
   },
@@ -12742,11 +12693,10 @@
     "category": "Shopping & Payment"
   },
   {
-    "name": "package-ckeck",
-    "slug": "package-ckeck",
+    "name": "package-check",
+    "slug": "package-check",
     "aliases": [
-      "package-ckeck",
-      "delivery"
+      "package-check"
     ],
     "category": "Shopping & Payment"
   },
@@ -13048,6 +12998,986 @@
     "category": "Shopping & Payment"
   },
   {
+    "name": "adobe-acrobat",
+    "slug": "adobe-acrobat",
+    "aliases": [
+      "adobe-acrobat"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "affinity",
+    "slug": "affinity",
+    "aliases": [
+      "affinity"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "amp",
+    "slug": "amp",
+    "aliases": [
+      "amp"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "angularjs",
+    "slug": "angularjs",
+    "aliases": [
+      "angularjs"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "anthropic",
+    "slug": "anthropic",
+    "aliases": [
+      "anthropic"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "antigravity",
+    "slug": "antigravity",
+    "aliases": [
+      "antigravity"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "apple",
+    "slug": "apple",
+    "aliases": [
+      "apple"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "apple-intelligence",
+    "slug": "apple-intelligence",
+    "aliases": [
+      "apple-intelligence"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "apple-music",
+    "slug": "apple-music",
+    "aliases": [
+      "apple-music"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "apple-spring",
+    "slug": "apple-spring",
+    "aliases": [
+      "apple-spring"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "appstore",
+    "slug": "appstore",
+    "aliases": [
+      "appstore"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "arc",
+    "slug": "arc",
+    "aliases": [
+      "arc"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "arena",
+    "slug": "arena",
+    "aliases": [
+      "arena"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "artifact-news",
+    "slug": "artifact-news",
+    "aliases": [
+      "artifact-news"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "behance",
+    "slug": "behance",
+    "aliases": [
+      "behance"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "bitcoin-logo",
+    "slug": "bitcoin-logo",
+    "aliases": [
+      "bitcoin-logo"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "bluesky",
+    "slug": "bluesky",
+    "aliases": [
+      "bluesky"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "bolt",
+    "slug": "bolt",
+    "aliases": [
+      "bolt"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "bun",
+    "slug": "bun",
+    "aliases": [
+      "bun"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "cash",
+    "slug": "cash",
+    "aliases": [
+      "cash"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "central-icon-system",
+    "slug": "central-icon-system",
+    "aliases": [
+      "central-icon-system"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "chrome",
+    "slug": "chrome",
+    "aliases": [
+      "chrome"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "claudeai",
+    "slug": "claudeai",
+    "aliases": [
+      "claudeai"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "clawd",
+    "slug": "clawd",
+    "aliases": [
+      "clawd"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "codepen",
+    "slug": "codepen",
+    "aliases": [
+      "codepen"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "copilot",
+    "slug": "copilot",
+    "aliases": [
+      "copilot"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "cosmos",
+    "slug": "cosmos",
+    "aliases": [
+      "cosmos"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "cursor",
+    "slug": "cursor",
+    "aliases": [
+      "cursor"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "deepseek",
+    "slug": "deepseek",
+    "aliases": [
+      "deepseek"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "devin",
+    "slug": "devin",
+    "aliases": [
+      "devin"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "dia",
+    "slug": "dia",
+    "aliases": [
+      "dia"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "discord",
+    "slug": "discord",
+    "aliases": [
+      "discord"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "dribbble",
+    "slug": "dribbble",
+    "aliases": [
+      "dribbble"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "duolingo",
+    "slug": "duolingo",
+    "aliases": [
+      "duolingo"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "european-union",
+    "slug": "european-union",
+    "aliases": [
+      "european-union",
+      "eu-stars"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "facebook",
+    "slug": "facebook",
+    "aliases": [
+      "facebook"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "facebook-messenger",
+    "slug": "facebook-messenger",
+    "aliases": [
+      "facebook-messenger"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "factory",
+    "slug": "factory",
+    "aliases": [
+      "factory"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "figma",
+    "slug": "figma",
+    "aliases": [
+      "figma"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "figma-simple",
+    "slug": "figma-simple",
+    "aliases": [
+      "figma-simple"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "firefox",
+    "slug": "firefox",
+    "aliases": [
+      "firefox"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "formula1",
+    "slug": "formula1",
+    "aliases": [
+      "formula1"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "framer",
+    "slug": "framer",
+    "aliases": [
+      "framer"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "gemini",
+    "slug": "gemini",
+    "aliases": [
+      "gemini"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "git",
+    "slug": "git",
+    "aliases": [
+      "git"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "github",
+    "slug": "github",
+    "aliases": [
+      "github"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "google",
+    "slug": "google",
+    "aliases": [
+      "google"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "google-aistudio",
+    "slug": "google-aistudio",
+    "aliases": [
+      "google-aistudio"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "google-deepmind",
+    "slug": "google-deepmind",
+    "aliases": [
+      "google-deepmind"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "google-play-store",
+    "slug": "google-play-store",
+    "aliases": [
+      "google-play-store"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "goose",
+    "slug": "goose",
+    "aliases": [
+      "goose"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "granola",
+    "slug": "granola",
+    "aliases": [
+      "granola"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "grok",
+    "slug": "grok",
+    "aliases": [
+      "grok"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "gumroad",
+    "slug": "gumroad",
+    "aliases": [
+      "gumroad"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "iconists",
+    "slug": "iconists",
+    "aliases": [
+      "iconists"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "imessage",
+    "slug": "imessage",
+    "aliases": [
+      "imessage"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "instagram",
+    "slug": "instagram",
+    "aliases": [
+      "instagram"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "iso-org",
+    "slug": "iso-org",
+    "aliases": [
+      "iso-org"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "java",
+    "slug": "java",
+    "aliases": [
+      "java"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "java-coffee-bean",
+    "slug": "java-coffee-bean",
+    "aliases": [
+      "java-coffee-bean"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "javascript",
+    "slug": "javascript",
+    "aliases": [
+      "javascript"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "json",
+    "slug": "json",
+    "aliases": [
+      "json"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "lemonsqueezy",
+    "slug": "lemonsqueezy",
+    "aliases": [
+      "lemonsqueezy"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "linear",
+    "slug": "linear",
+    "aliases": [
+      "linear"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "linkedin",
+    "slug": "linkedin",
+    "aliases": [
+      "linkedin"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "linktree",
+    "slug": "linktree",
+    "aliases": [
+      "linktree"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "lottielab",
+    "slug": "lottielab",
+    "aliases": [
+      "lottielab"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "lovable",
+    "slug": "lovable",
+    "aliases": [
+      "lovable"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "manus-ai",
+    "slug": "manus-ai",
+    "aliases": [
+      "manus-ai"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "mastadon",
+    "slug": "mastadon",
+    "aliases": [
+      "mastadon"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "medium",
+    "slug": "medium",
+    "aliases": [
+      "medium"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "meta-ai",
+    "slug": "meta-ai",
+    "aliases": [
+      "meta-ai"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "microsoft-copilot",
+    "slug": "microsoft-copilot",
+    "aliases": [
+      "microsoft-copilot"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "midjourney",
+    "slug": "midjourney",
+    "aliases": [
+      "midjourney"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "mistral",
+    "slug": "mistral",
+    "aliases": [
+      "mistral"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "modelcontextprotocol",
+    "slug": "modelcontextprotocol",
+    "aliases": [
+      "modelcontextprotocol",
+      "mcp"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "netify",
+    "slug": "netify",
+    "aliases": [
+      "netify"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "nintendo-switch",
+    "slug": "nintendo-switch",
+    "aliases": [
+      "nintendo-switch"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "notebooklm",
+    "slug": "notebooklm",
+    "aliases": [
+      "notebooklm"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "notion",
+    "slug": "notion",
+    "aliases": [
+      "notion"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "notion-ai",
+    "slug": "notion-ai",
+    "aliases": [
+      "notion-ai"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "npm",
+    "slug": "npm",
+    "aliases": [
+      "npm"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "nvidia",
+    "slug": "nvidia",
+    "aliases": [
+      "nvidia"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "ollama",
+    "slug": "ollama",
+    "aliases": [
+      "ollama"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "openai",
+    "slug": "openai",
+    "aliases": [
+      "openai",
+      "chatgpt"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "openai-atlas",
+    "slug": "openai-atlas",
+    "aliases": [
+      "openai-atlas"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "openai-codex",
+    "slug": "openai-codex",
+    "aliases": [
+      "openai-codex"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "openai-prism",
+    "slug": "openai-prism",
+    "aliases": [
+      "openai-prism"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "openai-sora",
+    "slug": "openai-sora",
+    "aliases": [
+      "openai-sora"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "openclaw",
+    "slug": "openclaw",
+    "aliases": [
+      "openclaw"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "opencode",
+    "slug": "opencode",
+    "aliases": [
+      "opencode"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "opera",
+    "slug": "opera",
+    "aliases": [
+      "opera"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "patreon",
+    "slug": "patreon",
+    "aliases": [
+      "patreon"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "perplexity",
+    "slug": "perplexity",
+    "aliases": [
+      "perplexity"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "php",
+    "slug": "php",
+    "aliases": [
+      "php"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "php-elephant",
+    "slug": "php-elephant",
+    "aliases": [
+      "php-elephant"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "phyton",
+    "slug": "phyton",
+    "aliases": [
+      "phyton"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "pinterest",
+    "slug": "pinterest",
+    "aliases": [
+      "pinterest"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "pinterest-simple",
+    "slug": "pinterest-simple",
+    "aliases": [
+      "pinterest-simple"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "playstation",
+    "slug": "playstation",
+    "aliases": [
+      "playstation"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "producthunt",
+    "slug": "producthunt",
+    "aliases": [
+      "producthunt"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "quora",
+    "slug": "quora",
+    "aliases": [
+      "quora"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "react",
+    "slug": "react",
+    "aliases": [
+      "react"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "recraft",
+    "slug": "recraft",
+    "aliases": [
+      "recraft"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "red-dot-award",
+    "slug": "red-dot-award",
+    "aliases": [
+      "red-dot-award"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "reddit",
+    "slug": "reddit",
+    "aliases": [
+      "reddit"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "replit",
+    "slug": "replit",
+    "aliases": [
+      "replit"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "rss-feed",
+    "slug": "rss-feed",
+    "aliases": [
+      "rss-feed"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "slack",
+    "slug": "slack",
+    "aliases": [
+      "slack"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "snapchat",
+    "slug": "snapchat",
+    "aliases": [
+      "snapchat"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "spotify",
+    "slug": "spotify",
+    "aliases": [
+      "spotify"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "steam",
+    "slug": "steam",
+    "aliases": [
+      "steam"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "telegram",
+    "slug": "telegram",
+    "aliases": [
+      "telegram"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "threads",
+    "slug": "threads",
+    "aliases": [
+      "threads"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "tiktok",
+    "slug": "tiktok",
+    "aliases": [
+      "tiktok"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "tumblr",
+    "slug": "tumblr",
+    "aliases": [
+      "tumblr"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "twitch",
+    "slug": "twitch",
+    "aliases": [
+      "twitch"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "twitter",
+    "slug": "twitter",
+    "aliases": [
+      "twitter",
+      "larry"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "whatsapp",
+    "slug": "whatsapp",
+    "aliases": [
+      "whatsapp"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "x",
+    "slug": "x",
+    "aliases": [
+      "x"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "xbox",
+    "slug": "xbox",
+    "aliases": [
+      "xbox"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
+    "name": "youtube",
+    "slug": "youtube",
+    "aliases": [
+      "youtube"
+    ],
+    "category": "Social Media & Brands"
+  },
+  {
     "name": "airpod-left",
     "slug": "airpod-left",
     "aliases": [
@@ -13079,6 +14009,14 @@
     "aliases": [
       "albums",
       "cover"
+    ],
+    "category": "Sound & Music"
+  },
+  {
+    "name": "albums-2",
+    "slug": "albums-2",
+    "aliases": [
+      "albums-2"
     ],
     "category": "Sound & Music"
   },
@@ -14577,15 +15515,6 @@
     "category": "Things"
   },
   {
-    "name": "form-pyramide",
-    "slug": "form-pyramide",
-    "aliases": [
-      "form-pyramide",
-      "prism"
-    ],
-    "category": "Things"
-  },
-  {
     "name": "for-you",
     "slug": "for-you",
     "aliases": [
@@ -14594,6 +15523,15 @@
       "event",
       "address",
       "post"
+    ],
+    "category": "Things"
+  },
+  {
+    "name": "form-pyramide",
+    "slug": "form-pyramide",
+    "aliases": [
+      "form-pyramide",
+      "prism"
     ],
     "category": "Things"
   },
@@ -14867,6 +15805,14 @@
     "aliases": [
       "piggy-bank",
       "save-money"
+    ],
+    "category": "Things"
+  },
+  {
+    "name": "piggy-bank-coin",
+    "slug": "piggy-bank-coin",
+    "aliases": [
+      "piggy-bank-coin"
     ],
     "category": "Things"
   },
@@ -15298,7 +16244,7 @@
     "category": "Things"
   },
   {
-    "name": "test-tube 2",
+    "name": "test-tube-2",
     "slug": "test-tube-2",
     "aliases": [
       "test-tube 2",
@@ -16064,21 +17010,21 @@
     "category": "Typography"
   },
   {
-    "name": "linebreak",
-    "slug": "linebreak",
-    "aliases": [
-      "linebreak",
-      "next-line"
-    ],
-    "category": "Typography"
-  },
-  {
     "name": "line-height",
     "slug": "line-height",
     "aliases": [
       "line-height",
       "spacing",
       "eleborate"
+    ],
+    "category": "Typography"
+  },
+  {
+    "name": "linebreak",
+    "slug": "linebreak",
+    "aliases": [
+      "linebreak",
+      "next-line"
     ],
     "category": "Typography"
   },
@@ -16522,6 +17468,14 @@
     "category": "Vehicles"
   },
   {
+    "name": "rocket-2",
+    "slug": "rocket-2",
+    "aliases": [
+      "rocket-2"
+    ],
+    "category": "Vehicles"
+  },
+  {
     "name": "steering-wheel",
     "slug": "steering-wheel",
     "aliases": [
@@ -16584,6 +17538,14 @@
     "category": "Vehicles & Aircrafts"
   },
   {
+    "name": "car-1-ev",
+    "slug": "car-1-ev",
+    "aliases": [
+      "car-1-ev"
+    ],
+    "category": "Vehicles & Aircrafts"
+  },
+  {
     "name": "car-10",
     "slug": "car-10",
     "aliases": [
@@ -16598,14 +17560,6 @@
     "aliases": [
       "car-10-ev",
       "truck"
-    ],
-    "category": "Vehicles & Aircrafts"
-  },
-  {
-    "name": "car-1-ev",
-    "slug": "car-1-ev",
-    "aliases": [
-      "car-1-ev"
     ],
     "category": "Vehicles & Aircrafts"
   },
@@ -17062,1177 +18016,5 @@
       "windy"
     ],
     "category": "Weather"
-  },
-  {
-    "name": "adobe-acrobat",
-    "slug": "adobe-acrobat",
-    "aliases": [
-      "adobe-acrobat"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "affinity",
-    "slug": "affinity",
-    "aliases": [
-      "affinity"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "amp",
-    "slug": "amp",
-    "aliases": [
-      "amp"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "angularjs",
-    "slug": "angularjs",
-    "aliases": [
-      "angularjs"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "anthropic",
-    "slug": "anthropic",
-    "aliases": [
-      "anthropic"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "antigravity",
-    "slug": "antigravity",
-    "aliases": [
-      "antigravity"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "apple",
-    "slug": "apple",
-    "aliases": [
-      "apple"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "apple-intelligence",
-    "slug": "apple-intelligence",
-    "aliases": [
-      "apple-intelligence"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "apple-music",
-    "slug": "apple-music",
-    "aliases": [
-      "apple-music"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "apple-spring",
-    "slug": "apple-spring",
-    "aliases": [
-      "apple-spring"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "appstore",
-    "slug": "appstore",
-    "aliases": [
-      "appstore"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "arc",
-    "slug": "arc",
-    "aliases": [
-      "arc"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "arena",
-    "slug": "arena",
-    "aliases": [
-      "arena"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "artifact-news",
-    "slug": "artifact-news",
-    "aliases": [
-      "artifact-news"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "behance",
-    "slug": "behance",
-    "aliases": [
-      "behance"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "bitcoin-logo",
-    "slug": "bitcoin-logo",
-    "aliases": [
-      "bitcoin-logo"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "bluesky",
-    "slug": "bluesky",
-    "aliases": [
-      "bluesky"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "bolt",
-    "slug": "bolt",
-    "aliases": [
-      "bolt"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "bun",
-    "slug": "bun",
-    "aliases": [
-      "bun"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "cash",
-    "slug": "cash",
-    "aliases": [
-      "cash"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "central-icon-system",
-    "slug": "central-icon-system",
-    "aliases": [
-      "central-icon-system"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "chrome",
-    "slug": "chrome",
-    "aliases": [
-      "chrome"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "claudeai",
-    "slug": "claudeai",
-    "aliases": [
-      "claudeai"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "clawd",
-    "slug": "clawd",
-    "aliases": [
-      "clawd"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "codepen",
-    "slug": "codepen",
-    "aliases": [
-      "codepen"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "copilot",
-    "slug": "copilot",
-    "aliases": [
-      "copilot"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "cosmos",
-    "slug": "cosmos",
-    "aliases": [
-      "cosmos"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "c++",
-    "slug": "c",
-    "aliases": [
-      "c++"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "cursor",
-    "slug": "cursor",
-    "aliases": [
-      "cursor"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "deepseek",
-    "slug": "deepseek",
-    "aliases": [
-      "deepseek"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "devin",
-    "slug": "devin",
-    "aliases": [
-      "devin"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "dia",
-    "slug": "dia",
-    "aliases": [
-      "dia"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "discord",
-    "slug": "discord",
-    "aliases": [
-      "discord"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "dribbble",
-    "slug": "dribbble",
-    "aliases": [
-      "dribbble"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "duolingo",
-    "slug": "duolingo",
-    "aliases": [
-      "duolingo"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "european-union",
-    "slug": "european-union",
-    "aliases": [
-      "european-union",
-      "eu-stars"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "facebook",
-    "slug": "facebook",
-    "aliases": [
-      "facebook"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "facebook-messenger",
-    "slug": "facebook-messenger",
-    "aliases": [
-      "facebook-messenger"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "factory",
-    "slug": "factory",
-    "aliases": [
-      "factory"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "figma",
-    "slug": "figma",
-    "aliases": [
-      "figma"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "figma-simple",
-    "slug": "figma-simple",
-    "aliases": [
-      "figma-simple"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "firefox",
-    "slug": "firefox",
-    "aliases": [
-      "firefox"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "formula1",
-    "slug": "formula1",
-    "aliases": [
-      "formula1"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "framer",
-    "slug": "framer",
-    "aliases": [
-      "framer"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "gemini",
-    "slug": "gemini",
-    "aliases": [
-      "gemini"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "git",
-    "slug": "git",
-    "aliases": [
-      "git"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "github",
-    "slug": "github",
-    "aliases": [
-      "github"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "google",
-    "slug": "google",
-    "aliases": [
-      "google"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "google-aistudio",
-    "slug": "google-aistudio",
-    "aliases": [
-      "google-aistudio"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "google-deepmind",
-    "slug": "google-deepmind",
-    "aliases": [
-      "google-deepmind"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "google-play-store",
-    "slug": "google-play-store",
-    "aliases": [
-      "google-play-store"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "goose",
-    "slug": "goose",
-    "aliases": [
-      "goose"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "granola",
-    "slug": "granola",
-    "aliases": [
-      "granola"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "grok",
-    "slug": "grok",
-    "aliases": [
-      "grok"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "gumroad",
-    "slug": "gumroad",
-    "aliases": [
-      "gumroad"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "iconists",
-    "slug": "iconists",
-    "aliases": [
-      "iconists"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "imessage",
-    "slug": "imessage",
-    "aliases": [
-      "imessage"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "instagram",
-    "slug": "instagram",
-    "aliases": [
-      "instagram"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "iso-org",
-    "slug": "iso-org",
-    "aliases": [
-      "iso-org"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "java",
-    "slug": "java",
-    "aliases": [
-      "java"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "java-coffee-bean",
-    "slug": "java-coffee-bean",
-    "aliases": [
-      "java-coffee-bean"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "javascript",
-    "slug": "javascript",
-    "aliases": [
-      "javascript"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "json",
-    "slug": "json",
-    "aliases": [
-      "json"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "lemonsqueezy",
-    "slug": "lemonsqueezy",
-    "aliases": [
-      "lemonsqueezy"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "linear",
-    "slug": "linear",
-    "aliases": [
-      "linear"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "linkedin",
-    "slug": "linkedin",
-    "aliases": [
-      "linkedin"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "linktree",
-    "slug": "linktree",
-    "aliases": [
-      "linktree"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "lottielab",
-    "slug": "lottielab",
-    "aliases": [
-      "lottielab"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "lovable",
-    "slug": "lovable",
-    "aliases": [
-      "lovable"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "manus-ai",
-    "slug": "manus-ai",
-    "aliases": [
-      "manus-ai"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "mastadon",
-    "slug": "mastadon",
-    "aliases": [
-      "mastadon"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "medium",
-    "slug": "medium",
-    "aliases": [
-      "medium"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "meta-ai",
-    "slug": "meta-ai",
-    "aliases": [
-      "meta-ai"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "microsoft-copilot",
-    "slug": "microsoft-copilot",
-    "aliases": [
-      "microsoft-copilot"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "midjourney",
-    "slug": "midjourney",
-    "aliases": [
-      "midjourney"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "mistral",
-    "slug": "mistral",
-    "aliases": [
-      "mistral"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "modelcontextprotocol",
-    "slug": "modelcontextprotocol",
-    "aliases": [
-      "modelcontextprotocol",
-      "mcp"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "netify",
-    "slug": "netify",
-    "aliases": [
-      "netify"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "nintendo-switch",
-    "slug": "nintendo-switch",
-    "aliases": [
-      "nintendo-switch"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "notebooklm",
-    "slug": "notebooklm",
-    "aliases": [
-      "notebooklm"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "notion",
-    "slug": "notion",
-    "aliases": [
-      "notion"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "notion-ai",
-    "slug": "notion-ai",
-    "aliases": [
-      "notion-ai"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "npm",
-    "slug": "npm",
-    "aliases": [
-      "npm"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "nvidia",
-    "slug": "nvidia",
-    "aliases": [
-      "nvidia"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "ollama",
-    "slug": "ollama",
-    "aliases": [
-      "ollama"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "openai",
-    "slug": "openai",
-    "aliases": [
-      "openai",
-      "chatgpt"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "openai-atlas",
-    "slug": "openai-atlas",
-    "aliases": [
-      "openai-atlas"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "openai-codex",
-    "slug": "openai-codex",
-    "aliases": [
-      "openai-codex"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "openai-prism",
-    "slug": "openai-prism",
-    "aliases": [
-      "openai-prism"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "openai-sora",
-    "slug": "openai-sora",
-    "aliases": [
-      "openai-sora"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "openclaw",
-    "slug": "openclaw",
-    "aliases": [
-      "openclaw"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "opencode",
-    "slug": "opencode",
-    "aliases": [
-      "opencode"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "opera",
-    "slug": "opera",
-    "aliases": [
-      "opera"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "patreon",
-    "slug": "patreon",
-    "aliases": [
-      "patreon"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "perplexity",
-    "slug": "perplexity",
-    "aliases": [
-      "perplexity"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "php",
-    "slug": "php",
-    "aliases": [
-      "php"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "php-elephant",
-    "slug": "php-elephant",
-    "aliases": [
-      "php-elephant"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "phyton",
-    "slug": "phyton",
-    "aliases": [
-      "phyton"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "pinterest",
-    "slug": "pinterest",
-    "aliases": [
-      "pinterest"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "pinterest-simple",
-    "slug": "pinterest-simple",
-    "aliases": [
-      "pinterest-simple"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "playstation",
-    "slug": "playstation",
-    "aliases": [
-      "playstation"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "producthunt",
-    "slug": "producthunt",
-    "aliases": [
-      "producthunt"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "quora",
-    "slug": "quora",
-    "aliases": [
-      "quora"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "react",
-    "slug": "react",
-    "aliases": [
-      "react"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "recraft",
-    "slug": "recraft",
-    "aliases": [
-      "recraft"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "reddit",
-    "slug": "reddit",
-    "aliases": [
-      "reddit"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "red-dot-award",
-    "slug": "red-dot-award",
-    "aliases": [
-      "red-dot-award"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "replit",
-    "slug": "replit",
-    "aliases": [
-      "replit"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "riot-games",
-    "slug": "riot-games",
-    "aliases": [
-      "riot-games"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "rive",
-    "slug": "rive",
-    "aliases": [
-      "rive"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "robinhood",
-    "slug": "robinhood",
-    "aliases": [
-      "robinhood"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "rss-feed",
-    "slug": "rss-feed",
-    "aliases": [
-      "rss-feed"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "rust",
-    "slug": "rust",
-    "aliases": [
-      "rust"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "safari",
-    "slug": "safari",
-    "aliases": [
-      "safari"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "siri",
-    "slug": "siri",
-    "aliases": [
-      "siri"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "sketch",
-    "slug": "sketch",
-    "aliases": [
-      "sketch"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "slack",
-    "slug": "slack",
-    "aliases": [
-      "slack"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "snapchat",
-    "slug": "snapchat",
-    "aliases": [
-      "snapchat"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "solidjs",
-    "slug": "solidjs",
-    "aliases": [
-      "solidjs"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "spotify",
-    "slug": "spotify",
-    "aliases": [
-      "spotify"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "stack-overflow",
-    "slug": "stack-overflow",
-    "aliases": [
-      "stack-overflow"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "steam",
-    "slug": "steam",
-    "aliases": [
-      "steam"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "substack",
-    "slug": "substack",
-    "aliases": [
-      "substack"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "supabase",
-    "slug": "supabase",
-    "aliases": [
-      "supabase"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "svelte",
-    "slug": "svelte",
-    "aliases": [
-      "svelte"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "telegram",
-    "slug": "telegram",
-    "aliases": [
-      "telegram"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "things",
-    "slug": "things",
-    "aliases": [
-      "things"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "threads",
-    "slug": "threads",
-    "aliases": [
-      "threads"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "tiktok",
-    "slug": "tiktok",
-    "aliases": [
-      "tiktok"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "tumblr",
-    "slug": "tumblr",
-    "aliases": [
-      "tumblr"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "twitch",
-    "slug": "twitch",
-    "aliases": [
-      "twitch"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "twitter",
-    "slug": "twitter",
-    "aliases": [
-      "twitter",
-      "larry"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "typescript",
-    "slug": "typescript",
-    "aliases": [
-      "typescript"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "v0",
-    "slug": "v0",
-    "aliases": [
-      "v0"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "venmo",
-    "slug": "venmo",
-    "aliases": [
-      "venmo"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "vercel",
-    "slug": "vercel",
-    "aliases": [
-      "vercel"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "vkontakte",
-    "slug": "vkontakte",
-    "aliases": [
-      "vkontakte"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "vue",
-    "slug": "vue",
-    "aliases": [
-      "vue"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "warp",
-    "slug": "warp",
-    "aliases": [
-      "warp"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "webflow",
-    "slug": "webflow",
-    "aliases": [
-      "webflow"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "wechat",
-    "slug": "wechat",
-    "aliases": [
-      "wechat"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "whatsapp",
-    "slug": "whatsapp",
-    "aliases": [
-      "whatsapp"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "windsurf",
-    "slug": "windsurf",
-    "aliases": [
-      "windsurf"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "x",
-    "slug": "x",
-    "aliases": [
-      "x"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "xbox",
-    "slug": "xbox",
-    "aliases": [
-      "xbox"
-    ],
-    "category": "Social Media & Brands"
-  },
-  {
-    "name": "youtube",
-    "slug": "youtube",
-    "aliases": [
-      "youtube"
-    ],
-    "category": "Social Media & Brands"
   }
 ]
