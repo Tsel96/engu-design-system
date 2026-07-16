@@ -75,6 +75,21 @@ function chunk(arr, size) {
   return out;
 }
 
+// Variant property order isn't guaranteed to match across component sets
+// (it follows each set's own property-definition order), so parse into a
+// map rather than comparing the raw "Size=24, Style=Outlined" string.
+function isOutlined24(variantName) {
+  const props = {};
+  for (const part of variantName.split(",")) {
+    const idx = part.indexOf("=");
+    if (idx === -1) continue;
+    const key = part.slice(0, idx).trim().toLowerCase();
+    const value = part.slice(idx + 1).trim().toLowerCase();
+    props[key] = value;
+  }
+  return props.size === "24" && props.style === "outlined";
+}
+
 function escapeHtml(s) {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
@@ -98,11 +113,13 @@ async function main() {
   console.log(`Resolving outlined-24 variant for ${sets.length} icon component sets…`);
   const setBatches = chunk(sets, 150);
   const childBySetId = {};
+  const childNamesBySetId = {};
   for (const batch of setBatches) {
     const data = await get(`https://api.figma.com/v1/files/${FILE_KEY}/nodes?ids=${batch.map((s) => s.node_id).join(",")}`);
     for (const [nodeId, entry] of Object.entries(data.nodes || {})) {
       const children = entry?.document?.children || [];
-      const outlined = children.find((ch) => ch.name === OUTLINED_24);
+      childNamesBySetId[nodeId] = children.map((ch) => ch.name);
+      const outlined = children.find((ch) => isOutlined24(ch.name));
       if (outlined) childBySetId[nodeId] = outlined.id;
     }
   }
@@ -115,7 +132,7 @@ async function main() {
     const name = parts.slice(2).join("/").trim();
     const outlinedNodeId = childBySetId[set.node_id];
     if (!outlinedNodeId) {
-      missingVariant.push(set.name);
+      missingVariant.push({ name: set.name, children: childNamesBySetId[set.node_id] });
       continue;
     }
     icons.push({ category, name, nodeId: outlinedNodeId });
@@ -130,17 +147,21 @@ async function main() {
       return 0;
     }
   })();
-  if (icons.length === 0 || (priorCount > 0 && icons.length < priorCount * 0.5)) {
+  if (icons.length === 0 || (priorCount > 0 && icons.length < priorCount * 0.9)) {
     console.error(
       `Refusing to write output: resolved ${icons.length} icons vs ${priorCount} previously. ` +
         `This looks like an API/matching failure, not a real icon-set shrink. Leaving existing files untouched.`
     );
+    if (missingVariant.length) {
+      console.error(`Sample of unresolved sets (with their actual variant child names):`);
+      missingVariant.slice(0, 10).forEach((m) => console.error(`  - ${m.name}: [${(m.children || []).join(" | ")}]`));
+    }
     process.exit(1);
   }
 
   if (missingVariant.length) {
     console.warn(`Skipped ${missingVariant.length} icon(s) with no "${OUTLINED_24}" variant:`);
-    missingVariant.slice(0, 20).forEach((n) => console.warn(`  - ${n}`));
+    missingVariant.slice(0, 20).forEach((m) => console.warn(`  - ${m.name}: [${(m.children || []).join(" | ")}]`));
   }
 
   // Bulk-resolve export URLs for the outlined-24 node of every icon.
