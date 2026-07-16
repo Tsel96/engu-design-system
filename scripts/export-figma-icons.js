@@ -78,7 +78,7 @@ function chunk(arr, size) {
 // Variant property order isn't guaranteed to match across component sets
 // (it follows each set's own property-definition order), so parse into a
 // map rather than comparing the raw "Size=24, Style=Outlined" string.
-function isOutlined24(variantName) {
+function parseVariantProps(variantName) {
   const props = {};
   for (const part of variantName.split(",")) {
     const idx = part.indexOf("=");
@@ -87,7 +87,24 @@ function isOutlined24(variantName) {
     const value = part.slice(idx + 1).trim().toLowerCase();
     props[key] = value;
   }
-  return props.size === "24" && props.style === "outlined";
+  return props;
+}
+
+// Picks the "Size=24, Style=Outlined" child for a normal icon. Single-style
+// icons (brand/logo marks, which don't have an outlined/solid distinction)
+// only carry a "Size" property with no "Style" at all — for those, fall back
+// to whichever child is just Size=24, rather than treating them as missing.
+function pickOutlined24(children) {
+  const outlined = children.find((ch) => {
+    const props = parseVariantProps(ch.name);
+    return props.size === "24" && props.style === "outlined";
+  });
+  if (outlined) return outlined;
+
+  const hasStyleProp = children.some((ch) => parseVariantProps(ch.name).style !== undefined);
+  if (hasStyleProp) return null; // a real Style axis exists but only non-Outlined variants do (e.g. Solid-only) — skip
+
+  return children.find((ch) => parseVariantProps(ch.name).size === "24") || null;
 }
 
 function escapeHtml(s) {
@@ -121,7 +138,7 @@ async function main() {
       const children = entry?.document?.children || [];
       childNamesBySetId[nodeId] = children.map((ch) => ch.name);
       visibleBySetId[nodeId] = entry?.document?.visible !== false;
-      const outlined = children.find((ch) => isOutlined24(ch.name));
+      const outlined = pickOutlined24(children);
       if (outlined) childBySetId[nodeId] = outlined.id;
     }
   }
