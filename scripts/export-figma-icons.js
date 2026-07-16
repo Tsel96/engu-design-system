@@ -89,25 +89,22 @@ function extractInnerSvg(svgText) {
 
 async function main() {
   console.log(`Fetching component sets from file ${FILE_KEY}…`);
-  const [setData, compData] = await Promise.all([
-    get(`https://api.figma.com/v1/files/${FILE_KEY}/component_sets`),
-    get(`https://api.figma.com/v1/files/${FILE_KEY}/components`),
-  ]);
-
+  const setData = await get(`https://api.figma.com/v1/files/${FILE_KEY}/component_sets`);
   const sets = (setData.meta?.component_sets ?? []).filter((c) => /^Icons\/[^/]+\/.+/.test(c.name));
-  const components = compData.meta?.components ?? [];
 
-  const variantsBySet = {};
-  for (const comp of components) {
-    const setId = comp.component_set_id || comp.containing_frame?.containingStateGroup?.nodeId;
-    if (!setId) continue;
-    (variantsBySet[setId] ??= []).push(comp);
-  }
-
-  if (Object.keys(variantsBySet).length === 0 && components.length > 0) {
-    console.error("Could not determine component-set membership for any component. Sample component shape:");
-    console.error(JSON.stringify(components[0], null, 2));
-    process.exit(1);
+  // Resolve each set's "Size=24, Style=Outlined" child via /v1/files/:key/nodes rather than
+  // the file-scoped /components endpoint, which paginates on files this large and silently
+  // truncates (previously matched only ~63% of icons with no error).
+  console.log(`Resolving outlined-24 variant for ${sets.length} icon component sets…`);
+  const setBatches = chunk(sets, 150);
+  const childBySetId = {};
+  for (const batch of setBatches) {
+    const data = await get(`https://api.figma.com/v1/files/${FILE_KEY}/nodes?ids=${batch.map((s) => s.node_id).join(",")}`);
+    for (const [nodeId, entry] of Object.entries(data.nodes || {})) {
+      const children = entry?.document?.children || [];
+      const outlined = children.find((ch) => ch.name === OUTLINED_24);
+      if (outlined) childBySetId[nodeId] = outlined.id;
+    }
   }
 
   const icons = []; // { category, name, nodeId }
@@ -116,13 +113,12 @@ async function main() {
     const parts = set.name.split("/"); // ["Icons", "Category", "icon-name"]
     const category = parts[1];
     const name = parts.slice(2).join("/").trim();
-    const variants = variantsBySet[set.node_id] || [];
-    const outlined = variants.find((v) => v.name === OUTLINED_24);
-    if (!outlined) {
+    const outlinedNodeId = childBySetId[set.node_id];
+    if (!outlinedNodeId) {
       missingVariant.push(set.name);
       continue;
     }
-    icons.push({ category, name, nodeId: outlined.node_id });
+    icons.push({ category, name, nodeId: outlinedNodeId });
   }
 
   console.log(`Found ${icons.length} icons across ${new Set(icons.map((i) => i.category)).size} categories.`);
