@@ -126,6 +126,22 @@ async function main() {
   }
 
   console.log(`Found ${icons.length} icons across ${new Set(icons.map((i) => i.category)).size} categories.`);
+
+  const priorCount = (() => {
+    try {
+      return JSON.parse(fs.readFileSync(JSON_PATH, "utf8")).length;
+    } catch {
+      return 0;
+    }
+  })();
+  if (icons.length === 0 || (priorCount > 0 && icons.length < priorCount * 0.5)) {
+    console.error(
+      `Refusing to write output: resolved ${icons.length} icons vs ${priorCount} previously. ` +
+        `This looks like an API/matching failure, not a real icon-set shrink. Leaving existing files untouched.`
+    );
+    process.exit(1);
+  }
+
   if (missingVariant.length) {
     console.warn(`Skipped ${missingVariant.length} icon(s) with no "${OUTLINED_24}" variant:`);
     missingVariant.slice(0, 20).forEach((n) => console.warn(`  - ${n}`));
