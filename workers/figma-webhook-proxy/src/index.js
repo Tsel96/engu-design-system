@@ -24,6 +24,15 @@ export default {
 
     const eventType = body.event_type ?? "FIGMA_WEBHOOK";
 
+    // Figma sends a PING when a webhook is first registered, to confirm the
+    // endpoint responds — acknowledge it without spending a GitHub API call.
+    // Same for any event type the workflow doesn't listen for (only
+    // FILE_UPDATE and LIBRARY_PUBLISH trigger regenerate-code-connect.yml).
+    const DISPATCHABLE_EVENTS = new Set(["FILE_UPDATE", "LIBRARY_PUBLISH"]);
+    if (!DISPATCHABLE_EVENTS.has(eventType)) {
+      return new Response(`Acknowledged, not dispatched: ${eventType}`, { status: 200 });
+    }
+
     const githubRes = await fetch(GITHUB_DISPATCHES_URL, {
       method: "POST",
       headers: {
