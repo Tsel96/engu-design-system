@@ -24,8 +24,8 @@ let busy = false;
 function status(message, error = false) { $("status").textContent = message; $("status").dataset.error = String(error); }
 function lock(value) { busy = value; $("sync").disabled = value || !ready; $("icons").disabled = value; }
 window.onmessage = async event => {
-  if (event.source !== parent) return;
-  const message = event.data.pluginMessage;
+  // Figma's sandbox relays Plugin API messages; event.source is not always parent.
+  const message = event.data && event.data.pluginMessage;
   if (!message) return;
   if (message.type === "source-error") { ready = false; $("summary").textContent = "Open Brand Foundation for token sync."; status(message.message, true); lock(false); return; }
   if (message.type === "ready") {
@@ -52,5 +52,7 @@ $("icons").onclick = async () => {
   catch (error) { status(error.message, true); }
   finally { lock(false); }
 };
+// Request the initial snapshot only after this iframe can receive the response.
+parent.postMessage({ pluginMessage: { type: "ui-ready" } }, "*");
 </script>
 </html>

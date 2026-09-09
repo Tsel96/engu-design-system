@@ -112,14 +112,48 @@ test('plugin main rejects other Figma files without writing design data',async()
   const messages=[];
   const figma={fileKey:'wrong-file',showUI(){},ui:{postMessage:m=>messages.push(m)},variables:{}};
   vm.runInNewContext(fs.readFileSync('figma-plugin/code.js','utf8'),{figma,__html__:'',Date});
-  await new Promise(resolve=>setImmediate(resolve));
+  assert.equal(messages.length, 0, 'wait for the UI listener before sending source data');
+  await figma.ui.onmessage({type:'ui-ready'});
   assert.equal(messages[0].type,'source-error');
+});
+
+test('plugin reads all source variables after the UI handshake and again on sync',async()=>{
+  const messages=[];
+  let reads=0;
+  const figma={fileKey:snapshot.source.fileKey,showUI(){},ui:{postMessage:m=>messages.push(m)},variables:{
+    getLocalVariableCollectionsAsync:async()=>Object.values(snapshot.meta.variableCollections),
+    getLocalVariablesAsync:async()=>{reads++;return Object.values(snapshot.meta.variables);},
+  }};
+  vm.runInNewContext(fs.readFileSync('figma-plugin/code.js','utf8'),{figma,__html__:'',Date});
+  assert.equal(reads,0);
+  await figma.ui.onmessage({type:'ui-ready'});
+  assert.equal(messages[0].type,'ready');
+  assert.equal(Object.keys(messages[0].data.meta.variables).length,121);
+  await figma.ui.onmessage({type:'export'});
+  assert.equal(reads,2);
+  assert.equal(messages[1].type,'snapshot');
 });
 
 test('shipped plugin UI contains valid JavaScript and no unbuilt placeholders',()=>{
   const html=fs.readFileSync('figma-plugin/ui.html','utf8');
   assert.doesNotMatch(html,/__TOKEN_RENDERER__|__GITHUB_CLIENT__/);
   new vm.Script(html.match(/<script>([\s\S]*?)<\/script>/)[1]);
+});
+
+test('plugin UI handshakes and handles messages relayed by the Figma sandbox',async()=>{
+  const elements=Object.fromEntries(['status','sync','icons','summary','token'].map(id=>[id,{dataset:{},value:''}]));
+  const sent=[];
+  const window={};
+  const parent={postMessage:message=>sent.push(message)};
+  const html=fs.readFileSync('figma-plugin/ui.html','utf8');
+  vm.runInNewContext(html.match(/<script>([\s\S]*?)<\/script>/)[1],{window,parent,document:{getElementById:id=>elements[id]}});
+  assert.equal(sent[0].pluginMessage.type,'ui-ready');
+  await window.onmessage({source:null,data:{pluginMessage:{type:'ready',data:snapshot}}});
+  assert.match(elements.summary.textContent,/121 variables/);
+  assert.equal(elements.sync.disabled,false);
+  await window.onmessage({source:null,data:{pluginMessage:{type:'source-error',message:'Wrong file'}}});
+  assert.equal(elements.sync.disabled,true);
+  assert.equal(elements.status.textContent,'Wrong file');
 });
 
 test('removed Figma tokens cannot reveal obsolete hand-coded fallback values',()=>{

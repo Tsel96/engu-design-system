@@ -33,7 +33,7 @@ async function sendSnapshot(type) {
   catch (error) { figma.ui.postMessage({ type: "source-error", message: error.message }); }
 }
 figma.ui.onmessage = async message => {
+  if (message.type === "ui-ready") await sendSnapshot("ready");
   if (message.type === "export") await sendSnapshot("snapshot");
   if (message.type === "close") figma.closePlugin();
 };
-void sendSnapshot("ready");
