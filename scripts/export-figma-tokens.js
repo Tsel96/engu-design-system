@@ -1,235 +1,152 @@
 #!/usr/bin/env node
-/**
- * Reads the "engu-color-semantic" variable collection from Figma,
- * resolves all alias chains to final hex/rgba values, and updates
- * the --color-* section inside colors_and_type.css in-place.
- *
- * Replaces only the region between the two sentinel comments:
- *   ▸ "PUBLIC — semantic tokens"
- *   ▸ "LEGACY COMPATIBILITY"
- * Everything else in the file (fonts, spacing, shadows, …) is untouched.
- *
- * Dark-mode values are written into a
- *   @media (prefers-color-scheme: dark) { :root { … } }
- * block that is appended after the closing } of :root, replacing any
- * existing dark block if one is already present.
- *
- * Requires:
- *   FIGMA_TOKEN    — Figma personal access token (file_variables:read scope)
- *   FIGMA_FILE_KEY — Figma file key (default: yFUGWRkPWpTU0rDJOqrIBe)
- */
+// Figma is the source of truth. Read live REST data or an explicit Plugin API
+// snapshot; never silently substitute a stale snapshot for a failed live read.
+const fs = require("node:fs");
+const path = require("node:path");
+const ROOT = path.join(__dirname, "..");
+const FILE_KEY = "yFUGWRkPWpTU0rDJOqrIBe";
+const START = "/* figma:tokens:start */";
+const END = "/* figma:tokens:end */";
+const ALIASES = {
+  "--color-bg-canvas": "--color-bg-default",
+  "--color-bg-card": "--color-bg-default",
+  "--color-bg-elevated": "--color-bg-default",
+  "--color-bg-tinted": "--color-bg-brand-subtle",
+  "--color-fg-on-inverse": "--color-fg-inverse",
+  "--color-intent-info": "--color-intent-info-icon",
+  "--color-intent-success": "--color-intent-success-icon",
+  "--color-intent-warning": "--color-intent-warning-icon",
+  "--color-intent-error": "--color-intent-error-icon",
+};
 
-const https = require("https");
-const fs = require("fs");
-const path = require("path");
-
-const TOKEN = process.env.FIGMA_TOKEN;
-const FILE_KEY = process.env.FIGMA_FILE_KEY || "yFUGWRkPWpTU0rDJOqrIBe";
-const CSS_PATH = path.join(__dirname, "..", "colors_and_type.css");
-const COLLECTION_NAME = "engu-color-semantic";
-const LIGHT_MODE = "Light";
-const DARK_MODE = "Dark";
-
-if (!TOKEN) {
-  console.error("Error: FIGMA_TOKEN env var is required (needs file_variables:read scope).");
-  process.exit(1);
-}
-
-// ─── HTTP helper ─────────────────────────────────────────────────────────────
-
-function get(url) {
-  return new Promise((resolve, reject) => {
-    https
-      .get(url, { headers: { "X-Figma-Token": TOKEN } }, (res) => {
-        let body = "";
-        res.on("data", (c) => (body += c));
-        res.on("end", () => {
-          if (res.statusCode !== 200) {
-            reject(new Error(`HTTP ${res.statusCode}: ${body.slice(0, 300)}`));
-          } else {
-            resolve(JSON.parse(body));
-          }
-        });
-      })
-      .on("error", reject);
-  });
-}
-
-// ─── Color helpers ───────────────────────────────────────────────────────────
-
-function toHex(channel) {
-  return Math.round(channel * 255)
-    .toString(16)
-    .padStart(2, "0");
-}
-
-function figmaColorToCss({ r, g, b, a }) {
-  if (a === undefined || a === 1) {
-    return `#${toHex(r)}${toHex(g)}${toHex(b)}`.toUpperCase();
+function cssName(v, collection) {
+  if (collection.name === "engu-brand") {
+    const match = /^engu-([a-z]+)\/([a-z]+) (\d+)$/i.exec(v.name);
+    if (!match) throw new Error(`Unsupported brand variable name: ${v.name}`);
+    return `--_${match[1].toLowerCase()}-${match[1] === "overlay" ? match[2].toLowerCase() + "-" : ""}${match[3]}`;
   }
-  const pct = Math.round(a * 100) / 100;
-  return `rgba(${Math.round(r * 255)},${Math.round(g * 255)},${Math.round(b * 255)},${pct})`;
+  const name = "--" + v.name.replaceAll("/", "-");
+  if (!/^--[a-z][a-z0-9-]*$/.test(name)) throw new Error(`Invalid CSS variable: ${v.name}`);
+  return name;
 }
 
-// ─── Variable name → CSS custom property ─────────────────────────────────────
-
-function varNameToCss(name) {
-  return "--" + name.replace(/\//g, "-");
-}
-
-// ─── Alias resolver ──────────────────────────────────────────────────────────
-
-function resolveValue(rawValue, modeId, allVars, depth = 0) {
-  if (depth > 10) throw new Error("Circular alias chain detected");
-  if (rawValue && rawValue.type === "VARIABLE_ALIAS") {
-    const target = allVars[rawValue.id];
-    if (!target) throw new Error(`Alias target not found: ${rawValue.id}`);
-    const nextValue = target.valuesByMode[modeId] ?? Object.values(target.valuesByMode)[0];
-    return resolveValue(nextValue, modeId, allVars, depth + 1);
+function resolve(v, modeName, meta, seen = new Set()) {
+  if (seen.has(v.id)) throw new Error(`Circular alias: ${v.name}`);
+  seen.add(v.id);
+  const collection = meta.variableCollections[v.variableCollectionId];
+  if (!collection) throw new Error(`Missing collection for ${v.name}`);
+  // Mode IDs are local to a collection. Match the mode by NAME across
+  // collections, or use the explicit default of a single-mode collection.
+  const mode = collection.modes.find(m => m.name === modeName) ||
+    (collection.modes.length === 1 && collection.modes.find(m => m.modeId === collection.defaultModeId));
+  if (!mode) throw new Error(`No ${modeName} mode in ${collection.name}`);
+  const value = v.valuesByMode[mode.modeId];
+  if (value === undefined) throw new Error(`Missing ${modeName} value for ${v.name}`);
+  if (value && value.type === "VARIABLE_ALIAS") {
+    const target = meta.variables[value.id];
+    if (!target) throw new Error(`Missing alias target ${value.id}`);
+    return resolve(target, modeName, meta, seen);
   }
-  return rawValue; // should be { r, g, b, a }
+  return value;
 }
 
-// ─── CSS section replacement ─────────────────────────────────────────────────
-
-const LIGHT_START = "/* ═══════════════════════════════════════════════════════════════\n     PUBLIC — semantic tokens. Components read from these.\n     ═══════════════════════════════════════════════════════════════ */";
-const LIGHT_END_MARKER = "LEGACY COMPATIBILITY";
-const DARK_BLOCK_RE = /\/\* figma:dark:start \*\/[\s\S]*?\/\* figma:dark:end \*\//;
-
-function buildLightBlock(vars) {
-  const lines = [
-    "  /* ═══════════════════════════════════════════════════════════════",
-    "     PUBLIC — semantic tokens. Components read from these.",
-    "     ═══════════════════════════════════════════════════════════════ */",
-    "  /* do not edit by hand — generated by scripts/export-figma-tokens.js */",
-    "",
-  ];
-  for (const { cssName, lightValue } of vars) {
-    lines.push(`  ${cssName}: ${lightValue};`);
+function cssValue(v, value) {
+  if (v.resolvedType === "FLOAT" && v.name.startsWith("space/")) {
+    if (!Number.isFinite(value) || value < 0) throw new Error(`Invalid spacing: ${v.name}`);
+    return `${value}px`;
   }
-  return lines.join("\n");
+  if (v.resolvedType !== "COLOR" || !value ||
+      ![value.r, value.g, value.b, value.a ?? 1].every(c => Number.isFinite(c) && c >= 0 && c <= 1)) {
+    throw new Error(`Invalid color/type: ${v.name}`);
+  }
+  const rgb = [value.r, value.g, value.b].map(c => Math.round(c * 255));
+  if (value.a === undefined || value.a === 1) return "#" + rgb.map(c => c.toString(16).padStart(2, "0")).join("").toUpperCase();
+  return `rgba(${rgb.join(",")},${Number(value.a.toFixed(6))})`;
 }
 
-function buildDarkBlock(vars) {
-  const lines = [
-    "/* figma:dark:start */",
-    "@media (prefers-color-scheme: dark) {",
-    "  :root {",
-    "    /* do not edit by hand — generated by scripts/export-figma-tokens.js */",
-  ];
-  for (const { cssName, darkValue } of vars) {
-    if (darkValue !== null) {
-      lines.push(`    ${cssName}: ${darkValue};`);
+function render(data) {
+  if (data.source?.fileKey !== FILE_KEY) throw new Error("Snapshot must identify the configured Brand Foundation file");
+  const meta = data.meta;
+  if (!meta?.variables || !meta?.variableCollections) throw new Error("Incomplete Figma snapshot");
+  const light = new Map();
+  const dark = new Map();
+  for (const name of ["engu-brand", "engu-color-semantic", "engu-spacing"]) {
+    const c = Object.values(meta.variableCollections).find(c => c.name === name);
+    if (!c || !c.variableIds?.length) throw new Error(`Missing or empty collection: ${name}`);
+    if (name === "engu-color-semantic" && !["Light", "Dark"].every(n => c.modes.some(m => m.name === n))) {
+      throw new Error("Semantic collection must contain both Light and Dark modes");
+    }
+    for (const id of c.variableIds) {
+      const v = meta.variables[id];
+      if (!v || v.variableCollectionId !== c.id) throw new Error(`Missing variable: ${id}`);
+      const key = cssName(v, c);
+      if (light.has(key)) throw new Error(`Duplicate CSS name: ${key}`);
+      light.set(key, cssValue(v, resolve(v, "Light", meta)));
+      if (c.modes.length > 1) dark.set(key, cssValue(v, resolve(v, "Dark", meta)));
     }
   }
-  lines.push("  }", "}", "/* figma:dark:end */");
-  return lines.join("\n");
+  for (const [alias, target] of Object.entries(ALIASES)) {
+    if (!light.has(target) || light.has(alias)) throw new Error(`Invalid compatibility alias: ${alias}`);
+    light.set(alias, `var(${target})`);
+    if (dark.has(target)) dark.set(alias, `var(${target})`);
+  }
+  const lines = (map, indent) => [...map].sort(([a], [b]) => a.localeCompare(b, "en"))
+    .map(([key, value]) => `${indent}${key}: ${value};`).join("\n");
+  return `${START}\n/* Generated from Figma Brand Foundation. Edit Figma, then re-export. */\n:root {\n${lines(light, "  ")}\n}\n\n@media (prefers-color-scheme: dark) {\n  :root {\n${lines(dark, "    ")}\n  }\n}\n${END}`;
 }
 
-// ─── Main ────────────────────────────────────────────────────────────────────
-
-async function main() {
-  console.log(`Fetching variables from file ${FILE_KEY}…`);
-  const data = await get(`https://api.figma.com/v1/files/${FILE_KEY}/variables/local`);
-
-  const allVars = data.meta?.variables ?? {};
-  const allCollections = data.meta?.variableCollections ?? {};
-
-  // Find the target collection
-  const collection = Object.values(allCollections).find(
-    (c) => c.name === COLLECTION_NAME
-  );
-  if (!collection) {
-    const names = Object.values(allCollections).map((c) => c.name).join(", ");
-    throw new Error(
-      `Collection "${COLLECTION_NAME}" not found. Available: ${names}`
-    );
+function updateCss(css, data) {
+  const block = render(data); // Resolve and validate everything before editing.
+  const start = css.indexOf(START);
+  const end = css.indexOf(END);
+  if ((start < 0) !== (end < 0) || (start >= 0 && (end < start || css.indexOf(START, start + 1) >= 0 || css.indexOf(END, end + 1) >= 0))) {
+    throw new Error("Malformed generated token markers");
   }
+  // Remove old definitions of owned names outside the generated block, too.
+  // Otherwise removing a token in Figma could reveal an obsolete CSS fallback.
+  const previous = start >= 0 ? css.slice(start, end + END.length) : "";
+  const owned = new Set([...block.matchAll(/(--[_a-z0-9-]+):/g), ...previous.matchAll(/(--[_a-z0-9-]+):/g)].map(m => m[1]));
+  const clean = text => text.replace(/--[_a-z0-9-]+\s*:[^;{}]+;/g, declaration => {
+    const name = declaration.slice(0, declaration.indexOf(":")).trim();
+    return owned.has(name) ? "" : declaration;
+  }).replace(/[ \t]+$/gm, "").replace(/\n{3,}/g, "\n\n");
+  if (start >= 0) return clean(css.slice(0, start)) + block + clean(css.slice(end + END.length));
+  return clean(css).trimEnd() + "\n\n" + block + "\n";
+}
 
-  const lightMode = collection.modes.find((m) => m.name === LIGHT_MODE);
-  const darkMode = collection.modes.find((m) => m.name === DARK_MODE);
-  if (!lightMode) throw new Error(`Mode "${LIGHT_MODE}" not found in collection`);
-  if (!darkMode) console.warn(`Warning: Mode "${DARK_MODE}" not found — dark block will be empty`);
-
-  // Filter variables belonging to this collection
-  const collectionVars = Object.values(allVars).filter(
-    (v) => v.variableCollectionId === collection.id && v.resolvedType === "COLOR"
-  );
-  console.log(`Found ${collectionVars.length} color variables in "${COLLECTION_NAME}".`);
-
-  // Resolve each variable for both modes
-  const resolved = [];
-  for (const v of collectionVars) {
-    const cssName = varNameToCss(v.name);
-
-    let lightValue = null;
-    try {
-      const raw = v.valuesByMode[lightMode.modeId];
-      if (raw) lightValue = figmaColorToCss(resolveValue(raw, lightMode.modeId, allVars));
-    } catch (e) {
-      console.warn(`  ⚠ ${v.name} (light): ${e.message}`);
-    }
-
-    let darkValue = null;
-    if (darkMode) {
-      try {
-        const raw = v.valuesByMode[darkMode.modeId];
-        if (raw) darkValue = figmaColorToCss(resolveValue(raw, darkMode.modeId, allVars));
-      } catch (e) {
-        console.warn(`  ⚠ ${v.name} (dark): ${e.message}`);
-      }
-    }
-
-    resolved.push({ cssName, lightValue, darkValue });
-  }
-
-  // Read existing CSS
-  let css = fs.readFileSync(CSS_PATH, "utf8");
-
-  // Replace the PUBLIC semantic tokens section
-  const lightStartIdx = css.indexOf(LIGHT_START);
-  if (lightStartIdx === -1) {
-    throw new Error(
-      `Could not find "PUBLIC — semantic tokens" section marker in ${CSS_PATH}.\n` +
-        `Ensure the file contains the expected section comment.`
-    );
-  }
-  const legacyIdx = css.indexOf(LEGACY_COMPAT_MARKER, lightStartIdx);
-  if (legacyIdx === -1) {
-    throw new Error(`Could not find "LEGACY COMPATIBILITY" marker in ${CSS_PATH}.`);
-  }
-
-  const before = css.slice(0, lightStartIdx);
-  const after = css.slice(legacyIdx); // keeps legacy block onward
-  css = before + buildLightBlock(resolved) + "\n\n  " + after;
-
-  // Replace or append dark block
-  const darkBlock = buildDarkBlock(resolved);
-  if (DARK_BLOCK_RE.test(css)) {
-    css = css.replace(DARK_BLOCK_RE, darkBlock);
+async function main(args = process.argv.slice(2)) {
+  const file = args.indexOf("--input");
+  const check = args.includes("--check");
+  let data;
+  if (file >= 0) {
+    if (!args[file + 1] || args[file + 1].startsWith("--")) throw new Error("--input requires a Figma snapshot path");
+    data = JSON.parse(fs.readFileSync(args[file + 1], "utf8"));
   } else {
-    // Append after the :root closing brace (last standalone "}")
-    const rootCloseIdx = css.lastIndexOf("\n}");
-    if (rootCloseIdx === -1) {
-      css += "\n\n" + darkBlock + "\n";
-    } else {
-      css =
-        css.slice(0, rootCloseIdx + 2) +
-        "\n\n" +
-        darkBlock +
-        "\n" +
-        css.slice(rootCloseIdx + 2);
-    }
+    const token = process.env.FIGMA_TOKEN;
+    if (!token) throw new Error("Set FIGMA_TOKEN for Enterprise REST access, or use --input with a fresh Figma Plugin API snapshot. See docs/figma-sync.md.");
+    const res = await fetch(`https://api.figma.com/v1/files/${FILE_KEY}/variables/local`, {
+      headers: { "X-Figma-Token": token }, signal: AbortSignal.timeout(30000),
+    });
+    if (!res.ok) throw new Error(`Figma HTTP ${res.status}. Variables REST access requires an Enterprise Full seat and file_variables:read. No files changed. See docs/figma-sync.md.`);
+    data = await res.json();
+    data.source = { fileKey: FILE_KEY, fileUrl: `https://www.figma.com/design/${FILE_KEY}/Brand-Foundation`, exportedAt: new Date().toISOString(), method: "Figma REST API" };
   }
-
-  fs.writeFileSync(CSS_PATH, css, "utf8");
-  console.log(`✓ Wrote ${resolved.length} light tokens and ${resolved.filter((r) => r.darkValue).length} dark tokens to ${path.relative(process.cwd(), CSS_PATH)}.`);
+  const cssPath = path.join(ROOT, "colors_and_type.css");
+  const css = fs.readFileSync(cssPath, "utf8");
+  const next = updateCss(css, data);
+  if (check) {
+    if (next !== css) throw new Error("Generated CSS differs from the Figma snapshot. Run npm run build:tokens.");
+    console.log("Generated CSS matches the recorded Figma snapshot (not a live freshness check).");
+    return;
+  }
+  if (next !== css) fs.writeFileSync(cssPath, next);
+  if (file < 0) {
+    const snapshotPath = path.join(ROOT, "tokens/figma-variables.json");
+    const prior = fs.existsSync(snapshotPath) ? JSON.parse(fs.readFileSync(snapshotPath, "utf8")) : null;
+    if (JSON.stringify(prior?.meta) !== JSON.stringify(data.meta)) fs.writeFileSync(snapshotPath, JSON.stringify(data, null, 2) + "\n");
+  }
+  console.log(`Generated tokens from Figma (${Object.keys(data.meta.variables).length} variables).`);
 }
 
-// Typo fix: define the constant used in main()
-const LEGACY_COMPAT_MARKER = LIGHT_END_MARKER;
-
-main().catch((err) => {
-  console.error("Error:", err.message);
-  process.exit(1);
-});
+module.exports = { render, updateCss, resolve };
+if (require.main === module) main().catch(error => { console.error(error.message); process.exitCode = 1; });

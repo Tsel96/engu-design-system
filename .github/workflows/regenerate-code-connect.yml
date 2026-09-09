@@ -4,46 +4,55 @@ on:
   workflow_dispatch:
     inputs:
       event_type:
-        description: "Figma webhook event type (e.g. FILE_UPDATE, LIBRARY_PUBLISH)"
+        description: Figma event that requested this sync
         required: false
-        default: "manual"
+        default: manual
   repository_dispatch:
     types: [FILE_UPDATE, LIBRARY_PUBLISH]
+  schedule:
+    - cron: '0 9 * * 1'
+  push:
+    branches: [main]
+    paths: ['scripts/generate-code-connect.js', 'scripts/current-icon-sets.js', 'scripts/export-figma-icons.js', '.github/workflows/regenerate-code-connect.yml']
 
 permissions:
   contents: write
+
+concurrency:
+  group: figma-sync-main
+  cancel-in-progress: false
 
 jobs:
   regenerate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
         with:
-          node-version: 20
+          ref: main
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
           cache: npm
-
       - run: npm ci
-
-      - name: Export icon assets (sprite / manifest / browse page)
+      - name: Export icon assets
         run: node scripts/export-figma-icons.js
         env:
           FIGMA_TOKEN: ${{ secrets.FIGMA_ACCESS_TOKEN }}
-
-      - name: Regenerate code-connect files
-        run: node scripts/generate-code-connect.js
+      - name: Generate mappings for live Figma components
+        run: npm run generate
         env:
           FIGMA_TOKEN: ${{ secrets.FIGMA_ACCESS_TOKEN }}
-
-      - name: Commit and push updated files
+      - name: Commit generated assets and mappings
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
           git add assets/icons/ code-connect/
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "chore: sync icons + code-connect from Figma (event: ${{ inputs.event_type || github.event.action || 'unknown' }})"
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: sync icons and Code Connect from Figma'
             git push
           fi
+      # GITHUB_TOKEN pushes do not trigger the separate push workflow.
+      - name: Publish Code Connect in this run
+        run: npm run publish
+        env:
+          FIGMA_ACCESS_TOKEN: ${{ secrets.FIGMA_ACCESS_TOKEN }}

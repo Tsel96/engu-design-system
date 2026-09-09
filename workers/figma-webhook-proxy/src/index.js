@@ -43,7 +43,7 @@ export default {
       },
       body: JSON.stringify({
         event_type: eventType,
-        client_payload: { figma_event: body },
+        client_payload: { figma_event: { event_type: eventType, file_key: body.file_key } },
       }),
     });
 

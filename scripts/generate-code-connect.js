@@ -10,6 +10,8 @@ const https = require("https");
 const fs = require("fs");
 const path = require("path");
 
+const { currentIconSets } = require("./current-icon-sets");
+
 const FILE_KEY = "92ZwLCANCyRKezlcuQLOBW";
 const SPRITE_PATH = "assets/icons/engu-icons-sprite.svg";
 const OUT_DIR = path.join(__dirname, "..", "code-connect", "icons");
@@ -57,7 +59,7 @@ async function main() {
   console.log(`Found ${components.length} total components.`);
 
   // Filter to Icons/{Category}/{icon-name} pattern
-  const iconComponents = components.filter((c) => /^Icons\/[^/]+\/.+/.test(c.name));
+  const iconComponents = await currentIconSets(components.filter((c) => /^Icons\/[^/]+\/.+/.test(c.name)), FILE_KEY, get);
   console.log(`Matched ${iconComponents.length} icon components.`);
 
   if (iconComponents.length === 0) {
@@ -78,12 +80,14 @@ async function main() {
   // Write output files
   fs.mkdirSync(OUT_DIR, { recursive: true });
 
+  const generatedFiles = new Set();
   let totalFiles = 0;
   let totalConnections = 0;
 
   for (const [category, icons] of Object.entries(byCategory)) {
     const slug = slugCategory(category);
     const outFile = path.join(OUT_DIR, `${slug}.figma.ts`);
+    generatedFiles.add(`${slug}.figma.ts`);
 
     const lines = [
       `// Code Connect — Icons / ${category}`,
@@ -114,6 +118,10 @@ async function main() {
     fs.writeFileSync(outFile, lines.join("\n"), "utf8");
     console.log(`  ✓ ${slug}.figma.ts  (${icons.length} icons)`);
     totalFiles++;
+  }
+
+  for (const file of fs.readdirSync(OUT_DIR)) {
+    if (file.endsWith(".figma.ts") && !generatedFiles.has(file)) fs.unlinkSync(path.join(OUT_DIR, file));
   }
 
   console.log(`\nDone. ${totalFiles} files, ${totalConnections} connections → ${OUT_DIR}`);

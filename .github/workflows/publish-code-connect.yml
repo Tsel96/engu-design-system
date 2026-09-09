@@ -1,23 +1,30 @@
 name: Publish Figma Code Connect
 
 on:
+  workflow_dispatch:
   push:
-    branches:
-      - main
-    paths:
-      - "code-connect/**"
+    branches: [main]
+    paths: ['code-connect/**', 'figma.config.json']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: figma-sync-main
+  cancel-in-progress: false
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
         with:
-          node-version: 20
+          ref: main
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
           cache: npm
-
       - run: npm ci
-
-      - run: npx figma connect publish --token ${{ secrets.FIGMA_ACCESS_TOKEN }}
+      - run: npm run publish
+        env:
+          FIGMA_ACCESS_TOKEN: ${{ secrets.FIGMA_ACCESS_TOKEN }}

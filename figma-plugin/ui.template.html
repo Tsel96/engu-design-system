@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box}body{margin:0;padding:24px;font:13px/1.5 Inter,system-ui,sans-serif;color:#122119;background:#f6faf7}h1{font-size:25px;line-height:1.2;letter-spacing:-.7px;margin:7px 0 10px}p{margin:0 0 16px;color:#4c6355}.brand{font-weight:800;font-size:15px;color:#34724d}.target{padding:13px 14px;border:1px solid #d8e6dd;border-radius:12px;background:white;margin:20px 0}.target strong{display:block;font-size:12px}.target span{font-size:11px;color:#587160}label{font-size:12px;font-weight:650;display:block;margin-bottom:6px}input{width:100%;border:1px solid #b8cfbf;background:white;border-radius:8px;padding:11px 12px;font:inherit}input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #52996c;outline-offset:3px}.hint{font-size:11px;margin-top:6px;color:#597263}button{width:100%;border:0;border-radius:9px;padding:12px 14px;font:650 13px Inter,system-ui,sans-serif;cursor:pointer;margin-top:13px;background:#28583b;color:white}button.secondary{background:#e1eee5;color:#28583b;margin-top:8px}button:disabled{opacity:.5;cursor:default}a{color:#28583b}#status{font-size:12px;white-space:pre-line;margin-top:16px;min-height:36px}#status[data-error=true]{color:#b13232}.footer{font-size:11px;margin-top:14px;color:#597263}
+</style>
+<div class="brand">engu / design system</div>
+<h1>From Figma to code.</h1>
+<p>Send the latest foundation tokens to GitHub. Figma owns the design decisions.</p>
+<div class="target"><strong>Tsel96/engu-design-system · main</strong><span id="summary">Reading the Figma source…</span></div>
+<label for="token">GitHub access token</label>
+<input id="token" type="password" autocomplete="off" spellcheck="false" placeholder="Fine-grained token for this repository">
+<div class="hint">Contents: read and write. Also Actions: read and write for icons. Kept only while this window is open.</div>
+<button id="sync" disabled>Sync tokens to GitHub</button>
+<button class="secondary" id="icons">Refresh icons &amp; Code Connect</button>
+<div id="status" role="status" aria-live="polite"></div>
+<div class="footer"><a href="https://www.figma.com/design/yFUGWRkPWpTU0rDJOqrIBe/Brand-Foundation" target="_blank" rel="noreferrer">Open Brand Foundation</a> · <a href="https://github.com/Tsel96/engu-design-system/actions" target="_blank" rel="noreferrer">View sync runs</a></div>
+<script>
+__TOKEN_RENDERER__
+__GITHUB_CLIENT__
+const $ = id => document.getElementById(id);
+let ready = false;
+let busy = false;
+function status(message, error = false) { $("status").textContent = message; $("status").dataset.error = String(error); }
+function lock(value) { busy = value; $("sync").disabled = value || !ready; $("icons").disabled = value; }
+window.onmessage = async event => {
+  if (event.source !== parent) return;
+  const message = event.data.pluginMessage;
+  if (!message) return;
+  if (message.type === "source-error") { ready = false; $("summary").textContent = "Open Brand Foundation for token sync."; status(message.message, true); lock(false); return; }
+  if (message.type === "ready") {
+    ready = true;
+    $("summary").textContent = `${Object.keys(message.data.meta.variables).length} variables · Light + Dark · Figma → GitHub`;
+    lock(false);
+  }
+  if (message.type === "snapshot" && busy) {
+    try {
+      const result = await syncTokensToGitHub(message.data, $("token").value, updateCss);
+      status(result.changed ? "Synced. The Figma snapshot and CSS are committed together on main." : "Already synced. GitHub matches this Figma file.");
+    } catch (error) { status(error.message, true); }
+    finally { lock(false); }
+  }
+};
+$("sync").onclick = () => {
+  if (!$("token").value.trim()) return status("Enter your repository-scoped GitHub token.", true);
+  lock(true); status("Reading current Figma values and syncing to GitHub…");
+  parent.postMessage({ pluginMessage: { type: "export" } }, "*");
+};
+$("icons").onclick = async () => {
+  lock(true); status("Starting the icon and Code Connect workflow…");
+  try { await triggerIconSync($("token").value); status("Icon sync started. Open View sync runs to see completion."); }
+  catch (error) { status(error.message, true); }
+  finally { lock(false); }
+};
+</script>
+</html>

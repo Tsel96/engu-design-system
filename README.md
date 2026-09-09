@@ -8,10 +8,12 @@ This skill packages the visual + verbal foundation of the brand so an agent can 
 
 ## Sources
 
-The system was distilled from two Figma files mounted into this project as a virtual filesystem:
+**Figma is the source of truth.** Sync direction is Figma → GitHub.
 
-- **Brand Foundation.fig** — `/Logo`, `/Colors`, `/Typography`, `/Grids`, `/Spacings`. Contains the brand guidelines page, the Apparat / Inter Display lockups, the green/yellow/black/semantic color scales, the spacing token system, and the breakpoint set. (8 pages, 68 frames.)
-- **Design System.fig** — Listed in the project brief with component pages for /Buttons, /Cards, /Inputs, /Navbar, /Footer, /Toast, /Tooltip, /Table, /Switch, /Stepper, /Avatar, /Chips, /Dropdown, /Checkbox, /Radio, etc. (27 pages, 81 frames.) **⚠ Not currently mounted in this workspace.** The components in `ui_kits/` are reconstructed from the Brand Foundation tokens + the screenshots of the Button / Color-Swatch components that did mount under `/external-shared/` and `/Logo/external/`. **Ask the user to re-attach Design System.fig** to get the rest of the components 1:1.
+- [Brand Foundation](https://www.figma.com/design/yFUGWRkPWpTU0rDJOqrIBe/Brand-Foundation) owns brand, semantic Light/Dark and spacing variables.
+- [Design System](https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Design-System) owns components and icons, and already subscribes to Brand Foundation.
+
+Use the [Engu Figma sync plugin](figma-plugin/README.md) to sync variables and trigger icon/Code Connect refresh. Read [sync coverage and operations](docs/figma-sync.md) for access requirements and current limitations. The generated token block overrides historical values below; existing UI kits are examples, not verified copies of every Figma component.
 
 Fonts uploaded by the user:
 - `Inter Display` — the full family of TTF weights (Thin → Black, plus matching italics). Bundled in `fonts/`.
@@ -196,15 +198,7 @@ The brand ships a **distinctive custom logomark** (an 8-prong asterisk / compass
 - **Sub-brand**: `assets/educentrum-wordmark.svg` — the Edu centrum sister logotype.
 
 ### General icons
-The Design System figma file ships its own 16px icon family (referenced via the `SizeS16` symbol — `/external-shared/SizeS16/`). **Only the placeholder "Union" union-shape symbol made it into the mount; the full icon set is part of the Design System file that wasn't included.** Until that file is re-attached, this skill substitutes:
-
-- **Lucide Icons** (CDN: `https://unpkg.com/lucide@latest`) — outline icons at 1.5–2px stroke. The visual weight matches the SizeS16 figma symbol closely.
-
-When mocking up an engu screen and you need an icon:
-- Use Lucide via `<i data-lucide="icon-name"></i>` + `lucide.createIcons()`.
-- 16px in dense UI, 20–24px in default UI, 32px+ for marketing.
-- Use `currentColor` so icons inherit text color. Default icon color: `--fg-2` (`rgba(0,0,0,0.7)`).
-- For interactive icons (button glyph, nav item), stroke matches the button's text color.
+The source icon library is connected to `assets/icons/engu-icons.json`, `engu-icons-sprite.svg`, and the browse page. Use the exported SVG sprite and manifest for available icons. The automated export covers 24px outlined variants and 24px single-style marks; use live Figma for other variants.
 
 ### Emoji + unicode
 - **No emoji.** Not in product, not in marketing, not in slide content. The brand voice doesn't use them.

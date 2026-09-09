@@ -50,7 +50,7 @@ function getText(url) {
       .get(url, (res) => {
         let body = "";
         res.on("data", (chunk) => (body += chunk));
-        res.on("end", () => resolve(body));
+        res.on("end", () => res.statusCode === 200 ? resolve(body) : reject(new Error(`SVG download failed: HTTP ${res.statusCode}`)));
       })
       .on("error", reject);
   });
@@ -228,6 +228,16 @@ async function main() {
     svgByNodeId[icon.nodeId] = inner;
   });
 
+  if (Object.keys(svgByNodeId).length !== icons.length) {
+    throw new Error("Incomplete SVG export; existing icon assets were left untouched.");
+  }
+
+  const browseHtml = fs.readFileSync(BROWSE_PATH, "utf8");
+  const mainStart = browseHtml.indexOf("<main>");
+  const closingMain = browseHtml.indexOf("</main>", mainStart);
+  if (mainStart === -1 || closingMain === -1) throw new Error("Missing browse page main block; no assets written.");
+  const mainEnd = closingMain + "</main>".length;
+
   // Load existing manifest to preserve hand-curated aliases.
   let existing = [];
   try {
@@ -289,12 +299,6 @@ ${tiles}</div>
     .join("\n");
   const main = `<main>${sections}</main>`;
 
-  const browseHtml = fs.readFileSync(BROWSE_PATH, "utf8");
-  const mainStart = browseHtml.indexOf("<main>");
-  const mainEnd = browseHtml.indexOf("</main>") + "</main>".length;
-  if (mainStart === -1 || mainEnd === -1) {
-    throw new Error("Could not locate <main>…</main> block in engu-icons-browse.html");
-  }
   let updated = browseHtml.slice(0, mainStart) + main + browseHtml.slice(mainEnd);
   updated = updated.replace(
     /class="stat">[^<]*</,
