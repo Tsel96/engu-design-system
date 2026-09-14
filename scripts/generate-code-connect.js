@@ -7,6 +7,7 @@
  */
 
 const https = require("https");
+const { retryFigmaRequest } = require("./figma-request");
 const fs = require("fs");
 const path = require("path");
 
@@ -23,20 +24,22 @@ if (!token) {
 }
 
 function get(url) {
-  return new Promise((resolve, reject) => {
+  return retryFigmaRequest(() => new Promise((resolve, reject) => {
     const req = https.get(url, { headers: { "X-Figma-Token": token } }, (res) => {
       let body = "";
-      res.on("data", (chunk) => (body += chunk));
+      res.on("data", chunk => (body += chunk));
       res.on("end", () => {
         if (res.statusCode !== 200) {
-          reject(new Error(`HTTP ${res.statusCode}: ${body.slice(0, 200)}`));
+          reject(Object.assign(new Error(`HTTP ${res.statusCode}: ${body.slice(0, 300)}`), {
+            statusCode: res.statusCode, retryAfter: res.headers?.["retry-after"],
+          }));
         } else {
-          resolve(JSON.parse(body));
+          try { resolve(JSON.parse(body)); } catch (error) { reject(error); }
         }
       });
     });
     req.on("error", reject);
-  });
+  }));
 }
 
 function slugCategory(category) {

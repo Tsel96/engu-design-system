@@ -45,7 +45,7 @@ test('icon export uses current names, retains Custom icons and omits stale libra
     writeFileSync(file, data) { writes.set(path.basename(file), data); },
   };
   const context = {
-    require: name => name === 'https' ? https : name === 'fs' ? fakeFs : require(name),
+    require: name => name === 'https' ? https : name === 'fs' ? fakeFs : name === './figma-request' ? require('../scripts/figma-request') : require(name),
     __dirname: path.resolve(__dirname, '../scripts'),
     process: { env: { FIGMA_TOKEN: 'test-token' }, exit: code => { throw new Error(`Exit ${code}`); } },
     console: { log() {}, warn() {}, error() {} },
