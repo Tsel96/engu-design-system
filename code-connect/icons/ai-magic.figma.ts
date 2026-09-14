@@ -48,7 +48,7 @@ figma.connect(
 figma.connect(
   "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-4701",
   {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-bag-2-sparkle"/></svg>`,
+    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-bag 2-sparkle"/></svg>`,
   }
 );
 
@@ -125,7 +125,7 @@ figma.connect(
 figma.connect(
   "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-4970",
   {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-clipboard-2-sparkle"/></svg>`,
+    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-clipboard 2-sparkle"/></svg>`,
   }
 );
 
@@ -181,7 +181,7 @@ figma.connect(
 figma.connect(
   "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-5131",
   {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-folder-sparkle"/></svg>`,
+    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-Folder-sparkle"/></svg>`,
   }
 );
 
@@ -424,16 +424,16 @@ figma.connect(
 );
 
 figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-5985",
+  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-6007",
   {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-search-intelligence"/></svg>`,
+    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-search lines-sparkle"/></svg>`,
   }
 );
 
 figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-6007",
+  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-5985",
   {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-search-lines-sparkle"/></svg>`,
+    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-search-intelligence"/></svg>`,
   }
 );
 

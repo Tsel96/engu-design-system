@@ -277,7 +277,7 @@ figma.connect(
 );
 
 figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-35386",
+  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-14005",
   {
     example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-emoji-astonished"/></svg>`,
   }
@@ -424,13 +424,6 @@ figma.connect(
 );
 
 figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-35746",
-  {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-injection"/></svg>`,
-  }
-);
-
-figma.connect(
   "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-35768",
   {
     example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-judge-gavel"/></svg>`,
@@ -483,27 +476,6 @@ figma.connect(
   "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-35913",
   {
     example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-medal"/></svg>`,
-  }
-);
-
-figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-35935",
-  {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-medicine-pill"/></svg>`,
-  }
-);
-
-figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-35954",
-  {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-medicine-pill-2"/></svg>`,
-  }
-);
-
-figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-35970",
-  {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-medicine-tablett"/></svg>`,
   }
 );
 
@@ -888,7 +860,7 @@ figma.connect(
 figma.connect(
   "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1684-11072",
   {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-test-tube-2"/></svg>`,
+    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-test-tube 2"/></svg>`,
   }
 );
 
@@ -942,7 +914,7 @@ figma.connect(
 );
 
 figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-37309",
+  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1654-20531",
   {
     example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-unicorn"/></svg>`,
   }

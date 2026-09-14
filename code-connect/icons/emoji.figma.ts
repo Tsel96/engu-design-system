@@ -88,23 +88,16 @@ figma.connect(
 );
 
 figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-13902",
-  {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-emoji-smile-beam"/></svg>`,
-  }
-);
-
-figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-13927",
-  {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-emoji-smile-wink"/></svg>`,
-  }
-);
-
-figma.connect(
   "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1811-11220",
   {
     example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-emoji-smiling-face"/></svg>`,
+  }
+);
+
+figma.connect(
+  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-13952",
+  {
+    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-emoji-smirking"/></svg>`,
   }
 );
 
@@ -116,37 +109,16 @@ figma.connect(
 );
 
 figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-13952",
-  {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-emoji-sticker-smirk"/></svg>`,
-  }
-);
-
-figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-13980",
-  {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-emoji-sunglasses"/></svg>`,
-  }
-);
-
-figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-14005",
-  {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-emoji-surprised"/></svg>`,
-  }
-);
-
-figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-14033",
-  {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-emoji-sweat"/></svg>`,
-  }
-);
-
-figma.connect(
   "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1811-11195",
   {
     example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-emoji-tongue"/></svg>`,
+  }
+);
+
+figma.connect(
+  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-13927",
+  {
+    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-emoji-wink"/></svg>`,
   }
 );
 
@@ -158,36 +130,8 @@ figma.connect(
 );
 
 figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-14080",
-  {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-ghost"/></svg>`,
-  }
-);
-
-figma.connect(
   "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-14105",
   {
     example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-poop"/></svg>`,
-  }
-);
-
-figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-14130",
-  {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-skull"/></svg>`,
-  }
-);
-
-figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-14161",
-  {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-snowman"/></svg>`,
-  }
-);
-
-figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-14183",
-  {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-zzz"/></svg>`,
   }
 );

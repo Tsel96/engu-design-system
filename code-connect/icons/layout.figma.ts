@@ -216,7 +216,7 @@ figma.connect(
 figma.connect(
   "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-29236",
   {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-layout-half"/></svg>`,
+    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-layout-half-full"/></svg>`,
   }
 );
 
@@ -242,30 +242,9 @@ figma.connect(
 );
 
 figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-28815",
-  {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-layout-sidebar-right"/></svg>`,
-  }
-);
-
-figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-28834",
-  {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-layout-sidebar-two"/></svg>`,
-  }
-);
-
-figma.connect(
-  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-28856",
-  {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-layout-sidebar-two-r"/></svg>`,
-  }
-);
-
-figma.connect(
   "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-28875",
   {
-    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-layout-third"/></svg>`,
+    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-layout-third-full"/></svg>`,
   }
 );
 

@@ -182,13 +182,10 @@
     "category": "AI & Magic"
   },
   {
-    "name": "bag-2-sparkle",
-    "slug": "bag-2-sparkle",
+    "name": "bag 2-sparkle",
+    "slug": "bag 2-sparkle",
     "aliases": [
-      "bag 2-sparkle",
-      "shopping",
-      "add",
-      "plus"
+      "bag 2-sparkle"
     ],
     "category": "AI & Magic"
   },
@@ -298,14 +295,10 @@
     "category": "AI & Magic"
   },
   {
-    "name": "clipboard-2-sparkle",
-    "slug": "clipboard-2-sparkle",
+    "name": "clipboard 2-sparkle",
+    "slug": "clipboard 2-sparkle",
     "aliases": [
-      "clipboard 2-sparkle",
-      "copy",
-      "list",
-      "auto-fill",
-      "form-fill"
+      "clipboard 2-sparkle"
     ],
     "category": "AI & Magic"
   },
@@ -375,11 +368,10 @@
     "category": "AI & Magic"
   },
   {
-    "name": "folder-sparkle",
-    "slug": "folder-sparkle",
+    "name": "Folder-sparkle",
+    "slug": "Folder-sparkle",
     "aliases": [
-      "Folder-sparkle",
-      "plus"
+      "Folder-sparkle"
     ],
     "category": "AI & Magic"
   },
@@ -726,24 +718,19 @@
     "category": "AI & Magic"
   },
   {
+    "name": "search lines-sparkle",
+    "slug": "search lines-sparkle",
+    "aliases": [
+      "search lines-sparkle"
+    ],
+    "category": "AI & Magic"
+  },
+  {
     "name": "search-intelligence",
     "slug": "search-intelligence",
     "aliases": [
       "search-intelligence",
       "search-ai"
-    ],
-    "category": "AI & Magic"
-  },
-  {
-    "name": "search-lines-sparkle",
-    "slug": "search-lines-sparkle",
-    "aliases": [
-      "search lines-sparkle",
-      "magnifier",
-      "document",
-      "list",
-      "page",
-      "file"
     ],
     "category": "AI & Magic"
   },
@@ -2000,14 +1987,6 @@
     "category": "Arrows"
   },
   {
-    "name": "pivot",
-    "slug": "pivot",
-    "aliases": [
-      "pivot"
-    ],
-    "category": "Arrows"
-  },
-  {
     "name": "random",
     "slug": "random",
     "aliases": [
@@ -2352,14 +2331,6 @@
       "window"
     ],
     "category": "Augmented Reality"
-  },
-  {
-    "name": "add-building-blueprint",
-    "slug": "add-building-blueprint",
-    "aliases": [
-      "add-building-blueprint"
-    ],
-    "category": "Building"
   },
   {
     "name": "bank",
@@ -2907,94 +2878,50 @@
     "category": "Code"
   },
   {
-    "name": "bug-2",
-    "slug": "bug-2",
+    "name": "bug-face",
+    "slug": "bug-face",
     "aliases": [
-      "bug-2"
+      "bug-face"
     ],
     "category": "Code"
   },
   {
-    "name": "circles-three",
-    "slug": "circles-three",
+    "name": "changes",
+    "slug": "changes",
     "aliases": [
-      "circles-three",
-      "bubbles"
+      "changes"
     ],
     "category": "Code"
   },
   {
-    "name": "code-check",
-    "slug": "code-check",
+    "name": "code-brackets",
+    "slug": "code-brackets",
     "aliases": [
-      "code-check"
+      "code-brackets"
     ],
     "category": "Code"
   },
   {
-    "name": "code-snippet",
-    "slug": "code-snippet",
+    "name": "code-large",
+    "slug": "code-large",
     "aliases": [
-      "code-snippet"
+      "code-large"
     ],
     "category": "Code"
   },
   {
-    "name": "code-snippet-2",
-    "slug": "code-snippet-2",
+    "name": "code-medium",
+    "slug": "code-medium",
     "aliases": [
-      "code-snippet-2"
+      "code-medium"
     ],
     "category": "Code"
   },
   {
-    "name": "color-swatch",
-    "slug": "color-swatch",
+    "name": "commits",
+    "slug": "commits",
     "aliases": [
-      "color-swatch",
-      "palette",
-      "colours"
-    ],
-    "category": "Code"
-  },
-  {
-    "name": "command",
-    "slug": "command",
-    "aliases": [
-      "command"
-    ],
-    "category": "Code"
-  },
-  {
-    "name": "commit",
-    "slug": "commit",
-    "aliases": [
-      "commit"
-    ],
-    "category": "Code"
-  },
-  {
-    "name": "component-link",
-    "slug": "component-link",
-    "aliases": [
-      "component-link"
-    ],
-    "category": "Code"
-  },
-  {
-    "name": "components",
-    "slug": "components",
-    "aliases": [
-      "components",
-      "figma"
-    ],
-    "category": "Code"
-  },
-  {
-    "name": "components-2",
-    "slug": "components-2",
-    "aliases": [
-      "components-2"
+      "commits"
     ],
     "category": "Code"
   },
@@ -3008,90 +2935,26 @@
     "category": "Code"
   },
   {
-    "name": "container-simple",
-    "slug": "container-simple",
+    "name": "debugger",
+    "slug": "debugger",
     "aliases": [
-      "container-simple"
+      "debugger"
     ],
     "category": "Code"
   },
   {
-    "name": "cpu",
-    "slug": "cpu",
+    "name": "difference-ignored",
+    "slug": "difference-ignored",
     "aliases": [
-      "cpu"
+      "difference-ignored"
     ],
     "category": "Code"
   },
   {
-    "name": "debug",
-    "slug": "debug",
+    "name": "difference-modified",
+    "slug": "difference-modified",
     "aliases": [
-      "debug"
-    ],
-    "category": "Code"
-  },
-  {
-    "name": "deployment",
-    "slug": "deployment",
-    "aliases": [
-      "deployment"
-    ],
-    "category": "Code"
-  },
-  {
-    "name": "design-token",
-    "slug": "design-token",
-    "aliases": [
-      "design-token"
-    ],
-    "category": "Code"
-  },
-  {
-    "name": "diamond-code",
-    "slug": "diamond-code",
-    "aliases": [
-      "diamond-code"
-    ],
-    "category": "Code"
-  },
-  {
-    "name": "diff-added",
-    "slug": "diff-added",
-    "aliases": [
-      "diff-added"
-    ],
-    "category": "Code"
-  },
-  {
-    "name": "diff-ignored",
-    "slug": "diff-ignored",
-    "aliases": [
-      "diff-ignored"
-    ],
-    "category": "Code"
-  },
-  {
-    "name": "diff-modified",
-    "slug": "diff-modified",
-    "aliases": [
-      "diff-modified"
-    ],
-    "category": "Code"
-  },
-  {
-    "name": "diff-removed",
-    "slug": "diff-removed",
-    "aliases": [
-      "diff-removed"
-    ],
-    "category": "Code"
-  },
-  {
-    "name": "diff-renamed",
-    "slug": "diff-renamed",
-    "aliases": [
-      "diff-renamed"
+      "difference-modified"
     ],
     "category": "Code"
   },
@@ -3951,6 +3814,126 @@
     "category": "Crypto"
   },
   {
+    "name": "add-building-blueprint",
+    "slug": "add-building-blueprint",
+    "aliases": [
+      "add-building-blueprint"
+    ],
+    "category": "Custom"
+  },
+  {
+    "name": "alert-square",
+    "slug": "alert-square",
+    "aliases": [
+      "alert-square"
+    ],
+    "category": "Custom"
+  },
+  {
+    "name": "components-2",
+    "slug": "components-2",
+    "aliases": [
+      "components-2"
+    ],
+    "category": "Custom"
+  },
+  {
+    "name": "container-simple",
+    "slug": "container-simple",
+    "aliases": [
+      "container-simple"
+    ],
+    "category": "Custom"
+  },
+  {
+    "name": "deployment",
+    "slug": "deployment",
+    "aliases": [
+      "deployment"
+    ],
+    "category": "Custom"
+  },
+  {
+    "name": "design-token",
+    "slug": "design-token",
+    "aliases": [
+      "design-token"
+    ],
+    "category": "Custom"
+  },
+  {
+    "name": "diamond-code",
+    "slug": "diamond-code",
+    "aliases": [
+      "diamond-code"
+    ],
+    "category": "Custom"
+  },
+  {
+    "name": "emoji-sunglasses",
+    "slug": "emoji-sunglasses",
+    "aliases": [
+      "emoji-sunglasses"
+    ],
+    "category": "Custom"
+  },
+  {
+    "name": "emoji-sweat",
+    "slug": "emoji-sweat",
+    "aliases": [
+      "emoji-sweat"
+    ],
+    "category": "Custom"
+  },
+  {
+    "name": "layout-sidebar-right",
+    "slug": "layout-sidebar-right",
+    "aliases": [
+      "layout-sidebar-right"
+    ],
+    "category": "Custom"
+  },
+  {
+    "name": "layout-sidebar-two",
+    "slug": "layout-sidebar-two",
+    "aliases": [
+      "layout-sidebar-two"
+    ],
+    "category": "Custom"
+  },
+  {
+    "name": "layout-sidebar-two-r",
+    "slug": "layout-sidebar-two-r",
+    "aliases": [
+      "layout-sidebar-two-r"
+    ],
+    "category": "Custom"
+  },
+  {
+    "name": "pivot",
+    "slug": "pivot",
+    "aliases": [
+      "pivot"
+    ],
+    "category": "Custom"
+  },
+  {
+    "name": "skull",
+    "slug": "skull",
+    "aliases": [
+      "skull"
+    ],
+    "category": "Custom"
+  },
+  {
+    "name": "snowman",
+    "slug": "snowman",
+    "aliases": [
+      "snowman"
+    ],
+    "category": "Custom"
+  },
+  {
     "name": "agent-network",
     "slug": "agent-network",
     "aliases": [
@@ -4703,6 +4686,14 @@
     "category": "Edit"
   },
   {
+    "name": "bezier--edit",
+    "slug": "bezier--edit",
+    "aliases": [
+      "bezier--edit"
+    ],
+    "category": "Edit"
+  },
+  {
     "name": "bezier-add",
     "slug": "bezier-add",
     "aliases": [
@@ -4739,14 +4730,6 @@
     "aliases": [
       "bezier-curves",
       "path"
-    ],
-    "category": "Edit"
-  },
-  {
-    "name": "bezier-edit",
-    "slug": "bezier-edit",
-    "aliases": [
-      "bezier--edit"
     ],
     "category": "Edit"
   },
@@ -5653,27 +5636,19 @@
     "category": "Emoji"
   },
   {
-    "name": "emoji-smile-beam",
-    "slug": "emoji-smile-beam",
-    "aliases": [
-      "emoji-smile-beam"
-    ],
-    "category": "Emoji"
-  },
-  {
-    "name": "emoji-smile-wink",
-    "slug": "emoji-smile-wink",
-    "aliases": [
-      "emoji-smile-wink"
-    ],
-    "category": "Emoji"
-  },
-  {
     "name": "emoji-smiling-face",
     "slug": "emoji-smiling-face",
     "aliases": [
       "emoji-smiling-face",
       "heart-eyes"
+    ],
+    "category": "Emoji"
+  },
+  {
+    "name": "emoji-smirking",
+    "slug": "emoji-smirking",
+    "aliases": [
+      "emoji-smirking"
     ],
     "category": "Emoji"
   },
@@ -5687,42 +5662,18 @@
     "category": "Emoji"
   },
   {
-    "name": "emoji-sticker-smirk",
-    "slug": "emoji-sticker-smirk",
-    "aliases": [
-      "emoji-sticker-smirk"
-    ],
-    "category": "Emoji"
-  },
-  {
-    "name": "emoji-sunglasses",
-    "slug": "emoji-sunglasses",
-    "aliases": [
-      "emoji-sunglasses"
-    ],
-    "category": "Emoji"
-  },
-  {
-    "name": "emoji-surprised",
-    "slug": "emoji-surprised",
-    "aliases": [
-      "emoji-surprised"
-    ],
-    "category": "Emoji"
-  },
-  {
-    "name": "emoji-sweat",
-    "slug": "emoji-sweat",
-    "aliases": [
-      "emoji-sweat"
-    ],
-    "category": "Emoji"
-  },
-  {
     "name": "emoji-tongue",
     "slug": "emoji-tongue",
     "aliases": [
       "emoji-tongue"
+    ],
+    "category": "Emoji"
+  },
+  {
+    "name": "emoji-wink",
+    "slug": "emoji-wink",
+    "aliases": [
+      "emoji-wink"
     ],
     "category": "Emoji"
   },
@@ -5735,17 +5686,6 @@
     "category": "Emoji"
   },
   {
-    "name": "ghost",
-    "slug": "ghost",
-    "aliases": [
-      "ghost",
-      "hidden",
-      "unknown",
-      "horror"
-    ],
-    "category": "Emoji"
-  },
-  {
     "name": "poop",
     "slug": "poop",
     "aliases": [
@@ -5753,54 +5693,6 @@
       "spam"
     ],
     "category": "Emoji"
-  },
-  {
-    "name": "skull",
-    "slug": "skull",
-    "aliases": [
-      "skull"
-    ],
-    "category": "Emoji"
-  },
-  {
-    "name": "snowman",
-    "slug": "snowman",
-    "aliases": [
-      "snowman"
-    ],
-    "category": "Emoji"
-  },
-  {
-    "name": "zzz",
-    "slug": "zzz",
-    "aliases": [
-      "zzz"
-    ],
-    "category": "Emoji"
-  },
-  {
-    "name": "alert-circle",
-    "slug": "alert-circle",
-    "aliases": [
-      "alert-circle"
-    ],
-    "category": "Feedback"
-  },
-  {
-    "name": "alert-square",
-    "slug": "alert-square",
-    "aliases": [
-      "alert-square"
-    ],
-    "category": "Feedback"
-  },
-  {
-    "name": "alert-triangle",
-    "slug": "alert-triangle",
-    "aliases": [
-      "alert-triangle"
-    ],
-    "category": "Feedback"
   },
   {
     "name": "block-sort-ascending",
@@ -5942,6 +5834,14 @@
     "aliases": [
       "settings-gear-3",
       "preferences"
+    ],
+    "category": "Filter & Settings"
+  },
+  {
+    "name": "settings-gear-4",
+    "slug": "settings-gear-4",
+    "aliases": [
+      "settings-gear-4"
     ],
     "category": "Filter & Settings"
   },
@@ -7852,6 +7752,40 @@
     "category": "Hands"
   },
   {
+    "name": "injection",
+    "slug": "injection",
+    "aliases": [
+      "injection"
+    ],
+    "category": "Health & Medical"
+  },
+  {
+    "name": "medicine-pill",
+    "slug": "medicine-pill",
+    "aliases": [
+      "medicine-pill"
+    ],
+    "category": "Health & Medical"
+  },
+  {
+    "name": "medicine-pill-2",
+    "slug": "medicine-pill-2",
+    "aliases": [
+      "medicine-pill-2",
+      "tablett"
+    ],
+    "category": "Health & Medical"
+  },
+  {
+    "name": "medicine-tablett",
+    "slug": "medicine-tablett",
+    "aliases": [
+      "medicine-tablett",
+      "pill"
+    ],
+    "category": "Health & Medical"
+  },
+  {
     "name": "anchor-1",
     "slug": "anchor-1",
     "aliases": [
@@ -8257,17 +8191,6 @@
     "category": "Interface General"
   },
   {
-    "name": "circle-questionmark",
-    "slug": "circle-questionmark",
-    "aliases": [
-      "circle-questionmark",
-      "faq",
-      "help",
-      "questionaire"
-    ],
-    "category": "Interface General"
-  },
-  {
     "name": "circle-x",
     "slug": "circle-x",
     "aliases": [
@@ -8445,34 +8368,34 @@
     "category": "Interface General"
   },
   {
-    "name": "douple-check",
-    "slug": "douple-check",
+    "name": "double-checkmark-1",
+    "slug": "double-checkmark-1",
     "aliases": [
-      "douple-check"
+      "double-checkmark-1"
     ],
     "category": "Interface General"
   },
   {
-    "name": "douple-checkmark-1",
-    "slug": "douple-checkmark-1",
+    "name": "double-checkmark-1-small",
+    "slug": "double-checkmark-1-small",
     "aliases": [
-      "douple-checkmark-1"
+      "double-checkmark-1-small"
     ],
     "category": "Interface General"
   },
   {
-    "name": "douple-checkmark-1-small",
-    "slug": "douple-checkmark-1-small",
+    "name": "double-checkmark-2",
+    "slug": "double-checkmark-2",
     "aliases": [
-      "douple-checkmark-1-small"
+      "double-checkmark-2"
     ],
     "category": "Interface General"
   },
   {
-    "name": "douple-checkmark-2-small",
-    "slug": "douple-checkmark-2-small",
+    "name": "double-checkmark-2-small",
+    "slug": "double-checkmark-2-small",
     "aliases": [
-      "douple-checkmark-2-small"
+      "double-checkmark-2-small"
     ],
     "category": "Interface General"
   },
@@ -9007,6 +8930,14 @@
       "qr-code",
       "barcode",
       "scan"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "questionmark-circle-2",
+    "slug": "questionmark-circle-2",
+    "aliases": [
+      "questionmark-circle-2"
     ],
     "category": "Interface General"
   },
@@ -10023,10 +9954,10 @@
     "category": "Layout"
   },
   {
-    "name": "layout-half",
-    "slug": "layout-half",
+    "name": "layout-half-full",
+    "slug": "layout-half-full",
     "aliases": [
-      "layout-half"
+      "layout-half-full"
     ],
     "category": "Layout"
   },
@@ -10061,34 +9992,10 @@
     "category": "Layout"
   },
   {
-    "name": "layout-sidebar-right",
-    "slug": "layout-sidebar-right",
+    "name": "layout-third-full",
+    "slug": "layout-third-full",
     "aliases": [
-      "layout-sidebar-right"
-    ],
-    "category": "Layout"
-  },
-  {
-    "name": "layout-sidebar-two",
-    "slug": "layout-sidebar-two",
-    "aliases": [
-      "layout-sidebar-two"
-    ],
-    "category": "Layout"
-  },
-  {
-    "name": "layout-sidebar-two-r",
-    "slug": "layout-sidebar-two-r",
-    "aliases": [
-      "layout-sidebar-two-r"
-    ],
-    "category": "Layout"
-  },
-  {
-    "name": "layout-third",
-    "slug": "layout-third",
-    "aliases": [
-      "layout-third"
+      "layout-third-full"
     ],
     "category": "Layout"
   },
@@ -12693,10 +12600,10 @@
     "category": "Shopping & Payment"
   },
   {
-    "name": "package-check",
-    "slug": "package-check",
+    "name": "package-ckeck",
+    "slug": "package-ckeck",
     "aliases": [
-      "package-check"
+      "package-ckeck"
     ],
     "category": "Shopping & Payment"
   },
@@ -15615,14 +15522,6 @@
     "category": "Things"
   },
   {
-    "name": "injection",
-    "slug": "injection",
-    "aliases": [
-      "injection"
-    ],
-    "category": "Things"
-  },
-  {
     "name": "judge-gavel",
     "slug": "judge-gavel",
     "aliases": [
@@ -15696,32 +15595,6 @@
       "badge",
       "winner",
       "win"
-    ],
-    "category": "Things"
-  },
-  {
-    "name": "medicine-pill",
-    "slug": "medicine-pill",
-    "aliases": [
-      "medicine-pill"
-    ],
-    "category": "Things"
-  },
-  {
-    "name": "medicine-pill-2",
-    "slug": "medicine-pill-2",
-    "aliases": [
-      "medicine-pill-2",
-      "tablett"
-    ],
-    "category": "Things"
-  },
-  {
-    "name": "medicine-tablett",
-    "slug": "medicine-tablett",
-    "aliases": [
-      "medicine-tablett",
-      "pill"
     ],
     "category": "Things"
   },
@@ -16244,13 +16117,10 @@
     "category": "Things"
   },
   {
-    "name": "test-tube-2",
-    "slug": "test-tube-2",
+    "name": "test-tube 2",
+    "slug": "test-tube 2",
     "aliases": [
-      "test-tube 2",
-      "test",
-      "lab",
-      "filter"
+      "test-tube 2"
     ],
     "category": "Things"
   },

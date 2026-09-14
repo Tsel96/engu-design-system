@@ -116,6 +116,13 @@ figma.connect(
 );
 
 figma.connect(
+  "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1442-18247",
+  {
+    example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-settings-gear-4"/></svg>`,
+  }
+);
+
+figma.connect(
   "https://www.figma.com/design/92ZwLCANCyRKezlcuQLOBW/Engu-Design-System?node-id=1200-28422",
   {
     example: () => html`<svg viewBox="0 0 24 24" fill="none"><use href="assets/icons/engu-icons-sprite.svg#engu-settings-knob"/></svg>`,
