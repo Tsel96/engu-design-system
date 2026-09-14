@@ -122,22 +122,30 @@ function extractInnerSvg(svgText) {
 async function main() {
   console.log(`Fetching component sets from file ${FILE_KEY}…`);
   const setData = await get(`https://api.figma.com/v1/files/${FILE_KEY}/component_sets`);
-  const sets = (setData.meta?.component_sets ?? []).filter((c) => /^Icons\/[^/]+\/.+/.test(c.name));
+  const publishedSets = (setData.meta?.component_sets ?? []).filter((c) => /^Icons\/[^/]+\/.+/.test(c.name));
 
   // Resolve each set's "Size=24, Style=Outlined" child via /v1/files/:key/nodes rather than
   // the file-scoped /components endpoint, which paginates on files this large and silently
   // truncates (previously matched only ~63% of icons with no error).
-  console.log(`Resolving outlined-24 variant for ${sets.length} icon component sets…`);
-  const setBatches = chunk(sets, 150);
+  console.log(`Resolving outlined-24 variant for ${publishedSets.length} icon component sets…`);
+  const setBatches = chunk(publishedSets, 150);
+  const sets = [];
   const childBySetId = {};
   const childNamesBySetId = {};
   const visibleBySetId = {};
   for (const batch of setBatches) {
     const data = await get(`https://api.figma.com/v1/files/${FILE_KEY}/nodes?ids=${batch.map((s) => s.node_id).join(",")}`);
-    for (const [nodeId, entry] of Object.entries(data.nodes || {})) {
-      const children = entry?.document?.children || [];
+    for (const set of batch) {
+      const nodeId = set.node_id;
+      const document = data.nodes?.[nodeId]?.document;
+      // Library metadata can retain a component's previous name after a rename
+      // or deletion. Use the current document for both names and geometry so
+      // exported sprite IDs agree with the live Code Connect mappings.
+      if (!document || document.type !== "COMPONENT_SET" || document.visible === false || !/^Icons\/[^/]+\/.+/.test(document.name)) continue;
+      sets.push({ ...set, name: document.name });
+      const children = document.children || [];
       childNamesBySetId[nodeId] = children.map((ch) => ch.name);
-      visibleBySetId[nodeId] = entry?.document?.visible !== false;
+      visibleBySetId[nodeId] = document.visible !== false;
       const outlined = pickOutlined24(children);
       if (outlined) childBySetId[nodeId] = outlined.id;
     }
