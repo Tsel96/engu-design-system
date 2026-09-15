@@ -5884,6 +5884,13 @@
 <rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs></symbol>
+<symbol id="engu-window-square-delete" viewBox="0 0 24 24" fill="none"><path d="M4.5 9.75H19.5" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.5 6.75C7.5 7.16421 7.16421 7.5 6.75 7.5C6.33579 7.5 6 7.16421 6 6.75C6 6.33579 6.33579 6 6.75 6C7.16421 6 7.5 6.33579 7.5 6.75Z" fill="#1A1815"/>
+<path d="M9.75 6.75C9.75 7.16421 9.41421 7.5 9 7.5C8.58579 7.5 8.25 7.16421 8.25 6.75C8.25 6.33579 8.58579 6 9 6C9.41421 6 9.75 6.33579 9.75 6.75Z" fill="#1A1815"/>
+<path d="M12 6.75C12 7.16421 11.6642 7.5 11.25 7.5C10.8358 7.5 10.5 7.16421 10.5 6.75C10.5 6.33579 10.8358 6 11.25 6C11.6642 6 12 6.33579 12 6.75Z" fill="#1A1815"/>
+<path d="M13.75 20.25H4.75C4.19772 20.25 3.75 19.8023 3.75 19.25V4.75C3.75 4.19772 4.19772 3.75 4.75 3.75H19.25C19.8023 3.75 20.25 4.19772 20.25 4.75V12.75" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.25 15.75L16.75 20.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.75 15.75L21.25 20.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 <symbol id="engu-zoom-in" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_21867)">
 <path d="M16.1265 16.1265L20 20M16.1265 16.1265C17.4385 14.8145 18.25 13.002 18.25 11C18.25 6.99594 15.0041 3.75 11 3.75C6.99594 3.75 3.75 6.99594 3.75 11C3.75 15.0041 6.99594 18.25 11 18.25C13.002 18.25 14.8145 17.4385 16.1265 16.1265Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M11 7.75V14.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round"/>

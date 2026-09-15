@@ -9515,6 +9515,14 @@
     "category": "Interface General"
   },
   {
+    "name": "window-square-delete",
+    "slug": "window-square-delete",
+    "aliases": [
+      "window-square-delete"
+    ],
+    "category": "Interface General"
+  },
+  {
     "name": "zoom-in",
     "slug": "zoom-in",
     "aliases": [
