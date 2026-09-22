@@ -3822,6 +3822,14 @@
     "category": "Custom"
   },
   {
+    "name": "add-script",
+    "slug": "add-script",
+    "aliases": [
+      "add-script"
+    ],
+    "category": "Custom"
+  },
+  {
     "name": "alert-square",
     "slug": "alert-square",
     "aliases": [
