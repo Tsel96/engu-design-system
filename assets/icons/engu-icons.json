@@ -7812,6 +7812,214 @@
     "category": "Interface General"
   },
   {
+    "name": "appearance-dark-mode",
+    "slug": "appearance-dark-mode",
+    "aliases": [
+      "appearance-dark-mode"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "appearance-light-mode",
+    "slug": "appearance-light-mode",
+    "aliases": [
+      "appearance-light-mode"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "archive-1",
+    "slug": "archive-1",
+    "aliases": [
+      "archive-1"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "archive-junk",
+    "slug": "archive-junk",
+    "aliases": [
+      "archive-junk"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "arrow-box-left",
+    "slug": "arrow-box-left",
+    "aliases": [
+      "arrow-box-left"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "arrow-box-right",
+    "slug": "arrow-box-right",
+    "aliases": [
+      "arrow-box-right"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "arrow-inbox",
+    "slug": "arrow-inbox",
+    "aliases": [
+      "arrow-inbox"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "arrow-left-x",
+    "slug": "arrow-left-x",
+    "aliases": [
+      "arrow-left-x"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "arrow-out-of-box",
+    "slug": "arrow-out-of-box",
+    "aliases": [
+      "arrow-out-of-box"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "arrow-rounded",
+    "slug": "arrow-rounded",
+    "aliases": [
+      "arrow-rounded"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "arrows-all-sides",
+    "slug": "arrows-all-sides",
+    "aliases": [
+      "arrows-all-sides"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "arrows-all-sides-2",
+    "slug": "arrows-all-sides-2",
+    "aliases": [
+      "arrows-all-sides-2"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "barcode",
+    "slug": "barcode",
+    "aliases": [
+      "barcode"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "bars-three",
+    "slug": "bars-three",
+    "aliases": [
+      "bars-three"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "bars-three-2",
+    "slug": "bars-three-2",
+    "aliases": [
+      "bars-three-2"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "bars-three-3",
+    "slug": "bars-three-3",
+    "aliases": [
+      "bars-three-3"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "bars-two",
+    "slug": "bars-two",
+    "aliases": [
+      "bars-two"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "bars-two-2",
+    "slug": "bars-two-2",
+    "aliases": [
+      "bars-two-2"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "bell",
+    "slug": "bell",
+    "aliases": [
+      "bell"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "bell-2",
+    "slug": "bell-2",
+    "aliases": [
+      "bell-2"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "bell-2-active",
+    "slug": "bell-2-active",
+    "aliases": [
+      "bell-2-active"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "bell-2-off",
+    "slug": "bell-2-off",
+    "aliases": [
+      "bell-2-off"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "bell-2-snooze",
+    "slug": "bell-2-snooze",
+    "aliases": [
+      "bell-2-snooze"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "bell-active",
+    "slug": "bell-active",
+    "aliases": [
+      "bell-active"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "bell-check",
+    "slug": "bell-check",
+    "aliases": [
+      "bell-check"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "bell-off",
+    "slug": "bell-off",
+    "aliases": [
+      "bell-off"
+    ],
+    "category": "Interface General"
+  },
+  {
     "name": "bookmark",
     "slug": "bookmark",
     "aliases": [
@@ -8942,6 +9150,22 @@
     "category": "Interface General"
   },
   {
+    "name": "questionmark",
+    "slug": "questionmark",
+    "aliases": [
+      "questionmark"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "questionmark-circle",
+    "slug": "questionmark-circle",
+    "aliases": [
+      "questionmark-circle"
+    ],
+    "category": "Interface General"
+  },
+  {
     "name": "questionmark-circle-2",
     "slug": "questionmark-circle-2",
     "aliases": [
@@ -9523,10 +9747,42 @@
     "category": "Interface General"
   },
   {
+    "name": "window-square",
+    "slug": "window-square",
+    "aliases": [
+      "window-square"
+    ],
+    "category": "Interface General"
+  },
+  {
     "name": "window-square-delete",
     "slug": "window-square-delete",
     "aliases": [
       "window-square-delete"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "window-square-locked",
+    "slug": "window-square-locked",
+    "aliases": [
+      "window-square-locked"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "window-square-plus",
+    "slug": "window-square-plus",
+    "aliases": [
+      "window-square-plus"
+    ],
+    "category": "Interface General"
+  },
+  {
+    "name": "window-square-security",
+    "slug": "window-square-security",
+    "aliases": [
+      "window-square-security"
     ],
     "category": "Interface General"
   },
