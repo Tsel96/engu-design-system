@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-chart-waterfall" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_31804)">
+<path d="M2.75 19.25H21.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M4 14.25V11.75" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M12 12.25V9.75" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M16 9.25V5.75" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M20 14.25V4.75" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M8 12.25V6.75" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_31804">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

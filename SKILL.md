@@ -6,6 +6,8 @@ user-invocable: true
 
 Read the `README.md` file within this skill, and explore the other available files.
 
+For icon selection, read `assets/icons/README.md`, then use `node scripts/icons.js search "query"`. Search returns 10 matches by default; fetch only the selected SVG. Preserve exact names and existing aliases. Avoid reading the complete icon manifest, sprite, browse HTML, or all Code Connect files into context.
+
 If creating visual artifacts (slides, mocks, throwaway prototypes, etc.), copy assets out of `assets/` into the output and create static HTML files for the user to view. Always `@import "./colors_and_type.css";` (or copy it) so tokens, fonts, and the type scale are available.
 
 If working on production code, you can copy assets and read the rules here to become an expert in designing with this brand.

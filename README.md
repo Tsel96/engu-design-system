@@ -198,7 +198,9 @@ The brand ships a **distinctive custom logomark** (an 8-prong asterisk / compass
 - **Sub-brand**: `assets/educentrum-wordmark.svg` — the Edu centrum sister logotype.
 
 ### General icons
-The source icon library is connected to `assets/icons/engu-icons.json`, `engu-icons-sprite.svg`, and the browse page. Use the exported SVG sprite and manifest for available icons. The automated export covers 24px outlined variants and 24px single-style marks; use live Figma for other variants.
+Start with [the icon lookup guide](assets/icons/README.md). Run `node scripts/icons.js search "query"` for 10 matches, then `node scripts/icons.js get "exact-name"` for the selected asset path or `node scripts/icons.js svg "exact-name"` for its SVG. Names and curated aliases retain their established meanings. Remote agents can read `assets/icons/index.json`, one category catalog, and one standalone SVG. Keep the full manifest, sprite, and browse HTML out of the agent context during selection.
+
+The original `assets/icons/engu-icons.json`, `engu-icons-sprite.svg`, and browse page remain available for runtime use and visual browsing. The automated export covers 24px outlined variants and 24px single-style marks; use live Figma for other variants. Offline agent assets are derived from those same exports with `npm run build:icons` and verified with `npm run check:icons`.
 
 ### Emoji + unicode
 - **No emoji.** Not in product, not in marketing, not in slide content. The brand voice doesn't use them.

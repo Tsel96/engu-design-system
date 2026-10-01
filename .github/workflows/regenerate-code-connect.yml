@@ -13,7 +13,7 @@ on:
     - cron: '0 9 * * 1'
   push:
     branches: [main]
-    paths: ['scripts/generate-code-connect.js', 'scripts/current-icon-sets.js', 'scripts/export-figma-icons.js', '.github/workflows/regenerate-code-connect.yml']
+    paths: ['scripts/generate-code-connect.js', 'scripts/current-icon-sets.js', 'scripts/export-figma-icons.js', 'scripts/build-icon-assets.js', '.github/workflows/regenerate-code-connect.yml']
 
 permissions:
   contents: write
@@ -42,6 +42,8 @@ jobs:
         run: npm run generate
         env:
           FIGMA_TOKEN: ${{ secrets.FIGMA_ACCESS_TOKEN }}
+      - name: Verify generated assets
+        run: npm run check:icons
       - name: Commit generated assets and mappings
         run: |
           git config user.name 'github-actions[bot]'

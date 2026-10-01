@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-lightning-bolt" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_38544)">
+<g clip-path="url(#clip1_1200_38544)">
+<mask id="mask0_1200_38544" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path d="M24 0H0V24H24V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_1200_38544)">
+<path d="M5.9038 12.412L12.4087 3.46223C13.0402 2.59339 14.4105 3.19544 14.1978 4.24825L13.1565 9.40089C13.0939 9.71056 13.3306 9.99993 13.6466 9.99993H17.2867C18.1038 9.99993 18.576 10.9268 18.0956 11.5878L11.5907 20.5376C10.9592 21.4064 9.58883 20.8044 9.80159 19.7516L10.8429 14.5989C10.9055 14.2893 10.6688 13.9999 10.3528 13.9999H6.71272C5.89557 13.9999 5.42338 13.073 5.9038 12.412Z" stroke="#1A1815" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_1200_38544">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+<clipPath id="clip1_1200_38544">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

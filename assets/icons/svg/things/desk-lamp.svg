@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-desk-lamp" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_35154)">
+<path d="M15.4063 3.75H8.59385C6.5978 3.75 4.70011 4.90999 4.17381 6.83541C4.03834 7.33101 3.92994 7.83163 3.8567 8.34189C3.70465 9.40117 4.60297 10.25 5.67311 10.25H18.3268C19.397 10.25 20.2954 9.40109 20.1433 8.34176C20.07 7.83156 19.9617 7.33098 19.8262 6.83543C19.3 4.91 17.4023 3.75 15.4063 3.75Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 10.5V20" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.75 20.25H16.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.25 10.75V16.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_35154">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

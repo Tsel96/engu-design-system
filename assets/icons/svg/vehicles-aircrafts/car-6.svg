@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-car-6" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_33025)">
+<path d="M19.75 17.25H20.25C21.3546 17.25 22.25 16.3546 22.25 15.25V11.405C22.25 10.4447 21.5675 9.62001 20.6242 9.44033L17.761 8.89495C17.2714 8.80169 16.8342 8.52899 16.5352 8.13027L14.6 5.55C14.2223 5.04639 13.6295 4.75 13 4.75H3.75C2.64543 4.75 1.75 5.64543 1.75 6.75V15.25C1.75 16.3546 2.64543 17.25 3.75 17.25H4.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.75 17.25H14.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7 19.25C8.38071 19.25 9.5 18.1307 9.5 16.75C9.5 15.3693 8.38071 14.25 7 14.25C5.61929 14.25 4.5 15.3693 4.5 16.75C4.5 18.1307 5.61929 19.25 7 19.25Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17 19.25C18.3807 19.25 19.5 18.1307 19.5 16.75C19.5 15.3693 18.3807 14.25 17 14.25C15.6193 14.25 14.5 15.3693 14.5 16.75C14.5 18.1307 15.6193 19.25 17 19.25Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_33025">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

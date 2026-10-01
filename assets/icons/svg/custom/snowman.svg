@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-snowman" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_14140)">
+<path d="M18.25 18.25C18.25 16.4551 16.7949 15 15 15H9C7.20507 15 5.75 16.4551 5.75 18.25C5.75 20.0449 7.20507 21.25 9 21.25H15C16.7949 21.25 18.25 20.0449 18.25 18.25Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.25 9.5C16.25 11.571 14.3211 13.25 12 13.25C9.67893 13.25 7.75 11.571 7.75 9.5C7.75 7.42893 9.67893 5.75 12 5.75C14.3211 5.75 16.25 7.42893 16.25 9.5Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 3.75C12 3.75 11 4.5 11 5.75" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.75 18.25H14.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.5 10.25C9.91421 10.25 10.25 9.91421 10.25 9.5C10.25 9.08579 9.91421 8.75 9.5 8.75C9.08579 8.75 8.75 9.08579 8.75 9.5C8.75 9.91421 9.08579 10.25 9.5 10.25Z" fill="#1A1815"/>
+<path d="M14.5 10.25C14.9142 10.25 15.25 9.91421 15.25 9.5C15.25 9.08579 14.9142 8.75 14.5 8.75C14.0858 8.75 13.75 9.08579 13.75 9.5C13.75 9.91421 14.0858 10.25 14.5 10.25Z" fill="#1A1815"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_14140">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

@@ -14,6 +14,7 @@ const https = require("https");
 const { retryFigmaRequest } = require("./figma-request");
 const fs = require("fs");
 const path = require("path");
+const { createIconAssets, writeIconAssets } = require("./build-icon-assets");
 
 const FILE_KEY = "92ZwLCANCyRKezlcuQLOBW";
 const ICONS_DIR = path.join(__dirname, "..", "assets", "icons");
@@ -278,13 +279,14 @@ async function main() {
   if (added.length) console.log(`  new: ${added.map((a) => a.slug).join(", ")}`);
   if (removed.length) console.log(`  removed: ${removed.map((r) => r.slug).join(", ")}`);
 
-  fs.writeFileSync(JSON_PATH, JSON.stringify(manifest, null, 2) + "\n", "utf8");
-
   // --- sprite ---
   const symbols = resolvedIcons
     .map((icon) => `<symbol id="engu-${icon.name}" viewBox="0 0 24 24" fill="none">${svgByNodeId[icon.nodeId]}</symbol>`)
     .join("\n");
   const sprite = `<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">\n${symbols}\n</svg>\n`;
+  // Validate the complete derived set before updating any exported assets.
+  const agentAssets = createIconAssets(manifest, sprite);
+  fs.writeFileSync(JSON_PATH, JSON.stringify(manifest, null, 2) + "\n", "utf8");
   fs.writeFileSync(SPRITE_PATH, sprite, "utf8");
 
   // --- browse html (regenerate <main>…</main>, keep the rest of the page shell) ---
@@ -316,6 +318,7 @@ ${tiles}</div>
     `class="stat">${manifest.length} icons · ${Object.keys(byCategory).length} categories · 2px stroke · round caps<`
   );
   fs.writeFileSync(BROWSE_PATH, updated, "utf8");
+  writeIconAssets(agentAssets, ICONS_DIR);
 
   console.log("\nDone.");
 }

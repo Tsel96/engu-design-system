@@ -1,0 +1,20 @@
+{"name":"atom","slug":"atom","aliases":["atom"],"category":"Nature & Energy"}
+{"name":"blossom","slug":"blossom","aliases":["blossom","flower","growing"],"category":"Nature & Energy"}
+{"name":"charging-station","slug":"charging-station","aliases":["charging-station","electric-current","power","e-charge"],"category":"Nature & Energy"}
+{"name":"drilling-rig","slug":"drilling-rig","aliases":["drilling-rig","oil","gas"],"category":"Nature & Energy"}
+{"name":"exposure-2","slug":"exposure-2","aliases":["exposure-2","macro","flower"],"category":"Nature & Energy"}
+{"name":"grass","slug":"grass","aliases":["grass","logout","signout"],"category":"Nature & Energy"}
+{"name":"green-power","slug":"green-power","aliases":["green-power","green-energy"],"category":"Nature & Energy"}
+{"name":"growth","slug":"growth","aliases":["growth","grow","leafs"],"category":"Nature & Energy"}
+{"name":"home-energy","slug":"home-energy","aliases":["home-energy","electric current","power"],"category":"Nature & Energy"}
+{"name":"home-energy-2","slug":"home-energy-2","aliases":["home-energy-2","electric-current","power"],"category":"Nature & Energy"}
+{"name":"nuclear-power-plant","slug":"nuclear-power-plant","aliases":["nuclear-power-plant","radiation"],"category":"Nature & Energy"}
+{"name":"park","slug":"park","aliases":["park","tree","nature"],"category":"Nature & Energy"}
+{"name":"power-plant","slug":"power-plant","aliases":["power-plant","coal","gas","factory"],"category":"Nature & Energy"}
+{"name":"pumpjack","slug":"pumpjack","aliases":["pumpjack","oil"],"category":"Nature & Energy"}
+{"name":"rainbow","slug":"rainbow","aliases":["rainbow"],"category":"Nature & Energy"}
+{"name":"rose","slug":"rose","aliases":["rose","flower","romance","love"],"category":"Nature & Energy"}
+{"name":"solar","slug":"solar","aliases":["solar"],"category":"Nature & Energy"}
+{"name":"solar-panel","slug":"solar-panel","aliases":["solar-panel","Photovoltaics","energy","electricity"],"category":"Nature & Energy"}
+{"name":"tree","slug":"tree","aliases":["tree"],"category":"Nature & Energy"}
+{"name":"wind-power","slug":"wind-power","aliases":["wind-power","electric-current","power","green-energy"],"category":"Nature & Energy"}

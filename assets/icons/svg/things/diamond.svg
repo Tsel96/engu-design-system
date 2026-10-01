@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-diamond" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_35174)">
+<path d="M8.20733 3.75C7.68472 3.75 7.18287 3.95456 6.80918 4.3199L2.4456 8.58597C1.64946 9.36432 1.64224 10.643 2.42953 11.4303L10.5851 19.5858C11.3661 20.3668 12.6325 20.3668 13.4135 19.5858L21.569 11.4303C22.3563 10.643 22.3491 9.36432 21.5529 8.58597L17.1894 4.3199C16.8157 3.95456 16.3138 3.75 15.7912 3.75H8.20733Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.5 7.75L6.25 10L8.5 12.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_35174">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

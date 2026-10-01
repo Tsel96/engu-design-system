@@ -21,6 +21,8 @@ The snapshot stores Figma IDs, collection modes, aliases and source metadata. Th
 
 **Refresh icons & Code Connect** starts the existing GitHub workflow. It reads the Design System file, exports the supported 24px outlined/single-style SVG variants, filters deleted/hidden component nodes from Code Connect, commits the assets, and publishes Code Connect in the same job. It does not export every icon style or turn every Figma component into application code. Follow its status in GitHub Actions.
 
+Each icon export also derives the small `assets/icons/index.json`, per-category JSONL catalogs, and standalone SVGs for agent lookup. These preserve the exported names, categories, aliases, symbol IDs, and geometry. `npm run build:icons` regenerates them offline from the recorded manifest and sprite; `npm run check:icons` verifies consistency without changing files. Start icon selection with [the lookup guide](../assets/icons/README.md) and a bounded search rather than reading the entire library into context.
+
 ## Access
 
 For the plugin, create a fine-grained GitHub token limited to `Tsel96/engu-design-system` with **Contents: read and write**. Add **Actions: read and write** if using the icon button. Paste it only into the plugin's password field. It stays in memory for that window only.
@@ -36,6 +38,8 @@ npm run build:tokens   # Generate CSS from the recorded Figma snapshot
 npm run check:tokens   # Assert CSS equals that snapshot; not a live freshness check
 npm run build:plugin   # Bundle the shared token renderer into the plugin UI
 npm run check:plugin
+npm run build:icons    # Derive agent assets from the recorded icon export
+npm run check:icons    # Assert indexes and standalone SVGs match the export
 npm test
 ```
 

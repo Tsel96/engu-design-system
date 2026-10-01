@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-chain-link-1" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_19295)">
+<path d="M13.2497 17.75L10.9139 20.0858C10.1329 20.8668 8.86653 20.8668 8.08548 20.0858L3.91391 15.9142C3.13286 15.1332 3.13286 13.8668 3.91391 13.0858L6.24969 10.75" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.75 6.2497L13.0858 3.91391C13.8668 3.13286 15.1332 3.13286 15.9142 3.91391L20.0858 8.08548C20.8668 8.86653 20.8668 10.1329 20.0858 10.9139L17.75 13.2497" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 15L15 9" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_19295">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

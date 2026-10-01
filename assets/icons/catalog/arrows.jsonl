@@ -1,0 +1,135 @@
+{"name":"arrow","slug":"arrow","aliases":["arrow","refresh","renew"],"category":"Arrows"}
+{"name":"arrow-bottom-top","slug":"arrow-bottom-top","aliases":["arrow-bottom-top","sort 2","switch vertical"],"category":"Arrows"}
+{"name":"arrow-corner-down-left","slug":"arrow-corner-down-left","aliases":["arrow-corner-down-left"],"category":"Arrows"}
+{"name":"arrow-corner-down-right","slug":"arrow-corner-down-right","aliases":["arrow-corner-down-right"],"category":"Arrows"}
+{"name":"arrow-corner-left-down","slug":"arrow-corner-left-down","aliases":["arrow-corner-left-down"],"category":"Arrows"}
+{"name":"arrow-corner-left-up","slug":"arrow-corner-left-up","aliases":["arrow-corner-left-up"],"category":"Arrows"}
+{"name":"arrow-corner-right-down","slug":"arrow-corner-right-down","aliases":["arrow-corner-right-down"],"category":"Arrows"}
+{"name":"arrow-corner-right-up","slug":"arrow-corner-right-up","aliases":["arrow-corner-right-up"],"category":"Arrows"}
+{"name":"arrow-corner-up-left","slug":"arrow-corner-up-left","aliases":["arrow-corner-up-left"],"category":"Arrows"}
+{"name":"arrow-corner-up-right","slug":"arrow-corner-up-right","aliases":["arrow-corner-up-right"],"category":"Arrows"}
+{"name":"arrow-down","slug":"arrow-down","aliases":["arrow-down"],"category":"Arrows"}
+{"name":"arrow-down-circle","slug":"arrow-down-circle","aliases":["arrow-down-circle","arrow-bottom"],"category":"Arrows"}
+{"name":"arrow-down-left","slug":"arrow-down-left","aliases":["arrow-down-left"],"category":"Arrows"}
+{"name":"arrow-down-right","slug":"arrow-down-right","aliases":["arrow-down-right"],"category":"Arrows"}
+{"name":"arrow-down-square","slug":"arrow-down-square","aliases":["arrow-down-square","bottom"],"category":"Arrows"}
+{"name":"arrow-down-wall","slug":"arrow-down-wall","aliases":["arrow-down-wall"],"category":"Arrows"}
+{"name":"arrow-expand-hor","slug":"arrow-expand-hor","aliases":["arrow-expand-hor"],"category":"Arrows"}
+{"name":"arrow-expand-ver","slug":"arrow-expand-ver","aliases":["arrow-expand-ver"],"category":"Arrows"}
+{"name":"arrow-left","slug":"arrow-left","aliases":["arrow-left"],"category":"Arrows"}
+{"name":"arrow-left-circle","slug":"arrow-left-circle","aliases":["arrow-left-circle"],"category":"Arrows"}
+{"name":"arrow-left-down-circle","slug":"arrow-left-down-circle","aliases":["arrow-left-down-circle"],"category":"Arrows"}
+{"name":"arrow-left-right","slug":"arrow-left-right","aliases":["arrow-left-right","sort 2","switch horizonatl"],"category":"Arrows"}
+{"name":"arrow-left-square","slug":"arrow-left-square","aliases":["arrow-left-square"],"category":"Arrows"}
+{"name":"arrow-left-up-circle","slug":"arrow-left-up-circle","aliases":["arrow-left-up-circle"],"category":"Arrows"}
+{"name":"arrow-loop-down-left","slug":"arrow-loop-down-left","aliases":["arrow-loop-down-left","restore","reset"],"category":"Arrows"}
+{"name":"arrow-path-down","slug":"arrow-path-down","aliases":["arrow-path-down"],"category":"Arrows"}
+{"name":"arrow-path-left","slug":"arrow-path-left","aliases":["arrow-path-left"],"category":"Arrows"}
+{"name":"arrow-path-right","slug":"arrow-path-right","aliases":["arrow-path-right"],"category":"Arrows"}
+{"name":"arrow-path-up","slug":"arrow-path-up","aliases":["arrow-path-up"],"category":"Arrows"}
+{"name":"arrow-redo-down","slug":"arrow-redo-down","aliases":["arrow-redo-down","forward"],"category":"Arrows"}
+{"name":"arrow-right","slug":"arrow-right","aliases":["arrow-right"],"category":"Arrows"}
+{"name":"arrow-right-circle","slug":"arrow-right-circle","aliases":["arrow-right-circle"],"category":"Arrows"}
+{"name":"arrow-right-down-circle","slug":"arrow-right-down-circle","aliases":["arrow-right-down-circle"],"category":"Arrows"}
+{"name":"arrow-right-left","slug":"arrow-right-left","aliases":["arrow-right-left","sort 1","switch horizontal"],"category":"Arrows"}
+{"name":"arrow-right-square","slug":"arrow-right-square","aliases":["arrow-right-square"],"category":"Arrows"}
+{"name":"arrow-right-up-circle","slug":"arrow-right-up-circle","aliases":["arrow-right-up-circle"],"category":"Arrows"}
+{"name":"arrow-rotate-clockwise","slug":"arrow-rotate-clockwise","aliases":["arrow-rotate-clockwise","rotate-right"],"category":"Arrows"}
+{"name":"arrow-rotate-counter-clockwise","slug":"arrow-rotate-counter-clockwise","aliases":["arrow-rotate-counter-clockwise","rotate-left"],"category":"Arrows"}
+{"name":"arrow-rotate-left-right","slug":"arrow-rotate-left-right","aliases":["arrow-rotate-left-right","repeat","refresh"],"category":"Arrows"}
+{"name":"arrow-rotate-right-left","slug":"arrow-rotate-right-left","aliases":["arrow-rotate-right-left","repeat","refresh","routines"],"category":"Arrows"}
+{"name":"arrow-share-left","slug":"arrow-share-left","aliases":["arrow-share-left","back","last","reply"],"category":"Arrows"}
+{"name":"arrow-share-right","slug":"arrow-share-right","aliases":["arrow-share-right","next","forward"],"category":"Arrows"}
+{"name":"arrow-split-down","slug":"arrow-split-down","aliases":["arrow-split-down","rules","direction","split"],"category":"Arrows"}
+{"name":"arrow-split-left","slug":"arrow-split-left","aliases":["arrow-split-left","rules","direction","split"],"category":"Arrows"}
+{"name":"arrow-split-right","slug":"arrow-split-right","aliases":["arrow-split-right","rules","direction","split"],"category":"Arrows"}
+{"name":"arrow-split-up","slug":"arrow-split-up","aliases":["arrow-split-up","rules","direction","split"],"category":"Arrows"}
+{"name":"arrow-top-bottom","slug":"arrow-top-bottom","aliases":["arrow-top-bottom","sort 1","switch vertical"],"category":"Arrows"}
+{"name":"arrow-triangle-bottom","slug":"arrow-triangle-bottom","aliases":["arrow-triangle-bottom"],"category":"Arrows"}
+{"name":"arrow-triangle-left","slug":"arrow-triangle-left","aliases":["arrow-triangle-left"],"category":"Arrows"}
+{"name":"arrow-triangle-right","slug":"arrow-triangle-right","aliases":["arrow-triangle-right"],"category":"Arrows"}
+{"name":"arrow-triangle-top","slug":"arrow-triangle-top","aliases":["arrow-triangle-top"],"category":"Arrows"}
+{"name":"arrow-undo-up","slug":"arrow-undo-up","aliases":["arrow-undo-up","back","top"],"category":"Arrows"}
+{"name":"arrow-up","slug":"arrow-up","aliases":["arrow-up","arrow-top"],"category":"Arrows"}
+{"name":"arrow-up-circle","slug":"arrow-up-circle","aliases":["arrow-up-circle","arrow-top"],"category":"Arrows"}
+{"name":"arrow-up-down-left-right","slug":"arrow-up-down-left-right","aliases":["arrow-up-down-left-right","move"],"category":"Arrows"}
+{"name":"arrow-up-left","slug":"arrow-up-left","aliases":["arrow-up-left"],"category":"Arrows"}
+{"name":"arrow-up-right","slug":"arrow-up-right","aliases":["arrow-up-right"],"category":"Arrows"}
+{"name":"arrow-up-square","slug":"arrow-up-square","aliases":["arrow-up-square","top"],"category":"Arrows"}
+{"name":"arrow-up-wall","slug":"arrow-up-wall","aliases":["arrow-up-wall"],"category":"Arrows"}
+{"name":"arrow-wall-2-down","slug":"arrow-wall-2-down","aliases":["arrow-wall-2-down","align bottom"],"category":"Arrows"}
+{"name":"arrow-wall-2-left","slug":"arrow-wall-2-left","aliases":["arrow-wall-2-left","align left"],"category":"Arrows"}
+{"name":"arrow-wall-2-right","slug":"arrow-wall-2-right","aliases":["arrow-wall-2-right","align right"],"category":"Arrows"}
+{"name":"arrow-wall-2-up","slug":"arrow-wall-2-up","aliases":["arrow-wall-2-up","align top"],"category":"Arrows"}
+{"name":"arrow-wall-down","slug":"arrow-wall-down","aliases":["arrow-wall-down","align bottom"],"category":"Arrows"}
+{"name":"arrow-wall-left","slug":"arrow-wall-left","aliases":["arrow-wall-left","align left"],"category":"Arrows"}
+{"name":"arrow-wall-right","slug":"arrow-wall-right","aliases":["arrow-wall-right","align right"],"category":"Arrows"}
+{"name":"arrow-wall-up","slug":"arrow-wall-up","aliases":["arrow-wall-up","align top"],"category":"Arrows"}
+{"name":"arrows-hide","slug":"arrows-hide","aliases":["arrows-hide","collapse","minimize"],"category":"Arrows"}
+{"name":"arrows-repeat","slug":"arrows-repeat","aliases":["arrows-repeat","repost"],"category":"Arrows"}
+{"name":"arrows-repeat-circle","slug":"arrows-repeat-circle","aliases":["arrows-repeat-circle","repost"],"category":"Arrows"}
+{"name":"arrows-repeat-right-left","slug":"arrows-repeat-right-left","aliases":["arrows-repeat-right-left","repost"],"category":"Arrows"}
+{"name":"arrows-repeat-right-left-off","slug":"arrows-repeat-right-left-off","aliases":["arrows-repeat-right-left-off","repost-off"],"category":"Arrows"}
+{"name":"arrows-show","slug":"arrows-show","aliases":["arrows-show","expand","maximize"],"category":"Arrows"}
+{"name":"arrows-zoom","slug":"arrows-zoom","aliases":["arrows-zoom","scale","motion","move","directions"],"category":"Arrows"}
+{"name":"chevron-bottom","slug":"chevron-bottom","aliases":["chevron-bottom"],"category":"Arrows"}
+{"name":"chevron-double-left","slug":"chevron-double-left","aliases":["chevron-double-left"],"category":"Arrows"}
+{"name":"chevron-double-right","slug":"chevron-double-right","aliases":["chevron-double-right"],"category":"Arrows"}
+{"name":"chevron-down-medium","slug":"chevron-down-medium","aliases":["chevron-down-medium"],"category":"Arrows"}
+{"name":"chevron-down-small","slug":"chevron-down-small","aliases":["chevron-down-small"],"category":"Arrows"}
+{"name":"chevron-grabber-horizontal","slug":"chevron-grabber-horizontal","aliases":["chevron-grabber-horizontal"],"category":"Arrows"}
+{"name":"chevron-grabber-vertical","slug":"chevron-grabber-vertical","aliases":["chevron-grabber-vertical"],"category":"Arrows"}
+{"name":"chevron-large-down","slug":"chevron-large-down","aliases":["chevron-large-down","chev down","down"],"category":"Arrows"}
+{"name":"chevron-large-left","slug":"chevron-large-left","aliases":["chevron-large-left","chev left","last"],"category":"Arrows"}
+{"name":"chevron-large-right","slug":"chevron-large-right","aliases":["chevron-large-right","chev right","next"],"category":"Arrows"}
+{"name":"chevron-large-top","slug":"chevron-large-top","aliases":["chevron-large-top","chev top","up"],"category":"Arrows"}
+{"name":"chevron-left","slug":"chevron-left","aliases":["chevron-left"],"category":"Arrows"}
+{"name":"chevron-left-medium","slug":"chevron-left-medium","aliases":["chevron-left-medium"],"category":"Arrows"}
+{"name":"chevron-left-small","slug":"chevron-left-small","aliases":["chevron-left-small"],"category":"Arrows"}
+{"name":"chevron-right","slug":"chevron-right","aliases":["chevron-right"],"category":"Arrows"}
+{"name":"chevron-right-medium","slug":"chevron-right-medium","aliases":["chevron-right-medium"],"category":"Arrows"}
+{"name":"chevron-right-small","slug":"chevron-right-small","aliases":["chevron-right-small"],"category":"Arrows"}
+{"name":"chevron-top","slug":"chevron-top","aliases":["chevron-top"],"category":"Arrows"}
+{"name":"chevron-top-medium","slug":"chevron-top-medium","aliases":["chevron-top-medium"],"category":"Arrows"}
+{"name":"chevron-top-small","slug":"chevron-top-small","aliases":["chevron-top-small"],"category":"Arrows"}
+{"name":"chevron-triangle-down-small","slug":"chevron-triangle-down-small","aliases":["chevron-triangle-down-small","dropdown"],"category":"Arrows"}
+{"name":"chevron-triangle-up-small","slug":"chevron-triangle-up-small","aliases":["chevron-triangle-up-small","dropdown"],"category":"Arrows"}
+{"name":"collaboration-pointer-left","slug":"collaboration-pointer-left","aliases":["collaboration-pointer-left","cursor","agents"],"category":"Arrows"}
+{"name":"collaboration-pointer-right","slug":"collaboration-pointer-right","aliases":["collaboration-pointer-right","cursor","agents"],"category":"Arrows"}
+{"name":"computer-use","slug":"computer-use","aliases":["computer-use","cursor"],"category":"Arrows"}
+{"name":"cursor-1","slug":"cursor-1","aliases":["cursor-1","arrow"],"category":"Arrows"}
+{"name":"cursor-3","slug":"cursor-3","aliases":["cursor-3","arrow"],"category":"Arrows"}
+{"name":"cursor-click","slug":"cursor-click","aliases":["cursor-click","arrow","clickbait"],"category":"Arrows"}
+{"name":"cursor-list","slug":"cursor-list","aliases":["cursor-list","cursor","list"],"category":"Arrows"}
+{"name":"expand-315","slug":"expand-315","aliases":["expand-315","enlarge"],"category":"Arrows"}
+{"name":"expand-45","slug":"expand-45","aliases":["expand-45","enlarge"],"category":"Arrows"}
+{"name":"expand-simple","slug":"expand-simple","aliases":["expand-simple"],"category":"Arrows"}
+{"name":"expand-simple-2","slug":"expand-simple-2","aliases":["expand-simple-2"],"category":"Arrows"}
+{"name":"increase","slug":"increase","aliases":["increase","scale","show-more","change-position"],"category":"Arrows"}
+{"name":"jump","slug":"jump","aliases":["jump","skip"],"category":"Arrows"}
+{"name":"minimize-315","slug":"minimize-315","aliases":["minimize-315","arrow","shrink"],"category":"Arrows"}
+{"name":"minimize-45","slug":"minimize-45","aliases":["minimize-45","arrow","shrink"],"category":"Arrows"}
+{"name":"mouse-down","slug":"mouse-down","aliases":["mouse-down","press","depth","deep-dive"],"category":"Arrows"}
+{"name":"mouse-up","slug":"mouse-up","aliases":["mouse-up","hover","turn-up"],"category":"Arrows"}
+{"name":"ongoing","slug":"ongoing","aliases":["ongoing","moving"],"category":"Arrows"}
+{"name":"random","slug":"random","aliases":["random","productivity","smart"],"category":"Arrows"}
+{"name":"redirect-arrow","slug":"redirect-arrow","aliases":["redirect-arrow"],"category":"Arrows"}
+{"name":"remix","slug":"remix","aliases":["remix","new-try","repeat"],"category":"Arrows"}
+{"name":"remix-circle","slug":"remix-circle","aliases":["remix-circle","mix","new-try"],"category":"Arrows"}
+{"name":"rotate-360-left","slug":"rotate-360-left","aliases":["rotate-360-left"],"category":"Arrows"}
+{"name":"rotate-360-right","slug":"rotate-360-right","aliases":["rotate-360-right"],"category":"Arrows"}
+{"name":"share-arrow-down","slug":"share-arrow-down","aliases":["share-arrow-down","save"],"category":"Arrows"}
+{"name":"square-arrow-bottom-left-corner","slug":"square-arrow-bottom-left-corner","aliases":["square-arrow-bottom-left-corner"],"category":"Arrows"}
+{"name":"square-arrow-bottom-right","slug":"square-arrow-bottom-right","aliases":["square-arrow-bottom-right","resize small","box","arrow"],"category":"Arrows"}
+{"name":"square-arrow-bottom-right-corner","slug":"square-arrow-bottom-right-corner","aliases":["square-arrow-bottom-right-corner"],"category":"Arrows"}
+{"name":"square-arrow-center","slug":"square-arrow-center","aliases":["square-arrow-center","resize big","box","arrow"],"category":"Arrows"}
+{"name":"square-arrow-in-top-left","slug":"square-arrow-in-top-left","aliases":["square-arrow-in-top-left","dock","box","arrow"],"category":"Arrows"}
+{"name":"square-arrow-out-top-left","slug":"square-arrow-out-top-left","aliases":["square-arrow-out-top-left","undock","box","arrow"],"category":"Arrows"}
+{"name":"square-arrow-top-left-corner","slug":"square-arrow-top-left-corner","aliases":["square-arrow-top-left-corner"],"category":"Arrows"}
+{"name":"square-arrow-top-right","slug":"square-arrow-top-right","aliases":["square-arrow-top-right","open","new","link","open link","box","arrow"],"category":"Arrows"}
+{"name":"square-arrow-top-right-2","slug":"square-arrow-top-right-2","aliases":["square-arrow-top-right-2","open","new","link","open link","box","arrow"],"category":"Arrows"}
+{"name":"square-arrow-top-right-corner","slug":"square-arrow-top-right-corner","aliases":["square-arrow-top-right-corner"],"category":"Arrows"}
+{"name":"square-cursor","slug":"square-cursor","aliases":["square-cursor","cursor box","arrow"],"category":"Arrows"}
+{"name":"squized","slug":"squized","aliases":["squized","centered","aligned"],"category":"Arrows"}
+{"name":"step-back","slug":"step-back","aliases":["step-back","undo"],"category":"Arrows"}
+{"name":"step-forwards","slug":"step-forwards","aliases":["step-forwards","continue"],"category":"Arrows"}

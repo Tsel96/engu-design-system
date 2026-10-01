@@ -10,4 +10,5 @@ Figma is the source of truth for design decisions. Sync direction is Figma → G
 - Regenerate CSS with `npm run build:tokens`. Do not edit the generated `figma:tokens` block. After changing the renderer, run `npm run build:plugin` too.
 - Run `npm test`, `npm run check:tokens`, and `npm run check:plugin` before shipping sync changes.
 - Icons and Code Connect mappings are generated from live Figma nodes. Do not invent mappings for components without a matching implementation.
+- For icons, start with `assets/icons/README.md` and `node scripts/icons.js search "query"` (10 results by default). Retrieve only selected SVGs. Do not load the complete manifest, sprite, browse HTML, or all Code Connect files into context for icon selection. Keep canonical names and curated aliases exactly as recorded.
 - Existing UI kits, motion defaults and unmapped CSS values are implementation examples. They are not a verified copy of every Figma component.

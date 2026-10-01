@@ -44,8 +44,12 @@ test('icon export uses current names, retains Custom icons and omits stale libra
     readFileSync(file) { return file.endsWith('.json') ? '[]' : '<html><main></main></html>'; },
     writeFileSync(file, data) { writes.set(path.basename(file), data); },
   };
+  const iconBuilder = require('../scripts/build-icon-assets');
   const context = {
-    require: name => name === 'https' ? https : name === 'fs' ? fakeFs : name === './figma-request' ? require('../scripts/figma-request') : require(name),
+    require: name => name === 'https' ? https : name === 'fs' ? fakeFs : name === './figma-request' ? require('../scripts/figma-request') : name === './build-icon-assets' ? {
+      createIconAssets: iconBuilder.createIconAssets,
+      writeIconAssets: assets => { for (const [file, data] of assets) fakeFs.writeFileSync(file, data); },
+    } : require(name),
     __dirname: path.resolve(__dirname, '../scripts'),
     process: { env: { FIGMA_TOKEN: 'test-token' }, exit: code => { throw new Error(`Exit ${code}`); } },
     console: { log() {}, warn() {}, error() {} },
@@ -63,5 +67,8 @@ test('icon export uses current names, retains Custom icons and omits stale libra
   assert.match(sprite, /id="engu-deployment"/);
   assert.doesNotMatch(sprite, /engu-renamed|engu-custom|engu-hidden|engu-duplicate/);
   assert.match(writes.get('engu-icons-browse.html'), /data-cat="Custom"/);
+  assert.equal(JSON.parse(writes.get('index.json')).count, 2);
+  assert.match(writes.get('commits.svg'), /id="engu-commits"/);
+  assert.match(writes.get('deployment.svg'), /id="engu-deployment"/);
   assert.match(requests.find(url => url.includes('/images/')), /ids=icon-1,icon-2&/);
 });

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-pumpjack" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_39074)">
+<path d="M20.25 20.25H3.75" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.25277 10.6601L17.4182 5.4292M4.33021 6.15552C3.68852 7.52782 3.61138 9.15705 4.25277 10.6601C4.89416 12.1631 6.12382 13.2347 7.55859 13.7208" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20 5C20 5.69036 19.4404 6.25 18.75 6.25C18.0596 6.25 17.5 5.69036 17.5 5C17.5 4.30964 18.0596 3.75 18.75 3.75C19.4404 3.75 20 4.30964 20 5Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.75 6.25V20.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.9983 8.00013L12.704 7.74609H11.2926L11.9983 8.00013ZM11.2926 8.25417L14.261 16.4996L15.6723 15.9915L12.704 7.74609L11.2926 8.25417ZM14.261 16.4996L15.6126 20.2541L17.024 19.7461L15.6723 15.9915L14.261 16.4996ZM11.2926 7.74609L8.3243 15.9915L9.73563 16.4996L12.704 8.25417L11.2926 7.74609ZM8.3243 15.9915L6.97266 19.7461L8.38399 20.2541L9.73563 16.4996L8.3243 15.9915ZM14.9667 15.4956H9.02996V16.9956H14.9667V15.4956Z" fill="#1A1815"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_39074">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['tokens/**', 'colors_and_type.css', 'scripts/**', 'figma-plugin/**', 'tests/**', 'package.json', '.github/workflows/sync-tokens.yml']
+    paths: ['tokens/**', 'colors_and_type.css', 'scripts/**', 'assets/icons/**', 'figma-plugin/**', 'tests/**', 'package.json', '.github/workflows/sync-tokens.yml']
   pull_request:
-    paths: ['tokens/**', 'colors_and_type.css', 'scripts/**', 'figma-plugin/**', 'tests/**', 'package.json', '.github/workflows/sync-tokens.yml']
+    paths: ['tokens/**', 'colors_and_type.css', 'scripts/**', 'assets/icons/**', 'figma-plugin/**', 'tests/**', 'package.json', '.github/workflows/sync-tokens.yml']
 
 permissions:
   contents: read
@@ -22,3 +22,4 @@ jobs:
       - run: npm test
       - run: npm run check:tokens
       - run: npm run check:plugin
+      - run: npm run check:icons

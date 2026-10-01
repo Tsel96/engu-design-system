@@ -1,0 +1,16 @@
+{"name":"at","slug":"at","aliases":["at","handle","@"],"category":"Keyboard"}
+{"name":"backward","slug":"backward","aliases":["backward","delete","remove","key"],"category":"Keyboard"}
+{"name":"cmd","slug":"cmd","aliases":["cmd","command","apple","key"],"category":"Keyboard"}
+{"name":"cmd-box","slug":"cmd-box","aliases":["cmd-box","command","apple","key"],"category":"Keyboard"}
+{"name":"control-key-left","slug":"control-key-left","aliases":["control-key-left"],"category":"Keyboard"}
+{"name":"control-key-right","slug":"control-key-right","aliases":["control-key-right"],"category":"Keyboard"}
+{"name":"enter","slug":"enter","aliases":["enter"],"category":"Keyboard"}
+{"name":"esc","slug":"esc","aliases":["esc","power"],"category":"Keyboard"}
+{"name":"hashtag","slug":"hashtag","aliases":["hashtag","#"],"category":"Keyboard"}
+{"name":"opt","slug":"opt","aliases":["opt","option","key"],"category":"Keyboard"}
+{"name":"opt-alt","slug":"opt-alt","aliases":["opt-alt","option alt","key"],"category":"Keyboard"}
+{"name":"option-key","slug":"option-key","aliases":["option-key"],"category":"Keyboard"}
+{"name":"run-shortcut","slug":"run-shortcut","aliases":["run-shortcut","slash","skills"],"category":"Keyboard"}
+{"name":"shift","slug":"shift","aliases":["shift"],"category":"Keyboard"}
+{"name":"shortcut","slug":"shortcut","aliases":["shortcut","hotkey","powerkey","skill"],"category":"Keyboard"}
+{"name":"spacebar","slug":"spacebar","aliases":["spacebar"],"category":"Keyboard"}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-slides-wide-add" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_29183)">
+<path d="M6.75 15.25H4.75C3.64543 15.25 2.75 14.3546 2.75 13.25V6.75C2.75 5.64543 3.64543 4.75 4.75 4.75H15.25C16.3546 4.75 17.25 5.64543 17.25 6.75V8.75" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M6.75 17.25V10.75C6.75 9.64543 7.64543 8.75 8.75 8.75H19.25C20.3546 8.75 21.25 9.64543 21.25 10.75V17.25C21.25 18.3546 20.3546 19.25 19.25 19.25H8.75C7.64543 19.25 6.75 18.3546 6.75 17.25Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M11.75 14H14M14 14H16.25M14 14V11.75M14 14V16.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_29183">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>
