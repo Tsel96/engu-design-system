@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-calendar-clock" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_39361)">
+<path d="M2.46005 9.95616L3.58876 16.3574C3.78057 17.4452 4.81789 18.1716 5.90567 17.9798L10.1141 17.2377M2.46005 9.95616L2.11275 7.98655C1.92094 6.89876 2.64728 5.86144 3.73507 5.66964L13.0907 4.01998C14.1785 3.82817 15.2158 4.55451 15.4077 5.6423L15.755 7.61191L2.46005 9.95616Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 20.25C19.4518 20.25 22.25 17.4518 22.25 14C22.25 10.5482 19.4518 7.75 16 7.75C12.5482 7.75 9.75 10.5482 9.75 14C9.75 17.4518 12.5482 20.25 16 20.25Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 11.75V14L18 16" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_39361">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-filter-timeline" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_28253)">
+<path d="M6.0016 4.75V19.25M9 16.25L6.0016 19.25L3 16.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.75 6.75H20.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.75 17.25H20.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.75 12H20.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_28253">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

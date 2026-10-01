@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-pokeball" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_36314)">
+<path d="M20.75 11.75C20.75 16.7206 16.7206 20.75 11.75 20.75C6.77944 20.75 2.75 16.7206 2.75 11.75C2.75 6.77944 6.77944 2.75 11.75 2.75C16.7206 2.75 20.75 6.77944 20.75 11.75Z" stroke="#1A1815" stroke-width="1.5"/>
+<path d="M14.75 11.75C14.75 13.4069 13.4069 14.75 11.75 14.75C10.0931 14.75 8.75 13.4069 8.75 11.75C8.75 10.0931 10.0931 8.75 11.75 8.75C13.4069 8.75 14.75 10.0931 14.75 11.75Z" stroke="#1A1815" stroke-width="1.5"/>
+<path d="M14.75 11.75H20.75" stroke="#1A1815" stroke-width="1.5"/>
+<path d="M8.75 11.75H2.75" stroke="#1A1815" stroke-width="1.5"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_36314">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

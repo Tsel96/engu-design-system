@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-bike" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_32676)">
+<path d="M19 19.25C21.3472 19.25 23.25 17.3472 23.25 15C23.25 12.6528 21.3472 10.75 19 10.75C16.6528 10.75 14.75 12.6528 14.75 15C14.75 17.3472 16.6528 19.25 19 19.25Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 19.25C7.34721 19.25 9.25 17.3472 9.25 15C9.25 12.6528 7.34721 10.75 5 10.75C2.65279 10.75 0.75 12.6528 0.75 15C0.75 17.3472 2.65279 19.25 5 19.25Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 13L16.5 8" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.25 7.25L11.5132 12.2844C11.8242 12.5818 12 12.9933 12 13.4236C12 14.2942 11.2942 15 10.4236 15H5M6.25 7.25H8.75M6.25 7.25H5.75" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19 15L16.5774 6.85863C16.2052 5.60766 15.0552 4.75 13.75 4.75" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_32676">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

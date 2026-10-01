@@ -1,0 +1,24 @@
+{"name":"cloud-snow","slug":"cloud-snow","aliases":["cloud-snow"],"category":"Weather"}
+{"name":"cloud-weather","slug":"cloud-weather","aliases":["cloud-weather","clouds"],"category":"Weather"}
+{"name":"cloudy","slug":"cloudy","aliases":["cloudy","clouds"],"category":"Weather"}
+{"name":"cloudy-sun","slug":"cloudy-sun","aliases":["cloudy-sun","clouds"],"category":"Weather"}
+{"name":"drop","slug":"drop","aliases":["drop","water","precipitation","liquid"],"category":"Weather"}
+{"name":"full-moon","slug":"full-moon","aliases":["full-moon","dark-mode","nasa"],"category":"Weather"}
+{"name":"lightning","slug":"lightning","aliases":["lightning","zap","flash","thunder"],"category":"Weather"}
+{"name":"lightning-bolt","slug":"lightning-bolt","aliases":["lightning-bolt","speed","thunder","flash","high woltage"],"category":"Weather"}
+{"name":"lightning-bolt-off","slug":"lightning-bolt-off","aliases":["lightning-bolt-off","speed","thunder","flash","high woltage"],"category":"Weather"}
+{"name":"moon","slug":"moon","aliases":["moon","dark-mode","night"],"category":"Weather"}
+{"name":"moon-star","slug":"moon-star","aliases":["moon-star","night"],"category":"Weather"}
+{"name":"rainy","slug":"rainy","aliases":["rainy","rain"],"category":"Weather"}
+{"name":"rainy-light","slug":"rainy-light","aliases":["rainy-light"],"category":"Weather"}
+{"name":"snow-flakes","slug":"snow-flakes","aliases":["snow-flakes","freeze","frozen"],"category":"Weather"}
+{"name":"sun","slug":"sun","aliases":["sun","light-mode","day","today"],"category":"Weather"}
+{"name":"sun-high","slug":"sun-high","aliases":["sun-high","light-mode","day","today"],"category":"Weather"}
+{"name":"sun-low","slug":"sun-low","aliases":["sun-low","light-mode","day","today"],"category":"Weather"}
+{"name":"sunrise","slug":"sunrise","aliases":["sunrise"],"category":"Weather"}
+{"name":"sunrise-arrow-up","slug":"sunrise-arrow-up","aliases":["sunrise-arrow-up"],"category":"Weather"}
+{"name":"sunset","slug":"sunset","aliases":["sunset"],"category":"Weather"}
+{"name":"sunset-arrow-down","slug":"sunset-arrow-down","aliases":["sunset-arrow-down"],"category":"Weather"}
+{"name":"thermostat","slug":"thermostat","aliases":["thermostat","temprature"],"category":"Weather"}
+{"name":"thunder","slug":"thunder","aliases":["thunder","zap","flash"],"category":"Weather"}
+{"name":"wind","slug":"wind","aliases":["wind","windy"],"category":"Weather"}

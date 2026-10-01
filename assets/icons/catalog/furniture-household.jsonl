@@ -1,0 +1,17 @@
+{"name":"armchair","slug":"armchair","aliases":["armchair","seat","chill"],"category":"Furniture & Household"}
+{"name":"bed","slug":"bed","aliases":["bed"],"category":"Furniture & Household"}
+{"name":"cabinet","slug":"cabinet","aliases":["cabinet"],"category":"Furniture & Household"}
+{"name":"chair","slug":"chair","aliases":["chair","seat"],"category":"Furniture & Household"}
+{"name":"chair-modern","slug":"chair-modern","aliases":["chair-modern","seat"],"category":"Furniture & Household"}
+{"name":"desk-office","slug":"desk-office","aliases":["desk-office"],"category":"Furniture & Household"}
+{"name":"desk-office-2","slug":"desk-office-2","aliases":["desk-office-2"],"category":"Furniture & Household"}
+{"name":"dishwasher","slug":"dishwasher","aliases":["dishwasher","clean"],"category":"Furniture & Household"}
+{"name":"drawer-1","slug":"drawer-1","aliases":["drawer-1"],"category":"Furniture & Household"}
+{"name":"drawer-2","slug":"drawer-2","aliases":["drawer-2"],"category":"Furniture & Household"}
+{"name":"drawer-3","slug":"drawer-3","aliases":["drawer-3"],"category":"Furniture & Household"}
+{"name":"drawer-4","slug":"drawer-4","aliases":["drawer-4"],"category":"Furniture & Household"}
+{"name":"dresser","slug":"dresser","aliases":["dresser","drawer"],"category":"Furniture & Household"}
+{"name":"fridge","slug":"fridge","aliases":["fridge"],"category":"Furniture & Household"}
+{"name":"sofa","slug":"sofa","aliases":["sofa","couch","chill"],"category":"Furniture & Household"}
+{"name":"wardrobe","slug":"wardrobe","aliases":["wardrobe"],"category":"Furniture & Household"}
+{"name":"washing-machine","slug":"washing-machine","aliases":["washing-machine","laundry","clean"],"category":"Furniture & Household"}

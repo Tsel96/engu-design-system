@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-exclamation-circle" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_20102)">
+<path d="M12 21.25C17.1086 21.25 21.25 17.1086 21.25 12C21.25 6.89137 17.1086 2.75 12 2.75C6.89137 2.75 2.75 6.89137 2.75 12C2.75 17.1086 6.89137 21.25 12 21.25Z" stroke="#1A1815" stroke-width="1.5"/>
+<path d="M12 7.75V12.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z" fill="#1A1815"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_20102">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

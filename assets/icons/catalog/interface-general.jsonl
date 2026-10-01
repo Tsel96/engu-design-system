@@ -1,0 +1,209 @@
+{"name":"anchor-1","slug":"anchor-1","aliases":["anchor-1","link"],"category":"Interface General"}
+{"name":"anchor-2","slug":"anchor-2","aliases":["anchor-2","link"],"category":"Interface General"}
+{"name":"appearance-dark-mode","slug":"appearance-dark-mode","aliases":["appearance-dark-mode"],"category":"Interface General"}
+{"name":"appearance-light-mode","slug":"appearance-light-mode","aliases":["appearance-light-mode"],"category":"Interface General"}
+{"name":"archive-1","slug":"archive-1","aliases":["archive-1"],"category":"Interface General"}
+{"name":"archive-junk","slug":"archive-junk","aliases":["archive-junk"],"category":"Interface General"}
+{"name":"arrow-box-left","slug":"arrow-box-left","aliases":["arrow-box-left"],"category":"Interface General"}
+{"name":"arrow-box-right","slug":"arrow-box-right","aliases":["arrow-box-right"],"category":"Interface General"}
+{"name":"arrow-inbox","slug":"arrow-inbox","aliases":["arrow-inbox"],"category":"Interface General"}
+{"name":"arrow-left-x","slug":"arrow-left-x","aliases":["arrow-left-x"],"category":"Interface General"}
+{"name":"arrow-out-of-box","slug":"arrow-out-of-box","aliases":["arrow-out-of-box"],"category":"Interface General"}
+{"name":"arrow-rounded","slug":"arrow-rounded","aliases":["arrow-rounded"],"category":"Interface General"}
+{"name":"arrows-all-sides","slug":"arrows-all-sides","aliases":["arrows-all-sides"],"category":"Interface General"}
+{"name":"arrows-all-sides-2","slug":"arrows-all-sides-2","aliases":["arrows-all-sides-2"],"category":"Interface General"}
+{"name":"barcode","slug":"barcode","aliases":["barcode"],"category":"Interface General"}
+{"name":"bars-three","slug":"bars-three","aliases":["bars-three"],"category":"Interface General"}
+{"name":"bars-three-2","slug":"bars-three-2","aliases":["bars-three-2"],"category":"Interface General"}
+{"name":"bars-three-3","slug":"bars-three-3","aliases":["bars-three-3"],"category":"Interface General"}
+{"name":"bars-two","slug":"bars-two","aliases":["bars-two"],"category":"Interface General"}
+{"name":"bars-two-2","slug":"bars-two-2","aliases":["bars-two-2"],"category":"Interface General"}
+{"name":"bell","slug":"bell","aliases":["bell"],"category":"Interface General"}
+{"name":"bell-2","slug":"bell-2","aliases":["bell-2"],"category":"Interface General"}
+{"name":"bell-2-active","slug":"bell-2-active","aliases":["bell-2-active"],"category":"Interface General"}
+{"name":"bell-2-off","slug":"bell-2-off","aliases":["bell-2-off"],"category":"Interface General"}
+{"name":"bell-2-snooze","slug":"bell-2-snooze","aliases":["bell-2-snooze"],"category":"Interface General"}
+{"name":"bell-active","slug":"bell-active","aliases":["bell-active"],"category":"Interface General"}
+{"name":"bell-check","slug":"bell-check","aliases":["bell-check"],"category":"Interface General"}
+{"name":"bell-off","slug":"bell-off","aliases":["bell-off"],"category":"Interface General"}
+{"name":"bookmark","slug":"bookmark","aliases":["bookmark","banner","flag","tag"],"category":"Interface General"}
+{"name":"bookmark-check","slug":"bookmark-check","aliases":["bookmark-check","add","check"],"category":"Interface General"}
+{"name":"bookmark-delete","slug":"bookmark-delete","aliases":["bookmark-delete","remove","banner","flag","tag","x"],"category":"Interface General"}
+{"name":"bookmark-plus","slug":"bookmark-plus","aliases":["bookmark-plus","banner","flag","tag"],"category":"Interface General"}
+{"name":"bookmark-remove","slug":"bookmark-remove","aliases":["bookmark-remove","off"],"category":"Interface General"}
+{"name":"box-2","slug":"box-2","aliases":["box-2","inbox","archive","tray","shelf"],"category":"Interface General"}
+{"name":"box-2-alt-fill","slug":"box-2-alt-fill","aliases":["box-2-alt-fill","inbox","archive","tray","shelf"],"category":"Interface General"}
+{"name":"broken-chain-link-1","slug":"broken-chain-link-1","aliases":["broken-chain-link-1","unlink"],"category":"Interface General"}
+{"name":"broken-chain-link-2","slug":"broken-chain-link-2","aliases":["broken-chain-link-2","unlink"],"category":"Interface General"}
+{"name":"broken-chain-link-3","slug":"broken-chain-link-3","aliases":["broken-chain-link-3","unlink"],"category":"Interface General"}
+{"name":"broken-heart","slug":"broken-heart","aliases":["broken-heart","delete-account"],"category":"Interface General"}
+{"name":"browser-tabs","slug":"browser-tabs","aliases":["browser-tabs","tab-groups"],"category":"Interface General"}
+{"name":"bucket","slug":"bucket","aliases":["bucket","trash","can"],"category":"Interface General"}
+{"name":"card","slug":"card","aliases":["card","profile","avatar","account"],"category":"Interface General"}
+{"name":"chain-link-1","slug":"chain-link-1","aliases":["chain-link-1","url"],"category":"Interface General"}
+{"name":"chain-link-2","slug":"chain-link-2","aliases":["chain-link-2","url"],"category":"Interface General"}
+{"name":"chain-link-3","slug":"chain-link-3","aliases":["chain-link-3","url"],"category":"Interface General"}
+{"name":"chain-link-4","slug":"chain-link-4","aliases":["chain-link-4"],"category":"Interface General"}
+{"name":"check-circle-2","slug":"check-circle-2","aliases":["check-circle-2","done","confirm","save","success"],"category":"Interface General"}
+{"name":"check-circle-2-dashed","slug":"check-circle-2-dashed","aliases":["check-circle-2-dashed","progress"],"category":"Interface General"}
+{"name":"check-circle-dashed","slug":"check-circle-dashed","aliases":["check-circle-dashed","done","confirm","save","success"],"category":"Interface General"}
+{"name":"checklist","slug":"checklist","aliases":["checklist","list"],"category":"Interface General"}
+{"name":"checkmark-1","slug":"checkmark-1","aliases":["checkmark-1"],"category":"Interface General"}
+{"name":"checkmark-1-medium","slug":"checkmark-1-medium","aliases":["checkmark-1-medium"],"category":"Interface General"}
+{"name":"checkmark-1-small","slug":"checkmark-1-small","aliases":["checkmark-1-small"],"category":"Interface General"}
+{"name":"checkmark-2","slug":"checkmark-2","aliases":["checkmark-2"],"category":"Interface General"}
+{"name":"checkmark-2-medium","slug":"checkmark-2-medium","aliases":["checkmark-2-medium"],"category":"Interface General"}
+{"name":"checkmark-2-small","slug":"checkmark-2-small","aliases":["checkmark-2-small"],"category":"Interface General"}
+{"name":"circle-arrow-down","slug":"circle-arrow-down","aliases":["circle-arrow-down","download square","save"],"category":"Interface General"}
+{"name":"circle-ban-sign","slug":"circle-ban-sign","aliases":["circle-ban-sign","circle","block","ads"],"category":"Interface General"}
+{"name":"circle-check","slug":"circle-check","aliases":["circle-check","check radio","circle","checkbox","check","checkmark","confirm"],"category":"Interface General"}
+{"name":"circle-dashed","slug":"circle-dashed","aliases":["circle-dashed"],"category":"Interface General"}
+{"name":"circle-dots-center-1","slug":"circle-dots-center-1","aliases":["circle-dots-center-1","menu 1","grid","circle"],"category":"Interface General"}
+{"name":"circle-dots-center-2","slug":"circle-dots-center-2","aliases":["circle-dots-center-2","menu 1","grid","circle"],"category":"Interface General"}
+{"name":"circle-dotted","slug":"circle-dotted","aliases":["circle-dotted"],"category":"Interface General"}
+{"name":"circle-info","slug":"circle-info","aliases":["circle-info","info circle","tooltip","information"],"category":"Interface General"}
+{"name":"circle-minus","slug":"circle-minus","aliases":["circle-minus","remove"],"category":"Interface General"}
+{"name":"circle-placeholder-off","slug":"circle-placeholder-off","aliases":["circle-placeholder-off"],"category":"Interface General"}
+{"name":"circle-placeholder-on","slug":"circle-placeholder-on","aliases":["circle-placeholder-on"],"category":"Interface General"}
+{"name":"circle-plus","slug":"circle-plus","aliases":["circle-plus","add"],"category":"Interface General"}
+{"name":"circle-x","slug":"circle-x","aliases":["circle-x","close","checkbox","remove","failed","cancel"],"category":"Interface General"}
+{"name":"clipboard","slug":"clipboard","aliases":["clipboard","copy","list"],"category":"Interface General"}
+{"name":"clipboard-2","slug":"clipboard-2","aliases":["clipboard-2","copy","list"],"category":"Interface General"}
+{"name":"close-circle-dashed","slug":"close-circle-dashed","aliases":["close-circle-dashed","close","checkbox","remove"],"category":"Interface General"}
+{"name":"compass-round","slug":"compass-round","aliases":["compass-round","browser","safari","web","internet","navigation"],"category":"Interface General"}
+{"name":"compass-square","slug":"compass-square","aliases":["compass-square","browser","safari","web","internet","navigation"],"category":"Interface General"}
+{"name":"cross-large","slug":"cross-large","aliases":["cross-large","crossed large","close"],"category":"Interface General"}
+{"name":"cross-medium","slug":"cross-medium","aliases":["cross-medium","crossed medium","close"],"category":"Interface General"}
+{"name":"cross-small","slug":"cross-small","aliases":["cross-small","crossed small","delete","remove"],"category":"Interface General"}
+{"name":"deep-search","slug":"deep-search","aliases":["deep-search","deep-research","focus-search"],"category":"Interface General"}
+{"name":"dot-grid-1x3-horizontal","slug":"dot-grid-1x3-horizontal","aliases":["dot-grid-1x3-horizontal","menu","drag","grab"],"category":"Interface General"}
+{"name":"dot-grid-1x3-horizontal-tight","slug":"dot-grid-1x3-horizontal-tight","aliases":["dot-grid-1x3-horizontal-tight","menu","drag","grab"],"category":"Interface General"}
+{"name":"dot-grid-1x3-vertical","slug":"dot-grid-1x3-vertical","aliases":["dot-grid-1x3-vertical","menu","drag","grab"],"category":"Interface General"}
+{"name":"dot-grid-1x3-vertical-tight","slug":"dot-grid-1x3-vertical-tight","aliases":["dot-grid-1x3-vertical-tight","menu","drag","grab"],"category":"Interface General"}
+{"name":"dot-grid-2x3","slug":"dot-grid-2x3","aliases":["dot-grid-2x3","menu","drag","grab"],"category":"Interface General"}
+{"name":"dot-grid-3x3","slug":"dot-grid-3x3","aliases":["dot-grid-3x3","menu","drag","grab"],"category":"Interface General"}
+{"name":"double-checkmark-1","slug":"double-checkmark-1","aliases":["double-checkmark-1"],"category":"Interface General"}
+{"name":"double-checkmark-1-small","slug":"double-checkmark-1-small","aliases":["double-checkmark-1-small"],"category":"Interface General"}
+{"name":"double-checkmark-2","slug":"double-checkmark-2","aliases":["double-checkmark-2"],"category":"Interface General"}
+{"name":"double-checkmark-2-small","slug":"double-checkmark-2-small","aliases":["double-checkmark-2-small"],"category":"Interface General"}
+{"name":"electrocardiogram","slug":"electrocardiogram","aliases":["electrocardiogram","activity","notification","pulse","heartbeat","beat"],"category":"Interface General"}
+{"name":"exclamation-circle","slug":"exclamation-circle","aliases":["exclamation-circle","info","warning"],"category":"Interface General"}
+{"name":"exclamation-circle-bold","slug":"exclamation-circle-bold","aliases":["exclamation-circle-bold","info","warning"],"category":"Interface General"}
+{"name":"exclamation-triangle","slug":"exclamation-triangle","aliases":["exclamation-triangle","error","warning","alert"],"category":"Interface General"}
+{"name":"feature","slug":"feature","aliases":["feature","shine"],"category":"Interface General"}
+{"name":"gauge","slug":"gauge","aliases":["gauge","tachometer","performance","speed","scale"],"category":"Interface General"}
+{"name":"hand-bell","slug":"hand-bell","aliases":["hand-bell"],"category":"Interface General"}
+{"name":"heart","slug":"heart","aliases":["heart","like","health","life","favorite"],"category":"Interface General"}
+{"name":"heart-2","slug":"heart-2","aliases":["heart-2","like","health","life","fav"],"category":"Interface General"}
+{"name":"heart-beat","slug":"heart-beat","aliases":["heart-beat","heart rate","pulse"],"category":"Interface General"}
+{"name":"heart-donation","slug":"heart-donation","aliases":["heart-donation","dollar"],"category":"Interface General"}
+{"name":"import","slug":"import","aliases":["import","download","save"],"category":"Interface General"}
+{"name":"import-2","slug":"import-2","aliases":["import-2","download","save"],"category":"Interface General"}
+{"name":"inbox-checked","slug":"inbox-checked","aliases":["inbox-checked","saved"],"category":"Interface General"}
+{"name":"inbox-empty","slug":"inbox-empty","aliases":["inbox-empty"],"category":"Interface General"}
+{"name":"info-simple","slug":"info-simple","aliases":["info-simple","tooltip","information"],"category":"Interface General"}
+{"name":"light-bulb","slug":"light-bulb","aliases":["light-bulb","idea","light"],"category":"Interface General"}
+{"name":"light-bulb-simple","slug":"light-bulb-simple","aliases":["light-bulb-simple","idea"],"category":"Interface General"}
+{"name":"lightbulb-glow","slug":"lightbulb-glow","aliases":["lightbulb-glow","idea","reasoning","think"],"category":"Interface General"}
+{"name":"list-add","slug":"list-add","aliases":["list-add","list-plus","new-list"],"category":"Interface General"}
+{"name":"list-bullets","slug":"list-bullets","aliases":["list-bullets"],"category":"Interface General"}
+{"name":"loader","slug":"loader","aliases":["loader"],"category":"Interface General"}
+{"name":"loading-circle","slug":"loading-circle","aliases":["loading-circle","quarter","spinner"],"category":"Interface General"}
+{"name":"magnifying-glass","slug":"magnifying-glass","aliases":["magnifying-glass","search"],"category":"Interface General"}
+{"name":"magnifying-glass-2","slug":"magnifying-glass-2","aliases":["magnifying-glass-2","search"],"category":"Interface General"}
+{"name":"math-basic","slug":"math-basic","aliases":["math-basic","calc"],"category":"Interface General"}
+{"name":"math-equals","slug":"math-equals","aliases":["math-equals","="],"category":"Interface General"}
+{"name":"math-equals-circle","slug":"math-equals-circle","aliases":["math-equals-circle"],"category":"Interface General"}
+{"name":"math-greater-than","slug":"math-greater-than","aliases":["math-greater-than","&gt;"],"category":"Interface General"}
+{"name":"math-greater-than-circle","slug":"math-greater-than-circle","aliases":["math-greater-than-circle","&gt;"],"category":"Interface General"}
+{"name":"math-less-than","slug":"math-less-than","aliases":["math-less-than","&lt;"],"category":"Interface General"}
+{"name":"math-less-than-circle","slug":"math-less-than-circle","aliases":["math-less-than-circle","&lt;"],"category":"Interface General"}
+{"name":"math-multiplication","slug":"math-multiplication","aliases":["math-multiplication"],"category":"Interface General"}
+{"name":"math-notes","slug":"math-notes","aliases":["math-notes","function"],"category":"Interface General"}
+{"name":"math-scientific","slug":"math-scientific","aliases":["math-scientific","function"],"category":"Interface General"}
+{"name":"minus-large","slug":"minus-large","aliases":["minus-large","remove","delete"],"category":"Interface General"}
+{"name":"minus-medium","slug":"minus-medium","aliases":["minus-medium","remove","delete"],"category":"Interface General"}
+{"name":"minus-small","slug":"minus-small","aliases":["minus-small","remove","delete"],"category":"Interface General"}
+{"name":"morning-brief","slug":"morning-brief","aliases":["morning-brief","daily-todo"],"category":"Interface General"}
+{"name":"paperclip-1","slug":"paperclip-1","aliases":["paperclip-1","attachment"],"category":"Interface General"}
+{"name":"paperclip-2","slug":"paperclip-2","aliases":["paperclip-2","attachment"],"category":"Interface General"}
+{"name":"paperclip-3","slug":"paperclip-3","aliases":["paperclip-3","attachment"],"category":"Interface General"}
+{"name":"pin","slug":"pin","aliases":["pin"],"category":"Interface General"}
+{"name":"pin-2","slug":"pin-2","aliases":["pin-2"],"category":"Interface General"}
+{"name":"planning","slug":"planning","aliases":["planning","list","checklist"],"category":"Interface General"}
+{"name":"plus-large","slug":"plus-large","aliases":["plus-large","add large"],"category":"Interface General"}
+{"name":"plus-medium","slug":"plus-medium","aliases":["plus-medium","add medium"],"category":"Interface General"}
+{"name":"plus-small","slug":"plus-small","aliases":["plus-small","add small"],"category":"Interface General"}
+{"name":"preview","slug":"preview","aliases":["preview","details"],"category":"Interface General"}
+{"name":"progress-100","slug":"progress-100","aliases":["progress-100","ideas","open","status","task"],"category":"Interface General"}
+{"name":"progress-25","slug":"progress-25","aliases":["progress-25","ideas","open","status","task"],"category":"Interface General"}
+{"name":"progress-50","slug":"progress-50","aliases":["progress-50","ideas","open","status","tas"],"category":"Interface General"}
+{"name":"progress-75","slug":"progress-75","aliases":["progress-75","ideas","open","status","tas"],"category":"Interface General"}
+{"name":"progress-arc","slug":"progress-arc","aliases":["progress-arc","progress-dynamic","ideas","open","status","task"],"category":"Interface General"}
+{"name":"qr-code","slug":"qr-code","aliases":["qr-code","barcode","scan"],"category":"Interface General"}
+{"name":"questionmark","slug":"questionmark","aliases":["questionmark"],"category":"Interface General"}
+{"name":"questionmark-circle","slug":"questionmark-circle","aliases":["questionmark-circle"],"category":"Interface General"}
+{"name":"questionmark-circle-2","slug":"questionmark-circle-2","aliases":["questionmark-circle-2"],"category":"Interface General"}
+{"name":"quick-search","slug":"quick-search","aliases":["quick-search","quick-menu","command-k"],"category":"Interface General"}
+{"name":"review","slug":"review","aliases":["review","star-square"],"category":"Interface General"}
+{"name":"scan-code","slug":"scan-code","aliases":["scan-code","barcode"],"category":"Interface General"}
+{"name":"search-menu","slug":"search-menu","aliases":["search-menu","list-search"],"category":"Interface General"}
+{"name":"search-options","slug":"search-options","aliases":["search-options","settings"],"category":"Interface General"}
+{"name":"shapes-plus-x-square-circle","slug":"shapes-plus-x-square-circle","aliases":["shapes-plus-x-square-circle","icon","icons","shapes","games"],"category":"Interface General"}
+{"name":"share-android","slug":"share-android","aliases":["share-android"],"category":"Interface General"}
+{"name":"share-os","slug":"share-os","aliases":["share-os"],"category":"Interface General"}
+{"name":"shredder","slug":"shredder","aliases":["shredder","permanently"],"category":"Interface General"}
+{"name":"sidebar","slug":"sidebar","aliases":["sidebar","menu","list","window"],"category":"Interface General"}
+{"name":"square-arrow-down","slug":"square-arrow-down","aliases":["square-arrow-down","download square","save"],"category":"Interface General"}
+{"name":"square-behind-square-1","slug":"square-behind-square-1","aliases":["square-behind-square-1","copy 1","layers","pages"],"category":"Interface General"}
+{"name":"square-behind-square-2","slug":"square-behind-square-2","aliases":["square-behind-square-2","copy 2","layers","pages"],"category":"Interface General"}
+{"name":"square-behind-square-3","slug":"square-behind-square-3","aliases":["square-behind-square-3","copy 3","layers","pages"],"category":"Interface General"}
+{"name":"square-behind-square-4","slug":"square-behind-square-4","aliases":["square-behind-square-4","copy 4","layers","pages"],"category":"Interface General"}
+{"name":"square-behind-square-6","slug":"square-behind-square-6","aliases":["square-behind-square-6","layers","copy 6","pages"],"category":"Interface General"}
+{"name":"square-check","slug":"square-check","aliases":["square-check","checkbox","check","checkmark","confirm"],"category":"Interface General"}
+{"name":"square-checklist","slug":"square-checklist","aliases":["square-checklist","checklist box","check","list"],"category":"Interface General"}
+{"name":"square-checklist-bell","slug":"square-checklist-bell","aliases":["square-checklist-bell","checklist box","check","list","search"],"category":"Interface General"}
+{"name":"square-checklist-magnifying-glass","slug":"square-checklist-magnifying-glass","aliases":["square-checklist-magnifying-glass","checklist box","check","list","search"],"category":"Interface General"}
+{"name":"square-circle-top-right","slug":"square-circle-top-right","aliases":["square-circle-top-right","notifications","badge"],"category":"Interface General"}
+{"name":"square-doted-behind-square","slug":"square-doted-behind-square","aliases":["square-doted-behind-square","copy","layers","pages"],"category":"Interface General"}
+{"name":"square-grid-circle","slug":"square-grid-circle","aliases":["square-grid-circle","layout","grid","list","category","categories"],"category":"Interface General"}
+{"name":"square-grid-magnifying-glass","slug":"square-grid-magnifying-glass","aliases":["square-grid-magnifying-glass","layout","grid","list","search","find","magifier"],"category":"Interface General"}
+{"name":"square-info","slug":"square-info","aliases":["square-info","information","tooltip"],"category":"Interface General"}
+{"name":"square-lines","slug":"square-lines","aliases":["square-lines","note","card","text"],"category":"Interface General"}
+{"name":"square-minus","slug":"square-minus","aliases":["square-minus","remove","delete"],"category":"Interface General"}
+{"name":"square-placeholder","slug":"square-placeholder","aliases":["square-placeholder"],"category":"Interface General"}
+{"name":"square-placeholder-dashed","slug":"square-placeholder-dashed","aliases":["square-placeholder-dashed"],"category":"Interface General"}
+{"name":"square-plus","slug":"square-plus","aliases":["square-plus","add"],"category":"Interface General"}
+{"name":"square-x","slug":"square-x","aliases":["square-x","close","x","checkbox","remove"],"category":"Interface General"}
+{"name":"star","slug":"star","aliases":["star","favorite","award"],"category":"Interface General"}
+{"name":"star-lines","slug":"star-lines","aliases":["star-lines","features","favorite","award","to the moon","rising"],"category":"Interface General"}
+{"name":"target","slug":"target","aliases":["target","focus","do-not-disdurb"],"category":"Interface General"}
+{"name":"target-1","slug":"target-1","aliases":["target-1","zoom","crosshair"],"category":"Interface General"}
+{"name":"target-2","slug":"target-2","aliases":["target-2","zoom","crosshair"],"category":"Interface General"}
+{"name":"target-arrow","slug":"target-arrow","aliases":["target-arrow","goal","aim","focus","do-not-disdurb"],"category":"Interface General"}
+{"name":"tasks","slug":"tasks","aliases":["tasks","lists","todos"],"category":"Interface General"}
+{"name":"textarea-drag","slug":"textarea-drag","aliases":["textarea-drag"],"category":"Interface General"}
+{"name":"thumbtack","slug":"thumbtack","aliases":["thumbtack","pin","location","bookmark"],"category":"Interface General"}
+{"name":"todos","slug":"todos","aliases":["todos","check","things","task"],"category":"Interface General"}
+{"name":"trash-can","slug":"trash-can","aliases":["trash-can","delete","remove","garbage","waste"],"category":"Interface General"}
+{"name":"trash-can-simple","slug":"trash-can-simple","aliases":["trash-can-simple","delete","remove","garbage","waste"],"category":"Interface General"}
+{"name":"trash-paper","slug":"trash-paper","aliases":["trash-paper"],"category":"Interface General"}
+{"name":"trash-permanently","slug":"trash-permanently","aliases":["trash-permanently","remove"],"category":"Interface General"}
+{"name":"trash-rounded","slug":"trash-rounded","aliases":["trash-rounded","delete","remove"],"category":"Interface General"}
+{"name":"trial","slug":"trial","aliases":["trial","try","money-back","test-phase"],"category":"Interface General"}
+{"name":"unarchiv","slug":"unarchiv","aliases":["unarchiv","unbox"],"category":"Interface General"}
+{"name":"unblock","slug":"unblock","aliases":["unblock"],"category":"Interface General"}
+{"name":"unpin","slug":"unpin","aliases":["unpin"],"category":"Interface General"}
+{"name":"unpin-2","slug":"unpin-2","aliases":["unpin-2"],"category":"Interface General"}
+{"name":"untrash","slug":"untrash","aliases":["untrash"],"category":"Interface General"}
+{"name":"window","slug":"window","aliases":["window","timeline","feed","posts"],"category":"Interface General"}
+{"name":"window-2","slug":"window-2","aliases":["window-2","browser","app","desktop"],"category":"Interface General"}
+{"name":"window-app","slug":"window-app","aliases":["window-app","browser","app","desktop"],"category":"Interface General"}
+{"name":"window-cursor","slug":"window-cursor","aliases":["window-cursor","visit page","open app"],"category":"Interface General"}
+{"name":"window-square","slug":"window-square","aliases":["window-square"],"category":"Interface General"}
+{"name":"window-square-delete","slug":"window-square-delete","aliases":["window-square-delete"],"category":"Interface General"}
+{"name":"window-square-locked","slug":"window-square-locked","aliases":["window-square-locked"],"category":"Interface General"}
+{"name":"window-square-plus","slug":"window-square-plus","aliases":["window-square-plus"],"category":"Interface General"}
+{"name":"window-square-security","slug":"window-square-security","aliases":["window-square-security"],"category":"Interface General"}
+{"name":"zoom-in","slug":"zoom-in","aliases":["zoom-in","search-plus"],"category":"Interface General"}
+{"name":"zoom-out","slug":"zoom-out","aliases":["zoom-out","search-minus"],"category":"Interface General"}

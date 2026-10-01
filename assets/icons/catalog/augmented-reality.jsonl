@@ -1,0 +1,16 @@
+{"name":"3d-box-bottom","slug":"3d-box-bottom","aliases":["3d-box-bottom","shaders","model","room"],"category":"Augmented Reality"}
+{"name":"3d-box-top","slug":"3d-box-top","aliases":["3d-box-top","shaders","model","cube","ar"],"category":"Augmented Reality"}
+{"name":"3d-sphere","slug":"3d-sphere","aliases":["3d-sphere"],"category":"Augmented Reality"}
+{"name":"ar","slug":"ar","aliases":["ar","augmented-reality","card-box","3d","virtual reality","VR"],"category":"Augmented Reality"}
+{"name":"ar-cube-3","slug":"ar-cube-3","aliases":["ar-cube-3"],"category":"Augmented Reality"}
+{"name":"ar-scan-cube-1","slug":"ar-scan-cube-1","aliases":["ar-scan-cube-1"],"category":"Augmented Reality"}
+{"name":"ar-scan-cube-2","slug":"ar-scan-cube-2","aliases":["ar-scan-cube-2"],"category":"Augmented Reality"}
+{"name":"around","slug":"around","aliases":["around","spatial"],"category":"Augmented Reality"}
+{"name":"oculus","slug":"oculus","aliases":["oculus"],"category":"Augmented Reality"}
+{"name":"panorama-view","slug":"panorama-view","aliases":["panorama-view"],"category":"Augmented Reality"}
+{"name":"qm3","slug":"qm3","aliases":["qm3","room","transform","xyz","3d"],"category":"Augmented Reality"}
+{"name":"reframe","slug":"reframe","aliases":["reframe"],"category":"Augmented Reality","variant":{"size":24,"style":"Solid","nodeId":"1871:19294"}}
+{"name":"rotate","slug":"rotate","aliases":["rotate","rotation","x-axis"],"category":"Augmented Reality"}
+{"name":"spatial-capture","slug":"spatial-capture","aliases":["spatial-capture"],"category":"Augmented Reality"}
+{"name":"vision-pro","slug":"vision-pro","aliases":["vision-pro","goggles"],"category":"Augmented Reality"}
+{"name":"vision-pro-app","slug":"vision-pro-app","aliases":["vision-pro-app","window"],"category":"Augmented Reality"}

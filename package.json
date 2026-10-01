@@ -11,6 +11,9 @@
     "check:tokens": "node scripts/export-figma-tokens.js --input tokens/figma-variables.json --check",
     "build:plugin": "node scripts/build-figma-plugin.js",
     "check:plugin": "node scripts/build-figma-plugin.js --check",
+    "icons": "node scripts/icons.js",
+    "build:icons": "node scripts/build-icon-assets.js",
+    "check:icons": "node scripts/build-icon-assets.js --check",
     "test": "node --test tests/*.test.js"
   },
   "devDependencies": {

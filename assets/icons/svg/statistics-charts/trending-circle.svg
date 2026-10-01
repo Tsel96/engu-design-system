@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-trending-circle" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_32382)">
+<path d="M12 21.25C17.1086 21.25 21.25 17.1086 21.25 12C21.25 6.89137 17.1086 2.75 12 2.75C6.89137 2.75 2.75 6.89137 2.75 12C2.75 17.1086 6.89137 21.25 12 21.25Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.5 14.5L9 13C9.55229 12.4477 10.4477 12.4477 11 13C11.5523 13.5523 12.4477 13.5523 13 13L15.5 10.5" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.75 9.75H16.25V13.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_32382">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

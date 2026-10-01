@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-roller" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_33329)">
+<path d="M5.5 19.25C7.01878 19.25 8.25 18.0188 8.25 16.5C8.25 14.9812 7.01878 13.75 5.5 13.75C3.98122 13.75 2.75 14.9812 2.75 16.5C2.75 18.0188 3.98122 19.25 5.5 19.25Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.5 19.25C20.0188 19.25 21.25 18.0188 21.25 16.5C21.25 14.9812 20.0188 13.75 18.5 13.75C16.9812 13.75 15.75 14.9812 15.75 16.5C15.75 18.0188 16.9812 19.25 18.5 19.25Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.75 4.75H14.403C15.3371 4.75 16.1467 5.39649 16.3534 6.30736L18 13.5625" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.5 16.5H15.5" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_33329">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

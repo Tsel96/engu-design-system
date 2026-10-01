@@ -1,0 +1,13 @@
+{"name":"circle-half-fill","slug":"circle-half-fill","aliases":["circle-half-fill","contrast"],"category":"Accessibility"}
+{"name":"circle-person","slug":"circle-person","aliases":["circle-person","accessibility","a11y"],"category":"Accessibility"}
+{"name":"ear","slug":"ear","aliases":["ear","hearing","loud"],"category":"Accessibility"}
+{"name":"eye-closed","slug":"eye-closed","aliases":["eye-closed","see","hidden"],"category":"Accessibility"}
+{"name":"eye-open","slug":"eye-open","aliases":["eye-open","show","see","reveal","look","visible"],"category":"Accessibility"}
+{"name":"eye-slash","slug":"eye-slash","aliases":["eye-slash","hide","eye off","see","look","not visible"],"category":"Accessibility"}
+{"name":"eye-slash-2","slug":"eye-slash-2","aliases":["eye-slash-2","accessibility eye","a11y"],"category":"Accessibility"}
+{"name":"image-alt-text","slug":"image-alt-text","aliases":["image-alt-text"],"category":"Accessibility"}
+{"name":"reduce-motion","slug":"reduce-motion","aliases":["reduce-motion"],"category":"Accessibility"}
+{"name":"square-lines-bottom","slug":"square-lines-bottom","aliases":["square-lines-bottom","transcription"],"category":"Accessibility"}
+{"name":"voice-control","slug":"voice-control","aliases":["voice-control"],"category":"Accessibility"}
+{"name":"voiceover","slug":"voiceover","aliases":["voiceover"],"category":"Accessibility"}
+{"name":"voiceover-2","slug":"voiceover-2","aliases":["voiceover-2"],"category":"Accessibility"}

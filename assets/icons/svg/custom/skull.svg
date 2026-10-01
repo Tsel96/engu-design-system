@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-skull" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_14113)">
+<path d="M12 2.75C8.27208 2.75 5.25 5.77208 5.25 9.5C5.25 12.3038 6.89099 14.7214 9.27484 15.8706L9.25 20.25H14.75L14.7266 15.874C17.1095 14.7243 18.75 12.3068 18.75 9.5C18.75 5.77208 15.7279 2.75 12 2.75Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 11C10 11.5523 9.55228 12 9 12C8.44772 12 8 11.5523 8 11C8 10.4477 8.44772 10 9 10C9.55228 10 10 10.4477 10 11Z" fill="#1A1815"/>
+<path d="M16 11C16 11.5523 15.5523 12 15 12C14.4477 12 14 11.5523 14 11C14 10.4477 14.4477 10 15 10C15.5523 10 16 10.4477 16 11Z" fill="#1A1815"/>
+<path d="M9.25 17.25H14.75" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_14113">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

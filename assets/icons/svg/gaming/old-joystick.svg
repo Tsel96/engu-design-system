@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-old-joystick" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_29978)">
+<path d="M12 9.25V14.75" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.25 11.75V14.5" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.25 14.75H5.75C4.64543 14.75 3.75 15.6454 3.75 16.75V18.25C3.75 19.3546 4.64543 20.25 5.75 20.25H18.25C19.3546 20.25 20.25 19.3546 20.25 18.25V16.75C20.25 15.6454 19.3546 14.75 18.25 14.75Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 9.25C13.5188 9.25 14.75 8.01878 14.75 6.5C14.75 4.98122 13.5188 3.75 12 3.75C10.4812 3.75 9.25 4.98122 9.25 6.5C9.25 8.01878 10.4812 9.25 12 9.25Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_29978">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

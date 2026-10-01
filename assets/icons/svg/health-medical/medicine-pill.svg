@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-medicine-pill" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_35920)">
+<path d="M17.4968 9.98987C18.677 8.17259 18.4702 5.71715 16.8765 4.12345C15.0453 2.29218 12.0762 2.29218 10.2449 4.12345L4.12345 10.2449C2.29218 12.0762 2.29218 15.0453 4.12345 16.8765C5.71715 18.4702 8.17259 18.677 9.98987 17.4968" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.5 7.5L11 11" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.5 21.25C18.6756 21.25 21.25 18.6756 21.25 15.5C21.25 12.3244 18.6756 9.75 15.5 9.75C12.3244 9.75 9.75 12.3244 9.75 15.5C9.75 18.6756 12.3244 21.25 15.5 21.25Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.5 21L14.5 10" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_35920">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

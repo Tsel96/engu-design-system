@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-bucket" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_19256)">
+<path d="M4.24609 8.24805L5.53002 18.4986C5.65535 19.4992 6.50605 20.25 7.51451 20.25H16.4843C17.4927 20.25 18.3434 19.4992 18.4688 18.4986L19.7528 8.24805H4.24609Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.75 3.75H21.25V8.25H2.75V3.75Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_19256">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

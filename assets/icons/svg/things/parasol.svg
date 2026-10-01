@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-parasol" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_36098)">
+<g clip-path="url(#clip1_1200_36098)">
+<mask id="mask0_1200_36098" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path d="M24 0H0V24H24V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_1200_36098)">
+<path d="M16.1538 19.7029L11.2788 11.2592C10.3045 11.8217 9.45529 12.6007 8.62275 13.6587C6.82371 13.5427 5.09166 14.5427 3.85962 16.4087C1.37433 12.1041 2.84921 6.59978 7.15384 4.1145C11.4584 1.62922 16.9628 3.10409 19.448 7.40873C17.216 7.54267 15.4839 8.54271 14.6849 10.1587" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.62557 13.659C6.14029 9.35431 5.48263 5.08122 7.15666 4.11472C8.83068 3.14822 12.2025 5.85431 14.6878 10.159C13.3552 10.351 12.256 10.697 11.2817 11.2595" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_1200_36098">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+<clipPath id="clip1_1200_36098">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

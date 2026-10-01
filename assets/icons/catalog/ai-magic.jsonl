@@ -1,0 +1,86 @@
+{"name":"ai-slop","slug":"ai-slop","aliases":["ai-slop","trash"],"category":"AI & Magic"}
+{"name":"ai-tokens","slug":"ai-tokens","aliases":["ai-tokens","credits"],"category":"AI & Magic"}
+{"name":"ai-translate","slug":"ai-translate","aliases":["ai-translate","language","auto-translate"],"category":"AI & Magic"}
+{"name":"apple-intelligence-icon","slug":"apple-intelligence-icon","aliases":["apple-intelligence-icon","ai","tools"],"category":"AI & Magic"}
+{"name":"arrow-rotate-sparkle","slug":"arrow-rotate-sparkle","aliases":["arrow-rotate-sparkle","repeat","refresh","generate"],"category":"AI & Magic"}
+{"name":"auto-crop","slug":"auto-crop","aliases":["auto-crop","ai-crop"],"category":"AI & Magic"}
+{"name":"bag 2-sparkle","slug":"bag 2-sparkle","aliases":["bag 2-sparkle"],"category":"AI & Magic"}
+{"name":"box-sparkle","slug":"box-sparkle","aliases":["box-sparkle","magic box"],"category":"AI & Magic"}
+{"name":"brain-1","slug":"brain-1","aliases":["brain-1","ai","thinking","database","ki"],"category":"AI & Magic"}
+{"name":"brain-2","slug":"brain-2","aliases":["brain-2","ai","thinking","database","ki"],"category":"AI & Magic"}
+{"name":"broom-sparkle","slug":"broom-sparkle","aliases":["broom-sparkle","clean","brush"],"category":"AI & Magic"}
+{"name":"bubble-wide-sparkle","slug":"bubble-wide-sparkle","aliases":["bubble-wide-sparkle","message","chat"],"category":"AI & Magic"}
+{"name":"burn-tokens","slug":"burn-tokens","aliases":["burn-tokens","limit"],"category":"AI & Magic"}
+{"name":"calender-sparkle","slug":"calender-sparkle","aliases":["calender-sparkle","date","plan"],"category":"AI & Magic"}
+{"name":"camera-sparkle","slug":"camera-sparkle","aliases":["camera-sparkle","picture","image","cam"],"category":"AI & Magic"}
+{"name":"clapboard-sparkle","slug":"clapboard-sparkle","aliases":["clapboard-sparkle","movie","film","ai"],"category":"AI & Magic"}
+{"name":"claw","slug":"claw","aliases":["claw","openclaw","ai","qclaw"],"category":"AI & Magic"}
+{"name":"clipboard 2-sparkle","slug":"clipboard 2-sparkle","aliases":["clipboard 2-sparkle"],"category":"AI & Magic"}
+{"name":"cloudy-sparkle","slug":"cloudy-sparkle","aliases":["cloudy-sparkle","clouds"],"category":"AI & Magic"}
+{"name":"console-sparkle","slug":"console-sparkle","aliases":["console-sparkle","Terminal"],"category":"AI & Magic"}
+{"name":"cursor-ai","slug":"cursor-ai","aliases":["cursor-ai","agent","magic"],"category":"AI & Magic"}
+{"name":"cute-robot","slug":"cute-robot","aliases":["cute-robot"],"category":"AI & Magic"}
+{"name":"email-1-sparkle","slug":"email-1-sparkle","aliases":["email-1-sparkle","envelope"],"category":"AI & Magic"}
+{"name":"eye-sparkle","slug":"eye-sparkle","aliases":["eye-sparkle","magic eyes"],"category":"AI & Magic"}
+{"name":"file-sparkle","slug":"file-sparkle","aliases":["file-sparkle","document","locked","password"],"category":"AI & Magic"}
+{"name":"Folder-sparkle","slug":"Folder-sparkle","aliases":["Folder-sparkle"],"category":"AI & Magic"}
+{"name":"fortune-teller-ball","slug":"fortune-teller-ball","aliases":["fortune-teller-ball","future"],"category":"AI & Magic"}
+{"name":"goblin","slug":"goblin","aliases":["goblin","troll","agent","helper"],"category":"AI & Magic"}
+{"name":"goblin-2","slug":"goblin-2","aliases":["goblin-2","troll","agent","helper"],"category":"AI & Magic"}
+{"name":"hat-bunny","slug":"hat-bunny","aliases":["hat-bunny","surprise","magic hat"],"category":"AI & Magic"}
+{"name":"hat-sparkle","slug":"hat-sparkle","aliases":["hat-sparkle","magic hat"],"category":"AI & Magic"}
+{"name":"image-avatar-sparkle","slug":"image-avatar-sparkle","aliases":["image-avatar-sparkle","generated avatar","profile ai","magic avatar"],"category":"AI & Magic"}
+{"name":"image-sparkle","slug":"image-sparkle","aliases":["image-sparkle","midjourney","ai generated","star"],"category":"AI & Magic"}
+{"name":"images-sparkle","slug":"images-sparkle","aliases":["images-sparkle","photos","pictures","shot","generate"],"category":"AI & Magic"}
+{"name":"imagine","slug":"imagine","aliases":["imagine","head","thinking"],"category":"AI & Magic"}
+{"name":"imagine-ai","slug":"imagine-ai","aliases":["imagine-ai","cube","room","3d","opject","vector"],"category":"AI & Magic"}
+{"name":"imagine-head","slug":"imagine-head","aliases":["imagine-head","thinking","ai"],"category":"AI & Magic"}
+{"name":"lightbulb-sparkle","slug":"lightbulb-sparkle","aliases":["lightbulb-sparkle","idea","reasoning","think"],"category":"AI & Magic"}
+{"name":"list-sparkle","slug":"list-sparkle","aliases":["list-sparkle","ai text","text generation"],"category":"AI & Magic"}
+{"name":"live-voice-translate","slug":"live-voice-translate","aliases":["live-voice-translate"],"category":"AI & Magic"}
+{"name":"location-sparkle","slug":"location-sparkle","aliases":["location-sparkle","map","route"],"category":"AI & Magic"}
+{"name":"magic-book","slug":"magic-book","aliases":["magic-book","magician","sparkles"],"category":"AI & Magic"}
+{"name":"magic-edit","slug":"magic-edit","aliases":["magic-edit","magic-writing"],"category":"AI & Magic"}
+{"name":"magic-wand","slug":"magic-wand","aliases":["magic-wand","magic stick","star"],"category":"AI & Magic"}
+{"name":"magic-wand-2","slug":"magic-wand-2","aliases":["magic-wand-2","magic stick","star"],"category":"AI & Magic"}
+{"name":"magic-wand-3","slug":"magic-wand-3","aliases":["magic-wand-3","magic stick","star"],"category":"AI & Magic"}
+{"name":"microphone-sparkle","slug":"microphone-sparkle","aliases":["microphone-sparkle","mic","sound","podcast"],"category":"AI & Magic"}
+{"name":"pencil-sparkle","slug":"pencil-sparkle","aliases":["pencil-sparkle","magic pencil","magic brush"],"category":"AI & Magic"}
+{"name":"prompt","slug":"prompt","aliases":["prompt","vibe-designing","box-sparkle"],"category":"AI & Magic"}
+{"name":"prompt-suggestion","slug":"prompt-suggestion","aliases":["prompt-suggestion","auto-prompt"],"category":"AI & Magic"}
+{"name":"prompt-text-to-image","slug":"prompt-text-to-image","aliases":["prompt-text-to-image"],"category":"AI & Magic"}
+{"name":"prompt-text-to-video","slug":"prompt-text-to-video","aliases":["prompt-text-to-video"],"category":"AI & Magic"}
+{"name":"quick-ai","slug":"quick-ai","aliases":["quick-ai","rising"],"category":"AI & Magic"}
+{"name":"receiption-bell-sparkle","slug":"receiption-bell-sparkle","aliases":["receiption-bell-sparkle","ai-concierge","ai-assistant"],"category":"AI & Magic"}
+{"name":"robot","slug":"robot","aliases":["robot"],"category":"AI & Magic"}
+{"name":"robot-2","slug":"robot-2","aliases":["robot-2","agent","scout"],"category":"AI & Magic"}
+{"name":"robot-3","slug":"robot-3","aliases":["robot-3","agent","scout"],"category":"AI & Magic"}
+{"name":"robot-head-slop","slug":"robot-head-slop","aliases":["robot-head-slop"],"category":"AI & Magic"}
+{"name":"scan-text-sparkle","slug":"scan-text-sparkle","aliases":["scan-text-sparkle","scan","arrows-all-sides","focus","list"],"category":"AI & Magic"}
+{"name":"script-ai","slug":"script-ai","aliases":["script-ai","paper","page","contract","file","document","skills"],"category":"AI & Magic"}
+{"name":"search lines-sparkle","slug":"search lines-sparkle","aliases":["search lines-sparkle"],"category":"AI & Magic"}
+{"name":"search-intelligence","slug":"search-intelligence","aliases":["search-intelligence","search-ai"],"category":"AI & Magic"}
+{"name":"separate-video-voice","slug":"separate-video-voice","aliases":["separate-video-voice","video-audio"],"category":"AI & Magic"}
+{"name":"shield-ai","slug":"shield-ai","aliases":["shield-ai","security","safety","privacy","cyber"],"category":"AI & Magic"}
+{"name":"sparkle","slug":"sparkle","aliases":["sparkle","star","ai"],"category":"AI & Magic"}
+{"name":"sparkle-2","slug":"sparkle-2","aliases":["sparkle-2","star","magic","ai"],"category":"AI & Magic"}
+{"name":"sparkle-3","slug":"sparkle-3","aliases":["sparkle-3","ai","star","magic"],"category":"AI & Magic"}
+{"name":"sparkle-central","slug":"sparkle-central","aliases":["sparkle-central","star","magic","ai"],"category":"AI & Magic"}
+{"name":"sparkle-hightlight","slug":"sparkle-hightlight","aliases":["sparkle-hightlight","special","ai","magic"],"category":"AI & Magic"}
+{"name":"sparkles-2-bold","slug":"sparkles-2-bold","aliases":["sparkles-2-bold","ai","magic"],"category":"AI & Magic"}
+{"name":"sparkles-3-bold","slug":"sparkles-3-bold","aliases":["sparkles-3-bold","ai","magic"],"category":"AI & Magic"}
+{"name":"sparkles-soft","slug":"sparkles-soft","aliases":["sparkles-soft"],"category":"AI & Magic"}
+{"name":"sparkles-three","slug":"sparkles-three","aliases":["sparkles-three","ai 3 stars","sparkles","✨"],"category":"AI & Magic"}
+{"name":"sparkles-two","slug":"sparkles-two","aliases":["sparkles-two","ai 2 stars","sparkles","✨"],"category":"AI & Magic"}
+{"name":"sparkles-two-2","slug":"sparkles-two-2","aliases":["sparkles-two-2","ai 2 stars","sparkles","✨"],"category":"AI & Magic"}
+{"name":"speach-to-text","slug":"speach-to-text","aliases":["speach-to-text","voice-to-text"],"category":"AI & Magic"}
+{"name":"star-wand","slug":"star-wand","aliases":["star-wand","magic"],"category":"AI & Magic"}
+{"name":"switch-voice","slug":"switch-voice","aliases":["switch-voice","change-voice"],"category":"AI & Magic"}
+{"name":"text-to-image","slug":"text-to-image","aliases":["text-to-image"],"category":"AI & Magic"}
+{"name":"text-to-speach","slug":"text-to-speach","aliases":["text-to-speach"],"category":"AI & Magic"}
+{"name":"visual-intelligence","slug":"visual-intelligence","aliases":["visual-intelligence"],"category":"AI & Magic"}
+{"name":"voice-2","slug":"voice-2","aliases":["voice-2","siri","wave"],"category":"AI & Magic"}
+{"name":"voice-circle","slug":"voice-circle","aliases":["voice-circle","waves"],"category":"AI & Magic"}
+{"name":"voice-sparkle","slug":"voice-sparkle","aliases":["voice-sparkle","ai","sound"],"category":"AI & Magic"}
+{"name":"window-sparkle","slug":"window-sparkle","aliases":["window-sparkle","whisper","api","app","software"],"category":"AI & Magic"}
+{"name":"wizard-hat","slug":"wizard-hat","aliases":["wizard-hat","magician","fantasy"],"category":"AI & Magic"}

@@ -1,0 +1,247 @@
+{
+  "version": 1,
+  "count": 1992,
+  "sprite": "engu-icons-sprite.svg",
+  "categories": [
+    {
+      "name": "Accessibility",
+      "count": 13,
+      "catalog": "catalog/accessibility.jsonl",
+      "svgDirectory": "svg/accessibility"
+    },
+    {
+      "name": "AI & Magic",
+      "count": 86,
+      "catalog": "catalog/ai-magic.jsonl",
+      "svgDirectory": "svg/ai-magic"
+    },
+    {
+      "name": "Arrows",
+      "count": 135,
+      "catalog": "catalog/arrows.jsonl",
+      "svgDirectory": "svg/arrows"
+    },
+    {
+      "name": "Augmented Reality",
+      "count": 16,
+      "catalog": "catalog/augmented-reality.jsonl",
+      "svgDirectory": "svg/augmented-reality"
+    },
+    {
+      "name": "Building",
+      "count": 26,
+      "catalog": "catalog/building.jsonl",
+      "svgDirectory": "svg/building"
+    },
+    {
+      "name": "Clouds",
+      "count": 15,
+      "catalog": "catalog/clouds.jsonl",
+      "svgDirectory": "svg/clouds"
+    },
+    {
+      "name": "Code",
+      "count": 51,
+      "catalog": "catalog/code.jsonl",
+      "svgDirectory": "svg/code"
+    },
+    {
+      "name": "Communication",
+      "count": 53,
+      "catalog": "catalog/communication.jsonl",
+      "svgDirectory": "svg/communication"
+    },
+    {
+      "name": "Crypto",
+      "count": 18,
+      "catalog": "catalog/crypto.jsonl",
+      "svgDirectory": "svg/crypto"
+    },
+    {
+      "name": "Custom",
+      "count": 16,
+      "catalog": "catalog/custom.jsonl",
+      "svgDirectory": "svg/custom"
+    },
+    {
+      "name": "Devices & Signals",
+      "count": 77,
+      "catalog": "catalog/devices-signals.jsonl",
+      "svgDirectory": "svg/devices-signals"
+    },
+    {
+      "name": "Edit",
+      "count": 92,
+      "catalog": "catalog/edit.jsonl",
+      "svgDirectory": "svg/edit"
+    },
+    {
+      "name": "Emoji",
+      "count": 19,
+      "catalog": "catalog/emoji.jsonl",
+      "svgDirectory": "svg/emoji"
+    },
+    {
+      "name": "Filter & Settings",
+      "count": 25,
+      "catalog": "catalog/filter-settings.jsonl",
+      "svgDirectory": "svg/filter-settings"
+    },
+    {
+      "name": "Folders & Files",
+      "count": 84,
+      "catalog": "catalog/folders-files.jsonl",
+      "svgDirectory": "svg/folders-files"
+    },
+    {
+      "name": "Food",
+      "count": 48,
+      "catalog": "catalog/food.jsonl",
+      "svgDirectory": "svg/food"
+    },
+    {
+      "name": "Forms & Shapes",
+      "count": 15,
+      "catalog": "catalog/forms-shapes.jsonl",
+      "svgDirectory": "svg/forms-shapes"
+    },
+    {
+      "name": "Furniture & Household",
+      "count": 17,
+      "catalog": "catalog/furniture-household.jsonl",
+      "svgDirectory": "svg/furniture-household"
+    },
+    {
+      "name": "Gaming",
+      "count": 25,
+      "catalog": "catalog/gaming.jsonl",
+      "svgDirectory": "svg/gaming"
+    },
+    {
+      "name": "Hands",
+      "count": 22,
+      "catalog": "catalog/hands.jsonl",
+      "svgDirectory": "svg/hands"
+    },
+    {
+      "name": "Health & Medical",
+      "count": 4,
+      "catalog": "catalog/health-medical.jsonl",
+      "svgDirectory": "svg/health-medical"
+    },
+    {
+      "name": "Interface General",
+      "count": 209,
+      "catalog": "catalog/interface-general.jsonl",
+      "svgDirectory": "svg/interface-general"
+    },
+    {
+      "name": "Keyboard",
+      "count": 16,
+      "catalog": "catalog/keyboard.jsonl",
+      "svgDirectory": "svg/keyboard"
+    },
+    {
+      "name": "Layout",
+      "count": 57,
+      "catalog": "catalog/layout.jsonl",
+      "svgDirectory": "svg/layout"
+    },
+    {
+      "name": "Location",
+      "count": 19,
+      "catalog": "catalog/location.jsonl",
+      "svgDirectory": "svg/location"
+    },
+    {
+      "name": "Nature & Energy",
+      "count": 20,
+      "catalog": "catalog/nature-energy.jsonl",
+      "svgDirectory": "svg/nature-energy"
+    },
+    {
+      "name": "People",
+      "count": 56,
+      "catalog": "catalog/people.jsonl",
+      "svgDirectory": "svg/people"
+    },
+    {
+      "name": "Photography & Video",
+      "count": 87,
+      "catalog": "catalog/photography-video.jsonl",
+      "svgDirectory": "svg/photography-video"
+    },
+    {
+      "name": "Security",
+      "count": 37,
+      "catalog": "catalog/security.jsonl",
+      "svgDirectory": "svg/security"
+    },
+    {
+      "name": "Shopping & Payment",
+      "count": 73,
+      "catalog": "catalog/shopping-payment.jsonl",
+      "svgDirectory": "svg/shopping-payment"
+    },
+    {
+      "name": "Social Media & Brands",
+      "count": 122,
+      "catalog": "catalog/social-media-brands.jsonl",
+      "svgDirectory": "svg/social-media-brands"
+    },
+    {
+      "name": "Sound & Music",
+      "count": 60,
+      "catalog": "catalog/sound-music.jsonl",
+      "svgDirectory": "svg/sound-music"
+    },
+    {
+      "name": "Sports",
+      "count": 14,
+      "catalog": "catalog/sports.jsonl",
+      "svgDirectory": "svg/sports"
+    },
+    {
+      "name": "Statistics & Charts",
+      "count": 42,
+      "catalog": "catalog/statistics-charts.jsonl",
+      "svgDirectory": "svg/statistics-charts"
+    },
+    {
+      "name": "Things",
+      "count": 137,
+      "catalog": "catalog/things.jsonl",
+      "svgDirectory": "svg/things"
+    },
+    {
+      "name": "Time & Date",
+      "count": 42,
+      "catalog": "catalog/time-date.jsonl",
+      "svgDirectory": "svg/time-date"
+    },
+    {
+      "name": "Typography",
+      "count": 81,
+      "catalog": "catalog/typography.jsonl",
+      "svgDirectory": "svg/typography"
+    },
+    {
+      "name": "Vehicles",
+      "count": 4,
+      "catalog": "catalog/vehicles.jsonl",
+      "svgDirectory": "svg/vehicles"
+    },
+    {
+      "name": "Vehicles & Aircrafts",
+      "count": 35,
+      "catalog": "catalog/vehicles-aircrafts.jsonl",
+      "svgDirectory": "svg/vehicles-aircrafts"
+    },
+    {
+      "name": "Weather",
+      "count": 24,
+      "catalog": "catalog/weather.jsonl",
+      "svgDirectory": "svg/weather"
+    }
+  ]
+}

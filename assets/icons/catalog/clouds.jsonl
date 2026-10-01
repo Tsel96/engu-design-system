@@ -1,0 +1,15 @@
+{"name":"cloud","slug":"cloud","aliases":["cloud"],"category":"Clouds"}
+{"name":"cloud-2","slug":"cloud-2","aliases":["cloud-2"],"category":"Clouds"}
+{"name":"cloud-api","slug":"cloud-api","aliases":["cloud-api","cloud-network"],"category":"Clouds"}
+{"name":"cloud-check","slug":"cloud-check","aliases":["cloud-check","save"],"category":"Clouds"}
+{"name":"cloud-download","slug":"cloud-download","aliases":["cloud-download"],"category":"Clouds"}
+{"name":"cloud-off","slug":"cloud-off","aliases":["cloud-off","offline"],"category":"Clouds"}
+{"name":"cloud-off-2","slug":"cloud-off-2","aliases":["cloud-off-2","offline"],"category":"Clouds"}
+{"name":"cloud-simple","slug":"cloud-simple","aliases":["cloud-simple"],"category":"Clouds"}
+{"name":"cloud-simple-disconnected","slug":"cloud-simple-disconnected","aliases":["cloud-simple-disconnected"],"category":"Clouds"}
+{"name":"cloud-simple-download","slug":"cloud-simple-download","aliases":["cloud-simple-download"],"category":"Clouds"}
+{"name":"cloud-simple-upload","slug":"cloud-simple-upload","aliases":["cloud-simple-upload"],"category":"Clouds"}
+{"name":"cloud-sync","slug":"cloud-sync","aliases":["cloud-sync"],"category":"Clouds"}
+{"name":"cloud-sync-2","slug":"cloud-sync-2","aliases":["cloud-sync-2"],"category":"Clouds"}
+{"name":"cloud-transfer","slug":"cloud-transfer","aliases":["cloud-transfer"],"category":"Clouds"}
+{"name":"cloud-upload","slug":"cloud-upload","aliases":["cloud-upload"],"category":"Clouds"}

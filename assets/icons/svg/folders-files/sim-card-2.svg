@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-sim-card-2" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_15516)">
+<path d="M19.25 4.75C19.25 3.64543 18.3546 2.75 17.25 2.75H9.99264C9.19699 2.75 8.43393 3.06607 7.87132 3.62868L5.62868 5.87132C5.06607 6.43393 4.75 7.19699 4.75 7.99264V19.25C4.75 20.3546 5.64543 21.25 6.75 21.25H17.25C18.3546 21.25 19.25 20.3546 19.25 19.25V4.75Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.25 2.75V7.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.25 2.75V7.25" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_15516">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

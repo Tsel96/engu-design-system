@@ -1,0 +1,14 @@
+{"name":"american-football","slug":"american-football","aliases":["american-football","nfl"],"category":"Sports"}
+{"name":"baseball","slug":"baseball","aliases":["baseball"],"category":"Sports"}
+{"name":"basketball","slug":"basketball","aliases":["basketball","nba"],"category":"Sports"}
+{"name":"bowling","slug":"bowling","aliases":["bowling"],"category":"Sports"}
+{"name":"frisbee","slug":"frisbee","aliases":["frisbee"],"category":"Sports"}
+{"name":"frisbee-golf","slug":"frisbee-golf","aliases":["frisbee-golf"],"category":"Sports"}
+{"name":"golf-ball","slug":"golf-ball","aliases":["golf-ball"],"category":"Sports"}
+{"name":"ice-hockey","slug":"ice-hockey","aliases":["ice-hockey"],"category":"Sports"}
+{"name":"kickball","slug":"kickball","aliases":["kickball"],"category":"Sports"}
+{"name":"pickelball","slug":"pickelball","aliases":["pickelball"],"category":"Sports"}
+{"name":"soccer","slug":"soccer","aliases":["soccer","football","mls"],"category":"Sports"}
+{"name":"tennis","slug":"tennis","aliases":["tennis"],"category":"Sports"}
+{"name":"versus-circle","slug":"versus-circle","aliases":["versus-circle","vs"],"category":"Sports"}
+{"name":"volleyball","slug":"volleyball","aliases":["volleyball"],"category":"Sports"}

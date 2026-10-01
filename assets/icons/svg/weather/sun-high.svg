@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-sun-high" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_38691)">
+<g clip-path="url(#clip1_1200_38691)">
+<mask id="mask0_1200_38691" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path d="M24 0H0V24H24V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_1200_38691)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.7123 8.28769C17.7626 10.3379 17.7626 13.6621 15.7123 15.7123C13.6621 17.7626 10.3379 17.7626 8.28769 15.7123C6.23744 13.6621 6.23744 10.3379 8.28769 8.28769C10.3379 6.23744 13.6621 6.23744 15.7123 8.28769Z" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 3.25V0.75M12 23.25V20.75M20.75 12H23.25M0.75 12H3.25M5.81282 5.81282L4.04505 4.04505M19.955 19.955L18.1872 18.1872M18.1872 5.81282L19.955 4.04506M4.04506 19.955L5.81282 18.1872" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_1200_38691">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+<clipPath id="clip1_1200_38691">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

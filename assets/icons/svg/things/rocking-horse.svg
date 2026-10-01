@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="engu-rocking-horse" viewBox="0 0 24 24" fill="none"><g clip-path="url(#clip0_1200_36576)">
+<path d="M2.75 12.2501C2.75 10.5932 4.09315 9.25008 5.75 9.25008H11.9932C13.9021 4.25612 14.8022 2.88152 18.4214 2.75932C18.778 2.74728 19.1101 2.94023 19.2889 3.24904L21.3597 6.82597C21.5892 7.22235 21.5201 7.72396 21.1919 8.04348L20.713 8.50983C20.4109 8.80398 19.9567 8.87704 19.5776 8.69247L18.1554 8.00008L17 10.0001L19.5 19.0001" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7 9.5L4.5 19" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.5 20L9.72854 15.3201C9.89437 14.9718 10.2457 14.75 10.6314 14.75H13.3686C13.7543 14.75 14.1056 14.9718 14.2715 15.3201L16.5 20" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.75 18C8.88423 22.3333 15.1158 22.3333 21.25 18" stroke="#1A1815" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1200_36576">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs></svg>

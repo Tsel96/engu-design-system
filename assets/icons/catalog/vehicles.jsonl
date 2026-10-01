@@ -1,0 +1,4 @@
+{"name":"boat","slug":"boat","aliases":["boat","ship","sailing"],"category":"Vehicles"}
+{"name":"car-taxi","slug":"car-taxi","aliases":["car-taxi","uber"],"category":"Vehicles"}
+{"name":"rocket-2","slug":"rocket-2","aliases":["rocket-2"],"category":"Vehicles"}
+{"name":"steering-wheel","slug":"steering-wheel","aliases":["steering-wheel","autopilot","drive"],"category":"Vehicles"}
