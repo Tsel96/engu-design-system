@@ -188,7 +188,7 @@ Used sparingly. The brand prefers solid surfaces. When blur is appropriate (mobi
 
 ## ICONOGRAPHY
 
-The brand ships a **distinctive custom logomark** (an 8-prong asterisk / compass-rosette) and otherwise relies on a **stroke-only line icon set** at 16px and 24px.
+The brand ships a **distinctive custom logomark** (an 8-prong asterisk / compass-rosette) and a Figma icon library with multiple sizes and styles. The developer export provides one native 24px SVG per named icon.
 
 ### What we have
 - **Brand logomark**: `assets/engu-logomark.svg` — the iconic 8-prong shape (cardinal + diagonal arrows merging into a flat base). Drawn from the figma `EnguLogomarkGreen` path. Use it at 24px minimum.
@@ -200,7 +200,7 @@ The brand ships a **distinctive custom logomark** (an 8-prong asterisk / compass
 ### General icons
 Start with [the icon lookup guide](assets/icons/README.md). Run `node scripts/icons.js search "query"` for 10 matches, then `node scripts/icons.js get "exact-name"` for the selected asset path or `node scripts/icons.js svg "exact-name"` for its SVG. Names and curated aliases retain their established meanings. Remote agents can read `assets/icons/index.json`, one category catalog, and one standalone SVG. Keep the full manifest, sprite, and browse HTML out of the agent context during selection.
 
-The original `assets/icons/engu-icons.json`, `engu-icons-sprite.svg`, and browse page remain available for runtime use and visual browsing. The automated export covers 24px outlined variants and 24px single-style marks; use live Figma for other variants. Offline agent assets are derived from those same exports with `npm run build:icons` and verified with `npm run check:icons`.
+The original `assets/icons/engu-icons.json`, `engu-icons-sprite.svg`, and browse page remain available for runtime use and visual browsing. The automated export selects native 24px Outlined variants, single-style marks, then Solid fallbacks. Solid selections include explicit variant metadata; use live Figma for other variants. Offline agent assets are derived from those same exports with `npm run build:icons` and verified with `npm run check:icons`. The [live verification](docs/icon-sync-verification.md) covers all 1,992 named icons and preserves the original 1,978 assets and aliases.
 
 ### Emoji + unicode
 - **No emoji.** Not in product, not in marketing, not in slide content. The brand voice doesn't use them.

@@ -5,7 +5,9 @@
  *
  * Existing hand-curated aliases (assets/icons/engu-icons.json) are preserved for
  * icons that still exist; new icons default to a single alias (their own name).
- * Icons removed from Figma are dropped from all three output files.
+ * Uses the original 24px Outlined variant, a 24px single-style variant, or a
+ * 24px Solid fallback, in that order. Solid selections record their Figma node.
+ * Icons removed from Figma are dropped from exported and derived output files.
  *
  * Requires FIGMA_TOKEN env var (personal access token).
  */
@@ -21,7 +23,6 @@ const ICONS_DIR = path.join(__dirname, "..", "assets", "icons");
 const JSON_PATH = path.join(ICONS_DIR, "engu-icons.json");
 const SPRITE_PATH = path.join(ICONS_DIR, "engu-icons-sprite.svg");
 const BROWSE_PATH = path.join(ICONS_DIR, "engu-icons-browse.html");
-const OUTLINED_24 = "Size=24, Style=Outlined";
 
 const token = process.env.FIGMA_TOKEN;
 if (!token) {
@@ -111,6 +112,21 @@ function pickOutlined24(children) {
   return children.find((ch) => parseVariantProps(ch.name).size === "24") || null;
 }
 
+// A native 24px Solid variant fills sets with no exported Outlined/default 24px
+// variant. Never substitute or scale a different size. Missing type remains
+// compatible with older fixture/export snapshots; live Figma variants are COMPONENTs.
+function pickDefault24(children) {
+  const visible = children.filter((child) => child.visible !== false && (!child.type || child.type === "COMPONENT"));
+  for (const style of ["outlined", undefined, "solid"]) {
+    const selected = visible.find((child) => {
+      const props = parseVariantProps(child.name);
+      return props.size === "24" && props.style === style;
+    });
+    if (selected) return selected;
+  }
+  return null;
+}
+
 function escapeHtml(s) {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
@@ -128,13 +144,14 @@ async function main() {
   const setData = await get(`https://api.figma.com/v1/files/${FILE_KEY}/component_sets`);
   const publishedSets = (setData.meta?.component_sets ?? []).filter((c) => /^Icons\/[^/]+\/.+/.test(c.name));
 
-  // Resolve each set's "Size=24, Style=Outlined" child via /v1/files/:key/nodes rather than
+  // Resolve each set's native default 24px child via /v1/files/:key/nodes rather than
   // the file-scoped /components endpoint, which paginates on files this large and silently
   // truncates (previously matched only ~63% of icons with no error).
-  console.log(`Resolving outlined-24 variant for ${publishedSets.length} icon component sets…`);
+  console.log(`Resolving default 24px variant (Outlined, single-style, Solid) for ${publishedSets.length} icon component sets…`);
   const setBatches = chunk(publishedSets, 150);
   const sets = [];
   const childBySetId = {};
+  const styleBySetId = {};
   const childNamesBySetId = {};
   const visibleBySetId = {};
   for (const batch of setBatches) {
@@ -150,15 +167,20 @@ async function main() {
       const children = document.children || [];
       childNamesBySetId[nodeId] = children.map((ch) => ch.name);
       visibleBySetId[nodeId] = document.visible !== false;
-      const outlined = pickOutlined24(children);
-      if (outlined) childBySetId[nodeId] = outlined.id;
+      const selected = pickDefault24(children);
+      if (selected) {
+        childBySetId[nodeId] = selected.id;
+        styleBySetId[nodeId] = parseVariantProps(selected.name).style;
+      }
     }
   }
 
   // The file has leftover hidden/duplicate component sets that reuse the exact
   // "Icons/{Category}/{name}" name of a real, current icon (edit history cruft
   // Figma keeps around). Dedupe by name, preferring a visible set that actually
-  // resolves an outlined-24 child over a stale/hidden one that doesn't.
+  // resolves a default 24px child over a stale/hidden one that doesn't. Preserve
+  // the same style priority across duplicates so Solid fallbacks cannot replace
+  // an existing Outlined export just because they appeared earlier in metadata.
   const bestByKey = new Map(); // "category/name" -> set
   for (const set of sets) {
     const key = set.name;
@@ -171,22 +193,24 @@ async function main() {
     }
     const existingVisible = visibleBySetId[existing.node_id] !== false;
     const existingResolved = Boolean(childBySetId[existing.node_id]);
-    const better = (visible && !existingVisible) || (visible === existingVisible && resolved && !existingResolved);
+    const priority = id => !childBySetId[id] ? 0 : styleBySetId[id] === "outlined" ? 3 : styleBySetId[id] === undefined ? 2 : 1;
+    const better = (visible && !existingVisible) || (visible === existingVisible && resolved &&
+      (!existingResolved || priority(set.node_id) > priority(existing.node_id)));
     if (better) bestByKey.set(key, set);
   }
 
-  const icons = []; // { category, name, nodeId }
+  const icons = []; // { category, name, nodeId, style }
   const missingVariant = [];
   for (const set of bestByKey.values()) {
     const parts = set.name.split("/"); // ["Icons", "Category", "icon-name"]
     const category = parts[1];
     const name = parts.slice(2).join("/").trim();
-    const outlinedNodeId = childBySetId[set.node_id];
-    if (!outlinedNodeId) {
+    const selectedNodeId = childBySetId[set.node_id];
+    if (!selectedNodeId) {
       missingVariant.push({ name: set.name, children: childNamesBySetId[set.node_id] });
       continue;
     }
-    icons.push({ category, name, nodeId: outlinedNodeId });
+    icons.push({ category, name, nodeId: selectedNodeId, style: styleBySetId[set.node_id] });
   }
 
   console.log(`Found ${icons.length} icons across ${new Set(icons.map((i) => i.category)).size} categories.`);
@@ -211,11 +235,11 @@ async function main() {
   }
 
   if (missingVariant.length) {
-    console.warn(`Skipped ${missingVariant.length} icon(s) with no "${OUTLINED_24}" variant:`);
+    console.warn(`Skipped ${missingVariant.length} icon(s) with no visible native 24px Outlined, single-style, or Solid variant:`);
     missingVariant.slice(0, 20).forEach((m) => console.warn(`  - ${m.name}: [${(m.children || []).join(" | ")}]`));
   }
 
-  // Bulk-resolve export URLs for the outlined-24 node of every icon.
+  // Bulk-resolve export URLs for the selected native 24px node of every icon.
   const idBatches = chunk(icons.map((i) => i.nodeId), 200);
   const urlByNodeId = {};
   for (const batch of idBatches) {
@@ -270,6 +294,7 @@ async function main() {
       slug: icon.name,
       aliases: prior?.aliases?.length ? prior.aliases : [icon.name],
       category: icon.category,
+      ...(icon.style === "solid" ? { variant: { size: 24, style: "Solid", nodeId: icon.nodeId } } : {}),
     };
   });
 
@@ -315,7 +340,7 @@ ${tiles}</div>
   let updated = browseHtml.slice(0, mainStart) + main + browseHtml.slice(mainEnd);
   updated = updated.replace(
     /class="stat">[^<]*</,
-    `class="stat">${manifest.length} icons · ${Object.keys(byCategory).length} categories · 2px stroke · round caps<`
+    `class="stat">${manifest.length} icons · ${Object.keys(byCategory).length} categories · 24px · original Figma styling<`
   );
   fs.writeFileSync(BROWSE_PATH, updated, "utf8");
   writeIconAssets(agentAssets, ICONS_DIR);

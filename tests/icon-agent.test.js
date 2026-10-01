@@ -54,7 +54,8 @@ test('generated catalogs preserve every source name, slug, category and alias wi
     assert.equal(records.length, category.count);
     for (const record of records) {
       assert.equal(record.category, category.name);
-      assert.deepEqual(Object.keys(record).sort(), ['aliases', 'category', 'name', 'slug']);
+      assert.deepEqual(Object.keys(record).sort(), record.variant === undefined
+        ? ['aliases', 'category', 'name', 'slug'] : ['aliases', 'category', 'name', 'slug', 'variant']);
       catalog.set(record.slug, record);
     }
   }
@@ -82,6 +83,24 @@ test('standalone SVG preserves exact case, spaces, symbol attributes and interna
     assert.doesNotMatch(svg, /<symbol\b|display:none|aria-hidden="true"/);
   });
   assert.match(assets.get(iconPath(fixture[0])), /clip-path="url\(#clip-0\)"/);
+});
+
+test('recorded Figma variant metadata survives catalogs and lookup without changing geometry', () => {
+  const variant = { size: 24, style: 'Solid', nodeId: '55:24' };
+  const icons = [fixture[0], { ...fixture[1], variant }];
+  const assets = createIconAssets(icons, fixtureSprite);
+  const index = JSON.parse(assets.get('index.json'));
+  const category = index.categories.find(entry => entry.name === 'Code');
+  assert.equal(index.count, icons.length);
+  assert.equal(category.count, 1);
+  assert.deepEqual(JSON.parse(assets.get(category.catalog)), icons[1]);
+  assert.deepEqual(describeIcon(resolveIcon(icons, 'test-tube 2')).variant, variant);
+  assert.deepEqual(searchIcons(icons, 'laboratory').results[0].variant, variant);
+  assert.equal('variant' in describeIcon(icons[0]), false);
+  assert.equal(assets.get(iconPath(icons[1])), createIconAssets(fixture, fixtureSprite).get(iconPath(fixture[1])));
+  for (const malformed of [null, [], { ...variant, size: 48 }, { ...variant, style: 'Unknown' }, { ...variant, nodeId: '' }]) {
+    assert.throws(() => createIconAssets([fixture[0], { ...fixture[1], variant: malformed }], fixtureSprite), /variant metadata/);
+  }
 });
 
 test('generation rejects path traversal, collisions and mismatched sprites before producing assets', () => {

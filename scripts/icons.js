@@ -24,6 +24,7 @@ function describeIcon(icon) {
     slug: icon.slug,
     category: icon.category,
     aliases: icon.aliases,
+    ...(icon.variant === undefined ? {} : { variant: icon.variant }),
     symbolId,
     svg: `assets/icons/${iconPath(icon)}`,
     sprite: `assets/icons/engu-icons-sprite.svg#${encodeURIComponent(symbolId)}`,

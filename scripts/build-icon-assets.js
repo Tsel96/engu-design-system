@@ -93,6 +93,13 @@ function createIconAssets(manifest, sprite) {
         !Array.isArray(icon.aliases) || icon.aliases.some(alias => typeof alias !== 'string')) {
       throw new Error('Invalid icon manifest record');
     }
+    if (icon.variant !== undefined && (!icon.variant || Array.isArray(icon.variant) ||
+        typeof icon.variant !== 'object' || icon.variant.size !== 24 ||
+        !['Outlined', 'Solid'].includes(icon.variant.style) ||
+        typeof icon.variant.nodeId !== 'string' || !icon.variant.nodeId ||
+        /\s/.test(icon.variant.nodeId))) {
+      throw new Error(`Invalid icon variant metadata: ${icon.name}`);
+    }
     const relative = iconPath(icon);
     if (filenames.has(relative.toLowerCase())) throw new Error(`Icon filename collision: ${relative}`);
     filenames.add(relative.toLowerCase());
@@ -110,6 +117,7 @@ function createIconAssets(manifest, sprite) {
     if (!categories.has(icon.category)) categories.set(icon.category, []);
     categories.get(icon.category).push({
       name: icon.name, slug: icon.slug, aliases: icon.aliases, category: icon.category,
+      ...(icon.variant === undefined ? {} : { variant: icon.variant }),
     });
   }
   if (symbols.size) throw new Error(`Unmatched sprite symbol: ${symbols.keys().next().value}`);

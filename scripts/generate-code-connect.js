@@ -12,9 +12,11 @@ const fs = require("fs");
 const path = require("path");
 
 const { currentIconSets } = require("./current-icon-sets");
+const { createIconAssets } = require("./build-icon-assets");
 
 const FILE_KEY = "92ZwLCANCyRKezlcuQLOBW";
 const SPRITE_PATH = "assets/icons/engu-icons-sprite.svg";
+const ICONS_DIR = path.join(__dirname, "..", "assets", "icons");
 const OUT_DIR = path.join(__dirname, "..", "code-connect", "icons");
 
 const token = process.env.FIGMA_TOKEN;
@@ -70,15 +72,30 @@ async function main() {
     process.exit(1);
   }
 
+  // Only map implementations actually included in the exported icon library.
+  // Live sets can contain styles or sizes that the 24px SVG exporter skips.
+  const manifest = JSON.parse(fs.readFileSync(path.join(ICONS_DIR, "engu-icons.json"), "utf8"));
+  const sprite = fs.readFileSync(path.join(ICONS_DIR, "engu-icons-sprite.svg"), "utf8");
+  createIconAssets(manifest, sprite); // Validate consistency before any mapping writes.
+  const exportedByName = new Map(manifest.map(icon => [`${icon.category}\0${icon.name}`, icon]));
+
   // Group by category
   const byCategory = {};
+  let skipped = 0;
   for (const c of iconComponents) {
     const parts = c.name.split("/"); // ["Icons", "Category", "icon-name"]
     const category = parts[1];
-    const iconName = parts[2];
+    const iconName = parts.slice(2).join("/").trim();
+    const exported = exportedByName.get(`${category}\0${iconName}`);
+    if (!exported) {
+      skipped++;
+      continue;
+    }
     if (!byCategory[category]) byCategory[category] = [];
-    byCategory[category].push({ iconName, nodeId: c.node_id, key: c.key });
+    byCategory[category].push({ iconName: exported.slug, nodeId: c.node_id, key: c.key });
   }
+  if (!Object.keys(byCategory).length) throw new Error("No live icon components have exported SVGs; existing mappings were left untouched.");
+  if (skipped) console.log(`Skipped ${skipped} live icon component sets without an exported SVG.`);
 
   // Write output files
   fs.mkdirSync(OUT_DIR, { recursive: true });

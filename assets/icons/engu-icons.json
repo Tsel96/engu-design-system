@@ -2297,6 +2297,19 @@
     "category": "Augmented Reality"
   },
   {
+    "name": "reframe",
+    "slug": "reframe",
+    "aliases": [
+      "reframe"
+    ],
+    "category": "Augmented Reality",
+    "variant": {
+      "size": 24,
+      "style": "Solid",
+      "nodeId": "1871:19294"
+    }
+  },
+  {
     "name": "rotate",
     "slug": "rotate",
     "aliases": [
@@ -7740,6 +7753,123 @@
     "category": "Hands"
   },
   {
+    "name": "pointer",
+    "slug": "pointer",
+    "aliases": [
+      "pointer"
+    ],
+    "category": "Hands",
+    "variant": {
+      "size": 24,
+      "style": "Solid",
+      "nodeId": "1200:33898"
+    }
+  },
+  {
+    "name": "raising-hand-4-finger",
+    "slug": "raising-hand-4-finger",
+    "aliases": [
+      "raising-hand-4-finger"
+    ],
+    "category": "Hands",
+    "variant": {
+      "size": 24,
+      "style": "Solid",
+      "nodeId": "1200:33911"
+    }
+  },
+  {
+    "name": "raising-hand-5-finger",
+    "slug": "raising-hand-5-finger",
+    "aliases": [
+      "raising-hand-5-finger"
+    ],
+    "category": "Hands",
+    "variant": {
+      "size": 24,
+      "style": "Solid",
+      "nodeId": "1200:33924"
+    }
+  },
+  {
+    "name": "shaka-1",
+    "slug": "shaka-1",
+    "aliases": [
+      "shaka-1"
+    ],
+    "category": "Hands",
+    "variant": {
+      "size": 24,
+      "style": "Solid",
+      "nodeId": "1200:33937"
+    }
+  },
+  {
+    "name": "shaka-2",
+    "slug": "shaka-2",
+    "aliases": [
+      "shaka-2"
+    ],
+    "category": "Hands",
+    "variant": {
+      "size": 24,
+      "style": "Solid",
+      "nodeId": "1200:33950"
+    }
+  },
+  {
+    "name": "thumb-down-curved",
+    "slug": "thumb-down-curved",
+    "aliases": [
+      "thumb-down-curved"
+    ],
+    "category": "Hands",
+    "variant": {
+      "size": 24,
+      "style": "Solid",
+      "nodeId": "1200:33964"
+    }
+  },
+  {
+    "name": "thumb-up-curved",
+    "slug": "thumb-up-curved",
+    "aliases": [
+      "thumb-up-curved"
+    ],
+    "category": "Hands",
+    "variant": {
+      "size": 24,
+      "style": "Solid",
+      "nodeId": "1200:34006"
+    }
+  },
+  {
+    "name": "thumbs-down",
+    "slug": "thumbs-down",
+    "aliases": [
+      "thumbs-down"
+    ],
+    "category": "Hands",
+    "variant": {
+      "size": 24,
+      "style": "Solid",
+      "nodeId": "1200:33979"
+    }
+  },
+  {
+    "name": "thumbs-up",
+    "slug": "thumbs-up",
+    "aliases": [
+      "thumbs-up"
+    ],
+    "category": "Hands",
+    "variant": {
+      "size": 24,
+      "style": "Solid",
+      "nodeId": "1200:33992"
+    }
+  },
+  {
     "name": "touch",
     "slug": "touch",
     "aliases": [
@@ -12299,12 +12429,38 @@
     "category": "Security"
   },
   {
+    "name": "key-3",
+    "slug": "key-3",
+    "aliases": [
+      "key-3"
+    ],
+    "category": "Security",
+    "variant": {
+      "size": 24,
+      "style": "Solid",
+      "nodeId": "1709:10966"
+    }
+  },
+  {
     "name": "keyhole",
     "slug": "keyhole",
     "aliases": [
       "keyhole"
     ],
     "category": "Security"
+  },
+  {
+    "name": "keyhole-2",
+    "slug": "keyhole-2",
+    "aliases": [
+      "keyhole-2"
+    ],
+    "category": "Security",
+    "variant": {
+      "size": 24,
+      "style": "Solid",
+      "nodeId": "1709:10992"
+    }
   },
   {
     "name": "law",
@@ -12326,6 +12482,19 @@
       "private"
     ],
     "category": "Security"
+  },
+  {
+    "name": "lock-2",
+    "slug": "lock-2",
+    "aliases": [
+      "lock-2"
+    ],
+    "category": "Security",
+    "variant": {
+      "size": 24,
+      "style": "Solid",
+      "nodeId": "1709:11031"
+    }
   },
   {
     "name": "passkeys",
@@ -12506,6 +12675,19 @@
       "private"
     ],
     "category": "Security"
+  },
+  {
+    "name": "unlocked-2",
+    "slug": "unlocked-2",
+    "aliases": [
+      "unlocked-2"
+    ],
+    "category": "Security",
+    "variant": {
+      "size": 24,
+      "style": "Solid",
+      "nodeId": "1709:20409"
+    }
   },
   {
     "name": "vault",

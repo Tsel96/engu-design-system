@@ -9,6 +9,7 @@
 {"name":"oculus","slug":"oculus","aliases":["oculus"],"category":"Augmented Reality"}
 {"name":"panorama-view","slug":"panorama-view","aliases":["panorama-view"],"category":"Augmented Reality"}
 {"name":"qm3","slug":"qm3","aliases":["qm3","room","transform","xyz","3d"],"category":"Augmented Reality"}
+{"name":"reframe","slug":"reframe","aliases":["reframe"],"category":"Augmented Reality","variant":{"size":24,"style":"Solid","nodeId":"1871:19294"}}
 {"name":"rotate","slug":"rotate","aliases":["rotate","rotation","x-axis"],"category":"Augmented Reality"}
 {"name":"spatial-capture","slug":"spatial-capture","aliases":["spatial-capture"],"category":"Augmented Reality"}
 {"name":"vision-pro","slug":"vision-pro","aliases":["vision-pro","goggles"],"category":"Augmented Reality"}

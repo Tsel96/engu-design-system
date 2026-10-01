@@ -20,14 +20,16 @@ Search matches names and existing aliases, case-insensitively. Exact names rank 
 ## Without a shell
 
 1. Read [`index.json`](index.json): category names, counts, and catalog paths only.
-2. Read one `catalog/<category>.jsonl` listed there. Each line has one icon's original name, slug, aliases, and category; search that small catalog for the existing semantics.
+2. Read one `catalog/<category>.jsonl` listed there. Each line has one icon's original name, slug, aliases, and category; search that small catalog for the existing semantics. Solid fallbacks also include `variant` with their size, style, and exact Figma node ID.
 3. Fetch `svg/<category>/<exact-slug>.svg`, using the catalog path's category key. URL-encode each path segment when accessing raw GitHub, especially names with spaces. Preserve case.
 
 For example, the `AI & Magic` catalog is `catalog/ai-magic.jsonl`, and `Folder-sparkle` is `svg/ai-magic/Folder-sparkle.svg`. Stop after finding the needed icon; expand to another category only when necessary.
 
 ## Use and maintenance
 
-Standalone SVGs preserve the original symbol ID, viewBox, fill/stroke values, geometry, and embedded definitions. Exported coverage is 24px outlined variants and 24px single-style marks; other variants require live Figma. Apply accessible labels in your UI. Repeated inline SVGs need unique internal IDs if their definitions would otherwise collide.
+Standalone SVGs preserve the original symbol ID, viewBox, fill/stroke values, geometry, and embedded definitions. Each named icon uses its native 24px Outlined variant, then a 24px single-style mark, then a 24px Solid fallback, in that order. Solid fallbacks are labeled in the manifest, category catalogs, and lookup results. Other sizes and styles require live Figma. Apply accessible labels in your UI. Repeated inline SVGs need unique internal IDs if their definitions would otherwise collide.
+
+The [live Figma verification](../../docs/icon-sync-verification.md) records the 1,992-icon coverage and the 14 Solid additions. No external replacement icons were required.
 
 The original `engu-icons.json`, `engu-icons-sprite.svg`, and `engu-icons-browse.html` retain their existing runtime paths. Agents should avoid reading those entire files into context for selection. Browser previews can still use the browse HTML and sprite. Sprite IDs remain `engu-<exact-slug>`; URL-encode fragments containing spaces.
 

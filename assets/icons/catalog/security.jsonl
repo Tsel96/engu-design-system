@@ -8,9 +8,12 @@
 {"name":"ghost-2","slug":"ghost-2","aliases":["ghost-2","privacy","hidden","unknown"],"category":"Security"}
 {"name":"key-1","slug":"key-1","aliases":["key-1","password"],"category":"Security"}
 {"name":"key-2","slug":"key-2","aliases":["key-2","password"],"category":"Security"}
+{"name":"key-3","slug":"key-3","aliases":["key-3"],"category":"Security","variant":{"size":24,"style":"Solid","nodeId":"1709:10966"}}
 {"name":"keyhole","slug":"keyhole","aliases":["keyhole"],"category":"Security"}
+{"name":"keyhole-2","slug":"keyhole-2","aliases":["keyhole-2"],"category":"Security","variant":{"size":24,"style":"Solid","nodeId":"1709:10992"}}
 {"name":"law","slug":"law","aliases":["law","legal","terms","imprint","balance"],"category":"Security"}
 {"name":"lock","slug":"lock","aliases":["lock","private"],"category":"Security"}
+{"name":"lock-2","slug":"lock-2","aliases":["lock-2"],"category":"Security","variant":{"size":24,"style":"Solid","nodeId":"1709:11031"}}
 {"name":"passkeys","slug":"passkeys","aliases":["passkeys","passkey","passwordless"],"category":"Security"}
 {"name":"passport","slug":"passport","aliases":["passport","visa"],"category":"Security"}
 {"name":"password","slug":"password","aliases":["password","lock","protection"],"category":"Security"}
@@ -30,4 +33,5 @@
 {"name":"siren","slug":"siren","aliases":["siren","alarm"],"category":"Security"}
 {"name":"umbrella-security","slug":"umbrella-security","aliases":["umbrella-security"],"category":"Security"}
 {"name":"unlocked","slug":"unlocked","aliases":["unlocked","unlock","private"],"category":"Security"}
+{"name":"unlocked-2","slug":"unlocked-2","aliases":["unlocked-2"],"category":"Security","variant":{"size":24,"style":"Solid","nodeId":"1709:20409"}}
 {"name":"vault","slug":"vault","aliases":["vault","safe"],"category":"Security"}

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "count": 1978,
+  "count": 1992,
   "sprite": "engu-icons-sprite.svg",
   "categories": [
     {
@@ -23,7 +23,7 @@
     },
     {
       "name": "Augmented Reality",
-      "count": 15,
+      "count": 16,
       "catalog": "catalog/augmented-reality.jsonl",
       "svgDirectory": "svg/augmented-reality"
     },
@@ -119,7 +119,7 @@
     },
     {
       "name": "Hands",
-      "count": 13,
+      "count": 22,
       "catalog": "catalog/hands.jsonl",
       "svgDirectory": "svg/hands"
     },
@@ -173,7 +173,7 @@
     },
     {
       "name": "Security",
-      "count": 33,
+      "count": 37,
       "catalog": "catalog/security.jsonl",
       "svgDirectory": "svg/security"
     },
