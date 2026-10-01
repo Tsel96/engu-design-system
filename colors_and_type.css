@@ -342,6 +342,7 @@ code, .t-mono { font-family: var(--font-mono); font-size: 13px; }
   --color-action-primary-border: rgba(0,0,0,0.1);
   --color-action-primary-fg: #332900;
   --color-bg-brand: #EEF6F2;
+  --color-bg-brand-fill: #64977B;
   --color-bg-brand-hover: #EEF6F2;
   --color-bg-brand-selected: #D2E3DA;
   --color-bg-brand-strong: #115C33;
@@ -416,6 +417,7 @@ code, .t-mono { font-family: var(--font-mono); font-size: 13px; }
     --color-action-primary-border: rgba(0,0,0,0.1);
     --color-action-primary-fg: #332900;
     --color-bg-brand: #EEF6F2;
+    --color-bg-brand-fill: #64977B;
     --color-bg-brand-hover: #EEF6F2;
     --color-bg-brand-selected: #D2E3DA;
     --color-bg-brand-strong: #115C33;
