@@ -17,7 +17,7 @@ test('all live source variables generate valid CSS and preserve non-token CSS', 
   assert.match(next, /prefers-color-scheme: dark/);
   assert.doesNotMatch(next, /: null;|undefined|NaN/);
   assert.equal(updateCss(next, snapshot), next);
-  assert.equal(Object.keys(snapshot.meta.variables).length, 132);
+  assert.equal(Object.keys(snapshot.meta.variables).length, 133);
 });
 
 test('cross-collection aliases use matching mode names, not insertion order', () => {
@@ -128,7 +128,7 @@ test('plugin reads all source variables after the UI handshake and again on sync
   assert.equal(reads,0);
   await figma.ui.onmessage({type:'ui-ready'});
   assert.equal(messages[0].type,'ready');
-  assert.equal(Object.keys(messages[0].data.meta.variables).length,132);
+  assert.equal(Object.keys(messages[0].data.meta.variables).length,133);
   await figma.ui.onmessage({type:'export'});
   assert.equal(reads,2);
   assert.equal(messages[1].type,'snapshot');
@@ -149,7 +149,7 @@ test('plugin UI handshakes and handles messages relayed by the Figma sandbox',as
   vm.runInNewContext(html.match(/<script>([\s\S]*?)<\/script>/)[1],{window,parent,document:{getElementById:id=>elements[id]}});
   assert.equal(sent[0].pluginMessage.type,'ui-ready');
   await window.onmessage({source:null,data:{pluginMessage:{type:'ready',data:snapshot}}});
-  assert.match(elements.summary.textContent,/132 variables/);
+  assert.match(elements.summary.textContent,/133 variables/);
   assert.equal(elements.sync.disabled,false);
   await window.onmessage({source:null,data:{pluginMessage:{type:'source-error',message:'Wrong file'}}});
   assert.equal(elements.sync.disabled,true);

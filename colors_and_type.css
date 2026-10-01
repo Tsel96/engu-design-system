@@ -379,6 +379,7 @@ code, .t-mono { font-family: var(--font-mono); font-size: 13px; }
   --color-intent-error-bg-pressed: #FFD9D9;
   --color-intent-error-border: #FF7777;
   --color-intent-error-fg: #990808;
+  --color-intent-error-fg-strong: #660505;
   --color-intent-error-icon: #E51C1C;
   --color-intent-info: var(--color-intent-info-icon);
   --color-intent-info-bg: #F0F4FF;
@@ -454,6 +455,7 @@ code, .t-mono { font-family: var(--font-mono); font-size: 13px; }
     --color-intent-error-bg-pressed: #FFD9D9;
     --color-intent-error-border: #FF7777;
     --color-intent-error-fg: #990808;
+    --color-intent-error-fg-strong: #660505;
     --color-intent-error-icon: #E51C1C;
     --color-intent-info: var(--color-intent-info-icon);
     --color-intent-info-bg: #F0F4FF;

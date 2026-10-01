@@ -90,7 +90,8 @@
           "VariableID:486:45",
           "VariableID:486:46",
           "VariableID:486:47",
-          "VariableID:487:29"
+          "VariableID:487:29",
+          "VariableID:488:29"
         ]
       },
       "VariableCollectionId:436:2": {
@@ -2070,6 +2071,22 @@
           "383:1": {
             "type": "VARIABLE_ALIAS",
             "id": "VariableID:437:7"
+          }
+        }
+      },
+      "VariableID:488:29": {
+        "id": "VariableID:488:29",
+        "name": "color/intent/error/fg-strong",
+        "variableCollectionId": "VariableCollectionId:383:8261",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "383:0": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:445:32"
+          },
+          "383:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:445:32"
           }
         }
       }

@@ -17,7 +17,7 @@ Install the plugin in `figma-plugin/` (see its README). Open the original Brand 
 
 The plugin reads the native Plugin API, resolves variables through the same renderer as the CLI, and commits both `tokens/figma-variables.json` and `colors_and_type.css` atomically to `main`. It makes no Figma design edits. It never stores the GitHub token. If the branch moves during the sync, it refuses the update and asks you to retry. If nothing changed, it makes no commit.
 
-The snapshot stores Figma IDs, collection modes, aliases and source metadata. The generated CSS includes all 132 variables as of 2026-10-01: 70 brand colors, 51 semantic colors in Light/Dark, and 11 spacing values. Cross-collection aliases resolve by mode name. Existing CSS names such as `--color-bg-canvas` are compatibility aliases to Figma names. Fonts, radii, shadows, motion, layout and unrepresented tokens remain implementation fallbacks pending an explicit Figma mapping.
+The snapshot stores Figma IDs, collection modes, aliases and source metadata. The generated CSS includes all 133 variables as of 2026-10-01: 70 brand colors, 52 semantic colors in Light/Dark, and 11 spacing values. Cross-collection aliases resolve by mode name. Existing CSS names such as `--color-bg-canvas` are compatibility aliases to Figma names. Fonts, radii, shadows, motion, layout and unrepresented tokens remain implementation fallbacks pending an explicit Figma mapping.
 
 **Refresh icons & Code Connect** starts the existing GitHub workflow. It reads the Design System file and selects one native 24px variant per named icon: Outlined first, single-style second, Solid third. Solid fallbacks record their size, style, and exact Figma node ID in the manifest. It filters deleted/hidden component nodes and sets without exported SVGs from Code Connect, commits the assets, and publishes Code Connect in the same job. It does not export every icon style or turn every Figma component into application code. Follow its status in GitHub Actions.
 
@@ -55,7 +55,7 @@ The Cloudflare webhook proxy is optional. No webhook delivery was observed in th
 
 ## AAA role variables (2026-10-01)
 
-Brand Foundation gained ten variables so product UIs can meet WCAG AAA (7:1 text) without inventing colours. All are aliases to the existing scales, in Light and Dark.
+Brand Foundation gained eleven variables so product UIs can meet WCAG AAA (7:1 text) without inventing colours. All are aliases to the existing scales, in Light and Dark.
 
 | Semantic variable | Alias | Contrast |
 | --- | --- | --- |
@@ -67,6 +67,7 @@ Brand Foundation gained ten variables so product UIs can meet WCAG AAA (7:1 text
 | `color/bg/brand-selected` | Green 100 | Pressed/selected surface; pair with `fg/primary` only |
 | `color/bg/brand-strong` | Green 800 | Surface behind `fg/inverse` text (8.1:1) |
 | `color/bg/brand-fill` | Green 500 | Checked/active control fill (non-text) |
+| `color/intent/error/fg-strong` | Error 800 | Error text on `intent/error/bg-pressed` (13:1; `fg` is 6.8:1 there) |
 | `color/border/hairline` | Black 5 / White 10 (Dark) | Faintest panel divider (new primitive `engu-overlay/Black 5`) |
 | `color/intent/error/bg-pressed` | Error 100 | Pressed destructive surface |
 
