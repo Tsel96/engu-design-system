@@ -80,7 +80,18 @@
           "VariableID:383:8299",
           "VariableID:383:8300",
           "VariableID:383:8301",
-          "VariableID:383:8302"
+          "VariableID:383:8302",
+          "VariableID:486:39",
+          "VariableID:486:40",
+          "VariableID:486:41",
+          "VariableID:486:42",
+          "VariableID:486:43",
+          "VariableID:486:44",
+          "VariableID:486:45",
+          "VariableID:486:46",
+          "VariableID:486:47",
+          "VariableID:487:29",
+          "VariableID:488:29"
         ]
       },
       "VariableCollectionId:436:2": {
@@ -162,7 +173,8 @@
           "VariableID:453:9",
           "VariableID:453:10",
           "VariableID:453:11",
-          "VariableID:453:12"
+          "VariableID:453:12",
+          "VariableID:486:38"
         ]
       }
     },
@@ -1887,13 +1899,203 @@
             "a": 1
           }
         }
+      },
+      "VariableID:486:38": {
+        "id": "VariableID:486:38",
+        "name": "engu-overlay/Black 5",
+        "variableCollectionId": "VariableCollectionId:436:2",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "436:0": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.05000000074505806
+          }
+        }
+      },
+      "VariableID:486:39": {
+        "id": "VariableID:486:39",
+        "name": "color/fg/secondary-strong",
+        "variableCollectionId": "VariableCollectionId:383:8261",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "383:0": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:453:11"
+          },
+          "383:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:453:11"
+          }
+        }
+      },
+      "VariableID:486:40": {
+        "id": "VariableID:486:40",
+        "name": "color/fg/tertiary-strong",
+        "variableCollectionId": "VariableCollectionId:383:8261",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "383:0": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:453:10"
+          },
+          "383:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:453:10"
+          }
+        }
+      },
+      "VariableID:486:41": {
+        "id": "VariableID:486:41",
+        "name": "color/fg/brand-strong",
+        "variableCollectionId": "VariableCollectionId:383:8261",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "383:0": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:437:10"
+          },
+          "383:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:437:10"
+          }
+        }
+      },
+      "VariableID:486:42": {
+        "id": "VariableID:486:42",
+        "name": "color/fg/inverse-muted",
+        "variableCollectionId": "VariableCollectionId:383:8261",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "383:0": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:453:5"
+          },
+          "383:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:453:5"
+          }
+        }
+      },
+      "VariableID:486:43": {
+        "id": "VariableID:486:43",
+        "name": "color/bg/brand-hover",
+        "variableCollectionId": "VariableCollectionId:383:8261",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "383:0": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:437:2"
+          },
+          "383:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:437:2"
+          }
+        }
+      },
+      "VariableID:486:44": {
+        "id": "VariableID:486:44",
+        "name": "color/bg/brand-selected",
+        "variableCollectionId": "VariableCollectionId:383:8261",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "383:0": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:437:3"
+          },
+          "383:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:437:3"
+          }
+        }
+      },
+      "VariableID:486:45": {
+        "id": "VariableID:486:45",
+        "name": "color/bg/brand-strong",
+        "variableCollectionId": "VariableCollectionId:383:8261",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "383:0": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:437:10"
+          },
+          "383:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:437:10"
+          }
+        }
+      },
+      "VariableID:486:46": {
+        "id": "VariableID:486:46",
+        "name": "color/border/hairline",
+        "variableCollectionId": "VariableCollectionId:383:8261",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "383:0": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:486:38"
+          },
+          "383:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:447:6"
+          }
+        }
+      },
+      "VariableID:486:47": {
+        "id": "VariableID:486:47",
+        "name": "color/intent/error/bg-pressed",
+        "variableCollectionId": "VariableCollectionId:383:8261",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "383:0": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:445:25"
+          },
+          "383:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:445:25"
+          }
+        }
+      },
+      "VariableID:487:29": {
+        "id": "VariableID:487:29",
+        "name": "color/bg/brand-fill",
+        "variableCollectionId": "VariableCollectionId:383:8261",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "383:0": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:437:7"
+          },
+          "383:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:437:7"
+          }
+        }
+      },
+      "VariableID:488:29": {
+        "id": "VariableID:488:29",
+        "name": "color/intent/error/fg-strong",
+        "variableCollectionId": "VariableCollectionId:383:8261",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "383:0": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:445:32"
+          },
+          "383:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:445:32"
+          }
+        }
       }
     }
   },
   "source": {
     "fileKey": "yFUGWRkPWpTU0rDJOqrIBe",
     "fileUrl": "https://www.figma.com/design/yFUGWRkPWpTU0rDJOqrIBe/Brand-Foundation",
-    "exportedAt": "2026-09-09",
-    "method": "Figma Plugin API via Codex"
+    "exportedAt": "2026-10-01",
+    "method": "Figma Plugin API via Codex (AAA role variables added 2026-10-01)"
   }
 }

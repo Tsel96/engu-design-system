@@ -17,7 +17,7 @@ Install the plugin in `figma-plugin/` (see its README). Open the original Brand 
 
 The plugin reads the native Plugin API, resolves variables through the same renderer as the CLI, and commits both `tokens/figma-variables.json` and `colors_and_type.css` atomically to `main`. It makes no Figma design edits. It never stores the GitHub token. If the branch moves during the sync, it refuses the update and asks you to retry. If nothing changed, it makes no commit.
 
-The snapshot stores Figma IDs, collection modes, aliases and source metadata. The generated CSS includes all 121 variables as of 2026-09-09: 69 brand colors, 41 semantic colors in Light/Dark, and 11 spacing values. Cross-collection aliases resolve by mode name. Existing CSS names such as `--color-bg-canvas` are compatibility aliases to Figma names. Fonts, radii, shadows, motion, layout and unrepresented tokens remain implementation fallbacks pending an explicit Figma mapping.
+The snapshot stores Figma IDs, collection modes, aliases and source metadata. The generated CSS includes all 133 variables as of 2026-10-01: 70 brand colors, 52 semantic colors in Light/Dark, and 11 spacing values. Cross-collection aliases resolve by mode name. Existing CSS names such as `--color-bg-canvas` are compatibility aliases to Figma names. Fonts, radii, shadows, motion, layout and unrepresented tokens remain implementation fallbacks pending an explicit Figma mapping.
 
 **Refresh icons & Code Connect** starts the existing GitHub workflow. It reads the Design System file and selects one native 24px variant per named icon: Outlined first, single-style second, Solid third. Solid fallbacks record their size, style, and exact Figma node ID in the manifest. It filters deleted/hidden component nodes and sets without exported SVGs from Code Connect, commits the assets, and publishes Code Connect in the same job. It does not export every icon style or turn every Figma component into application code. Follow its status in GitHub Actions.
 
@@ -52,3 +52,23 @@ The token CI workflow validates committed snapshot/CSS consistency on pushes and
 The repository has icon Code Connect mappings. Full button/card/form component implementation parity is not established by a token or icon sync. Existing marketing kits remain examples; read the corresponding live Figma node before implementing or changing a component. Typography/effect styles and all icon variant sizes/styles are not yet generated into code.
 
 The Cloudflare webhook proxy is optional. No webhook delivery was observed in the historical workflow runs; treat automatic Figma events as unverified until a real publish causes a successful GitHub run. The plugin and scheduled fallback do not depend on that proxy.
+
+## AAA role variables (2026-10-01)
+
+Brand Foundation gained eleven variables so product UIs can meet WCAG AAA (7:1 text) without inventing colours. All are aliases to the existing scales, in Light and Dark.
+
+| Semantic variable | Alias | Contrast |
+| --- | --- | --- |
+| `color/fg/secondary-strong` | Grey 800 | 10.3:1 or more on white, greys and brand tints |
+| `color/fg/tertiary-strong` | Grey 700 | 7.4:1 or more on white, `bg/subtle`, `bg/inset`, `bg/brand` |
+| `color/fg/brand-strong` | Green 800 | 8.1:1 on white; 7.2:1 on `bg/inset` |
+| `color/fg/inverse-muted` | Grey 200 | AAA on `bg/inverse` |
+| `color/bg/brand-hover` | Green 50 | Hover/focus surface for menus and lists |
+| `color/bg/brand-selected` | Green 100 | Pressed/selected surface; pair with `fg/primary` only |
+| `color/bg/brand-strong` | Green 800 | Surface behind `fg/inverse` text (8.1:1) |
+| `color/bg/brand-fill` | Green 500 | Checked/active control fill (non-text) |
+| `color/intent/error/fg-strong` | Error 800 | Error text on `intent/error/bg-pressed` (13:1; `fg` is 6.8:1 there) |
+| `color/border/hairline` | Black 5 / White 10 (Dark) | Faintest panel divider (new primitive `engu-overlay/Black 5`) |
+| `color/intent/error/bg-pressed` | Error 100 | Pressed destructive surface |
+
+`color/fg/tertiary` (Grey 600, 4.8:1) and `color/fg/brand` (Green 600, 4.4:1) remain for AA contexts; use the `-strong` variants when AAA is required. The hand-written `--color-fg-brand-strong` that claimed Green 700 at 7.1:1 was wrong (5.9:1) and has been replaced by the generated value.

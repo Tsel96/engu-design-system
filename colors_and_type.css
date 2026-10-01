@@ -91,8 +91,7 @@
   --color-fg-on-accent:     var(--_yellow-900);
 
   --color-fg-on-inverse-2:  rgba(255,255,255,0.70);
-     /* 4.05:1 on white, AA OK */
-  --color-fg-brand-strong:  var(--_green-700);   /* 7.1:1, AAA */
+  /* --color-fg-brand-strong is generated from Figma color/fg/brand-strong (Green 800, 8.1:1 on white, AAA). */
 
   /* ───── Color · Border ───── */
 
@@ -311,6 +310,7 @@ code, .t-mono { font-family: var(--font-mono); font-size: 13px; }
   --_overlay-black-18: rgba(0,0,0,0.18);
   --_overlay-black-35: rgba(0,0,0,0.35);
   --_overlay-black-40: rgba(0,0,0,0.4);
+  --_overlay-black-5: rgba(0,0,0,0.05);
   --_overlay-white-10: rgba(255,255,255,0.1);
   --_overlay-white-18: rgba(255,255,255,0.18);
   --_overlay-white-20: rgba(255,255,255,0.2);
@@ -342,6 +342,10 @@ code, .t-mono { font-family: var(--font-mono); font-size: 13px; }
   --color-action-primary-border: rgba(0,0,0,0.1);
   --color-action-primary-fg: #332900;
   --color-bg-brand: #EEF6F2;
+  --color-bg-brand-fill: #64977B;
+  --color-bg-brand-hover: #EEF6F2;
+  --color-bg-brand-selected: #D2E3DA;
+  --color-bg-brand-strong: #115C33;
   --color-bg-brand-subtle: #EEF6F2;
   --color-bg-canvas: var(--color-bg-default);
   --color-bg-card: var(--color-bg-default);
@@ -354,21 +358,28 @@ code, .t-mono { font-family: var(--font-mono); font-size: 13px; }
   --color-bg-tinted: var(--color-bg-brand-subtle);
   --color-border-brand: #7FAA92;
   --color-border-default: rgba(0,0,0,0.18);
+  --color-border-hairline: rgba(0,0,0,0.05);
   --color-border-inverse: rgba(255,255,255,0.2);
   --color-border-strong: rgba(0,0,0,0.35);
   --color-border-subtle: rgba(0,0,0,0.1);
   --color-fg-brand: #488463;
+  --color-fg-brand-strong: #115C33;
   --color-fg-disabled: #B8B4AC;
   --color-fg-inverse: #FFFFFF;
+  --color-fg-inverse-muted: #E8E6E1;
   --color-fg-on-brand: #083D22;
   --color-fg-on-inverse: var(--color-fg-inverse);
   --color-fg-primary: #1A1815;
   --color-fg-secondary: #524E48;
+  --color-fg-secondary-strong: #302D28;
   --color-fg-tertiary: #767169;
+  --color-fg-tertiary-strong: #524E48;
   --color-intent-error: var(--color-intent-error-icon);
   --color-intent-error-bg: #FFF2F2;
+  --color-intent-error-bg-pressed: #FFD9D9;
   --color-intent-error-border: #FF7777;
   --color-intent-error-fg: #990808;
+  --color-intent-error-fg-strong: #660505;
   --color-intent-error-icon: #E51C1C;
   --color-intent-info: var(--color-intent-info-icon);
   --color-intent-info-bg: #F0F4FF;
@@ -407,6 +418,10 @@ code, .t-mono { font-family: var(--font-mono); font-size: 13px; }
     --color-action-primary-border: rgba(0,0,0,0.1);
     --color-action-primary-fg: #332900;
     --color-bg-brand: #EEF6F2;
+    --color-bg-brand-fill: #64977B;
+    --color-bg-brand-hover: #EEF6F2;
+    --color-bg-brand-selected: #D2E3DA;
+    --color-bg-brand-strong: #115C33;
     --color-bg-brand-subtle: #EEF6F2;
     --color-bg-canvas: var(--color-bg-default);
     --color-bg-card: var(--color-bg-default);
@@ -419,21 +434,28 @@ code, .t-mono { font-family: var(--font-mono); font-size: 13px; }
     --color-bg-tinted: var(--color-bg-brand-subtle);
     --color-border-brand: #7FAA92;
     --color-border-default: rgba(255,255,255,0.18);
+    --color-border-hairline: rgba(255,255,255,0.1);
     --color-border-inverse: rgba(0,0,0,0.18);
     --color-border-strong: rgba(255,255,255,0.35);
     --color-border-subtle: rgba(255,255,255,0.1);
     --color-fg-brand: #488463;
+    --color-fg-brand-strong: #115C33;
     --color-fg-disabled: #B8B4AC;
     --color-fg-inverse: #FFFFFF;
+    --color-fg-inverse-muted: #E8E6E1;
     --color-fg-on-brand: #083D22;
     --color-fg-on-inverse: var(--color-fg-inverse);
     --color-fg-primary: #1A1815;
     --color-fg-secondary: #524E48;
+    --color-fg-secondary-strong: #302D28;
     --color-fg-tertiary: #767169;
+    --color-fg-tertiary-strong: #524E48;
     --color-intent-error: var(--color-intent-error-icon);
     --color-intent-error-bg: #FFF2F2;
+    --color-intent-error-bg-pressed: #FFD9D9;
     --color-intent-error-border: #FF7777;
     --color-intent-error-fg: #990808;
+    --color-intent-error-fg-strong: #660505;
     --color-intent-error-icon: #E51C1C;
     --color-intent-info: var(--color-intent-info-icon);
     --color-intent-info-bg: #F0F4FF;
