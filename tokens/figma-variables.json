@@ -91,7 +91,12 @@
           "VariableID:486:46",
           "VariableID:486:47",
           "VariableID:487:29",
-          "VariableID:488:29"
+          "VariableID:488:29",
+          "VariableID:497:30",
+          "VariableID:497:32",
+          "VariableID:497:34",
+          "VariableID:497:36",
+          "VariableID:497:38"
         ]
       },
       "VariableCollectionId:436:2": {
@@ -174,7 +179,12 @@
           "VariableID:453:10",
           "VariableID:453:11",
           "VariableID:453:12",
-          "VariableID:486:38"
+          "VariableID:486:38",
+          "VariableID:497:29",
+          "VariableID:497:31",
+          "VariableID:497:33",
+          "VariableID:497:35",
+          "VariableID:497:37"
         ]
       }
     },
@@ -2089,13 +2099,163 @@
             "id": "VariableID:445:32"
           }
         }
+      },
+      "VariableID:497:29": {
+        "id": "VariableID:497:29",
+        "name": "engu-blue/Blue 50",
+        "variableCollectionId": "VariableCollectionId:436:2",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "436:0": {
+            "r": 0.9176470637321472,
+            "g": 0.9450980424880981,
+            "b": 0.9843137264251709,
+            "a": 1
+          }
+        }
+      },
+      "VariableID:497:30": {
+        "id": "VariableID:497:30",
+        "name": "color/entity/character/bg",
+        "variableCollectionId": "VariableCollectionId:383:8261",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "383:0": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:497:29"
+          },
+          "383:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:497:29"
+          }
+        }
+      },
+      "VariableID:497:31": {
+        "id": "VariableID:497:31",
+        "name": "engu-sand/Sand 50",
+        "variableCollectionId": "VariableCollectionId:436:2",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "436:0": {
+            "r": 0.9647058844566345,
+            "g": 0.9372549057006836,
+            "b": 0.8901960849761963,
+            "a": 1
+          }
+        }
+      },
+      "VariableID:497:32": {
+        "id": "VariableID:497:32",
+        "name": "color/entity/prop/bg",
+        "variableCollectionId": "VariableCollectionId:383:8261",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "383:0": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:497:31"
+          },
+          "383:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:497:31"
+          }
+        }
+      },
+      "VariableID:497:33": {
+        "id": "VariableID:497:33",
+        "name": "engu-violet/Violet 50",
+        "variableCollectionId": "VariableCollectionId:436:2",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "436:0": {
+            "r": 0.9411764740943909,
+            "g": 0.929411768913269,
+            "b": 0.9803921580314636,
+            "a": 1
+          }
+        }
+      },
+      "VariableID:497:34": {
+        "id": "VariableID:497:34",
+        "name": "color/entity/logic/bg",
+        "variableCollectionId": "VariableCollectionId:383:8261",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "383:0": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:497:33"
+          },
+          "383:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:497:33"
+          }
+        }
+      },
+      "VariableID:497:35": {
+        "id": "VariableID:497:35",
+        "name": "engu-amber/Amber 50",
+        "variableCollectionId": "VariableCollectionId:436:2",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "436:0": {
+            "r": 0.9843137264251709,
+            "g": 0.9607843160629272,
+            "b": 0.8666666746139526,
+            "a": 1
+          }
+        }
+      },
+      "VariableID:497:36": {
+        "id": "VariableID:497:36",
+        "name": "color/entity/light/bg",
+        "variableCollectionId": "VariableCollectionId:383:8261",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "383:0": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:497:35"
+          },
+          "383:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:497:35"
+          }
+        }
+      },
+      "VariableID:497:37": {
+        "id": "VariableID:497:37",
+        "name": "engu-teal/Teal 50",
+        "variableCollectionId": "VariableCollectionId:436:2",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "436:0": {
+            "r": 0.9019607901573181,
+            "g": 0.95686274766922,
+            "b": 0.9529411792755127,
+            "a": 1
+          }
+        }
+      },
+      "VariableID:497:38": {
+        "id": "VariableID:497:38",
+        "name": "color/entity/dialogue/bg",
+        "variableCollectionId": "VariableCollectionId:383:8261",
+        "resolvedType": "COLOR",
+        "valuesByMode": {
+          "383:0": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:497:37"
+          },
+          "383:1": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:497:37"
+          }
+        }
       }
     }
   },
   "source": {
     "fileKey": "yFUGWRkPWpTU0rDJOqrIBe",
     "fileUrl": "https://www.figma.com/design/yFUGWRkPWpTU0rDJOqrIBe/Brand-Foundation",
-    "exportedAt": "2026-10-01",
-    "method": "Figma Plugin API via Codex (AAA role variables added 2026-10-01)"
+    "exportedAt": "2026-10-03",
+    "method": "Figma Plugin API via Claude Code (entity-category tints added, scopes and code syntax set 2026-10-03)"
   }
 }

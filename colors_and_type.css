@@ -265,6 +265,8 @@ code, .t-mono { font-family: var(--font-mono); font-size: 13px; }
 /* figma:tokens:start */
 /* Generated from Figma Brand Foundation. Edit Figma, then re-export. */
 :root {
+  --_amber-50: #FBF5DD;
+  --_blue-50: #EAF1FB;
   --_error-100: #FFD9D9;
   --_error-200: #FFAAAA;
   --_error-300: #FF7777;
@@ -315,6 +317,9 @@ code, .t-mono { font-family: var(--font-mono); font-size: 13px; }
   --_overlay-white-18: rgba(255,255,255,0.18);
   --_overlay-white-20: rgba(255,255,255,0.2);
   --_overlay-white-35: rgba(255,255,255,0.35);
+  --_sand-50: #F6EFE3;
+  --_teal-50: #E6F4F3;
+  --_violet-50: #F0EDFA;
   --_warning-100: #FFECD4;
   --_warning-200: #FFD4A0;
   --_warning-300: #FFB86A;
@@ -350,7 +355,6 @@ code, .t-mono { font-family: var(--font-mono); font-size: 13px; }
   --color-bg-canvas: var(--color-bg-default);
   --color-bg-card: var(--color-bg-default);
   --color-bg-default: #FFFFFF;
-  --color-bg-elevated: var(--color-bg-default);
   --color-bg-inset: #F3F2EF;
   --color-bg-inverse: #1A1815;
   --color-bg-overlay: rgba(0,0,0,0.4);
@@ -362,13 +366,17 @@ code, .t-mono { font-family: var(--font-mono); font-size: 13px; }
   --color-border-inverse: rgba(255,255,255,0.2);
   --color-border-strong: rgba(0,0,0,0.35);
   --color-border-subtle: rgba(0,0,0,0.1);
+  --color-entity-character-bg: #EAF1FB;
+  --color-entity-dialogue-bg: #E6F4F3;
+  --color-entity-light-bg: #FBF5DD;
+  --color-entity-logic-bg: #F0EDFA;
+  --color-entity-prop-bg: #F6EFE3;
   --color-fg-brand: #488463;
   --color-fg-brand-strong: #115C33;
   --color-fg-disabled: #B8B4AC;
   --color-fg-inverse: #FFFFFF;
   --color-fg-inverse-muted: #E8E6E1;
   --color-fg-on-brand: #083D22;
-  --color-fg-on-inverse: var(--color-fg-inverse);
   --color-fg-primary: #1A1815;
   --color-fg-secondary: #524E48;
   --color-fg-secondary-strong: #302D28;
@@ -381,17 +389,14 @@ code, .t-mono { font-family: var(--font-mono); font-size: 13px; }
   --color-intent-error-fg: #990808;
   --color-intent-error-fg-strong: #660505;
   --color-intent-error-icon: #E51C1C;
-  --color-intent-info: var(--color-intent-info-icon);
   --color-intent-info-bg: #F0F4FF;
   --color-intent-info-border: #7BB1FF;
   --color-intent-info-fg: #0E4799;
   --color-intent-info-icon: #2476E5;
-  --color-intent-success: var(--color-intent-success-icon);
   --color-intent-success-bg: #EEF6F2;
   --color-intent-success-border: #9BBDAA;
   --color-intent-success-fg: #2C714B;
   --color-intent-success-icon: #488463;
-  --color-intent-warning: var(--color-intent-warning-icon);
   --color-intent-warning-bg: #FFF8EE;
   --color-intent-warning-border: #FFB86A;
   --color-intent-warning-fg: #994A08;
@@ -426,7 +431,6 @@ code, .t-mono { font-family: var(--font-mono); font-size: 13px; }
     --color-bg-canvas: var(--color-bg-default);
     --color-bg-card: var(--color-bg-default);
     --color-bg-default: #FFFFFF;
-    --color-bg-elevated: var(--color-bg-default);
     --color-bg-inset: #F3F2EF;
     --color-bg-inverse: #1A1815;
     --color-bg-overlay: rgba(0,0,0,0.4);
@@ -438,13 +442,17 @@ code, .t-mono { font-family: var(--font-mono); font-size: 13px; }
     --color-border-inverse: rgba(0,0,0,0.18);
     --color-border-strong: rgba(255,255,255,0.35);
     --color-border-subtle: rgba(255,255,255,0.1);
+    --color-entity-character-bg: #EAF1FB;
+    --color-entity-dialogue-bg: #E6F4F3;
+    --color-entity-light-bg: #FBF5DD;
+    --color-entity-logic-bg: #F0EDFA;
+    --color-entity-prop-bg: #F6EFE3;
     --color-fg-brand: #488463;
     --color-fg-brand-strong: #115C33;
     --color-fg-disabled: #B8B4AC;
     --color-fg-inverse: #FFFFFF;
     --color-fg-inverse-muted: #E8E6E1;
     --color-fg-on-brand: #083D22;
-    --color-fg-on-inverse: var(--color-fg-inverse);
     --color-fg-primary: #1A1815;
     --color-fg-secondary: #524E48;
     --color-fg-secondary-strong: #302D28;
@@ -457,17 +465,14 @@ code, .t-mono { font-family: var(--font-mono); font-size: 13px; }
     --color-intent-error-fg: #990808;
     --color-intent-error-fg-strong: #660505;
     --color-intent-error-icon: #E51C1C;
-    --color-intent-info: var(--color-intent-info-icon);
     --color-intent-info-bg: #F0F4FF;
     --color-intent-info-border: #7BB1FF;
     --color-intent-info-fg: #0E4799;
     --color-intent-info-icon: #2476E5;
-    --color-intent-success: var(--color-intent-success-icon);
     --color-intent-success-bg: #EEF6F2;
     --color-intent-success-border: #9BBDAA;
     --color-intent-success-fg: #2C714B;
     --color-intent-success-icon: #488463;
-    --color-intent-warning: var(--color-intent-warning-icon);
     --color-intent-warning-bg: #FFF8EE;
     --color-intent-warning-border: #FFB86A;
     --color-intent-warning-fg: #994A08;

@@ -17,7 +17,7 @@ Install the plugin in `figma-plugin/` (see its README). Open the original Brand 
 
 The plugin reads the native Plugin API, resolves variables through the same renderer as the CLI, and commits both `tokens/figma-variables.json` and `colors_and_type.css` atomically to `main`. It makes no Figma design edits. It never stores the GitHub token. If the branch moves during the sync, it refuses the update and asks you to retry. If nothing changed, it makes no commit.
 
-The snapshot stores Figma IDs, collection modes, aliases and source metadata. The generated CSS includes all 133 variables as of 2026-10-01: 70 brand colors, 52 semantic colors in Light/Dark, and 11 spacing values. Cross-collection aliases resolve by mode name. Existing CSS names such as `--color-bg-canvas` are compatibility aliases to Figma names. Fonts, radii, shadows, motion, layout and unrepresented tokens remain implementation fallbacks pending an explicit Figma mapping.
+The snapshot stores Figma IDs, collection modes, aliases and source metadata. The generated CSS includes all 143 variables as of 2026-10-03: 75 brand colors, 57 semantic colors in Light/Dark, and 11 spacing values. Cross-collection aliases resolve by mode name. Four compatibility CSS names remain because consumers use them: `--color-bg-canvas`, `--color-bg-card`, `--color-bg-tinted` and `--color-intent-error`. Fonts, radii, shadows, motion, layout and unrepresented tokens remain implementation fallbacks pending an explicit Figma mapping.
 
 **Refresh icons & Code Connect** starts the existing GitHub workflow. It reads the Design System file and selects one native 24px variant per named icon: Outlined first, single-style second, Solid third. Solid fallbacks record their size, style, and exact Figma node ID in the manifest. It filters deleted/hidden component nodes and sets without exported SVGs from Code Connect, commits the assets, and publishes Code Connect in the same job. It does not export every icon style or turn every Figma component into application code. Follow its status in GitHub Actions.
 
@@ -72,3 +72,26 @@ Brand Foundation gained eleven variables so product UIs can meet WCAG AAA (7:1 t
 | `color/intent/error/bg-pressed` | Error 100 | Pressed destructive surface |
 
 `color/fg/tertiary` (Grey 600, 4.8:1) and `color/fg/brand` (Green 600, 4.4:1) remain for AA contexts; use the `-strong` variants when AAA is required. The hand-written `--color-fg-brand-strong` that claimed Green 700 at 7.1:1 was wrong (5.9:1) and has been replaced by the generated value.
+
+## Entity-category tints and cleanup (2026-10-03)
+
+Brand Foundation gained one pale tint per editor-entity category, for the Inspector header strip and tab. Each is a new primitive (one step, in its own hue group so the exporter names it uniquely) aliased by a semantic background. Hues avoid brand green, destructive red and the info/warning intents; text on every tint keeps `fg/primary` at 15:1+ and `fg/tertiary-strong` at 7:1+ (AAA). Dark mode aliases the same tints, like the rest of the current Dark mode.
+
+| Semantic variable | Primitive | Value | Entities |
+| --- | --- | --- | --- |
+| `color/entity/character/bg` | `engu-blue/Blue 50` | #EAF1FB | Characters and creatures |
+| `color/entity/prop/bg` | `engu-sand/Sand 50` | #F6EFE3 | Props and containers |
+| `color/entity/logic/bg` | `engu-violet/Violet 50` | #F0EDFA | Trigger zones, group templates, spawners |
+| `color/entity/light/bg` | `engu-amber/Amber 50` | #FBF5DD | Lights and effects |
+| `color/entity/dialogue/bg` | `engu-teal/Teal 50` | #E6F4F3 | Dialogue and narrative |
+
+Cleanup in the same pass:
+
+- Every variable has explicit scopes instead of `ALL_SCOPES`: primitives `[]` (hidden from pickers, used through semantic aliases), backgrounds `FRAME_FILL, SHAPE_FILL`, text `TEXT_FILL, SHAPE_FILL, STROKE_COLOR`, borders `STROKE_COLOR`, icons `SHAPE_FILL, STROKE_COLOR`, spacing `GAP`.
+- Every variable has WEB code syntax equal to its generated CSS name (for example `var(--color-entity-prop-bg)`, `var(--_sand-50)`, `var(--space-3)`).
+- HTML entities (`&#39;`) in variable descriptions and the Colors specimen were decoded.
+- The Colors page specimen now lists all 57 semantic variables (it was missing the 11 AAA role variables) plus an Entity · Category group.
+- The unused `test` page was deleted from Brand Foundation.
+- Five compatibility CSS aliases with no consumer were removed: `--color-bg-elevated`, `--color-fg-on-inverse`, `--color-intent-info`, `--color-intent-success`, `--color-intent-warning` (also from `_ds_manifest.json` and `_adherence.oxlintrc.json`).
+
+Known open items (owner decision, not changed): the Dark mode mirrors Light for every surface and text token, so it is not yet a dark theme; several semantic roles share a value by design (`bg/brand`, `bg/brand-subtle`, `bg/brand-hover`, `intent/success/bg` are Green 50; `fg/secondary` and `fg/tertiary-strong` are Grey 700).
